@@ -2630,7 +2630,7 @@
         </div>
     </footer>
 
-    <!-- ===== FLOATING BUTTONS (only Telegram & Instagram, WhatsApp removed from floating) ===== -->
+    <!-- ===== FLOATING BUTTONS (only Telegram & Instagram) ===== -->
     <div class="floating-buttons">
         <a href="https://t.me/U_N_I_D_E_N_T" class="floating-btn telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
         <a href="https://www.instagram.com/u_n_i_d_e_n_t" class="floating-btn" target="_blank" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#c13584,#833ab4);color:#fff;"><i class="fab fa-instagram"></i></a>
@@ -2937,7 +2937,7 @@
         //  STATE
         // ============================================================
         let productsData = [];
-        const stored = localStorage.getItem('unident_products_final_v11');
+        const stored = localStorage.getItem('unident_products_final_v12');
         if (stored) {
             try {
                 productsData = JSON.parse(stored);
@@ -2952,11 +2952,11 @@
                 });
             } catch (e) {
                 productsData = generateProducts();
-                localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
             }
         } else {
             productsData = generateProducts();
-            localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
         }
 
         let cart = JSON.parse(localStorage.getItem('unident_cart')) || [];
@@ -3256,7 +3256,7 @@
                     const p = productsData.find(p => p.id === id);
                     if (p) {
                         p.viewCount = (p.viewCount || 0) + 1;
-                        localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                        localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                     }
                     showProductDetail(id);
                 });
@@ -4066,8 +4066,9 @@
         });
 
         // ============================================================
-        //  ADMIN PANEL
+        //  ADMIN PANEL - ALL SECTIONS WITH FULL PRODUCTS (NO LIMIT)
         // ============================================================
+
         function renderDashboard() {
             const content = document.getElementById('adminContent');
             const totalOrders = orders.length,
@@ -4127,7 +4128,7 @@
             showToast('سفارش حذف شد');
         };
 
-        // ===== ADMIN PRODUCTS =====
+        // ===== ADMIN PRODUCTS (FULL - NO LIMIT) =====
         function renderProductsAdmin() {
             const content = document.getElementById('adminContent');
             const searchTerm = document.getElementById('adminProductSearch')?.value?.trim() || '';
@@ -4163,7 +4164,7 @@
                     <div id="addProductResult" style="margin-top:10px;"></div>
                 </div>
                 <div style="max-height:60vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                    ${filtered.slice(0, 100).map(p => `
+                    ${filtered.map(p => `
                         <div style="border:1px solid var(--border-color);border-radius:12px;padding:12px;background:var(--bg-secondary);">
                             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
                                 ${p.image?`<img src="${p.image}" style="width:40px;height:40px;object-fit:cover;border-radius:8px;" onerror="this.onerror=null;this.parentElement.innerHTML='📦';" />`:'📦'}
@@ -4187,20 +4188,38 @@
                                 <button class="btn btn-sm btn-white" onclick="window.saveProductImage('${p.id}')" style="padding:2px 10px;font-size:0.6rem;margin-top:4px;">ذخیره</button>
                                 <div style="margin-top:6px;display:flex;gap:4px;flex-wrap:wrap;">
                                     ${(p.images||[]).map((img,idx)=>`<img src="${img}" style="width:40px;height:40px;object-fit:cover;border-radius:6px;border:1px solid var(--border-color);" onerror="this.style.display='none';" />`).join('')}
+                                    ${(p.images||[]).length > 0 ? `<button class="btn btn-sm btn-outline" onclick="window.removeImage('${p.id}', ${idx})" style="color:#ef4444;border-color:#ef4444;padding:2px 6px;font-size:0.5rem;">حذف</button>` : ''}
                                 </div>
                             </div>
                         </div>
                     `).join('')}
-                    ${filtered.length>100?`<div style="grid-column:1/-1;text-align:center;padding:16px;color:var(--text-muted);font-size:0.8rem;">+ ${filtered.length-100} محصول دیگر ...</div>`:''}
                 </div>
             `;
         }
+
+        // ===== REMOVE IMAGE =====
+        window.removeImage = function(productId, index) {
+            const p = productsData.find(p => p.id === productId);
+            if (!p || !p.images || p.images.length <= 1) {
+                showToast('حداقل یک تصویر باید باقی بماند.', 'error');
+                return;
+            }
+            if (!confirm('آیا از حذف این تصویر مطمئن هستید؟')) return;
+            p.images.splice(index, 1);
+            if (index === 0) p.image = p.images[0] || '';
+            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+            showToast('تصویر حذف شد');
+            renderProductsAdmin();
+            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
+                .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
+                .value, currentPage);
+        };
 
         window.bulkToggleInquiry = function() {
             const current = productsData.every(p => p.showPrice === true);
             const newVal = !current;
             productsData.forEach(p => { p.showPrice = newVal; });
-            localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
             showToast(`همه محصولات ${newVal ? 'قابل نمایش' : 'در حالت استعلام قیمت'} شدند`);
             renderProductsAdmin();
             renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -4215,7 +4234,7 @@
             const p = productsData.find(p => p.id === id);
             if (p) { p.isOriginal = value;
                 p['اصالت'] = value ? 'اورجینال' : 'غیر اورجینال';
-                localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 showToast('اصالت به‌روز شد');
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -4229,7 +4248,7 @@
             const value = select.value === 'true';
             const p = productsData.find(p => p.id === id);
             if (p) { p.showPrice = value;
-                localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 showToast('وضعیت نمایش قیمت به‌روز شد');
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -4243,7 +4262,7 @@
             const stock = parseInt(input.value) || 0;
             const p = productsData.find(p => p.id === id);
             if (p) { p.stock = stock;
-                localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 showToast('موجودی به‌روز شد');
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -4255,7 +4274,7 @@
         window.toggleGuarantee = function(id) {
             const p = productsData.find(p => p.id === id);
             if (p) { p.guarantee = !p.guarantee;
-                localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
                     .value, document.getElementById('filterSort').value, document.getElementById(
@@ -4267,7 +4286,7 @@
             if (!confirm('حذف شود؟')) return;
             const idx = productsData.findIndex(p => p.id === id);
             if (idx > -1) { productsData.splice(idx, 1);
-                localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById(
                     'filterCategory').value, document.getElementById('filterSort').value, document
@@ -4294,7 +4313,7 @@
                     if (!p.images) p.images = [p.image || dataUrl];
                     p.images.push(dataUrl);
                     p.image = dataUrl;
-                    localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                    localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                     showToast('تصویر جدید اضافه شد');
                     renderProductsAdmin();
                     renderProductPage(document.getElementById('filterBrand').value, document.getElementById(
@@ -4310,7 +4329,7 @@
                     if (!p.images) p.images = [p.image || url];
                     p.images.push(url);
                     p.image = url;
-                    localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                    localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                     showToast('تصویر اضافه شد');
                     renderProductsAdmin();
                     renderProductPage(document.getElementById('filterBrand').value, document.getElementById(
@@ -4387,7 +4406,7 @@
                 soldCount: 0,
                 viewCount: 0
             });
-            localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
             document.getElementById('addProductResult').innerHTML = '<span style="color:#22c55e;">✅ محصول اضافه شد.</span>';
             document.getElementById('newProductName').value = '';
             document.getElementById('newProductBrand').value = '';
@@ -4408,7 +4427,7 @@
                 document.getElementById('addProductResult').innerHTML = ''; }, 1500);
         }
 
-        // ===== ADMIN INVENTORY =====
+        // ===== ADMIN INVENTORY (FULL - NO LIMIT) =====
         function renderInventoryAdmin() {
             const content = document.getElementById('adminContent');
             const searchTerm = document.getElementById('invSearch')?.value?.trim() || '';
@@ -4431,10 +4450,9 @@
                 </div>
                 <div style="overflow-x:auto;max-height:400px;overflow-y:auto;">
                     <table class="admin-table"><thead><tr><th>محصول</th><th>برند</th><th>کد</th><th>موجودی</th><th>عملیات</th></tr></thead><tbody>
-                        ${filtered.slice(0, 200).map(p => `
+                        ${filtered.map(p => `
                             <tr><td style="font-size:0.7rem;">${escapeHtml(p.name)}</td><td style="font-size:0.7rem;">${escapeHtml(p.brand)}</td><td style="font-size:0.65rem;">${escapeHtml(p.code||'')}</td><td><input type="number" class="stock-quick-input" data-id="${p.id}" value="${p.stock||0}" min="0" style="width:60px;padding:4px 6px;border-radius:8px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.7rem;" /></td><td><button class="btn btn-sm btn-white" onclick="window.quickUpdateStock('${p.id}')" style="padding:2px 10px;font-size:0.6rem;">ذخیره</button></td></tr>
                         `).join('')}
-                        ${filtered.length>200?`<tr><td colspan="5" style="text-align:center;color:var(--text-muted);font-size:0.75rem;">+ ${filtered.length-200} محصول دیگر ...</td></tr>`:''}
                     </tbody></table>
                 </div>
                 <div id="stockUpdateResult" style="margin-top:12px;text-align:center;"></div>
@@ -4447,7 +4465,7 @@
             const stock = parseInt(input.value) || 0;
             const p = productsData.find(p => p.id === id);
             if (p) { p.stock = stock;
-                localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 document.getElementById('stockUpdateResult').innerHTML =
                     '<span style="color:#22c55e;">✅ موجودی به‌روز شد.</span>';
                 renderInventoryAdmin();
@@ -4457,7 +4475,7 @@
                 setTimeout(() => document.getElementById('stockUpdateResult').innerHTML = '', 2000); }
         };
 
-        // ===== ADMIN PRICES =====
+        // ===== ADMIN PRICES (FULL - NO LIMIT) =====
         function renderPriceManagement() {
             const content = document.getElementById('adminContent');
             const searchTerm = document.getElementById('priceSearch')?.value?.trim() || '';
@@ -4482,11 +4500,10 @@
                 </div>
                 <div style="overflow-x:auto;max-height:400px;overflow-y:auto;">
                     <table class="admin-table"><thead><tr><th>محصول</th><th>برند</th><th>قیمت پایه</th><th>سود %</th><th>قیمت نهایی</th><th>عملیات</th></tr></thead><tbody>
-                        ${filtered.slice(0, 100).map(p => {
+                        ${filtered.map(p => {
                             const final = getFinalPrice(p);
                             return `<tr><td style="font-size:0.7rem;">${escapeHtml(p.name)}</td><td style="font-size:0.7rem;">${escapeHtml(p.brand)}</td><td><input type="number" class="base-price-input" data-id="${p.id}" value="${p.basePrice||0}" style="width:80px;padding:4px 6px;border-radius:8px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.7rem;" /></td><td><input type="number" class="profit-input" data-id="${p.id}" value="${p.profitPercent||200}" style="width:50px;padding:4px 6px;border-radius:8px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.7rem;" /></td><td><span class="final-price" data-id="${p.id}" style="color:var(--text-primary);font-size:0.75rem;">${formatPrice(final)}</span></td><td><button class="btn btn-sm btn-white" onclick="window.updatePrice('${p.id}')" style="padding:2px 10px;font-size:0.6rem;">ذخیره</button></td></tr>`;
                         }).join('')}
-                        ${filtered.length>100?`<tr><td colspan="6" style="text-align:center;color:var(--text-muted);font-size:0.75rem;">+ ${filtered.length-100} محصول دیگر ...</td></tr>`:''}
                     </tbody></table>
                 </div>
                 <div id="priceUpdateResult" style="margin-top:12px;text-align:center;"></div>
@@ -4512,7 +4529,7 @@
                 return;
             }
             productsData.forEach(p => { p.profitPercent = profit; });
-            localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
             document.getElementById('bulkProfitResult').innerHTML =
                 `<span style="color:#22c55e;">✅ سود همه ${productsData.length} محصول به ${profit}% تغییر یافت.</span>`;
             renderPriceManagement();
@@ -4527,7 +4544,7 @@
             const p = productsData.find(p => p.id === id);
             if (p) { p.basePrice = base;
                 p.profitPercent = profit;
-                localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 document.getElementById('priceUpdateResult').innerHTML =
                     '<span style="color:#22c55e;">✅ قیمت به‌روز شد.</span>';
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -4536,7 +4553,7 @@
                 setTimeout(() => document.getElementById('priceUpdateResult').innerHTML = '', 2000); }
         };
 
-        // ===== ADMIN ORIGIN =====
+        // ===== ADMIN ORIGIN (FULL - NO LIMIT) =====
         function renderOriginManagement() {
             const content = document.getElementById('adminContent');
             const searchTerm = document.getElementById('originSearch')?.value?.trim() || '';
@@ -4567,10 +4584,9 @@
                 </div>
                 <div style="overflow-x:auto;max-height:400px;overflow-y:auto;">
                     <table class="admin-table"><thead><tr><th>محصول</th><th>برند</th><th>اصالت فعلی</th><th>تغییر به</th><th>عملیات</th></tr></thead><tbody>
-                        ${filtered.slice(0, 200).map(p => `
+                        ${filtered.map(p => `
                             <tr><td style="font-size:0.7rem;">${escapeHtml(p.name)}</td><td style="font-size:0.7rem;">${escapeHtml(p.brand)}</td><td><span class="origin-badge ${p.isOriginal?'original':'copy'}">${p.isOriginal?'✅ اورجینال':'ℹ️ غیر اورجینال'}</span></td><td><select class="single-origin-select" data-id="${p.id}" style="padding:4px 8px;border-radius:8px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.7rem;"><option value="true" ${p.isOriginal?'selected':''}>اورجینال</option><option value="false" ${!p.isOriginal?'selected':''}>غیر اورجینال</option></select></td><td><button class="btn btn-sm btn-white" onclick="window.updateSingleOrigin('${p.id}')" style="padding:2px 10px;font-size:0.6rem;">ذخیره</button></td></tr>
                         `).join('')}
-                        ${filtered.length>200?`<tr><td colspan="5" style="text-align:center;color:var(--text-muted);font-size:0.75rem;">+ ${filtered.length-200} محصول دیگر ...</td></tr>`:''}
                     </tbody></table>
                 </div>
                 <div id="originUpdateResult" style="margin-top:12px;text-align:center;"></div>
@@ -4581,7 +4597,7 @@
             const value = document.getElementById('bulkOriginSelect').value === 'true';
             productsData.forEach(p => { p.isOriginal = value;
                 p['اصالت'] = value ? 'اورجینال' : 'غیر اورجینال'; });
-            localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
             document.getElementById('bulkOriginResult').innerHTML =
                 `<span style="color:#22c55e;">✅ اصالت همه ${productsData.length} محصول به ${value?'اورجینال':'غیر اورجینال'} تغییر یافت.</span>`;
             renderOriginManagement();
@@ -4597,7 +4613,7 @@
             const p = productsData.find(p => p.id === id);
             if (p) { p.isOriginal = value;
                 p['اصالت'] = value ? 'اورجینال' : 'غیر اورجینال';
-                localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 document.getElementById('originUpdateResult').innerHTML =
                     '<span style="color:#22c55e;">✅ اصالت به‌روز شد.</span>';
                 renderOriginManagement();
@@ -4984,7 +5000,7 @@
                         if (data.coupons) couponCodes = data.coupons;
                         if (data.surveys) surveyResults = data.surveys;
                         if (data.newsletter) newsletterSubs = data.newsletter;
-                        localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                        localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                         localStorage.setItem('unident_orders', JSON.stringify(orders));
                         localStorage.setItem('unident_reviews', JSON.stringify(reviews));
                         localStorage.setItem('unident_warranty_requests', JSON.stringify(warrantyRequests));
@@ -5142,7 +5158,7 @@
                             added++;
                         }
                     });
-                    localStorage.setItem('unident_products_final_v11', JSON.stringify(productsData));
+                    localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                     document.getElementById('importResult').innerHTML =
                         `<span style="color:#22c55e;">✅ ${added} محصول جدید وارد شد. (کل: ${productsData.length} محصول)</span>`;
                     showToast(`${added} محصول اضافه شد`);
@@ -5327,19 +5343,9 @@
 
         console.log('🦷 UNIDENT — ' + productsData.length + ' محصول');
         console.log('🔑 پنل ادمین با رمز 1212');
-        console.log('✅ ۱۰۰+ قابلیت جدید اضافه شد:');
-        console.log('  📱 لاگین با موبایل، PWA، دانلود PDF');
-        console.log('  🌍 نمایش موقعیت کاربر، بازدید محصولات');
-        console.log('  🌗 تم تاریک/روشن، تنظیمات فروشگاه');
-        console.log('  💾 بکاپ خودکار، واردات/صادرات CSV');
-        console.log('  📈 تحلیل فروش، گزارش سوددهی');
-        console.log('  📋 نظرسنجی، استعلام قیمت با فرم');
-        console.log('  📧 ارسال ایمیل و پیامک (شبیه‌سازی)');
-        console.log('  🛒 سبد خرید پیشرفته با کوپن و مالیات');
-        console.log('  📸 چندین تصویر برای هر محصول');
-        console.log('  🏷️ نمایش "اورجینال" و "غیر اورجینال"');
-        console.log('  📊 فیلترهای پیشرفته (قیمت، اصالت، موجودی)');
-        console.log('✅ واتساپ فقط در بخش اطلاعات تماس');
+        console.log('✅ تمام محصولات در تمام بخش‌های مدیریت قابل مشاهده هستند');
+        console.log('✅ امکان حذف تصاویر به صورت تکی اضافه شد');
+        console.log('✅ هیچ محدودیتی برای نمایش محصولات وجود ندارد');
     </script>
 </body>
 </html>
