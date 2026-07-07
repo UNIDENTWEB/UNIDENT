@@ -13,14 +13,10 @@ jobs:
           python-version: '3.10'
       - run: pip install -r requirements.txt
       - run: python scraper_bot.py
-      - uses: actions/upload-artifact@v3
-        with:
-          name: images
-          path: images/
-      - name: Commit and push changes
+      - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add images/ image_mapping.json approval_state.json || true
+          git add images/ image_mapping.json || true
           git commit -m "auto-update images" || exit 0
           git push
