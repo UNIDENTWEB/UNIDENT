@@ -1921,6 +1921,12 @@
             padding: 24px 20px;
             border: 1px solid rgba(255, 255, 255, 0.04);
             text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            border-color: rgba(200, 169, 106, 0.3);
+            transform: translateY(-4px);
         }
         .feature-card .icon {
             font-size: 2rem;
@@ -1959,6 +1965,58 @@
         .btn-danger:hover {
             background: #dc2626;
         }
+        /* Shipping info tooltip */
+        .shipping-info {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a1a;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(200, 169, 106, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            font-size: 0.95rem;
+            max-width: 90%;
+            text-align: center;
+            animation: fadeUp 0.4s ease forwards;
+        }
+        .shipping-info.show {
+            display: block;
+        }
+        .shipping-info .close-shipping {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #777;
+        }
+        .shipping-info .close-shipping:hover {
+            color: #fff;
+        }
+        .warranty-request-btn,
+        .custom-order-btn {
+            background: rgba(200, 169, 106, 0.15);
+            border: 1px solid #c8a96a;
+            color: #c8a96a;
+            padding: 10px 24px;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .warranty-request-btn:hover,
+        .custom-order-btn:hover {
+            background: #c8a96a;
+            color: #1a1a1a;
+        }
     </style>
 </head>
 <body>
@@ -1982,6 +2040,13 @@
         </div>
     </header>
 
+    <!-- ===== SHIPPING INFO POPUP ===== -->
+    <div class="shipping-info" id="shippingInfo">
+        <span class="close-shipping" id="closeShipping">&times;</span>
+        <p style="margin: 8px 0;">🚚 ارسال رایگان به سراسر کشور انجام میشود</p>
+        <p style="font-size: 0.8rem; color: #777; margin-top: 4px;">برای سفارشات بالای ۵ میلیون تومان</p>
+    </div>
+
     <!-- ===== HERO ===== -->
     <section class="hero" id="home">
         <div class="container">
@@ -1989,8 +2054,15 @@
                 <div class="hero-badge"><span class="dot"></span> پیشرو در متریال دندانپزشکی</div>
                 <h1>متریال <br /><span class="highlight">دندانپزشکی</span></h1>
                 <p>یونیدنت مرجع تخصصی تأمین تجهیزات، مواد مصرفی و ابزارآلات دندانپزشکی با ضمانت اصالت و کیفیت.</p>
-                <div class="hero-actions"><a href="#product-page" class="btn btn-gold"><i class="fas fa-arrow-left"></i> مشاهده محصولات</a><button class="btn btn-outline" id="consultBtn"><i class="fas fa-headset"></i> مشاوره رایگان</button></div>
-                <div class="hero-stats"><div class="stat"><h3 id="statProducts">۰</h3><p>محصولات</p></div><div class="stat"><h3 id="statBrands">۰</h3><p>برندها</p></div><div class="stat"><h3 id="statOrders">۰</h3><p>سفارشات</p></div></div>
+                <div class="hero-actions">
+                    <a href="#product-page" class="btn btn-gold"><i class="fas fa-arrow-left"></i> مشاهده محصولات</a>
+                    <button class="btn btn-outline" id="consultBtn"><i class="fas fa-headset"></i> مشاوره رایگان</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><h3 id="statProducts">۰</h3><p>محصولات</p></div>
+                    <div class="stat"><h3 id="statBrands">۰</h3><p>برندها</p></div>
+                    <div class="stat"><h3 id="statOrders">۰</h3><p>سفارشات</p></div>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator"><span>پایین</span><div class="mouse"></div></div>
@@ -2038,10 +2110,26 @@
         <div class="container">
             <div class="section-header animate-fade-up"><div><span class="badge">چرا یونیدنت</span><h2 class="section-title">مزایای همکاری</h2></div></div>
             <div class="features-grid">
-                <div class="feature-card"><div class="icon">✅</div><h4>ضمانت اصالت کالا</h4><p>همه محصولات با گارانتی معتبر</p></div>
-                <div class="feature-card"><div class="icon">🚚</div><h4>ارسال رایگان</h4><p>به سراسر کشور</p></div>
-                <div class="feature-card"><div class="icon">🛡️</div><h4>پشتیبانی ۲۴/۷</h4><p>تیم حرفه‌ای</p></div>
-                <div class="feature-card"><div class="icon">📦</div><h4>تنوع بی‌نظیر</h4><p>۳۰۰ محصول از برندهای معتبر</p></div>
+                <div class="feature-card" onclick="showShippingInfo()">
+                    <div class="icon">🚚</div>
+                    <h4>ارسال</h4>
+                    <p>ارسال سریع و مطمئن</p>
+                </div>
+                <div class="feature-card" onclick="document.getElementById('warrantyRequestBtn').click()">
+                    <div class="icon">🛡️</div>
+                    <h4>گارانتی</h4>
+                    <p>ضمانت اصالت و کیفیت</p>
+                </div>
+                <div class="feature-card" onclick="document.getElementById('customOrderBtn').click()">
+                    <div class="icon">📝</div>
+                    <h4>سفارش درخواستی</h4>
+                    <p>ثبت سفارش محصولات دلخواه</p>
+                </div>
+                <div class="feature-card" onclick="document.getElementById('orderNowBtn').click()">
+                    <div class="icon">✅</div>
+                    <h4>سفارش سریع</h4>
+                    <p>ثبت سفارش در کمترین زمان</p>
+                </div>
             </div>
         </div>
     </section>
@@ -2075,9 +2163,13 @@
                         <a href="https://t.me/U_N_I_D_E_N_T" target="_blank"><i class="fab fa-telegram-plane"></i> تلگرام</a>
                         <a href="mailto:unique.dental.contact@gmail.com"><i class="fas fa-envelope"></i> ایمیل</a>
                     </div>
+                    <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap;">
+                        <button class="warranty-request-btn" id="warrantyRequestBtn"><i class="fas fa-shield-alt"></i> درخواست گارانتی</button>
+                        <button class="custom-order-btn" id="customOrderBtn"><i class="fas fa-pen"></i> سفارش درخواستی</button>
+                    </div>
                 </div>
                 <div class="footer-col"><h5>دسترسی سریع</h5><a href="#product-page">محصولات</a><a href="#categories">دسته‌ها</a><a href="#warranty-modal" id="warrantyLinkFooter">گارانتی</a></div>
-                <div class="footer-col"><h5>خدمات</h5><a href="#">ارسال رایگان</a><a href="#">پشتیبانی</a></div>
+                <div class="footer-col"><h5>خدمات</h5><a href="#" onclick="showShippingInfo(); return false;">ارسال</a><a href="#" onclick="document.getElementById('warrantyRequestBtn').click(); return false;">گارانتی</a><a href="#" onclick="document.getElementById('customOrderBtn').click(); return false;">سفارش درخواستی</a></div>
             </div>
             <div class="trust-badges"><div class="trust-item"><i class="fas fa-shield-alt"></i> <span>اینماد</span></div><div class="trust-item"><i class="fas fa-check-circle"></i> <span>ساماندهی</span></div><div class="trust-item"><i class="fas fa-certificate"></i> <span>مجوز رسمی وزارت بهداشت</span></div><div class="trust-item"><i class="fas fa-credit-card"></i> <span>درگاه پرداخت امن</span></div><div class="trust-item"><i class="fas fa-lock"></i> <span>گواهی SSL</span></div></div>
             <div class="footer-bottom">
@@ -2103,7 +2195,7 @@
 
     <!-- ===== MODALS ===== -->
 
-    <!-- ORDER MODAL with 10 fields -->
+    <!-- ORDER MODAL -->
     <div id="orderModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -2119,10 +2211,6 @@
                 </div>
                 <div class="form-row-2">
                     <div class="form-group"><label class="field-label"><i class="fab fa-telegram"></i> تلگرام</label><input type="text" id="orderTelegram" placeholder="نام کاربری تلگرام" /></div>
-                    <div class="form-group"><label class="field-label"><i class="fab fa-whatsapp"></i> واتساپ</label><input type="text" id="orderWhatsapp" placeholder="شماره واتساپ" /></div>
-                </div>
-                <div class="form-row-2">
-                    <div class="form-group"><label class="field-label"><i class="fas fa-map-marker-alt"></i> آدرس</label><input type="text" id="orderAddress" placeholder="آدرس کامل" /></div>
                     <div class="form-group"><label class="field-label"><i class="fas fa-tag"></i> نوع سفارش *</label><select id="orderType" required><option value="product">خرید محصول</option><option value="consultation">مشاوره</option><option value="warranty">درخواست گارانتی</option></select></div>
                 </div>
                 <div class="form-group"><label class="field-label"><i class="fas fa-box"></i> نام محصول (در صورت مشخص)</label><input type="text" id="orderProductName" placeholder="نام محصول مورد نظر" /></div>
@@ -2194,7 +2282,7 @@
                 </div>
                 <div class="form-group"><label class="field-label"><i class="fas fa-box"></i> نام محصول *</label><input type="text" id="warrantyProductName" placeholder="نام محصول" required /></div>
                 <div class="form-group"><label class="field-label"><i class="fas fa-calendar-alt"></i> تاریخ خرید</label><input type="date" id="warrantyPurchaseDate" /></div>
-                <div class="form-group"><label class="field-label"><i class="fas fa-exclamation-triangle"></i> شرح مشکل *</label><textarea id="warrantyIssue" rows="3" placeholder="مشکل به طور دقیق توضیح دهید..." required></textarea></div>
+                <div class="form-group"><label class="field-label"><i class="fas fa-exclamation-triangle"></i> شرح مشکل *</label><textarea id="warrantyIssue" rows="3" placeholder="مشکل را به طور دقیق توضیح دهید..." required></textarea></div>
                 <div class="form-group"><label class="field-label"><i class="fas fa-image"></i> تصویر فاکتور (اختیاری)</label><input type="file" id="warrantyReceipt" accept="image/*" /></div>
                 <div class="checkbox-group"><input type="checkbox" id="warrantyAgree" required /><label for="warrantyAgree">شرایط گارانتی را مطالعه کرده و می‌پذیرم</label></div>
                 <button type="submit" class="btn btn-gold w-full" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i> ثبت درخواست</button>
@@ -2230,6 +2318,37 @@
         </div>
     </div>
 
+    <!-- CUSTOM ORDER REQUEST MODAL -->
+    <div id="customOrderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3><i class="fas fa-pen"></i> ثبت سفارش محصولات درخواستی</h3>
+            <p style="color:#bdbdbd; font-size:0.9rem; margin-bottom:16px;">اگر محصول مورد نظر خود را در لیست محصولات نیافتید، از این فرم استفاده کنید.</p>
+            <form id="customOrderForm">
+                <div class="form-row-2">
+                    <div class="form-group"><label class="field-label"><i class="fas fa-user"></i> نام کامل *</label><input type="text" id="customName" placeholder="نام و نام خانوادگی" required /></div>
+                    <div class="form-group"><label class="field-label"><i class="fas fa-phone"></i> شماره تماس *</label><input type="tel" id="customPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required /></div>
+                </div>
+                <div class="form-row-2">
+                    <div class="form-group"><label class="field-label"><i class="fas fa-envelope"></i> ایمیل</label><input type="email" id="customEmail" placeholder="example@email.com" /></div>
+                    <div class="form-group"><label class="field-label"><i class="fab fa-instagram"></i> اینستاگرام</label><input type="text" id="customInstagram" placeholder="نام کاربری اینستاگرام" /></div>
+                </div>
+                <div class="form-row-2">
+                    <div class="form-group"><label class="field-label"><i class="fas fa-tag"></i> برند محصول *</label><select id="customBrand" required><option value="">انتخاب برند</option><option value="NSK">NSK</option><option value="COXO">COXO</option><option value="W&H">W&H</option><option value="سایر">سایر</option></select></div>
+                    <div class="form-group"><label class="field-label"><i class="fas fa-box"></i> نام محصول *</label><input type="text" id="customProductName" placeholder="نام دقیق محصول" required /></div>
+                </div>
+                <div class="form-row-2">
+                    <div class="form-group"><label class="field-label"><i class="fas fa-sort-numeric-up"></i> تعداد</label><input type="number" id="customQuantity" placeholder="تعداد" min="1" value="1" /></div>
+                    <div class="form-group"><label class="field-label"><i class="fas fa-code"></i> کد محصول (در صورت موجود)</label><input type="text" id="customProductCode" placeholder="کد محصول" /></div>
+                </div>
+                <div class="form-group"><label class="field-label"><i class="fas fa-comment"></i> توضیحات و مشخصات مورد نظر *</label><textarea id="customDescription" rows="3" placeholder="مشخصات فنی، رنگ، سایز، و هر توضیح دیگری که نیاز دارید..." required></textarea></div>
+                <div class="checkbox-group"><input type="checkbox" id="customAgree" required /><label for="customAgree">شرایط و قوانین را می‌پذیرم</label></div>
+                <button type="submit" class="btn btn-gold w-full" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i> ثبت سفارش درخواستی</button>
+                <div id="customOrderResult" style="margin-top:16px; text-align:center;"></div>
+            </form>
+        </div>
+    </div>
+
     <!-- ADMIN PANEL -->
     <div id="adminPanel" class="admin-panel">
         <div class="admin-header">
@@ -2245,6 +2364,7 @@
             <div class="admin-tab" data-tab="prices">💰 قیمت‌ها</div>
             <div class="admin-tab" data-tab="origin">🏷️ اصالت</div>
             <div class="admin-tab" data-tab="warranty">🔧 گارانتی</div>
+            <div class="admin-tab" data-tab="customorders">📝 سفارشات درخواستی</div>
             <div class="admin-tab" data-tab="inquiries">📋 استعلام‌ها</div>
             <div class="admin-tab" data-tab="settings">⚙️ تنظیمات</div>
         </div>
@@ -2382,7 +2502,7 @@
         //  STATE
         // ============================================================
         let productsData = [];
-        const stored = localStorage.getItem('unident_products_final_v5');
+        const stored = localStorage.getItem('unident_products_final_v6');
         if (stored) {
             try {
                 productsData = JSON.parse(stored);
@@ -2391,11 +2511,11 @@
                         .inquiryEnabled = false; if (p.showPrice === undefined) p.showPrice = true; });
             } catch (e) {
                 productsData = generateProducts();
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
             }
         } else {
             productsData = generateProducts();
-            localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+            localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
         }
 
         let cart = JSON.parse(localStorage.getItem('unident_cart')) || [];
@@ -2409,6 +2529,7 @@
                 date: '۱۴۰۵/۰۱/۲۵', approved: true }
         ];
         let warrantyRequests = JSON.parse(localStorage.getItem('unident_warranty_requests')) || [];
+        let customOrders = JSON.parse(localStorage.getItem('unident_custom_orders')) || [];
         let inquiries = JSON.parse(localStorage.getItem('unident_inquiries')) || [];
         let wishlist = JSON.parse(localStorage.getItem('unident_wishlist')) || [];
         let currentAdminTab = 'dashboard';
@@ -2443,6 +2564,20 @@
             const profit = product.profitPercent || 200;
             return Math.round(base * (1 + profit / 100));
         }
+
+        // ============================================================
+        //  SHIPPING INFO
+        // ============================================================
+        function showShippingInfo() {
+            const el = document.getElementById('shippingInfo');
+            el.classList.add('show');
+            setTimeout(() => {
+                el.classList.remove('show');
+            }, 5000);
+        }
+        document.getElementById('closeShipping')?.addEventListener('click', function() {
+            document.getElementById('shippingInfo').classList.remove('show');
+        });
 
         // ============================================================
         //  RENDER PRODUCT PAGE
@@ -2581,7 +2716,6 @@
             inquiries.push(inquiry);
             localStorage.setItem('unident_inquiries', JSON.stringify(inquiries));
             showToast(`درخواست استعلام قیمت برای ${product.name} ثبت شد. به زودی با شما تماس می‌گیریم.`);
-            // Also open order modal with product name pre-filled
             document.getElementById('orderProductName').value = product.name;
             document.getElementById('orderType').value = 'consultation';
             openModal('order');
@@ -2776,6 +2910,9 @@
         document.getElementById('warrantyRequestLink')?.addEventListener('click', function(e) { e.preventDefault();
             closeAllModals();
             openModal('warrantyRequest'); });
+        document.getElementById('warrantyRequestBtn')?.addEventListener('click', function() { openModal(
+            'warrantyRequest'); });
+        document.getElementById('customOrderBtn')?.addEventListener('click', function() { openModal('customOrder'); });
 
         // ============================================================
         //  STAR RATING
@@ -2791,7 +2928,7 @@
         });
 
         // ============================================================
-        //  ORDER FORM - 10 fields
+        //  ORDER FORM
         // ============================================================
         document.getElementById('orderForm')?.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -2800,8 +2937,6 @@
             const email = document.getElementById('orderEmail').value.trim();
             const instagram = document.getElementById('orderInstagram').value.trim();
             const telegram = document.getElementById('orderTelegram').value.trim();
-            const whatsapp = document.getElementById('orderWhatsapp').value.trim();
-            const address = document.getElementById('orderAddress').value.trim();
             const type = document.getElementById('orderType').value;
             const productName = document.getElementById('orderProductName').value.trim();
             const quantity = document.getElementById('orderQuantity').value || 1;
@@ -2819,8 +2954,6 @@
                 email,
                 instagram,
                 telegram,
-                whatsapp,
-                address,
                 type,
                 productName,
                 quantity: parseInt(quantity),
@@ -2911,6 +3044,50 @@
         });
 
         // ============================================================
+        //  CUSTOM ORDER FORM
+        // ============================================================
+        document.getElementById('customOrderForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('customName').value.trim();
+            const phone = document.getElementById('customPhone').value.trim();
+            const email = document.getElementById('customEmail').value.trim();
+            const instagram = document.getElementById('customInstagram').value.trim();
+            const brand = document.getElementById('customBrand').value;
+            const productName = document.getElementById('customProductName').value.trim();
+            const quantity = document.getElementById('customQuantity').value || 1;
+            const productCode = document.getElementById('customProductCode').value.trim();
+            const description = document.getElementById('customDescription').value.trim();
+            const agree = document.getElementById('customAgree').checked;
+            if (!name || !phone || !brand || !productName || !description || !agree) {
+                document.getElementById('customOrderResult').innerHTML =
+                    '<span style="color:#ef4444;">لطفاً همه فیلدهای ضروری را پر کنید.</span>';
+                return;
+            }
+            const order = {
+                id: generateId(),
+                name,
+                phone,
+                email,
+                instagram,
+                brand,
+                productName,
+                quantity: parseInt(quantity),
+                productCode,
+                description,
+                date: getPersianDate(),
+                status: 'در انتظار بررسی',
+                createdAt: Date.now()
+            };
+            customOrders.push(order);
+            localStorage.setItem('unident_custom_orders', JSON.stringify(customOrders));
+            document.getElementById('customOrderResult').innerHTML =
+                '<span style="color:#22c55e;">✅ سفارش درخواستی ثبت شد. به زودی با شما تماس می‌گیریم.</span>';
+            this.reset();
+            setTimeout(() => { closeAllModals();
+                document.getElementById('customOrderResult').innerHTML = ''; }, 3000);
+        });
+
+        // ============================================================
         //  NEWSLETTER
         // ============================================================
         document.getElementById('newsletterForm')?.addEventListener('submit', function(e) {
@@ -2955,14 +3132,16 @@
                 totalProducts = productsData.length,
                 totalReviews = reviews.filter(r => r.approved).length,
                 totalWarranty = warrantyRequests.length,
+                totalCustomOrders = customOrders.length,
                 totalInquiries = inquiries.length;
             content.innerHTML = `
                 <div class="stats-cards">
                     <div class="stat-card"><div class="stat-number">${totalOrders}</div><div class="stat-label">سفارشات</div></div>
                     <div class="stat-card"><div class="stat-number">${totalProducts}</div><div class="stat-label">محصولات</div></div>
                     <div class="stat-card"><div class="stat-number">${totalReviews}</div><div class="stat-label">نظرات</div></div>
-                    <div class="stat-card"><div class="stat-number">${totalWarranty}</div><div class="stat-label">درخواست گارانتی</div></div>
-                    <div class="stat-card"><div class="stat-number">${totalInquiries}</div><div class="stat-label">استعلام قیمت</div></div>
+                    <div class="stat-card"><div class="stat-number">${totalWarranty}</div><div class="stat-label">گارانتی</div></div>
+                    <div class="stat-card"><div class="stat-number">${totalCustomOrders}</div><div class="stat-label">سفارشات درخواستی</div></div>
+                    <div class="stat-card"><div class="stat-number">${totalInquiries}</div><div class="stat-label">استعلام‌ها</div></div>
                 </div>
                 <div style="background:#111111; border-radius:12px; padding:16px; border:1px solid rgba(255,255,255,0.08);">
                     <h4 style="color:#c8a96a; font-size:1rem;">📋 آخرین سفارشات</h4>
@@ -3099,7 +3278,7 @@
             const product = productsData.find(p => p.id === id);
             if (product) {
                 product.showPrice = value;
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
                 showToast('وضعیت نمایش قیمت به‌روز شد');
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -3116,7 +3295,7 @@
             if (product) {
                 product.isOriginal = value;
                 product['اصالت'] = value ? 'اورجینال' : 'کپی';
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
                 showToast('اصالت به‌روز شد');
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -3132,7 +3311,7 @@
             const product = productsData.find(p => p.id === id);
             if (product) {
                 product.inquiryEnabled = value;
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
                 showToast('وضعیت استعلام به‌روز شد');
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -3148,7 +3327,7 @@
             const product = productsData.find(p => p.id === id);
             if (product) {
                 product.stock = stock;
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
                 showToast('موجودی به‌روز شد');
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -3162,7 +3341,7 @@
             const p = productsData.find(p => p.id === id);
             if (p) {
                 p.guarantee = !p.guarantee;
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
                     .value, document.getElementById('filterSort').value, document.getElementById(
@@ -3176,7 +3355,7 @@
             const idx = productsData.findIndex(p => p.id === id);
             if (idx > -1) {
                 productsData.splice(idx, 1);
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
                 renderProductsAdmin();
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById(
                     'filterCategory').value, document.getElementById('filterSort').value, document
@@ -3233,7 +3412,7 @@
                 inquiryEnabled: false,
                 showPrice: true
             });
-            localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+            localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
             document.getElementById('addProductResult').innerHTML =
                 '<span style="color:#22c55e;">✅ محصول اضافه شد.</span>';
             document.getElementById('newProductName').value = '';
@@ -3335,7 +3514,7 @@
                 return;
             }
             productsData.forEach(p => { p.profitPercent = profit; });
-            localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+            localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
             document.getElementById('bulkProfitResult').innerHTML =
                 `<span style="color:#22c55e;">✅ سود همه ${productsData.length} محصول به ${profit}% تغییر یافت.</span>`;
             renderPriceManagement();
@@ -3352,7 +3531,7 @@
             if (product) {
                 product.basePrice = base;
                 product.profitPercent = profit;
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
                 document.getElementById('priceUpdateResult').innerHTML =
                     '<span style="color:#22c55e;">✅ قیمت به‌روز شد.</span>';
                 renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
@@ -3420,7 +3599,7 @@
                 p.isOriginal = value;
                 p['اصالت'] = value ? 'اورجینال' : 'کپی';
             });
-            localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+            localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
             document.getElementById('bulkOriginResult').innerHTML =
                 `<span style="color:#22c55e;">✅ اصالت همه ${productsData.length} محصول به ${value ? 'اورجینال' : 'کپی'} تغییر یافت.</span>`;
             renderOriginManagement();
@@ -3438,7 +3617,7 @@
             if (product) {
                 product.isOriginal = value;
                 product['اصالت'] = value ? 'اورجینال' : 'کپی';
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
                 document.getElementById('originUpdateResult').innerHTML =
                     '<span style="color:#22c55e;">✅ اصالت به‌روز شد.</span>';
                 renderOriginManagement();
@@ -3509,6 +3688,71 @@
             localStorage.setItem('unident_warranty_requests', JSON.stringify(warrantyRequests));
             renderWarrantyAdmin();
             showToast('درخواست حذف شد');
+        };
+
+        // ============================================================
+        //  CUSTOM ORDERS ADMIN
+        // ============================================================
+        function renderCustomOrdersAdmin() {
+            const content = document.getElementById('adminContent');
+            if (customOrders.length === 0) {
+                content.innerHTML =
+                    '<h3 style="color:#c8a96a; font-size:1.1rem; margin-bottom:16px;">📝 سفارشات درخواستی</h3><p style="color:#777777;">هیچ سفارش درخواستی ثبت نشده است.</p>';
+                return;
+            }
+            content.innerHTML = `
+                <h3 style="color:#c8a96a; font-size:1.1rem; margin-bottom:16px;">📝 مدیریت سفارشات درخواستی (${customOrders.length})</h3>
+                <div style="overflow-x:auto;">
+                    <table class="admin-table">
+                        <thead><tr><th>شناسه</th><th>نام</th><th>تماس</th><th>ایمیل</th><th>برند</th><th>محصول</th><th>کد</th><th>تعداد</th><th>توضیحات</th><th>تاریخ</th><th>وضعیت</th><th>عملیات</th></tr></thead>
+                        <tbody>
+                            ${customOrders.map(o => `
+                                <tr>
+                                    <td>#${o.id.slice(0,8)}</td>
+                                    <td>${escapeHtml(o.name)}</td>
+                                    <td>${escapeHtml(o.phone)}</td>
+                                    <td>${escapeHtml(o.email||'-')}</td>
+                                    <td>${escapeHtml(o.brand)}</td>
+                                    <td>${escapeHtml(o.productName)}</td>
+                                    <td>${escapeHtml(o.productCode||'-')}</td>
+                                    <td>${o.quantity||1}</td>
+                                    <td style="max-width:150px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${escapeHtml(o.description)}">${escapeHtml(o.description.substring(0,40))}${o.description.length>40?'...':''}</td>
+                                    <td>${o.date||''}</td>
+                                    <td>
+                                        <select onchange="window.updateCustomOrderStatus('${o.id}', this.value)" style="background:transparent; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:4px 8px; color:#ffffff; font-size:0.7rem;">
+                                            <option value="در انتظار بررسی" ${o.status==='در انتظار بررسی'?'selected':''}>در انتظار</option>
+                                            <option value="در حال بررسی" ${o.status==='در حال بررسی'?'selected':''}>در حال بررسی</option>
+                                            <option value="قیمت‌گذاری شد" ${o.status==='قیمت‌گذاری شد'?'selected':''}>قیمت‌گذاری شد</option>
+                                            <option value="تأیید مشتری" ${o.status==='تأیید مشتری'?'selected':''}>تأیید مشتری</option>
+                                            <option value="ثبت سفارش" ${o.status==='ثبت سفارش'?'selected':''}>ثبت سفارش</option>
+                                            <option value="بسته شد" ${o.status==='بسته شد'?'selected':''}>بسته شد</option>
+                                        </select>
+                                    </td>
+                                    <td><button class="btn-icon" onclick="window.deleteCustomOrder('${o.id}')" style="color:#ef4444; font-size:0.9rem;"><i class="fas fa-trash"></i></button></td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        window.updateCustomOrderStatus = function(id, status) {
+            const o = customOrders.find(c => c.id === id);
+            if (o) {
+                o.status = status;
+                localStorage.setItem('unident_custom_orders', JSON.stringify(customOrders));
+                renderCustomOrdersAdmin();
+                showToast(`وضعیت به ${status} تغییر کرد`);
+            }
+        };
+
+        window.deleteCustomOrder = function(id) {
+            if (!confirm('حذف سفارش درخواستی؟')) return;
+            customOrders = customOrders.filter(c => c.id !== id);
+            localStorage.setItem('unident_custom_orders', JSON.stringify(customOrders));
+            renderCustomOrdersAdmin();
+            showToast('سفارش حذف شد');
         };
 
         // ============================================================
@@ -3615,7 +3859,7 @@
             const product = productsData.find(p => p.id === id);
             if (product) {
                 product.stock = stock;
-                localStorage.setItem('unident_products_final_v5', JSON.stringify(productsData));
+                localStorage.setItem('unident_products_final_v6', JSON.stringify(productsData));
                 document.getElementById('stockUpdateResult').innerHTML =
                     '<span style="color:#22c55e;">✅ موجودی به‌روز شد.</span>';
                 renderInventoryAdmin();
@@ -3739,6 +3983,9 @@
                     break;
                 case 'warranty':
                     renderWarrantyAdmin();
+                    break;
+                case 'customorders':
+                    renderCustomOrdersAdmin();
                     break;
                 case 'inquiries':
                     renderInquiriesAdmin();
@@ -3868,7 +4115,9 @@
         console.log('✅ مدیریت سفارشات با اطلاعات کامل مشتری');
         console.log('✅ فرم سفارش با ۱۰ فیلد');
         console.log('✅ درخواست گارانتی و استعلام قیمت');
+        console.log('✅ سفارش محصولات درخواستی با فرم جداگانه');
         console.log('✅ نمایش/عدم نمایش قیمت به صورت جداگانه');
+        console.log('✅ ارسال رایگان با کلیک روی کارت ارسال');
         console.log('📧 ایمیل: unique.dental.contact@gmail.com');
         console.log('📱 سازگار با اندروید و iOS');
     </script>
