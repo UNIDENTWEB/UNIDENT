@@ -61,6 +61,7 @@
             font-family: inherit;
             -webkit-appearance: none;
             appearance: none;
+            touch-action: manipulation;
         }
         input,
         textarea,
@@ -69,6 +70,7 @@
             outline: none;
             -webkit-appearance: none;
             appearance: none;
+            touch-action: manipulation;
         }
         .container {
             max-width: 1320px;
@@ -126,6 +128,7 @@
             font-weight: 700;
             letter-spacing: -0.03em;
             line-height: 1.1;
+            color: #ffffff;
         }
         .badge {
             display: inline-block;
@@ -162,6 +165,9 @@
             position: relative;
             overflow: hidden;
             -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            min-height: 48px;
+            min-width: 48px;
         }
         .btn-outline {
             background: transparent;
@@ -175,6 +181,7 @@
         .btn-sm {
             padding: 10px 24px;
             font-size: 0.85rem;
+            min-height: 40px;
         }
         .btn-gold {
             background: linear-gradient(95deg, #c8a96a, #b58c48);
@@ -192,6 +199,7 @@
             color: #c8a96a;
             transition: all 0.2s;
             padding: 4px 8px;
+            touch-action: manipulation;
         }
         .btn-icon:hover {
             transform: scale(1.2);
@@ -356,6 +364,7 @@
             font-weight: 800;
             letter-spacing: -0.03em;
             font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+            color: #ffffff;
         }
         .header-logo i {
             color: #c8a96a;
@@ -367,8 +376,8 @@
         }
         .header-search {
             flex: 1;
-            min-width: 180px;
-            max-width: 380px;
+            min-width: 160px;
+            max-width: 340px;
             display: flex;
             align-items: center;
             background: rgba(255, 255, 255, 0.06);
@@ -388,6 +397,7 @@
             color: #ffffff;
             font-size: 0.9rem;
             width: 100%;
+            min-height: 40px;
         }
         .header-search input::placeholder {
             color: #777777;
@@ -399,11 +409,15 @@
             padding: 6px;
             font-size: 1rem;
             cursor: pointer;
+            touch-action: manipulation;
+            min-height: 40px;
+            min-width: 40px;
         }
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            flex-wrap: wrap;
         }
         .header-actions .nav-icon {
             width: 40px;
@@ -420,6 +434,9 @@
             cursor: pointer;
             position: relative;
             -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            min-width: 44px;
+            min-height: 44px;
         }
         .header-actions .nav-icon:hover {
             background: rgba(255, 255, 255, 0.1);
@@ -448,6 +465,36 @@
             font-size: 1.4rem;
             cursor: pointer;
             padding: 4px;
+            touch-action: manipulation;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        .header-actions .header-action-btn {
+            padding: 8px 16px;
+            border-radius: 60px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            touch-action: manipulation;
+            min-height: 40px;
+            white-space: nowrap;
+            background: rgba(200, 169, 106, 0.15);
+            color: #c8a96a;
+            border: 1px solid rgba(200, 169, 106, 0.25);
+        }
+        .header-actions .header-action-btn:hover {
+            background: rgba(200, 169, 106, 0.25);
+        }
+        .header-actions .header-action-btn.gold {
+            background: linear-gradient(95deg, #c8a96a, #b58c48);
+            color: #1a1a1a;
+            border-color: transparent;
+        }
+        .header-actions .header-action-btn.gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(200, 169, 106, 0.3);
         }
         .nav-links {
             display: flex;
@@ -463,6 +510,19 @@
         .nav-links a:hover {
             color: #ffffff;
         }
+        @media (max-width: 1024px) {
+            .header-actions .header-action-btn {
+                font-size: 0.65rem;
+                padding: 6px 12px;
+                min-height: 34px;
+            }
+            .header-actions .header-action-btn span {
+                display: none;
+            }
+            .header-actions .header-action-btn i {
+                font-size: 1rem;
+            }
+        }
         @media (max-width: 768px) {
             .header-search {
                 order: 3;
@@ -472,6 +532,12 @@
             }
             .header-actions .menu-toggle {
                 display: block;
+            }
+            .header-actions .header-action-btn span {
+                display: none;
+            }
+            .header-actions .header-action-btn i {
+                font-size: 1rem;
             }
             .nav-links {
                 display: none;
@@ -498,19 +564,45 @@
             .header-logo i {
                 font-size: 1.6rem;
             }
-        }
-        @media (max-width: 480px) {
             .header-actions .nav-icon {
                 width: 36px;
                 height: 36px;
                 font-size: 0.9rem;
+                min-width: 40px;
+                min-height: 40px;
             }
             .header-actions .btn-sm {
                 padding: 6px 14px;
                 font-size: 0.75rem;
+                min-height: 34px;
             }
+        }
+        @media (max-width: 480px) {
             .header-logo {
                 font-size: 1.1rem;
+            }
+            .header-logo i {
+                font-size: 1.4rem;
+            }
+            .header-actions .nav-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
+                min-width: 36px;
+                min-height: 36px;
+            }
+            .header-actions .header-action-btn {
+                padding: 4px 8px;
+                font-size: 0.6rem;
+                min-height: 30px;
+            }
+            .header-actions .header-action-btn i {
+                font-size: 0.8rem;
+            }
+            .header-actions .btn-sm {
+                padding: 4px 10px;
+                font-size: 0.65rem;
+                min-height: 30px;
             }
         }
         .hero {
@@ -561,6 +653,7 @@
             line-height: 1.05;
             margin-bottom: 20px;
             font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+            color: #ffffff;
         }
         .hero h1 .highlight {
             background: linear-gradient(135deg, #fff 40%, rgba(255, 255, 255, 0.4));
@@ -592,6 +685,7 @@
             font-weight: 700;
             letter-spacing: -0.02em;
             font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+            color: #ffffff;
         }
         .hero-stats .stat p {
             font-size: 0.8rem;
@@ -695,34 +789,78 @@
             opacity: 1;
             color: #ffffff;
         }
+
+        /* ===== CATEGORY CARDS WITH LOGO STYLE ===== */
         .category-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 18px;
         }
         .category-list a {
-            display: block;
-            background: #111111;
-            border-radius: 16px;
-            padding: 20px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0d0d0d;
+            border-radius: 20px;
+            padding: 28px 16px 22px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            color: #bdbdbd;
+            color: #ffffff;
             font-weight: 500;
             font-size: 0.9rem;
+            min-height: 140px;
+            position: relative;
+            overflow: hidden;
+        }
+        .category-list a::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background: radial-gradient(circle at 30% 30%, rgba(200, 169, 106, 0.08), transparent 70%);
+        }
+        .category-list a:hover::before {
+            opacity: 1;
         }
         .category-list a:hover {
-            transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.12);
-            color: #ffffff;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: translateY(-6px);
+            border-color: rgba(200, 169, 106, 0.25);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(200, 169, 106, 0.04);
         }
-        .category-list a i {
-            display: block;
-            font-size: 2rem;
-            margin-bottom: 8px;
+        .category-list a .cat-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            transition: all 0.4s ease;
             color: #c8a96a;
+            flex-shrink: 0;
+        }
+        .category-list a:hover .cat-icon {
+            background: rgba(200, 169, 106, 0.12);
+            border-color: rgba(200, 169, 106, 0.3);
+            transform: scale(1.05) rotate(-4deg);
+        }
+        .category-list a .cat-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.3px;
+        }
+        .category-list a .cat-sub {
+            font-size: 0.6rem;
+            color: #777777;
+            margin-top: 2px;
         }
         @media (max-width: 480px) {
             .category-list {
@@ -730,13 +868,24 @@
                 gap: 12px;
             }
             .category-list a {
-                padding: 14px 12px;
-                font-size: 0.8rem;
+                padding: 18px 10px 16px;
+                font-size: 0.75rem;
+                min-height: 110px;
+                border-radius: 16px;
             }
-            .category-list a i {
+            .category-list a .cat-icon {
+                width: 54px;
+                height: 54px;
                 font-size: 1.6rem;
             }
+            .category-list a .cat-label {
+                font-size: 0.7rem;
+            }
+            .category-list a .cat-sub {
+                font-size: 0.5rem;
+            }
         }
+
         .product-page-section {
             padding-top: 30px;
             min-height: 70vh;
@@ -763,6 +912,7 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             color: #ffffff;
             font-size: 0.85rem;
+            min-height: 40px;
         }
         .product-page-header .filters select:focus,
         .product-page-header .filters input:focus {
@@ -816,6 +966,7 @@
             font-weight: 600;
             margin: 10px 0 4px;
             font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+            color: #ffffff;
         }
         .product-card-full .brand {
             font-size: 0.8rem;
@@ -881,6 +1032,9 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            touch-action: manipulation;
+            min-width: 40px;
+            min-height: 40px;
         }
         .product-card-full .add-btn:hover {
             background: #ffffff;
@@ -891,6 +1045,12 @@
             color: #777777;
             font-size: 1.1rem;
             transition: color 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            touch-action: manipulation;
+            min-width: 40px;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .product-card-full .wishlist-btn.active {
             color: #c8a96a;
@@ -935,6 +1095,8 @@
             font-size: 0.7rem;
             transition: all 0.3s;
             cursor: pointer;
+            touch-action: manipulation;
+            min-height: 30px;
         }
         .product-card-full .inquiry-btn:hover {
             background: #c8a96a;
@@ -945,6 +1107,7 @@
             justify-content: center;
             gap: 6px;
             margin-top: 30px;
+            flex-wrap: wrap;
         }
         .pagination button {
             padding: 6px 14px;
@@ -955,6 +1118,9 @@
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             font-size: 0.85rem;
+            touch-action: manipulation;
+            min-height: 40px;
+            min-width: 40px;
         }
         .pagination button.active {
             background: #c8a96a;
@@ -1043,6 +1209,7 @@
             .product-page-header .filters input {
                 font-size: 0.75rem;
                 padding: 6px 12px;
+                min-height: 34px;
             }
         }
         @media (max-width: 480px) {
@@ -1069,13 +1236,20 @@
                 width: 28px;
                 height: 28px;
                 font-size: 0.7rem;
+                min-width: 34px;
+                min-height: 34px;
             }
             .product-card-full .inquiry-btn {
                 font-size: 0.55rem;
                 padding: 2px 10px;
+                min-height: 26px;
             }
             .product-page-header .section-title {
                 font-size: 1.2rem;
+            }
+            .product-card-full .wishlist-btn {
+                min-width: 34px;
+                min-height: 34px;
             }
         }
         .testimonial-grid {
@@ -1123,6 +1297,7 @@
         .testimonial-card .author .info h5 {
             font-size: 0.8rem;
             font-weight: 600;
+            color: #ffffff;
         }
         .testimonial-card .author .info p {
             font-size: 0.7rem;
@@ -1145,6 +1320,7 @@
             font-weight: 700;
             margin-bottom: 4px;
             font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+            color: #ffffff;
         }
         .newsletter-content p {
             color: #bdbdbd;
@@ -1166,6 +1342,7 @@
             min-width: 200px;
             outline: none;
             transition: border 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            min-height: 44px;
         }
         .newsletter-form input:focus {
             border-color: rgba(255, 255, 255, 0.2);
@@ -1200,6 +1377,7 @@
             font-weight: 800;
             margin-bottom: 8px;
             font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+            color: #ffffff;
         }
         .footer-brand p {
             color: #777777;
@@ -1210,6 +1388,7 @@
             font-weight: 600;
             font-size: 0.85rem;
             margin-bottom: 10px;
+            color: #ffffff;
         }
         .footer-col a {
             display: block;
@@ -1248,6 +1427,8 @@
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             font-size: 0.85rem;
             background: #000;
+            min-width: 40px;
+            min-height: 40px;
         }
         .footer-socials a:hover {
             border-color: rgba(255, 255, 255, 0.2);
@@ -1337,6 +1518,9 @@
             position: relative;
             overflow: hidden;
             animation: float 4s ease-in-out infinite;
+            touch-action: manipulation;
+            min-width: 48px;
+            min-height: 48px;
         }
         .floating-btn.whatsapp {
             background: #25d366;
@@ -1360,6 +1544,8 @@
                 width: 40px;
                 height: 40px;
                 font-size: 1.2rem;
+                min-width: 40px;
+                min-height: 40px;
             }
         }
         .scroll-top {
@@ -1380,6 +1566,9 @@
             z-index: 99;
             font-size: 1.2rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            touch-action: manipulation;
+            min-width: 44px;
+            min-height: 44px;
         }
         .scroll-top.visible {
             opacity: 1;
@@ -1395,6 +1584,8 @@
                 width: 36px;
                 height: 36px;
                 font-size: 1rem;
+                min-width: 36px;
+                min-height: 36px;
             }
         }
         .modal {
@@ -1462,6 +1653,12 @@
             font-size: 1.6rem;
             transition: transform 0.2s;
             z-index: 10;
+            touch-action: manipulation;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .close-modal:hover {
             transform: rotate(90deg);
@@ -1494,6 +1691,7 @@
             color: #ffffff;
             transition: all 0.25s ease;
             font-size: 0.9rem;
+            min-height: 44px;
         }
         .form-group input:focus,
         .form-group textarea:focus,
@@ -1561,6 +1759,7 @@
             .form-group select {
                 padding: 10px 14px;
                 font-size: 0.85rem;
+                min-height: 38px;
             }
             .checkbox-group input[type="checkbox"] {
                 width: 18px;
@@ -1612,6 +1811,12 @@
             font-size: 1.6rem;
             transition: transform 0.2s;
             color: #bdbdbd;
+            touch-action: manipulation;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .admin-close:hover {
             transform: rotate(90deg);
@@ -1633,6 +1838,8 @@
             color: #bdbdbd;
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             font-size: 0.8rem;
+            touch-action: manipulation;
+            min-height: 36px;
         }
         .admin-tab.active {
             background: #c8a96a;
@@ -1704,6 +1911,7 @@
         }
         .admin-table td {
             font-size: 0.75rem;
+            color: #ffffff;
         }
         .status-badge {
             display: inline-block;
@@ -1741,6 +1949,7 @@
             .admin-tab {
                 padding: 6px 12px;
                 font-size: 0.7rem;
+                min-height: 30px;
             }
             .admin-table th,
             .admin-table td {
@@ -1765,6 +1974,7 @@
             .admin-tab {
                 padding: 4px 10px;
                 font-size: 0.6rem;
+                min-height: 26px;
             }
             .admin-table th,
             .admin-table td {
@@ -1798,6 +2008,7 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             font-weight: 500;
             font-size: 0.9rem;
+            max-width: 90%;
         }
         .success-toast i {
             font-size: 1.1rem;
@@ -1834,6 +2045,7 @@
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             display: none;
+            color: #ffffff;
         }
         .admin-toggle-btn {
             background: rgba(200, 169, 106, 0.15);
@@ -1845,6 +2057,8 @@
             font-size: 0.75rem;
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             cursor: pointer;
+            touch-action: manipulation;
+            min-height: 36px;
         }
         .admin-toggle-btn:hover {
             background: #c8a96a;
@@ -1855,6 +2069,7 @@
             .admin-toggle-btn {
                 padding: 4px 10px;
                 font-size: 0.65rem;
+                min-height: 30px;
             }
             .cookie-consent {
                 padding: 10px 14px;
@@ -1865,6 +2080,7 @@
             .cookie-consent .btn-sm {
                 padding: 6px 16px;
                 font-size: 0.75rem;
+                min-height: 32px;
             }
         }
         .contact-social-links {
@@ -1884,6 +2100,7 @@
             border-radius: 60px;
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.06);
+            touch-action: manipulation;
         }
         .contact-social-links a:hover {
             color: #ffffff;
@@ -1905,6 +2122,7 @@
             .contact-social-links a {
                 font-size: 0.75rem;
                 padding: 4px 10px;
+                min-height: 30px;
             }
             .contact-social-links a i {
                 font-size: 1rem;
@@ -1923,6 +2141,7 @@
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            touch-action: manipulation;
         }
         .feature-card:hover {
             border-color: rgba(200, 169, 106, 0.3);
@@ -1937,6 +2156,7 @@
             font-size: 0.95rem;
             font-weight: 600;
             margin-bottom: 4px;
+            color: #ffffff;
         }
         .feature-card p {
             font-size: 0.8rem;
@@ -1965,7 +2185,6 @@
         .btn-danger:hover {
             background: #dc2626;
         }
-        /* Shipping info tooltip */
         .shipping-info {
             display: none;
             position: fixed;
@@ -1994,6 +2213,12 @@
             font-size: 1.2rem;
             cursor: pointer;
             color: #777;
+            touch-action: manipulation;
+            min-width: 36px;
+            min-height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .shipping-info .close-shipping:hover {
             color: #fff;
@@ -2011,11 +2236,60 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            touch-action: manipulation;
+            min-height: 44px;
         }
         .warranty-request-btn:hover,
         .custom-order-btn:hover {
             background: #c8a96a;
             color: #1a1a1a;
+        }
+
+        /* Android touch feedback */
+        .btn,
+        .nav-icon,
+        .header-action-btn,
+        .admin-toggle-btn,
+        .category-list a,
+        .product-card-full,
+        .floating-btn,
+        .scroll-top,
+        .close-modal,
+        .admin-close,
+        .admin-tab,
+        .warranty-request-btn,
+        .custom-order-btn,
+        .add-btn,
+        .wishlist-btn,
+        .inquiry-btn,
+        .pagination button {
+            -webkit-touch-callout: none;
+            touch-action: manipulation;
+        }
+        /* Better scroll on Android */
+        * {
+            -webkit-overflow-scrolling: touch;
+        }
+        /* Fix for Android input zoom */
+        input,
+        textarea,
+        select {
+            font-size: 16px !important;
+        }
+        @media (max-width: 480px) {
+            input,
+            textarea,
+            select {
+                font-size: 16px !important;
+            }
+        }
+        /* Fix for Android button min-height */
+        .btn,
+        .header-action-btn,
+        .admin-toggle-btn,
+        .warranty-request-btn,
+        .custom-order-btn {
+            min-height: 44px;
         }
     </style>
 </head>
@@ -2031,6 +2305,9 @@
             <div class="header-logo"><i class="fas fa-tooth"></i> یونیدنت <span>|</span></div>
             <div class="header-search"><input type="text" id="headerSearchInput" placeholder="جستجوی محصولات ..." /><button id="headerSearchBtn"><i class="fas fa-search"></i></button></div>
             <div class="header-actions">
+                <!-- جدید: دکمه‌های هدر -->
+                <button class="header-action-btn" id="headerWarrantyBtn"><i class="fas fa-shield-alt"></i> <span>گارانتی</span></button>
+                <button class="header-action-btn" id="headerCustomOrderBtn"><i class="fas fa-pen"></i> <span>سفارش درخواستی</span></button>
                 <button class="nav-icon" id="wishlistToggle"><i class="fas fa-heart"></i><span class="count" id="wishlistCount">۰</span></button>
                 <button class="nav-icon" id="cartToggle"><i class="fas fa-shopping-bag"></i><span class="count" id="cartCount">۰</span></button>
                 <button class="btn btn-sm btn-gold" id="orderNowBtn"><i class="fas fa-plus"></i> سفارش</button>
@@ -2043,8 +2320,8 @@
     <!-- ===== SHIPPING INFO POPUP ===== -->
     <div class="shipping-info" id="shippingInfo">
         <span class="close-shipping" id="closeShipping">&times;</span>
-        <p style="margin: 8px 0;">🚚 ارسال رایگان به سراسر کشور انجام میشود</p>
-        <p style="font-size: 0.8rem; color: #777; margin-top: 4px;">برای سفارشات بالای ۵ میلیون تومان</p>
+        <p style="margin:8px 0;">🚚 ارسال رایگان به سراسر کشور انجام میشود</p>
+        <p style="font-size:0.8rem; color:#777; margin-top:4px;">برای سفارشات بالای ۵ میلیون تومان</p>
     </div>
 
     <!-- ===== HERO ===== -->
@@ -2071,19 +2348,51 @@
     <!-- ===== MARQUEE ===== -->
     <div class="marquee"><div class="marquee-track"><span class="brand">COXO</span><span class="brand">NSK</span><span class="brand">W&H</span><span class="brand">Straummann</span><span class="brand">3M</span><span class="brand">Dentsply</span><span class="brand">KaVo</span><span class="brand">Ivoclar</span><span class="brand">Zimmer</span><span class="brand">COXO</span><span class="brand">NSK</span><span class="brand">W&H</span></div></div>
 
-    <!-- ===== CATEGORIES ===== -->
+    <!-- ===== CATEGORIES با لوگوی اختصاصی ===== -->
     <section class="section" id="categories">
         <div class="container">
             <div class="section-header animate-fade-up"><div><span class="badge">دسته‌بندی</span><h2 class="section-title">دسته‌بندی محصولات</h2></div></div>
             <div class="category-list" id="categoryList">
-                <a href="#product-page?cat=ایمپلنت"><i class="fas fa-tooth"></i> ایمپلنت</a>
-                <a href="#product-page?cat=توربین"><i class="fas fa-cog"></i> توربین</a>
-                <a href="#product-page?cat=آنگل"><i class="fas fa-tools"></i> آنگل</a>
-                <a href="#product-page?cat=ایرموتور"><i class="fas fa-microchip"></i> ایرموتور</a>
-                <a href="#product-page?cat=ست هندپیس"><i class="fas fa-box"></i> ست هندپیس</a>
-                <a href="#product-page?cat=ضدعفونی"><i class="fas fa-hand-sparkles"></i> ضدعفونی</a>
-                <a href="#product-page?cat=اندو"><i class="fas fa-sync-alt"></i> اندو</a>
-                <a href="#product-page?cat=ارتودنسی"><i class="fas fa-teeth"></i> ارتودنسی</a>
+                <a href="#product-page?cat=ایمپلنت">
+                    <span class="cat-icon"><i class="fas fa-tooth"></i></span>
+                    <span class="cat-label">ایمپلنت</span>
+                    <span class="cat-sub">Implant</span>
+                </a>
+                <a href="#product-page?cat=توربین">
+                    <span class="cat-icon"><i class="fas fa-fan"></i></span>
+                    <span class="cat-label">توربین</span>
+                    <span class="cat-sub">Turbine</span>
+                </a>
+                <a href="#product-page?cat=آنگل">
+                    <span class="cat-icon"><i class="fas fa-angles-right"></i></span>
+                    <span class="cat-label">آنگل</span>
+                    <span class="cat-sub">Angle</span>
+                </a>
+                <a href="#product-page?cat=ایرموتور">
+                    <span class="cat-icon"><i class="fas fa-microchip"></i></span>
+                    <span class="cat-label">ایرموتور</span>
+                    <span class="cat-sub">Air Motor</span>
+                </a>
+                <a href="#product-page?cat=ست هندپیس">
+                    <span class="cat-icon"><i class="fas fa-screwdriver-wrench"></i></span>
+                    <span class="cat-label">ست هندپیس</span>
+                    <span class="cat-sub">Handpiece Set</span>
+                </a>
+                <a href="#product-page?cat=ضدعفونی">
+                    <span class="cat-icon"><i class="fas fa-hand-sparkles"></i></span>
+                    <span class="cat-label">ضدعفونی</span>
+                    <span class="cat-sub">Disinfection</span>
+                </a>
+                <a href="#product-page?cat=اندو">
+                    <span class="cat-icon"><i class="fas fa-circle-nodes"></i></span>
+                    <span class="cat-label">اندو</span>
+                    <span class="cat-sub">Endo</span>
+                </a>
+                <a href="#product-page?cat=ارتودنسی">
+                    <span class="cat-icon"><i class="fas fa-smile"></i></span>
+                    <span class="cat-label">ارتودنسی</span>
+                    <span class="cat-sub">Orthodontics</span>
+                </a>
             </div>
         </div>
     </section>
@@ -2811,7 +3120,7 @@
             cart.forEach(item => {
                 total += item.qty * item.price;
                 html +=
-                    `<div style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08);"><div><div style="font-weight:600;">${escapeHtml(item.name)}</div><div style="font-size:0.85rem; color:#777777;">تعداد: ${item.qty} × ${formatPrice(item.price)}</div></div><button class="btn-icon" onclick="removeFromCart('${item.id}')" style="color:#ef4444;"><i class="fas fa-trash"></i></button></div>`;
+                    `<div style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08);"><div><div style="font-weight:600; color:#ffffff;">${escapeHtml(item.name)}</div><div style="font-size:0.85rem; color:#777777;">تعداد: ${item.qty} × ${formatPrice(item.price)}</div></div><button class="btn-icon" onclick="removeFromCart('${item.id}')" style="color:#ef4444;"><i class="fas fa-trash"></i></button></div>`;
             });
             content.innerHTML = html;
             totalDiv.style.display = 'block';
@@ -2854,7 +3163,7 @@
             const items = wishlist.map(id => {
                 const p = productsData.find(prod => prod.id === id);
                 return p ?
-                    `<div style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08);"><div><strong>${escapeHtml(p.name)}</strong> - ${escapeHtml(p.brand)}</div><button class="btn-icon" onclick="toggleWishlist('${p.id}')" style="color:#ef4444;"><i class="fas fa-heart-broken"></i></button></div>` :
+                    `<div style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08);"><div><strong style="color:#ffffff;">${escapeHtml(p.name)}</strong> - ${escapeHtml(p.brand)}</div><button class="btn-icon" onclick="toggleWishlist('${p.id}')" style="color:#ef4444;"><i class="fas fa-heart-broken"></i></button></div>` :
                     '';
             }).join('');
             content.innerHTML = items;
@@ -2913,6 +3222,11 @@
         document.getElementById('warrantyRequestBtn')?.addEventListener('click', function() { openModal(
             'warrantyRequest'); });
         document.getElementById('customOrderBtn')?.addEventListener('click', function() { openModal('customOrder'); });
+
+        // Header buttons for warranty and custom order
+        document.getElementById('headerWarrantyBtn')?.addEventListener('click', function() { openModal('warranty'); });
+        document.getElementById('headerCustomOrderBtn')?.addEventListener('click', function() { openModal(
+            'customOrder'); });
 
         // ============================================================
         //  STAR RATING
@@ -3887,7 +4201,7 @@
                     ${pending.map(r => `
                         <div style="background:#111111; border-radius:12px; padding:12px; margin-bottom:10px; border:1px solid rgba(255,255,255,0.08);">
                             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-                                <div><strong style="font-size:0.85rem;">${escapeHtml(r.name)}</strong> <span style="color:#c8a96a; font-size:0.8rem;">${'★'.repeat(r.rating)}</span></div>
+                                <div><strong style="font-size:0.85rem; color:#ffffff;">${escapeHtml(r.name)}</strong> <span style="color:#c8a96a; font-size:0.8rem;">${'★'.repeat(r.rating)}</span></div>
                                 <div style="display:flex; gap:6px;">
                                     <button class="btn btn-sm btn-gold" onclick="window.approveReview('${r.id}')">تأیید</button>
                                     <button class="btn btn-sm btn-outline" onclick="window.deleteReview('${r.id}')" style="color:#ef4444;">حذف</button>
@@ -3900,7 +4214,7 @@
                     ${approved.map(r => `
                         <div style="background:#111111; border-radius:12px; padding:12px; margin-bottom:10px; border:1px solid rgba(255,255,255,0.08); opacity:0.7;">
                             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-                                <div><strong style="font-size:0.85rem;">${escapeHtml(r.name)}</strong> <span style="color:#c8a96a; font-size:0.8rem;">${'★'.repeat(r.rating)}</span></div>
+                                <div><strong style="font-size:0.85rem; color:#ffffff;">${escapeHtml(r.name)}</strong> <span style="color:#c8a96a; font-size:0.8rem;">${'★'.repeat(r.rating)}</span></div>
                                 <button class="btn btn-sm btn-outline" onclick="window.deleteReview('${r.id}')" style="color:#ef4444;">حذف</button>
                             </div>
                             <p style="color:#bdbdbd; margin-top:6px; font-size:0.85rem;">${escapeHtml(r.text)}</p>
