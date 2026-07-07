@@ -1,0 +1,27 @@
+name: Dental Image Scraper
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 lxml
+      - name: Run scraper
+        run: |
+          python scraper_bot.py
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add images/ image_mapping.json
+          git commit -m "Auto-update images" || echo "No changes"
+          git push
