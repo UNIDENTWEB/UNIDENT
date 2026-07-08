@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write    # <-- این خط دسترسی نوشتن را می‌دهد
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
