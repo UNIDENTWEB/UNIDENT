@@ -7,16 +7,16 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4          # ← تغییر به v4 (پشتیبانی از Node 24)
+      - uses: actions/setup-python@v5     # ← تغییر به v5 (پشتیبانی از Node 24)
         with:
-          python-version: '3.10'
+          python-version: '3.11'          # ← نسخه پایدار Python
       - run: pip install -r requirements.txt
-      - run: python scraper_headless.py   # ← این خط رو به scraper_bot.py تغییر دهید
+      - run: python scraper_bot.py        # ← اصلاح نام فایل
       - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add images/ image_mapping.json || true
-          git commit -m "auto-update images" || exit 0
+          git commit -m "auto-update images $(date)" || exit 0
           git push
