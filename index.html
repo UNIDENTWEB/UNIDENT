@@ -3236,6 +3236,7 @@
         //  LOAD IMAGE MAPPING FROM image_mapping.json (GitHub)
         // ============================================================
         let imageMapping = {};
+        // We try to load, but if not available, we just use default images
         fetch('image_mapping.json')
             .then(res => {
                 if (!res.ok) throw new Error('image_mapping.json not found');
@@ -3538,8 +3539,6 @@
                     <button class="btn btn-white btn-sm" onclick="submitInquiryWithInfo('${p.id}')">ثبت درخواست</button>
                 </div>` :
                 '';
-
-            // WhatsApp button removed
 
             content.innerHTML = `
                 <div class="product-detail-grid">
@@ -5066,9 +5065,11 @@
             });
         }
 
+        // This function is called when user clicks "اجرای دستی اسکرپ"
+        // It simulates fetching image_mapping.json and updating products
         window.triggerImageScraper = function() {
-            document.getElementById('scraperResult').innerHTML =
-                '<span style="color:#facc15;">⏳ در حال دریافت تصاویر ... (شبیه‌سازی)</span>';
+            const resultDiv = document.getElementById('scraperResult');
+            resultDiv.innerHTML = '<span style="color:#facc15;">⏳ در حال دریافت تصاویر ... (شبیه‌سازی)</span>';
             setTimeout(() => {
                 // Simulate fetching image_mapping.json
                 fetch('image_mapping.json')
@@ -5078,39 +5079,50 @@
                     })
                     .then(data => {
                         imageMapping = data;
+                        let updated = 0;
                         productsData.forEach(p => {
                             if (imageMapping[p.id] && imageMapping[p.id].images && imageMapping[p.id]
                                 .images.length > 0) {
                                 p.images = imageMapping[p.id].images;
                                 p.image = imageMapping[p.id].images[0];
+                                updated++;
                             }
                         });
                         localStorage.setItem('unident_products_final_v12', JSON.stringify(
                         productsData));
                         applyFilters();
-                        document.getElementById('scraperResult').innerHTML =
-                            '<span style="color:#22c55e;">✅ تصاویر با موفقیت دریافت و اعمال شدند.</span>';
+                        resultDiv.innerHTML =
+                            `<span style="color:#22c55e;">✅ تصاویر با موفقیت دریافت و اعمال شدند. (${updated} محصول به‌روز شد)</span>`;
+                        showToast('تصاویر به‌روز شدند');
                     })
                     .catch(err => {
-                        document.getElementById('scraperResult').innerHTML =
-                            `<span style="color:#ef4444;">❌ خطا: ${err.message}. لطفاً ربات را روی سرور اجرا کنید.</span>`;
+                        resultDiv.innerHTML =
+                            `<span style="color:#ef4444;">❌ خطا: ${err.message}. لطفاً ربات را روی سرور اجرا کنید و فایل image_mapping.json را در ریشه سایت قرار دهید.</span>`;
+                        showToast('خطا در دریافت تصاویر', 'error');
                     });
-            }, 2000);
+            }, 1000);
         };
 
+        // Save settings function - now fully functional
         window.saveSettings = function() {
-            const name = document.getElementById('shopName').value;
-            const address = document.getElementById('shopAddress').value;
-            const phone = document.getElementById('shopPhone').value;
-            const email = document.getElementById('shopEmail').value;
+            const name = document.getElementById('shopName').value.trim();
+            const address = document.getElementById('shopAddress').value.trim();
+            const phone = document.getElementById('shopPhone').value.trim();
+            const email = document.getElementById('shopEmail').value.trim();
             const tax = document.getElementById('taxRate').value;
             const shipping = document.getElementById('shippingCost').value;
             const free = document.getElementById('freeThreshold').value;
+
+            // Validate
+            if (!name) { showToast('نام فروشگاه را وارد کنید', 'error'); return; }
+            if (!email || !email.includes('@')) { showToast('ایمیل معتبر وارد کنید', 'error'); return; }
+
             localStorage.setItem('shop_settings', JSON.stringify({ name, address, phone, email }));
             localStorage.setItem('tax_rate', tax);
             localStorage.setItem('shipping_cost', shipping);
             localStorage.setItem('free_shipping_threshold', free);
-            document.getElementById('settingsResult').innerHTML = '<span style="color:#22c55e;">✅ تنظیمات ذخیره شد.</span>';
+
+            document.getElementById('settingsResult').innerHTML = '<span style="color:#22c55e;">✅ تنظیمات با موفقیت ذخیره شد.</span>';
             showToast('تنظیمات ذخیره شد');
         };
 
@@ -5182,7 +5194,6 @@
 
         window.restoreBackup = function(index) {
             if (index !== undefined) {
-                // Restore from list
                 showToast('بازیابی از بکاپ موجود...', 'error');
                 return;
             }
@@ -5239,7 +5250,6 @@
         };
 
         window.scheduleBackup = function() {
-            // Auto backup every 24h (simulated)
             const lastBackup = localStorage.getItem('last_auto_backup');
             const now = Date.now();
             if (lastBackup && (now - parseInt(lastBackup)) < 86400000) {
@@ -5537,13 +5547,6 @@
         // ============================================================
         //  INIT
         // ============================================================
-        // Wait for image mapping to load first, then render
-        // The fetch at the top already handles rendering after mapping loads.
-        // If mapping fails, applyFilters is called.
-        // We also call applyFilters initially to ensure products show.
-        // But we need to ensure that we don't double-render.
-        // The fetch will call applyFilters on success or error.
-        // So we just set up the other initializations.
         renderReviews();
         renderStats();
         updateCartUI();
