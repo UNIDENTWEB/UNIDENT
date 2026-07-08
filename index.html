@@ -10,6 +10,7 @@
     <title>UNIDENT | فروشگاه تخصصی متریال دندانپزشکی</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <style>
         /* ===== CSS VARIABLES (DARK/LIGHT) ===== */
         :root {
@@ -2444,6 +2445,103 @@
         #categories {
             display: none;
         }
+
+        /* ===== MINI CART ===== */
+        .mini-cart {
+            position: fixed;
+            top: 70px;
+            right: 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px;
+            max-width: 320px;
+            width: calc(100% - 32px);
+            z-index: 999;
+            box-shadow: 0 20px 60px var(--shadow-color);
+            display: none;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .mini-cart.open {
+            display: block;
+        }
+        .mini-cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.85rem;
+        }
+        .mini-cart-item .qty {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .mini-cart-item .qty button {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background: var(--bg-input);
+            color: var(--text-primary);
+            font-size: 0.8rem;
+        }
+        .mini-cart-total {
+            font-weight: 700;
+            padding-top: 10px;
+            margin-top: 10px;
+            border-top: 2px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* ===== SOCIAL PROOF ===== */
+        .social-proof {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+        .social-proof span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .social-proof i {
+            color: var(--text-primary);
+            margin-left: 6px;
+        }
+
+        /* ===== PRICE RANGE SLIDER (دو طرفه) ===== */
+        .price-slider-wrap {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .price-slider-wrap input[type="range"] {
+            width: 120px;
+            accent-color: var(--text-primary);
+            background: var(--bg-input);
+            height: 4px;
+            border-radius: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        .price-slider-wrap input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--text-primary);
+            cursor: pointer;
+        }
+        .price-slider-wrap .range-values {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
     </style>
 </head>
 <body>
@@ -2483,6 +2581,8 @@
                 <button class="admin-toggle-btn" id="adminToggleBtn"><i class="fas fa-chart-line"></i> پنل</button>
                 <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
             </div>
+            <!-- Mini cart -->
+            <div class="mini-cart" id="miniCart"></div>
         </div>
     </header>
 
@@ -2511,6 +2611,12 @@
                     <div class="stat"><h3 id="statBrands">۰</h3><p>برندها</p></div>
                     <div class="stat"><h3 id="statOrders">۰</h3><p>سفارشات</p></div>
                 </div>
+                <!-- Social proof -->
+                <div class="social-proof" id="socialProof">
+                    <span><i class="fas fa-check-circle"></i> بیش از ۵۰۰۰ کاربر</span>
+                    <span><i class="fas fa-star" style="color:#facc15;"></i> ۴.۸/۵ امتیاز</span>
+                    <span><i class="fas fa-truck"></i> ارسال سریع</span>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator"><span>پایین</span><div class="mouse"></div></div>
@@ -2528,12 +2634,16 @@
                     <select id="filterBrand"><option value="">همه برندها</option><option value="NSK">NSK</option><option value="COXO">COXO</option><option value="W&H">W&H</option></select>
                     <select id="filterCategory"><option value="">همه دسته‌ها</option><option value="ایمپلنت">ایمپلنت</option><option value="توربین">توربین</option><option value="آنگل">آنگل</option><option value="ایرموتور">ایرموتور</option><option value="ست هندپیس">ست هندپیس</option><option value="اندو">اندو</option><option value="ارتودنسی">ارتودنسی</option></select>
                     <select id="filterSort"><option value="name">مرتب‌سازی: نام</option><option value="price">قیمت</option><option value="stock">موجودی</option><option value="popular">پرفروش‌ترین</option></select>
-                    <div class="price-slider">
-                        <span id="priceRangeLabel">۰ - ۲۰۰M</span>
-                        <input type="range" id="priceRange" min="0" max="200000000" step="1000000" value="200000000" />
+                    <!-- Price slider (دو طرفه) -->
+                    <div class="price-slider-wrap">
+                        <span style="font-size:0.75rem;color:var(--text-muted);">قیمت:</span>
+                        <input type="range" id="priceMin" min="0" max="500000000" value="0" step="1000000" />
+                        <input type="range" id="priceMax" min="0" max="500000000" value="500000000" step="1000000" />
+                        <span class="range-values" id="priceRangeDisplay">۰ - ۵۰۰,۰۰۰,۰۰۰</span>
                     </div>
-                    <select id="filterOrigin"><option value="">همه</option><option value="original">اورجینال</option><option value="copy">غیر اورجینال</option></select>
-                    <select id="filterStock"><option value="">همه</option><option value="in">موجود</option><option value="out">ناموجود</option></select>
+                    <select id="filterOrigin"><option value="">همه اصالت</option><option value="true">اورجینال</option><option value="false">کپی</option></select>
+                    <select id="filterCountry"><option value="">همه کشورها</option><option value="چین">چین</option><option value="آلمان">آلمان</option><option value="ژاپن">ژاپن</option><option value="سوئیس">سوئیس</option></select>
+                    <label style="display:flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text-muted);"><input type="checkbox" id="filterInStock" /> فقط موجود</label>
                     <input type="text" id="productSearchInput" placeholder="جستجو..." />
                 </div>
             </div>
@@ -2551,6 +2661,7 @@
                 <div class="feature-card" onclick="document.getElementById('heroWarrantyBtn').click()"><div class="icon">🛡️</div><h4>گارانتی</h4><p>ضمانت اصالت و کیفیت</p></div>
                 <div class="feature-card" onclick="document.getElementById('heroOrderBtn').click()"><div class="icon">✅</div><h4>سفارش</h4><p>ثبت سفارش در کمترین زمان</p></div>
                 <div class="feature-card" onclick="document.getElementById('consultBtn').click()"><div class="icon">💬</div><h4>مشاوره</h4><p>مشاوره تخصصی رایگان</p></div>
+                <div class="feature-card" onclick="openModal('survey')"><div class="icon">📊</div><h4>نظرسنجی</h4><p>رضایت شما برای ما مهم است</p></div>
             </div>
         </div>
     </section>
@@ -2602,7 +2713,6 @@
                         <a href="https://www.instagram.com/u_n_i_d_e_n_t" target="_blank"><i class="fab fa-instagram"></i> اینستاگرام</a>
                         <a href="https://t.me/U_N_I_D_E_N_T" target="_blank"><i class="fab fa-telegram-plane"></i> تلگرام</a>
                         <a href="mailto:unique.dental.contact@gmail.com"><i class="fas fa-envelope"></i> ایمیل</a>
-                        <a href="https://wa.me/989123456789" target="_blank"><i class="fab fa-whatsapp"></i> واتساپ</a>
                     </div>
                 </div>
                 <div class="footer-col"><h5>دسترسی سریع</h5><a href="#product-page">محصولات</a><a href="#reviews">نظرات</a><a href="#warranty-modal" id="warrantyLinkFooter">گارانتی</a><a href="#survey">نظرسنجی</a></div>
@@ -2624,7 +2734,6 @@
                 <div class="footer-socials">
                     <a href="https://t.me/U_N_I_D_E_N_T" target="_blank"><i class="fab fa-telegram-plane"></i></a>
                     <a href="https://www.instagram.com/u_n_i_d_e_n_t" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/989123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -2665,15 +2774,15 @@
                 </div>
                 <div class="form-row-2">
                     <div class="form-group"><label class="field-label"><i class="fas fa-envelope"></i> ایمیل</label><input type="email" id="orderEmail" placeholder="example@email.com" /></div>
-                    <div class="form-group"><label class="field-label"><i class="fas fa-map-marker-alt"></i> آدرس</label><input type="text" id="orderAddress" placeholder="آدرس کامل" /></div>
+                    <div class="form-group"><label class="field-label"><i class="fab fa-instagram"></i> اینستاگرام</label><input type="text" id="orderInstagram" placeholder="نام کاربری" /></div>
                 </div>
                 <div class="form-row-2">
-                    <div class="form-group"><label class="field-label"><i class="fas fa-truck"></i> روش ارسال</label><select id="orderShipping"><option value="post">پست</option><option value="tipax">تیپاکس</option><option value="courier">پیک موتوری</option></select></div>
-                    <div class="form-group"><label class="field-label"><i class="fas fa-credit-card"></i> روش پرداخت</label><select id="orderPayment"><option value="online">پرداخت آنلاین</option><option value="card">کارت به کارت</option><option value="cod">پرداخت در محل</option></select></div>
+                    <div class="form-group"><label class="field-label"><i class="fas fa-tag"></i> نوع سفارش *</label><select id="orderType" required><option value="product">خرید محصول</option><option value="consultation">مشاوره</option><option value="warranty">درخواست گارانتی</option></select></div>
+                    <div class="form-group"><label class="field-label"><i class="fas fa-box"></i> نام محصول</label><input type="text" id="orderProductName" placeholder="نام محصول" /></div>
                 </div>
-                <div class="form-group"><label class="field-label"><i class="fas fa-box"></i> نام محصول (در صورت مشخص)</label><input type="text" id="orderProductName" placeholder="نام محصول مورد نظر" /></div>
-                <div class="form-group"><label class="field-label"><i class="fas fa-tag"></i> کد تخفیف</label><input type="text" id="orderCoupon" placeholder="کد تخفیف را وارد کنید" /></div>
-                <div class="form-group"><label class="field-label"><i class="fas fa-sort-numeric-up"></i> تعداد</label><input type="number" id="orderQuantity" placeholder="تعداد" min="1" value="1" /></div>
+                <div class="form-group"><label class="field-label"><i class="fas fa-sort-numeric-up"></i> تعداد</label><input type="number" id="orderQuantity" min="1" value="1" /></div>
+                <div class="form-group"><label class="field-label"><i class="fas fa-truck"></i> روش ارسال</label><select id="orderShipping"><option value="post">پست (۵۰,۰۰۰ تومان)</option><option value="tipax">تیپاکس (۷۰,۰۰۰ تومان)</option><option value="motobike">پیک موتوری (۱۰۰,۰۰۰ تومان)</option></select></div>
+                <div class="form-group"><label class="field-label"><i class="fas fa-credit-card"></i> روش پرداخت</label><select id="orderPayment"><option value="online">پرداخت آنلاین</option><option value="card">کارت به کارت</option><option value="cod">پرداخت در محل</option></select></div>
                 <div class="form-group"><label class="field-label"><i class="fas fa-comment"></i> توضیحات</label><textarea id="orderMessage" rows="3" placeholder="توضیحات تکمیلی..."></textarea></div>
                 <div class="checkbox-group"><input type="checkbox" id="orderAgree" required /><label for="orderAgree">شرایط و قوانین را می‌پذیرم</label></div>
                 <button type="submit" class="btn btn-white w-full" style="width:100%; justify-content:center;"><i class="fas fa-check"></i> ثبت سفارش</button>
@@ -2709,6 +2818,7 @@
                 <div style="display:flex; justify-content:space-between; font-size:0.9rem; color:var(--text-muted);"><span>هزینه ارسال:</span><span id="cartShippingAmount">۰</span></div>
                 <div style="display:flex; justify-content:space-between; font-size:0.9rem; color:var(--text-muted);"><span>مالیات (۹٪):</span><span id="cartTaxAmount">۰</span></div>
                 <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.3rem; border-top:1px solid var(--border-color); padding-top:8px; margin-top:8px;"><span>قابل پرداخت:</span><span id="cartFinalAmount">۰</span></div>
+                <div class="form-group" style="margin-top:12px;"><label class="field-label">کد تخفیف</label><div style="display:flex;gap:8px;"><input type="text" id="couponInput" placeholder="کد تخفیف" style="flex:1;" /><button class="btn btn-sm btn-white" onclick="applyCoupon()">اعمال</button></div><div id="couponMsg" style="font-size:0.8rem;color:var(--text-muted);"></div></div>
                 <button class="btn btn-white w-full" style="width:100%; justify-content:center; margin-top:12px;" id="checkoutBtn"><i class="fas fa-arrow-left"></i> نهایی کردن</button>
             </div>
         </div>
@@ -2773,6 +2883,20 @@
         </div>
     </div>
 
+    <!-- SURVEY MODAL (اضافی برای نظرسنجی) -->
+    <div id="surveyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3><i class="fas fa-poll"></i> نظرسنجی رضایت مشتری</h3>
+            <form id="surveyForm">
+                <div class="form-group"><label class="field-label">از خرید خود چقدر راضی هستید؟</label><div class="survey-stars" id="surveyStars"><span data-value="1">☆</span><span data-value="2">☆</span><span data-value="3">☆</span><span data-value="4">☆</span><span data-value="5">☆</span></div></div>
+                <div class="form-group"><label class="field-label"><i class="fas fa-comment"></i> پیشنهادات شما</label><textarea id="surveyText" rows="3" placeholder="نظر یا پیشنهاد خود را بنویسید..."></textarea></div>
+                <button type="submit" class="btn btn-white w-full" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i> ارسال نظرسنجی</button>
+                <div id="surveyResultModal" style="margin-top:16px; text-align:center;"></div>
+            </form>
+        </div>
+    </div>
+
     <!-- ===== ADMIN PANEL ===== -->
     <div id="adminPanel" class="admin-panel">
         <div class="admin-header">
@@ -2783,16 +2907,16 @@
             <div class="admin-tab active" data-tab="dashboard">📊 داشبورد</div>
             <div class="admin-tab" data-tab="orders">📦 سفارشات</div>
             <div class="admin-tab" data-tab="products">🛒 محصولات</div>
-            <div class="admin-tab" data-tab="reviews">⭐ نظرات</div>
             <div class="admin-tab" data-tab="inventory">📦 انبار</div>
             <div class="admin-tab" data-tab="prices">💰 قیمت‌ها</div>
             <div class="admin-tab" data-tab="origin">🏷️ اصالت</div>
+            <div class="admin-tab" data-tab="reviews">⭐ نظرات</div>
             <div class="admin-tab" data-tab="warranty">🔧 گارانتی</div>
             <div class="admin-tab" data-tab="inquiries">📋 استعلام‌ها</div>
-            <div class="admin-tab" data-tab="analytics">📈 تحلیل فروش</div>
             <div class="admin-tab" data-tab="settings">⚙️ تنظیمات</div>
             <div class="admin-tab" data-tab="backup">💾 بکاپ</div>
-            <div class="admin-tab" data-tab="importexport">📤 واردات/صادرات</div>
+            <div class="admin-tab" data-tab="csv">📄 CSV</div>
+            <div class="admin-tab" data-tab="reports">📈 گزارش‌ها</div>
         </div>
         <div id="adminContent" class="admin-content-scroll"><p style="color:var(--text-muted);">بارگذاری...</p></div>
     </div>
@@ -2977,6 +3101,8 @@
         let userIP = '';
         let userCountry = '';
         let userCity = '';
+        let appliedCoupon = null;
+        let chartInstance = null;
 
         // ============================================================
         //  ENCRYPTION (simple base64 for demo)
@@ -3051,7 +3177,7 @@
             return Math.round(subtotal * taxRate / 100);
         }
 
-        function applyCoupon(subtotal, code) {
+        function applyCouponCode(subtotal, code) {
             const coupon = couponCodes.find(c => c.code === code.toUpperCase() && (!c.expiry || new Date(c.expiry) >= new
                 Date()));
             if (!coupon) return { discount: 0, valid: false, message: 'کد نامعتبر' };
@@ -3107,26 +3233,67 @@
         });
 
         // ============================================================
+        //  LOAD IMAGE MAPPING FROM image_mapping.json (GitHub)
+        // ============================================================
+        let imageMapping = {};
+        fetch('image_mapping.json')
+            .then(res => {
+                if (!res.ok) throw new Error('image_mapping.json not found');
+                return res.json();
+            })
+            .then(data => {
+                imageMapping = data;
+                // Update products with images from mapping
+                productsData.forEach(p => {
+                    if (imageMapping[p.id] && imageMapping[p.id].images && imageMapping[p.id].images.length > 0) {
+                        p.images = imageMapping[p.id].images;
+                        p.image = imageMapping[p.id].images[0];
+                    }
+                });
+                // Re-render
+                applyFilters();
+                console.log('✅ تصاویر از image_mapping.json بارگذاری شدند');
+            })
+            .catch(err => {
+                console.warn('⚠️ image_mapping.json بارگذاری نشد، از تصاویر پیش‌فرض استفاده می‌شود.', err);
+                // Still render products
+                applyFilters();
+            });
+
+        // ============================================================
         //  RENDER PRODUCT PAGE with all filters
         // ============================================================
-        function renderProductPage(filterBrand = '', filterCategory = '', sort = 'name', search = '', page = 1) {
+        function renderProductPage(filterBrand = '', filterCategory = '', sort = 'name', search = '', page = 1,
+            priceMin = 0, priceMax = 500000000, origin = '', country = '', inStock = false) {
             const container = document.getElementById('productGridFull');
             if (!container) return;
 
-            const priceMax = parseInt(document.getElementById('priceRange').value) || 200000000;
-            const originFilter = document.getElementById('filterOrigin').value;
-            const stockFilter = document.getElementById('filterStock').value;
+            // Get filters from UI if not passed
+            if (typeof priceMin === 'string') {
+                // called from event, use UI values
+                const p = getFilterParams();
+                filterBrand = p.brand;
+                filterCategory = p.cat;
+                sort = p.sort;
+                search = p.search;
+                priceMin = p.pMin;
+                priceMax = p.pMax;
+                origin = p.origin;
+                country = p.country;
+                inStock = p.inStock;
+            }
 
             let filtered = productsData.filter(p => {
                 if (filterBrand && p.brand !== filterBrand) return false;
                 if (filterCategory && p.category !== filterCategory) return false;
                 if (search && !p.name.includes(search) && !p.code.includes(search) && !p.brand.includes(
                     search)) return false;
-                if (getFinalPrice(p) > priceMax) return false;
-                if (originFilter === 'original' && !p.isOriginal) return false;
-                if (originFilter === 'copy' && p.isOriginal) return false;
-                if (stockFilter === 'in' && (p.stock || 0) <= 0) return false;
-                if (stockFilter === 'out' && (p.stock || 0) > 0) return false;
+                const fp = getFinalPrice(p);
+                if (fp < priceMin || fp > priceMax) return false;
+                if (origin === 'true' && !p.isOriginal) return false;
+                if (origin === 'false' && p.isOriginal) return false;
+                if (country && p['کشور تولید کننده'] !== country) return false;
+                if (inStock && (p.stock || 0) <= 0) return false;
                 return true;
             });
 
@@ -3144,8 +3311,8 @@
             const end = Math.min(start + perPage, total);
             const pageItems = filtered.slice(start, end);
 
-            document.getElementById('priceRangeLabel').textContent =
-                `۰ - ${formatPrice(priceMax)}`;
+            document.getElementById('priceRangeDisplay').textContent =
+                `${formatPrice(priceMin)} - ${formatPrice(priceMax)}`;
 
             if (pageItems.length === 0) {
                 container.innerHTML =
@@ -3226,7 +3393,7 @@
             document.querySelectorAll('#pagination button').forEach(btn => {
                 btn.addEventListener('click', function() {
                     renderProductPage(filterBrand, filterCategory, sort, search, parseInt(this.dataset
-                    .page));
+                        .page), priceMin, priceMax, origin, country, inStock);
                 });
             });
 
@@ -3243,7 +3410,8 @@
                 btn.addEventListener('click', function(e) {
                     e.stopPropagation();
                     toggleWishlist(this.dataset.id);
-                    renderProductPage(filterBrand, filterCategory, sort, search, currentPage);
+                    renderProductPage(filterBrand, filterCategory, sort, search, currentPage, priceMin,
+                        priceMax, origin, country, inStock);
                 });
             });
 
@@ -3284,6 +3452,28 @@
             const brands = new Set(productsData.map(p => p.brand));
             document.getElementById('statBrands').textContent = brands.size || '۰';
             document.getElementById('statOrders').textContent = orders.length;
+        }
+
+        // ============================================================
+        //  FILTER PARAMETERS HELPER
+        // ============================================================
+        function getFilterParams() {
+            const brand = document.getElementById('filterBrand').value;
+            const cat = document.getElementById('filterCategory').value;
+            const sort = document.getElementById('filterSort').value;
+            const search = document.getElementById('productSearchInput').value.trim();
+            const pMin = parseInt(document.getElementById('priceMin').value) || 0;
+            const pMax = parseInt(document.getElementById('priceMax').value) || 500000000;
+            const origin = document.getElementById('filterOrigin').value;
+            const country = document.getElementById('filterCountry').value;
+            const inStock = document.getElementById('filterInStock').checked;
+            return { brand, cat, sort, search, pMin, pMax, origin, country, inStock };
+        }
+
+        function applyFilters() {
+            const p = getFilterParams();
+            renderProductPage(p.brand, p.cat, p.sort, p.search, 1, p.pMin, p.pMax, p.origin, p.country, p.inStock);
+            document.getElementById('priceRangeDisplay').textContent = `${formatPrice(p.pMin)} - ${formatPrice(p.pMax)}`;
         }
 
         // ============================================================
@@ -3349,6 +3539,8 @@
                 </div>` :
                 '';
 
+            // WhatsApp button removed
+
             content.innerHTML = `
                 <div class="product-detail-grid">
                     <div class="gallery">
@@ -3375,7 +3567,6 @@
                         <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;">
                             <button class="btn btn-white" onclick="addToCart('${p.id}')" ${p.stock <= 0 || p.showPrice === false ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''}><i class="fas fa-cart-plus"></i> افزودن به سبد</button>
                             <button class="btn btn-outline" onclick="toggleWishlist('${p.id}')"><i class="fas fa-heart"></i> ${wishlist.includes(p.id) ? 'حذف از علاقه‌مندی' : 'افزودن به علاقه‌مندی'}</button>
-                            <button class="btn btn-outline" onclick="window.open('https://wa.me/989123456789?text=${encodeURIComponent('سلام، من به محصول ' + p.name + ' علاقه دارم.')}', '_blank')"><i class="fab fa-whatsapp"></i> واتساپ</button>
                         </div>
                     </div>
                 </div>
@@ -3477,6 +3668,35 @@
             document.getElementById('cartCount').textContent = count;
             const total = cart.reduce((s, i) => s + i.qty * i.price, 0);
             document.getElementById('cartMiniPrice').textContent = total > 0 ? formatPrice(total) : '';
+            renderMiniCart();
+        }
+
+        function renderMiniCart() {
+            const el = document.getElementById('miniCart');
+            if (cart.length === 0) { el.classList.remove('open'); return; }
+            el.classList.add('open');
+            let html = '';
+            let total = 0;
+            cart.forEach(item => {
+                total += item.qty * item.price;
+                html += `<div class="mini-cart-item"><span>${escapeHtml(item.name)}</span><div class="qty"><button onclick="changeQty('${item.id}',-1)">-</button><span>${item.qty}</span><button onclick="changeQty('${item.id}',1)">+</button><button onclick="removeFromCart('${item.id}')" style="color:#ef4444;background:none;border:none;font-size:0.8rem;"><i class="fas fa-trash"></i></button></div></div>`;
+            });
+            html += `<div class="mini-cart-total"><span>جمع</span><span>${formatPrice(total)}</span></div>`;
+            html +=
+                `<button class="btn btn-sm btn-white w-full" style="margin-top:8px;" onclick="document.getElementById('cartToggle').click();">مشاهده سبد</button>`;
+            el.innerHTML = html;
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+            const p = productsData.find(pr => pr.id === id);
+            if (delta > 0 && item.qty >= (p ? p.stock : 0)) { showToast('بیشتر از موجودی است', 'error'); return; }
+            item.qty += delta;
+            if (item.qty <= 0) { cart = cart.filter(i => i.id !== id); }
+            localStorage.setItem('unident_cart', JSON.stringify(cart));
+            updateCartUI();
+            renderCartModal();
         }
 
         function renderCartModal() {
@@ -3496,9 +3716,9 @@
                         <div>
                             <div style="font-weight:600; color:var(--text-primary);">${escapeHtml(item.name)}</div>
                             <div style="display:flex; align-items:center; gap:12px; margin-top:4px;">
-                                <button class="btn-icon" onclick="updateCartQty('${item.id}', -1)" style="color:var(--text-primary); font-size:0.8rem; min-width:30px; min-height:30px;"><i class="fas fa-minus"></i></button>
+                                <button class="btn-icon" onclick="changeQty('${item.id}', -1)" style="color:var(--text-primary); font-size:0.8rem; min-width:30px; min-height:30px;"><i class="fas fa-minus"></i></button>
                                 <span style="color:var(--text-primary); font-weight:600; min-width:30px; text-align:center;">${item.qty}</span>
-                                <button class="btn-icon" onclick="updateCartQty('${item.id}', 1)" style="color:var(--text-primary); font-size:0.8rem; min-width:30px; min-height:30px;"><i class="fas fa-plus"></i></button>
+                                <button class="btn-icon" onclick="changeQty('${item.id}', 1)" style="color:var(--text-primary); font-size:0.8rem; min-width:30px; min-height:30px;"><i class="fas fa-plus"></i></button>
                                 <span style="color:var(--text-muted); font-size:0.85rem;">${formatPrice(item.price)} × ${item.qty}</span>
                             </div>
                         </div>
@@ -3508,9 +3728,9 @@
 
             // Apply coupon if exists
             let couponDiscount = 0;
-            const couponCode = document.getElementById('cartCouponInput')?.value?.trim() || '';
+            const couponCode = document.getElementById('couponInput')?.value?.trim() || '';
             if (couponCode) {
-                const result = applyCoupon(subtotal, couponCode);
+                const result = applyCouponCode(subtotal, couponCode);
                 if (result.valid) couponDiscount = result.discount;
             }
 
@@ -3520,10 +3740,10 @@
 
             html += `
                 <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
-                    <input type="text" id="cartCouponInput" placeholder="کد تخفیف" style="flex:1; min-width:120px; padding:8px 14px; border-radius:60px; background:var(--bg-input); border:1px solid var(--border-color); color:var(--text-primary); min-height:40px;" />
-                    <button class="btn btn-white btn-sm" onclick="applyCartCoupon()">اعمال</button>
+                    <input type="text" id="couponInput" placeholder="کد تخفیف" style="flex:1; min-width:120px; padding:8px 14px; border-radius:60px; background:var(--bg-input); border:1px solid var(--border-color); color:var(--text-primary); min-height:40px;" />
+                    <button class="btn btn-white btn-sm" onclick="applyCoupon()">اعمال</button>
                 </div>
-                <div id="cartCouponMsg" style="margin-top:6px; font-size:0.8rem; color:var(--text-muted);"></div>
+                <div id="couponMsg" style="margin-top:6px; font-size:0.8rem; color:var(--text-muted);"></div>
             `;
 
             content.innerHTML = html;
@@ -3534,22 +3754,15 @@
             document.getElementById('cartFinalAmount').textContent = formatPrice(total);
         }
 
-        window.applyCartCoupon = function() {
+        function applyCoupon() {
+            const code = document.getElementById('couponInput').value.trim().toUpperCase();
+            if (!code) { document.getElementById('couponMsg').textContent = 'کد را وارد کنید.'; return; }
+            const coup = couponCodes.find(c => c.code === code && (!c.expiry || new Date(c.expiry) > new Date()));
+            if (!coup) { document.getElementById('couponMsg').textContent = 'کد نامعتبر یا منقضی.'; return; }
+            appliedCoupon = coup;
+            document.getElementById('couponMsg').textContent = `✅ ${coup.discount}% تخفیف اعمال شد.`;
             renderCartModal();
-        };
-
-        window.updateCartQty = function(id, delta) {
-            const item = cart.find(i => i.id === id);
-            if (!item) return;
-            const newQty = item.qty + delta;
-            if (newQty < 1) return removeFromCart(id, true);
-            const product = productsData.find(p => p.id === id);
-            if (product && newQty > product.stock) return showToast('تعداد بیشتر از موجودی است', 'error');
-            item.qty = newQty;
-            localStorage.setItem('unident_cart', JSON.stringify(cart));
-            updateCartUI();
-            renderCartModal();
-        };
+        }
 
         document.getElementById('cartToggle')?.addEventListener('click', function() { renderCartModal();
             openModal('cart'); });
@@ -3698,7 +3911,7 @@
         }
 
         // ============================================================
-        //  SURVEY
+        //  SURVEY (emoji)
         // ============================================================
         let selectedSurveyRating = 0;
         document.querySelectorAll('#emojiRating span').forEach(el => {
@@ -3723,6 +3936,35 @@
             setTimeout(() => {
                 document.getElementById('surveyResult').innerHTML = '';
             }, 5000);
+        });
+
+        // ============================================================
+        //  SURVEY MODAL (stars)
+        // ============================================================
+        document.querySelectorAll('#surveyStars span').forEach(span => {
+            span.addEventListener('click', function() {
+                const val = parseInt(this.dataset.value);
+                document.querySelectorAll('#surveyStars span').forEach(s => {
+                    s.classList.toggle('active', parseInt(s.dataset.value) <= val);
+                    s.textContent = parseInt(s.dataset.value) <= val ? '★' : '☆';
+                });
+            });
+        });
+        document.getElementById('surveyForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const rating = document.querySelector('#surveyStars .active')?.dataset.value || 0;
+            const text = document.getElementById('surveyText').value.trim();
+            if (!rating) { document.getElementById('surveyResultModal').innerHTML =
+                    '<span style="color:#ef4444;">لطفاً امتیاز دهید.</span>'; return; }
+            surveyResults.push({ id: generateId(), rating: parseInt(rating), text, date: getPersianDate() });
+            localStorage.setItem('unident_surveys', JSON.stringify(surveyResults));
+            document.getElementById('surveyResultModal').innerHTML =
+                '<span style="color:#22c55e;">✅ نظرسنجی با تشکر ثبت شد.</span>';
+            this.reset();
+            document.querySelectorAll('#surveyStars span').forEach(s => { s.classList.remove('active');
+                s.textContent = '☆'; });
+            setTimeout(() => { closeAllModals();
+                document.getElementById('surveyResultModal').innerHTML = ''; }, 2000);
         });
 
         // ============================================================
@@ -3807,8 +4049,7 @@
             const val = document.getElementById('headerSearchInput').value.trim();
             if (val) {
                 document.getElementById('productSearchInput').value = val;
-                renderProductPage(document.getElementById('filterBrand').value, document.getElementById(
-                    'filterCategory').value, document.getElementById('filterSort').value, val, 1);
+                applyFilters();
                 document.getElementById('product-page').scrollIntoView({ behavior: 'smooth' });
             }
         });
@@ -3837,37 +4078,23 @@
         // ============================================================
         //  FILTER EVENTS
         // ============================================================
-        document.getElementById('filterBrand')?.addEventListener('change', function() {
-            renderProductPage(this.value, document.getElementById('filterCategory').value, document.getElementById(
-                'filterSort').value, document.getElementById('productSearchInput').value, 1);
+        document.getElementById('filterBrand')?.addEventListener('change', applyFilters);
+        document.getElementById('filterCategory')?.addEventListener('change', applyFilters);
+        document.getElementById('filterSort')?.addEventListener('change', applyFilters);
+        document.getElementById('productSearchInput')?.addEventListener('input', applyFilters);
+        document.getElementById('priceMin')?.addEventListener('input', function() {
+            if (parseInt(this.value) > parseInt(document.getElementById('priceMax').value))
+                document.getElementById('priceMax').value = this.value;
+            applyFilters();
         });
-        document.getElementById('filterCategory')?.addEventListener('change', function() {
-            renderProductPage(document.getElementById('filterBrand').value, this.value, document.getElementById(
-                'filterSort').value, document.getElementById('productSearchInput').value, 1);
+        document.getElementById('priceMax')?.addEventListener('input', function() {
+            if (parseInt(this.value) < parseInt(document.getElementById('priceMin').value))
+                document.getElementById('priceMin').value = this.value;
+            applyFilters();
         });
-        document.getElementById('filterSort')?.addEventListener('change', function() {
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, this.value, document.getElementById('productSearchInput').value, 1);
-        });
-        document.getElementById('productSearchInput')?.addEventListener('input', function() {
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, document.getElementById('filterSort').value, this.value, 1);
-        });
-        document.getElementById('priceRange')?.addEventListener('input', function() {
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                .value, 1);
-        });
-        document.getElementById('filterOrigin')?.addEventListener('change', function() {
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                .value, 1);
-        });
-        document.getElementById('filterStock')?.addEventListener('change', function() {
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                .value, 1);
-        });
+        document.getElementById('filterOrigin')?.addEventListener('change', applyFilters);
+        document.getElementById('filterCountry')?.addEventListener('change', applyFilters);
+        document.getElementById('filterInStock')?.addEventListener('change', applyFilters);
 
         // ============================================================
         //  ORDER FORM
@@ -3877,14 +4104,14 @@
             const name = document.getElementById('orderName').value.trim();
             const phone = document.getElementById('orderPhone').value.trim();
             const email = document.getElementById('orderEmail').value.trim();
-            const address = document.getElementById('orderAddress').value.trim();
-            const shipping = document.getElementById('orderShipping').value;
-            const payment = document.getElementById('orderPayment').value;
+            const instagram = document.getElementById('orderInstagram').value.trim();
+            const type = document.getElementById('orderType').value;
             const productName = document.getElementById('orderProductName').value.trim();
             const quantity = document.getElementById('orderQuantity').value || 1;
+            const shipping = document.getElementById('orderShipping').value;
+            const payment = document.getElementById('orderPayment').value;
             const msg = document.getElementById('orderMessage').value.trim();
             const agree = document.getElementById('orderAgree').checked;
-            const coupon = document.getElementById('orderCoupon').value.trim();
 
             if (!name || !phone || !agree) {
                 document.getElementById('orderResult').innerHTML =
@@ -3895,8 +4122,9 @@
             // Calculate totals
             const subtotal = cart.reduce((s, i) => s + i.qty * i.price, 0);
             let couponDiscount = 0;
-            if (coupon) {
-                const result = applyCoupon(subtotal, coupon);
+            const couponCode = document.getElementById('couponInput')?.value?.trim() || '';
+            if (couponCode) {
+                const result = applyCouponCode(subtotal, couponCode);
                 if (result.valid) couponDiscount = result.discount;
             }
             const shippingCost = getShippingCost(subtotal);
@@ -3912,18 +4140,18 @@
                 customer: name,
                 phone: encryptedPhone,
                 email: encryptedEmail,
-                address: address,
-                shipping: shipping,
-                payment: payment,
+                instagram: instagram,
+                type: type,
                 productName: productName,
                 quantity: parseInt(quantity),
                 message: msg,
-                coupon: coupon,
-                couponDiscount: couponDiscount,
+                shipping: shipping,
+                payment: payment,
                 items: cart.map(i => ({ name: i.name, qty: i.qty, price: i.price })),
                 subtotal: subtotal,
                 shippingCost: shippingCost,
                 tax: tax,
+                couponDiscount: couponDiscount,
                 total: total,
                 status: 'جدید',
                 date: getPersianDate(),
@@ -3931,6 +4159,18 @@
             };
             orders.push(order);
             localStorage.setItem('unident_orders', JSON.stringify(orders));
+
+            // Update customers
+            let customers = JSON.parse(localStorage.getItem('unident_customers')) || [];
+            if (!customers.find(c => c.phone === phone)) {
+                customers.push({ id: generateId(), name, phone, email, instagram, firstOrder: getPersianDate(),
+                    orderCount: 1, totalSpent: total });
+            } else {
+                const c = customers.find(c => c.phone === phone);
+                c.orderCount = (c.orderCount || 0) + 1;
+                c.totalSpent = (c.totalSpent || 0) + total;
+            }
+            localStorage.setItem('unident_customers', JSON.stringify(customers));
 
             // Email notification (simulated)
             if (email) {
@@ -3961,9 +4201,7 @@
         // ============================================================
         function generateInvoice(order) {
             // Simple PDF generation using jsPDF (load from CDN)
-            const script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
-            script.onload = function() {
+            if (typeof window.jspdf !== 'undefined') {
                 const { jsPDF } = window.jspdf;
                 const doc = new jsPDF('p', 'pt', 'a4');
                 const pageWidth = doc.internal.pageSize.width;
@@ -3984,8 +4222,6 @@
                 doc.text(`تماس: ${order.phone}`, margin, y);
                 y += 20;
                 if (order.email) { doc.text(`ایمیل: ${order.email}`, margin, y);
-                    y += 20; }
-                if (order.address) { doc.text(`آدرس: ${order.address}`, margin, y);
                     y += 20; }
 
                 y += 10;
@@ -4015,11 +4251,11 @@
                 doc.setFontSize(14);
                 doc.text(`قابل پرداخت: ${formatPrice(order.total)} تومان`, margin, y);
 
-                // Save PDF
                 doc.save(`فاکتور_${order.id.slice(0,8)}.pdf`);
                 showToast('✅ فاکتور PDF دانلود شد.');
-            };
-            document.head.appendChild(script);
+            } else {
+                showToast('⚠️ کتابخانه PDF بارگذاری نشد، لطفاً اتصال اینترنت را بررسی کنید.', 'error');
+            }
         }
 
         // ============================================================
@@ -4066,7 +4302,7 @@
         });
 
         // ============================================================
-        //  ADMIN PANEL - ALL SECTIONS WITH FULL PRODUCTS (NO LIMIT)
+        //  ADMIN PANEL - ALL SECTIONS (Combined from both files)
         // ============================================================
 
         function renderDashboard() {
@@ -4080,6 +4316,12 @@
             const totalSales = orders.reduce((s, o) => s + (o.total || 0), 0);
             const avgSurvey = surveyResults.length > 0 ? Math.round(surveyResults.reduce((s, r) => s + r.rating, 0) /
                 surveyResults.length) : 0;
+            const lowStock = productsData.filter(p => (p.stock || 0) < 3);
+            const topProducts = [...productsData].sort((a, b) => (b.soldCount || 0) - (a.soldCount || 0)).slice(0, 5);
+
+            let lowHtml = '';
+            if (lowStock.length > 0) lowHtml =
+                `<div style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.25);border-radius:12px;padding:12px 16px;margin-bottom:12px;color:#ef4444;font-size:0.85rem;"><i class="fas fa-exclamation-triangle"></i> ${lowStock.length} محصول موجودی کم دارند.</div>`;
 
             content.innerHTML = `
                 <div class="stats-cards">
@@ -4092,8 +4334,13 @@
                     <div class="stat-card"><div class="stat-number">${totalInquiries}</div><div class="stat-label">استعلام‌ها</div></div>
                     <div class="stat-card"><div class="stat-number">${surveyResults.length > 0 ? '⭐'.repeat(Math.min(avgSurvey,5)) : '—'}</div><div class="stat-label">میانگین نظرسنجی</div></div>
                 </div>
+                ${lowHtml}
                 <div style="background:var(--bg-card);border-radius:12px;padding:16px;border:1px solid var(--border-color);margin-bottom:16px;">
                     <h4 style="color:var(--text-primary);font-size:1rem;">📍 موقعیت شما: ${userCity}, ${userCountry}</h4>
+                </div>
+                <div style="background:var(--bg-card);border-radius:12px;padding:16px;border:1px solid var(--border-color);margin-bottom:16px;">
+                    <h4 style="color:var(--text-primary);font-size:1rem;">📈 محصولات پرفروش</h4>
+                    ${topProducts.length===0?'<p style="color:var(--text-muted);">هنوز فروشی ثبت نشده.</p>':topProducts.map(p=>`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border-color);font-size:0.85rem;"><span>${escapeHtml(p.name)}</span><span style="color:var(--text-primary);">${p.soldCount||0} فروش</span></div>`).join('')}
                 </div>
                 <div style="background:var(--bg-card);border-radius:12px;padding:16px;border:1px solid var(--border-color);">
                     <h4 style="color:var(--text-primary);font-size:1rem;">📋 آخرین سفارشات</h4>
@@ -4210,9 +4457,7 @@
             localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
             showToast('تصویر حذف شد');
             renderProductsAdmin();
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                .value, currentPage);
+            applyFilters();
         };
 
         window.bulkToggleInquiry = function() {
@@ -4222,9 +4467,7 @@
             localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
             showToast(`همه محصولات ${newVal ? 'قابل نمایش' : 'در حالت استعلام قیمت'} شدند`);
             renderProductsAdmin();
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                .value, 1);
+            applyFilters();
         };
 
         window.updateProductOrigin = function(id) {
@@ -4237,9 +4480,8 @@
                 localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 showToast('اصالت به‌روز شد');
                 renderProductsAdmin();
-                renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                    .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                    .value, currentPage); }
+                applyFilters();
+            }
         };
 
         window.updatePriceDisplay = function(id) {
@@ -4251,9 +4493,8 @@
                 localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 showToast('وضعیت نمایش قیمت به‌روز شد');
                 renderProductsAdmin();
-                renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                    .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                    .value, currentPage); }
+                applyFilters();
+            }
         };
 
         window.updateProductStock = function(id) {
@@ -4265,10 +4506,9 @@
                 localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 showToast('موجودی به‌روز شد');
                 renderProductsAdmin();
-                renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                    .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                    .value, currentPage);
-                renderInventoryAdmin(); }
+                applyFilters();
+                renderInventoryAdmin();
+            }
         };
 
         window.toggleGuarantee = function(id) {
@@ -4276,10 +4516,9 @@
             if (p) { p.guarantee = !p.guarantee;
                 localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 renderProductsAdmin();
-                renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                    .value, document.getElementById('filterSort').value, document.getElementById(
-                    'productSearchInput').value, currentPage);
-                showToast(`گارانتی ${p.guarantee?'فعال':'غیرفعال'} شد`); }
+                applyFilters();
+                showToast(`گارانتی ${p.guarantee?'فعال':'غیرفعال'} شد`);
+            }
         };
 
         window.deleteProduct = function(id) {
@@ -4288,12 +4527,11 @@
             if (idx > -1) { productsData.splice(idx, 1);
                 localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 renderProductsAdmin();
-                renderProductPage(document.getElementById('filterBrand').value, document.getElementById(
-                    'filterCategory').value, document.getElementById('filterSort').value, document
-                    .getElementById('productSearchInput').value, 1);
+                applyFilters();
                 renderStats();
                 renderInventoryAdmin();
-                showToast('محصول حذف شد'); }
+                showToast('محصول حذف شد');
+            }
         };
 
         window.editProductImage = function(id) {
@@ -4316,9 +4554,7 @@
                     localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                     showToast('تصویر جدید اضافه شد');
                     renderProductsAdmin();
-                    renderProductPage(document.getElementById('filterBrand').value, document.getElementById(
-                        'filterCategory').value, document.getElementById('filterSort').value, document
-                        .getElementById('productSearchInput').value, currentPage);
+                    applyFilters();
                 };
                 reader.readAsDataURL(fileInput.files[0]);
                 return;
@@ -4332,9 +4568,7 @@
                     localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                     showToast('تصویر اضافه شد');
                     renderProductsAdmin();
-                    renderProductPage(document.getElementById('filterBrand').value, document.getElementById(
-                        'filterCategory').value, document.getElementById('filterSort').value, document
-                        .getElementById('productSearchInput').value, currentPage);
+                    applyFilters();
                 }
             }
         };
@@ -4418,9 +4652,7 @@
             document.getElementById('newProductStock').value = '';
             document.getElementById('newProductPrice').value = '';
             renderProductsAdmin();
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                .value, 1);
+            applyFilters();
             renderStats();
             renderInventoryAdmin();
             setTimeout(() => { document.getElementById('addProductForm').style.display = 'none';
@@ -4431,26 +4663,30 @@
         function renderInventoryAdmin() {
             const content = document.getElementById('adminContent');
             const searchTerm = document.getElementById('invSearch')?.value?.trim() || '';
+            const brandFilter = document.getElementById('invBrand')?.value || '';
             let filtered = productsData;
             if (searchTerm) filtered = filtered.filter(p => p.name.includes(searchTerm) || p.code.includes(searchTerm) || p
                 .brand.includes(searchTerm));
+            if (brandFilter) filtered = filtered.filter(p => p.brand === brandFilter);
             const totalStock = filtered.reduce((s, p) => s + (p.stock || 0), 0);
-            const outOfStock = filtered.filter(p => (p.stock || 0) <= 0).length;
+            const lowStock = filtered.filter(p => (p.stock || 0) < 3);
+            const brands = [...new Set(productsData.map(p => p.brand))];
 
             content.innerHTML = `
-                <h3 style="color:var(--text-primary);font-size:1.1rem;margin-bottom:16px;">📦 مدیریت انبار (${filtered.length} محصول)</h3>
-                <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px;">
-                    <input type="text" id="invSearch" placeholder="جستجو..." value="${searchTerm}" style="flex:1;min-width:200px;padding:10px 16px;border-radius:60px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.9rem;min-height:44px;" oninput="renderInventoryAdmin()" />
-                    <button class="btn btn-white btn-sm" onclick="renderInventoryAdmin()"><i class="fas fa-search"></i></button>
+                <h3 style="color:var(--text-primary);font-size:1.1rem;margin-bottom:16px;">📦 مدیریت انبار</h3>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;">
+                    <input type="text" id="invSearch" placeholder="جستجو..." value="${searchTerm}" style="flex:1;min-width:160px;padding:10px 16px;border-radius:60px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.9rem;min-height:44px;" oninput="renderInventoryAdmin()" />
+                    <select id="invBrand" onchange="renderInventoryAdmin()" style="padding:10px 16px;border-radius:60px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.9rem;min-height:44px;"><option value="">همه برندها</option>${brands.map(b=>`<option value="${b}" ${b===brandFilter?'selected':''}>${b}</option>`).join('')}</select>
                 </div>
                 <div class="stats-cards">
                     <div class="stat-card"><div class="stat-number">${filtered.length}</div><div class="stat-label">تعداد محصولات</div></div>
                     <div class="stat-card"><div class="stat-number">${totalStock}</div><div class="stat-label">کل موجودی</div></div>
-                    <div class="stat-card"><div class="stat-number">${outOfStock}</div><div class="stat-label">ناموجود</div></div>
+                    <div class="stat-card"><div class="stat-number">${filtered.filter(p=>(p.stock||0)<=0).length}</div><div class="stat-label">ناموجود</div></div>
                 </div>
+                ${lowStock.length>0?`<div style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.25);border-radius:12px;padding:12px 16px;margin-bottom:12px;color:#ef4444;font-size:0.85rem;"><i class="fas fa-exclamation-triangle"></i> ${lowStock.length} محصول موجودی کم (کمتر از ۳ عدد)</div>`:''}
                 <div style="overflow-x:auto;max-height:400px;overflow-y:auto;">
                     <table class="admin-table"><thead><tr><th>محصول</th><th>برند</th><th>کد</th><th>موجودی</th><th>عملیات</th></tr></thead><tbody>
-                        ${filtered.map(p => `
+                        ${filtered.slice(0,200).map(p => `
                             <tr><td style="font-size:0.7rem;">${escapeHtml(p.name)}</td><td style="font-size:0.7rem;">${escapeHtml(p.brand)}</td><td style="font-size:0.65rem;">${escapeHtml(p.code||'')}</td><td><input type="number" class="stock-quick-input" data-id="${p.id}" value="${p.stock||0}" min="0" style="width:60px;padding:4px 6px;border-radius:8px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.7rem;" /></td><td><button class="btn btn-sm btn-white" onclick="window.quickUpdateStock('${p.id}')" style="padding:2px 10px;font-size:0.6rem;">ذخیره</button></td></tr>
                         `).join('')}
                     </tbody></table>
@@ -4469,10 +4705,9 @@
                 document.getElementById('stockUpdateResult').innerHTML =
                     '<span style="color:#22c55e;">✅ موجودی به‌روز شد.</span>';
                 renderInventoryAdmin();
-                renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                    .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                    .value, currentPage);
-                setTimeout(() => document.getElementById('stockUpdateResult').innerHTML = '', 2000); }
+                applyFilters();
+                setTimeout(() => document.getElementById('stockUpdateResult').innerHTML = '', 2000);
+            }
         };
 
         // ===== ADMIN PRICES (FULL - NO LIMIT) =====
@@ -4500,7 +4735,7 @@
                 </div>
                 <div style="overflow-x:auto;max-height:400px;overflow-y:auto;">
                     <table class="admin-table"><thead><tr><th>محصول</th><th>برند</th><th>قیمت پایه</th><th>سود %</th><th>قیمت نهایی</th><th>عملیات</th></tr></thead><tbody>
-                        ${filtered.map(p => {
+                        ${filtered.slice(0,200).map(p => {
                             const final = getFinalPrice(p);
                             return `<tr><td style="font-size:0.7rem;">${escapeHtml(p.name)}</td><td style="font-size:0.7rem;">${escapeHtml(p.brand)}</td><td><input type="number" class="base-price-input" data-id="${p.id}" value="${p.basePrice||0}" style="width:80px;padding:4px 6px;border-radius:8px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.7rem;" /></td><td><input type="number" class="profit-input" data-id="${p.id}" value="${p.profitPercent||200}" style="width:50px;padding:4px 6px;border-radius:8px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.7rem;" /></td><td><span class="final-price" data-id="${p.id}" style="color:var(--text-primary);font-size:0.75rem;">${formatPrice(final)}</span></td><td><button class="btn btn-sm btn-white" onclick="window.updatePrice('${p.id}')" style="padding:2px 10px;font-size:0.6rem;">ذخیره</button></td></tr>`;
                         }).join('')}
@@ -4533,9 +4768,7 @@
             document.getElementById('bulkProfitResult').innerHTML =
                 `<span style="color:#22c55e;">✅ سود همه ${productsData.length} محصول به ${profit}% تغییر یافت.</span>`;
             renderPriceManagement();
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                .value, currentPage);
+            applyFilters();
         };
 
         window.updatePrice = function(id) {
@@ -4547,10 +4780,9 @@
                 localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 document.getElementById('priceUpdateResult').innerHTML =
                     '<span style="color:#22c55e;">✅ قیمت به‌روز شد.</span>';
-                renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                    .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                    .value, currentPage);
-                setTimeout(() => document.getElementById('priceUpdateResult').innerHTML = '', 2000); }
+                applyFilters();
+                setTimeout(() => document.getElementById('priceUpdateResult').innerHTML = '', 2000);
+            }
         };
 
         // ===== ADMIN ORIGIN (FULL - NO LIMIT) =====
@@ -4601,9 +4833,7 @@
             document.getElementById('bulkOriginResult').innerHTML =
                 `<span style="color:#22c55e;">✅ اصالت همه ${productsData.length} محصول به ${value?'اورجینال':'غیر اورجینال'} تغییر یافت.</span>`;
             renderOriginManagement();
-            renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                .value, currentPage);
+            applyFilters();
         };
 
         window.updateSingleOrigin = function(id) {
@@ -4617,10 +4847,9 @@
                 document.getElementById('originUpdateResult').innerHTML =
                     '<span style="color:#22c55e;">✅ اصالت به‌روز شد.</span>';
                 renderOriginManagement();
-                renderProductPage(document.getElementById('filterBrand').value, document.getElementById('filterCategory')
-                    .value, document.getElementById('filterSort').value, document.getElementById('productSearchInput')
-                    .value, currentPage);
-                setTimeout(() => document.getElementById('originUpdateResult').innerHTML = '', 2000); }
+                applyFilters();
+                setTimeout(() => document.getElementById('originUpdateResult').innerHTML = '', 2000);
+            }
         };
 
         // ===== ADMIN WARRANTY =====
@@ -4638,7 +4867,8 @@
             if (r) { r.status = status;
                 localStorage.setItem('unident_warranty_requests', JSON.stringify(warrantyRequests));
                 renderWarrantyAdmin();
-                showToast(`وضعیت به ${status} تغییر کرد`); }
+                showToast(`وضعیت به ${status} تغییر کرد`);
+            }
         };
         window.deleteWarrantyRequest = function(id) {
             if (!confirm('حذف درخواست گارانتی؟')) return;
@@ -4663,7 +4893,8 @@
             if (q) { q.status = status;
                 localStorage.setItem('unident_inquiries', JSON.stringify(inquiries));
                 renderInquiriesAdmin();
-                showToast(`وضعیت به ${status} تغییر کرد`); }
+                showToast(`وضعیت به ${status} تغییر کرد`);
+            }
         };
         window.deleteInquiry = function(id) {
             if (!confirm('حذف استعلام؟')) return;
@@ -4691,7 +4922,8 @@
                 localStorage.setItem('unident_reviews', JSON.stringify(reviews));
                 renderReviewsAdmin();
                 renderReviews();
-                showToast('نظر تأیید شد'); }
+                showToast('نظر تأیید شد');
+            }
         };
         window.deleteReview = function(id) {
             if (!confirm('حذف نظر؟')) return;
@@ -4702,143 +4934,75 @@
             showToast('نظر حذف شد');
         };
 
-        // ===== ADMIN ANALYTICS =====
-        function renderAnalytics() {
+        // ===== ADMIN ANALYTICS (Reports) =====
+        function renderReports() {
             const content = document.getElementById('adminContent');
             const totalSales = orders.reduce((s, o) => s + (o.total || 0), 0);
             const totalOrders = orders.length;
             const avgOrder = totalOrders > 0 ? totalSales / totalOrders : 0;
-
-            // Group by month
-            const monthly = {};
-            orders.forEach(o => {
-                if (!o.date) return;
-                const parts = o.date.split('/');
-                if (parts.length === 3) {
-                    const key = parts[0] + '/' + parts[1];
-                    monthly[key] = (monthly[key] || 0) + (o.total || 0);
-                }
-            });
-            const sortedMonths = Object.keys(monthly).sort();
-            const monthlyLabels = sortedMonths.map(m => m.replace('/', '/'));
-            const monthlyData = sortedMonths.map(m => monthly[m]);
-
-            // Group by brand
-            const brandSales = {};
-            orders.forEach(o => {
-                if (!o.items) return;
-                o.items.forEach(item => {
-                    const p = productsData.find(p => p.name === item.name);
-                    if (p) {
-                        brandSales[p.brand] = (brandSales[p.brand] || 0) + (item.price * item.qty || 0);
-                    }
-                });
-            });
-
-            const brandLabels = Object.keys(brandSales);
-            const brandData = brandLabels.map(b => brandSales[b]);
+            const surveyAvg = surveyResults.length > 0 ? Math.round(surveyResults.reduce((s, r) => s + r.rating, 0) /
+                surveyResults.length * 10) / 10 : 0;
+            const profit = productsData.reduce((s, p) => { const fp = getFinalPrice(p); return s + (fp - (p.basePrice ||
+                    0)); }, 0);
+            const popularProducts = [...productsData].sort((a, b) => (b.soldCount || 0) - (a.soldCount || 0)).slice(0,
+            10);
 
             content.innerHTML = `
-                <h3 style="color:var(--text-primary);font-size:1.1rem;margin-bottom:16px;">📈 تحلیل فروش</h3>
+                <h3 style="color:var(--text-primary);font-size:1.1rem;margin-bottom:16px;">📈 گزارش‌های فروش و سوددهی</h3>
                 <div class="stats-cards">
-                    <div class="stat-card"><div class="stat-number">${formatPrice(totalSales)}</div><div class="stat-label">فروش کل</div></div>
+                    <div class="stat-card"><div class="stat-number">${formatPrice(totalSales)}</div><div class="stat-label">کل فروش</div></div>
                     <div class="stat-card"><div class="stat-number">${totalOrders}</div><div class="stat-label">تعداد سفارشات</div></div>
                     <div class="stat-card"><div class="stat-number">${formatPrice(avgOrder)}</div><div class="stat-label">میانگین هر سفارش</div></div>
+                    <div class="stat-card"><div class="stat-number">${formatPrice(profit)}</div><div class="stat-label">سود کل (تقریبی)</div></div>
+                    <div class="stat-card"><div class="stat-number">${surveyResults.length}</div><div class="stat-label">نظرسنجی‌ها</div></div>
+                    <div class="stat-card"><div class="stat-number">${surveyAvg}</div><div class="stat-label">میانگین رضایت</div></div>
                 </div>
                 <div class="chart-container">
                     <h4 style="color:var(--text-primary);font-size:0.95rem;margin-bottom:8px;">📊 فروش ماهانه</h4>
                     <canvas id="monthlyChart" height="200"></canvas>
                 </div>
-                <div class="chart-container">
-                    <h4 style="color:var(--text-primary);font-size:0.95rem;margin-bottom:8px;">📊 فروش بر اساس برند</h4>
-                    <canvas id="brandChart" height="200"></canvas>
-                </div>
                 <div style="background:var(--bg-card);border-radius:12px;padding:16px;border:1px solid var(--border-color);">
-                    <h4 style="color:var(--text-primary);font-size:0.95rem;margin-bottom:8px;">💰 گزارش سوددهی محصولات</h4>
-                    <div style="overflow-x:auto;max-height:300px;overflow-y:auto;">
-                        <table class="admin-table"><thead><tr><th>محصول</th><th>برند</th><th>قیمت خرید</th><th>قیمت فروش</th><th>سود</th><th>سود %</th></tr></thead><tbody>
-                            ${productsData.slice(0, 30).map(p => {
-                                const cost = p.basePrice || 0;
-                                const sell = getFinalPrice(p);
-                                const profit = sell - cost;
-                                const profitPercent = cost > 0 ? Math.round((profit/cost)*100) : 0;
-                                return `<tr><td style="font-size:0.7rem;">${escapeHtml(p.name)}</td><td style="font-size:0.7rem;">${escapeHtml(p.brand)}</td><td style="font-size:0.7rem;">${formatPrice(cost)}</td><td style="font-size:0.7rem;">${formatPrice(sell)}</td><td style="font-size:0.7rem;color:${profit>=0?'#22c55e':'#ef4444'};">${formatPrice(profit)}</td><td style="font-size:0.7rem;color:${profitPercent>=0?'#22c55e':'#ef4444'};">${profitPercent}%</td></tr>`;
-                            }).join('')}
-                        </tbody></table>
-                    </div>
+                    <h4 style="color:var(--text-primary);font-size:1rem;">🏆 محصولات پرفروش</h4>
+                    ${popularProducts.length===0?'<p style="color:var(--text-muted);">هنوز فروشی ثبت نشده.</p>':popularProducts.map((p,i)=>`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border-color);font-size:0.85rem;"><span>${i+1}. ${escapeHtml(p.name)}</span><span style="color:var(--text-primary);">${p.soldCount||0} فروش</span></div>`).join('')}
                 </div>
             `;
 
-            // Render charts
+            // Monthly chart
             setTimeout(() => {
-                renderChart('monthlyChart', 'bar', monthlyLabels, monthlyData, '#c8a96a');
-                renderChart('brandChart', 'doughnut', brandLabels, brandData, ['#c8a96a', '#22c55e', '#3b82f6',
-                    '#f59e0b', '#8b5cf6'
-                ]);
+                const canvas = document.getElementById('monthlyChart');
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+                const monthly = {};
+                orders.forEach(o => {
+                    if (!o.date) return;
+                    const parts = o.date.split('/');
+                    if (parts.length === 3) {
+                        const key = parts[0] + '/' + parts[1];
+                        monthly[key] = (monthly[key] || 0) + (o.total || 0);
+                    }
+                });
+                const sortedMonths = Object.keys(monthly).sort();
+                const labels = sortedMonths.map(m => m.replace('/', '/'));
+                const data = sortedMonths.map(m => monthly[m]);
+
+                if (window._chartMonthly) window._chartMonthly.destroy();
+                window._chartMonthly = new Chart(ctx, {
+                    type: 'bar',
+                    data: { labels: labels, datasets: [{ label: 'فروش (تومان)', data: data,
+                            backgroundColor: 'rgba(200,169,106,0.3)',
+                            borderColor: '#c8a96a', borderWidth: 1 }] },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { labels: { color: getComputedStyle(document.documentElement)
+                                    .getPropertyValue('--text-primary') || '#ffffff' } } },
+                        scales: { y: { ticks: { color: getComputedStyle(document.documentElement)
+                                    .getPropertyValue('--text-primary') || '#ffffff' } },
+                            x: { ticks: { color: getComputedStyle(document.documentElement)
+                                    .getPropertyValue('--text-primary') || '#ffffff' } } }
+                    }
+                });
             }, 100);
-        }
-
-        function renderChart(id, type, labels, data, colors) {
-            const canvas = document.getElementById(id);
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            if (window._charts && window._charts[id]) {
-                window._charts[id].destroy();
-            }
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            const textColor = isDark ? '#ffffff' : '#111111';
-            const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)';
-
-            // Simple chart drawing
-            const w = canvas.width || canvas.parentElement.clientWidth || 400;
-            const h = canvas.height || 200;
-            canvas.width = w;
-            canvas.height = h;
-
-            if (data.length === 0) {
-                ctx.fillStyle = textColor;
-                ctx.font = '14px Inter, sans-serif';
-                ctx.textAlign = 'center';
-                ctx.fillText('داده‌ای برای نمایش وجود ندارد', w / 2, h / 2);
-                return;
-            }
-
-            const maxVal = Math.max(...data, 1);
-            const padding = 40;
-            const chartW = w - padding * 2;
-            const chartH = h - padding * 2;
-            const barWidth = Math.min(chartW / data.length * 0.6, 30);
-
-            // Draw grid
-            ctx.strokeStyle = gridColor;
-            ctx.lineWidth = 0.5;
-            for (let i = 0; i <= 4; i++) {
-                const y = padding + chartH - (i / 4) * chartH;
-                ctx.beginPath();
-                ctx.moveTo(padding, y);
-                ctx.lineTo(w - padding, y);
-                ctx.stroke();
-                ctx.fillStyle = textColor;
-                ctx.font = '10px Inter, sans-serif';
-                ctx.textAlign = 'right';
-                ctx.fillText(formatPrice(Math.round(maxVal * i / 4)), padding - 4, y + 3);
-            }
-
-            // Draw bars
-            const colorArr = Array.isArray(colors) ? colors : [colors];
-            data.forEach((val, idx) => {
-                const barH = (val / maxVal) * chartH;
-                const x = padding + (idx / data.length) * chartW + (barWidth / 2);
-                const y = padding + chartH - barH;
-                const color = colorArr[idx % colorArr.length] || '#c8a96a';
-                ctx.fillStyle = color;
-                ctx.fillRect(x - barWidth / 2, y, barWidth, barH);
-                // Label
-                ctx.fillStyle = textColor;
-                ctx.font = '8px Inter, sans-serif';
-                ctx.textAlign = 'center';
-                ctx.fillText(labels[idx] || '', x, padding + chartH + 14);
-            });
         }
 
         // ===== ADMIN SETTINGS =====
@@ -4868,6 +5032,15 @@
                             <input type="file" id="logoFileInput" accept="image/*" />
                         </div>
                     </div>
+                    <div class="form-group" style="margin-top:20px;border-top:1px solid var(--border-color);padding-top:20px;">
+                        <label class="field-label">📤 آپلود خودکار تصاویر به GitHub</label>
+                        <p style="color:var(--text-muted);font-size:0.8rem;margin-bottom:8px;">با استفاده از ربات اسکرپری که در اختیار دارید، تصاویر محصولات به‌طور خودکار از منابع معتبر دریافت و در مخزن GitHub ذخیره می‌شوند. پس از اجرای ربات، فایل <code>image_mapping.json</code> تولید شده و تصاویر در سایت بارگذاری می‌شوند.</p>
+                        <div style="background:var(--bg-secondary);border-radius:12px;padding:16px;border:1px solid var(--border-color);">
+                            <p style="color:var(--text-secondary);font-size:0.85rem;"><i class="fas fa-info-circle"></i> برای فعال‌سازی، فایل‌های ربات (scraper_bot.py و ...) را در سرور خود اجرا کنید. پس از اجرا، تصاویر به‌روز می‌شوند.</p>
+                            <button class="btn btn-white btn-sm" onclick="window.triggerImageScraper()" style="margin-top:8px;"><i class="fas fa-play"></i> اجرای دستی اسکرپ (شبیه‌سازی)</button>
+                            <div id="scraperResult" style="margin-top:8px;font-size:0.85rem;"></div>
+                        </div>
+                    </div>
                     <button class="btn btn-white" onclick="window.saveSettings()"><i class="fas fa-save"></i> ذخیره تنظیمات</button>
                     <div id="settingsResult" style="margin-top:10px;"></div>
                 </div>
@@ -4892,6 +5065,38 @@
                 reader.readAsDataURL(file);
             });
         }
+
+        window.triggerImageScraper = function() {
+            document.getElementById('scraperResult').innerHTML =
+                '<span style="color:#facc15;">⏳ در حال دریافت تصاویر ... (شبیه‌سازی)</span>';
+            setTimeout(() => {
+                // Simulate fetching image_mapping.json
+                fetch('image_mapping.json')
+                    .then(res => {
+                        if (!res.ok) throw new Error('image_mapping.json یافت نشد');
+                        return res.json();
+                    })
+                    .then(data => {
+                        imageMapping = data;
+                        productsData.forEach(p => {
+                            if (imageMapping[p.id] && imageMapping[p.id].images && imageMapping[p.id]
+                                .images.length > 0) {
+                                p.images = imageMapping[p.id].images;
+                                p.image = imageMapping[p.id].images[0];
+                            }
+                        });
+                        localStorage.setItem('unident_products_final_v12', JSON.stringify(
+                        productsData));
+                        applyFilters();
+                        document.getElementById('scraperResult').innerHTML =
+                            '<span style="color:#22c55e;">✅ تصاویر با موفقیت دریافت و اعمال شدند.</span>';
+                    })
+                    .catch(err => {
+                        document.getElementById('scraperResult').innerHTML =
+                            `<span style="color:#ef4444;">❌ خطا: ${err.message}. لطفاً ربات را روی سرور اجرا کنید.</span>`;
+                    });
+            }, 2000);
+        };
 
         window.saveSettings = function() {
             const name = document.getElementById('shopName').value;
@@ -5018,6 +5223,11 @@
                             '<span style="color:#22c55e;">✅ اطلاعات با موفقیت بازیابی شد.</span>';
                         showToast('بازیابی کامل شد');
                         renderActiveTab();
+                        applyFilters();
+                        renderReviews();
+                        renderStats();
+                        updateCartUI();
+                        updateWishlistUI();
                     } catch (err) {
                         document.getElementById('backupResult').innerHTML =
                             '<span style="color:#ef4444;">❌ فایل بکاپ نامعتبر است.</span>';
@@ -5043,11 +5253,11 @@
                 '<span style="color:#22c55e;">✅ بکاپ خودکار با موفقیت انجام شد. (هر ۲۴ ساعت یکبار)</span>';
         };
 
-        // ===== ADMIN IMPORT/EXPORT =====
-        function renderImportExport() {
+        // ===== ADMIN IMPORT/EXPORT (CSV) =====
+        function renderCSV() {
             const content = document.getElementById('adminContent');
             content.innerHTML = `
-                <h3 style="color:var(--text-primary);font-size:1.1rem;margin-bottom:16px;">📤 واردات / صادرات محصولات</h3>
+                <h3 style="color:var(--text-primary);font-size:1.1rem;margin-bottom:16px;">📤 واردات / صادرات محصولات (CSV/JSON)</h3>
                 <div style="display:flex;gap:20px;flex-wrap:wrap;">
                     <div style="flex:1;min-width:250px;background:var(--bg-card);border-radius:12px;padding:20px;border:1px solid var(--border-color);">
                         <h4 style="color:var(--text-primary);font-size:1rem;">📤 صادرات</h4>
@@ -5163,9 +5373,7 @@
                         `<span style="color:#22c55e;">✅ ${added} محصول جدید وارد شد. (کل: ${productsData.length} محصول)</span>`;
                     showToast(`${added} محصول اضافه شد`);
                     renderActiveTab();
-                    renderProductPage(document.getElementById('filterBrand').value, document.getElementById(
-                        'filterCategory').value, document.getElementById('filterSort').value, document
-                        .getElementById('productSearchInput').value, 1);
+                    applyFilters();
                 } catch (err) {
                     document.getElementById('importResult').innerHTML =
                         `<span style="color:#ef4444;">❌ خطا در خواندن فایل: ${err.message}</span>`;
@@ -5206,17 +5414,17 @@
                 case 'inquiries':
                     renderInquiriesAdmin();
                     break;
-                case 'analytics':
-                    renderAnalytics();
-                    break;
                 case 'settings':
                     renderSettings();
                     break;
                 case 'backup':
                     renderBackup();
                     break;
-                case 'importexport':
-                    renderImportExport();
+                case 'csv':
+                    renderCSV();
+                    break;
+                case 'reports':
+                    renderReports();
                     break;
                 default:
                     renderDashboard();
@@ -5329,7 +5537,13 @@
         // ============================================================
         //  INIT
         // ============================================================
-        renderProductPage('', '', 'name', '', 1);
+        // Wait for image mapping to load first, then render
+        // The fetch at the top already handles rendering after mapping loads.
+        // If mapping fails, applyFilters is called.
+        // We also call applyFilters initially to ensure products show.
+        // But we need to ensure that we don't double-render.
+        // The fetch will call applyFilters on success or error.
+        // So we just set up the other initializations.
         renderReviews();
         renderStats();
         updateCartUI();
@@ -5346,6 +5560,8 @@
         console.log('✅ تمام محصولات در تمام بخش‌های مدیریت قابل مشاهده هستند');
         console.log('✅ امکان حذف تصاویر به صورت تکی اضافه شد');
         console.log('✅ هیچ محدودیتی برای نمایش محصولات وجود ندارد');
+        console.log('📸 سیستم آپلود تصویر روی GitHub در تنظیمات قرار دارد.');
+        console.log('❌ واتساپ حذف شد.');
     </script>
 </body>
 </html>
