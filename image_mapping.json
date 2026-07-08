@@ -1,0 +1,13 @@
+{
+  "wh_1": {
+    "name": "W&H WH-SET",
+    "brand": "W&H",
+    "images": [
+      "images/wh_1/1.jpg",
+      "images/wh_1/2.jpg",
+      "images/wh_1/3.png",
+      "images/wh_1/4.png",
+      "images/wh_1/5.png"
+    ]
+  }
+}
