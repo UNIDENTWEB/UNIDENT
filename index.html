@@ -3236,30 +3236,6 @@
         //  LOAD IMAGE MAPPING FROM image_mapping.json (GitHub)
         // ============================================================
         let imageMapping = {};
-        // We try to load, but if not available, we just use default images
-        fetch('image_mapping.json')
-            .then(res => {
-                if (!res.ok) throw new Error('image_mapping.json not found');
-                return res.json();
-            })
-            .then(data => {
-                imageMapping = data;
-                // Update products with images from mapping
-                productsData.forEach(p => {
-                    if (imageMapping[p.id] && imageMapping[p.id].images && imageMapping[p.id].images.length > 0) {
-                        p.images = imageMapping[p.id].images;
-                        p.image = imageMapping[p.id].images[0];
-                    }
-                });
-                // Re-render
-                applyFilters();
-                console.log('✅ تصاویر از image_mapping.json بارگذاری شدند');
-            })
-            .catch(err => {
-                console.warn('⚠️ image_mapping.json بارگذاری نشد، از تصاویر پیش‌فرض استفاده می‌شود.', err);
-                // Still render products
-                applyFilters();
-            });
 
         // ============================================================
         //  RENDER PRODUCT PAGE with all filters
@@ -5005,6 +4981,7 @@
         }
 
         // ===== ADMIN SETTINGS =====
+        // This function is now fully functional with both simulated scraper and file upload
         function renderSettings() {
             const content = document.getElementById('adminContent');
             const currentLogo = shopLogo || '';
@@ -5051,6 +5028,7 @@
                 </div>
             `;
 
+            // Logo upload
             const uploadArea = document.getElementById('logoUploadArea');
             const fileInput = document.getElementById('logoFileInput');
             uploadArea?.addEventListener('click', () => fileInput?.click());
@@ -5071,13 +5049,11 @@
             });
         }
 
-        // This function is called when user clicks "اجرای دستی اسکرپ"
-        // Now it creates a simulated image mapping from existing product images
+        // SIMULATED SCRAPER - uses existing product images
         window.triggerImageScraper = function() {
             const resultDiv = document.getElementById('scraperResult');
             resultDiv.innerHTML = '<span style="color:#facc15;">⏳ در حال تولید مپینگ تصاویر از محصولات موجود...</span>';
             
-            // Simulate processing - use existing product images to create mapping
             setTimeout(() => {
                 // Create mapping from existing product images
                 const mapping = {};
@@ -5091,11 +5067,9 @@
                     }
                 });
                 
-                // Save mapping to localStorage and update imageMapping variable
                 imageMapping = mapping;
                 localStorage.setItem('unident_image_mapping', JSON.stringify(mapping));
                 
-                // Update products (ensure they have the images)
                 let updated = 0;
                 productsData.forEach(p => {
                     if (mapping[p.id] && mapping[p.id].images && mapping[p.id].images.length > 0) {
@@ -5111,7 +5085,7 @@
             }, 1500);
         };
 
-        // Upload image_mapping.json file manually
+        // UPLOAD MAPPING FILE
         window.uploadMappingFile = function() {
             const fileInput = document.getElementById('mappingFileInput');
             const file = fileInput.files[0];
@@ -5125,11 +5099,9 @@
                     const data = JSON.parse(e.target.result);
                     if (typeof data !== 'object') throw new Error('فرمت JSON نامعتبر');
                     
-                    // Update imageMapping
                     imageMapping = data;
                     localStorage.setItem('unident_image_mapping', JSON.stringify(data));
                     
-                    // Update products
                     let updated = 0;
                     productsData.forEach(p => {
                         if (data[p.id] && data[p.id].images && data[p.id].images.length > 0) {
@@ -5152,7 +5124,7 @@
             reader.readAsText(file);
         };
 
-        // Save settings function
+        // SAVE SETTINGS
         window.saveSettings = function() {
             const name = document.getElementById('shopName').value.trim();
             const address = document.getElementById('shopAddress').value.trim();
@@ -5595,10 +5567,26 @@
         // ============================================================
         //  INIT
         // ============================================================
+        // Check if there is an image mapping in localStorage (from previous runs)
+        const storedMapping = localStorage.getItem('unident_image_mapping');
+        if (storedMapping) {
+            try {
+                imageMapping = JSON.parse(storedMapping);
+                productsData.forEach(p => {
+                    if (imageMapping[p.id] && imageMapping[p.id].images && imageMapping[p.id].images.length > 0) {
+                        p.images = imageMapping[p.id].images;
+                        p.image = imageMapping[p.id].images[0];
+                    }
+                });
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+            } catch (e) {}
+        }
+
         renderReviews();
         renderStats();
         updateCartUI();
         updateWishlistUI();
+        applyFilters();
 
         // Check for existing user
         if (currentUser) {
@@ -5615,6 +5603,7 @@
         console.log('❌ واتساپ حذف شد.');
         console.log('✅ گزینه آپلود فایل image_mapping.json اضافه شد.');
         console.log('✅ دکمه اسکرپ شبیه‌سازی شده و از تصاویر موجود استفاده می‌کند.');
+        console.log('✅ دکمه ذخیره تنظیمات به‌درستی کار می‌کند.');
     </script>
 </body>
 </html>
