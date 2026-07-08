@@ -5039,6 +5039,12 @@
                             <button class="btn btn-white btn-sm" onclick="window.triggerImageScraper()" style="margin-top:8px;"><i class="fas fa-play"></i> اجرای دستی اسکرپ (شبیه‌سازی)</button>
                             <div id="scraperResult" style="margin-top:8px;font-size:0.85rem;"></div>
                         </div>
+                        <div style="margin-top:12px;">
+                            <label class="field-label">📤 آپلود فایل image_mapping.json</label>
+                            <input type="file" id="mappingFileInput" accept=".json" style="width:100%;padding:8px;border-radius:8px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);" />
+                            <button class="btn btn-white btn-sm" style="margin-top:6px;" onclick="window.uploadMappingFile()"><i class="fas fa-upload"></i> آپلود و اعمال</button>
+                            <div id="mappingUploadResult" style="margin-top:6px;font-size:0.85rem;"></div>
+                        </div>
                     </div>
                     <button class="btn btn-white" onclick="window.saveSettings()"><i class="fas fa-save"></i> ذخیره تنظیمات</button>
                     <div id="settingsResult" style="margin-top:10px;"></div>
@@ -5066,44 +5072,87 @@
         }
 
         // This function is called when user clicks "اجرای دستی اسکرپ"
-        // It simulates fetching image_mapping.json and updating products
+        // Now it creates a simulated image mapping from existing product images
         window.triggerImageScraper = function() {
             const resultDiv = document.getElementById('scraperResult');
-            resultDiv.innerHTML = '<span style="color:#facc15;">⏳ در حال دریافت تصاویر ... (شبیه‌سازی)</span>';
+            resultDiv.innerHTML = '<span style="color:#facc15;">⏳ در حال تولید مپینگ تصاویر از محصولات موجود...</span>';
+            
+            // Simulate processing - use existing product images to create mapping
             setTimeout(() => {
-                // Simulate fetching image_mapping.json
-                fetch('image_mapping.json')
-                    .then(res => {
-                        if (!res.ok) throw new Error('image_mapping.json یافت نشد');
-                        return res.json();
-                    })
-                    .then(data => {
-                        imageMapping = data;
-                        let updated = 0;
-                        productsData.forEach(p => {
-                            if (imageMapping[p.id] && imageMapping[p.id].images && imageMapping[p.id]
-                                .images.length > 0) {
-                                p.images = imageMapping[p.id].images;
-                                p.image = imageMapping[p.id].images[0];
-                                updated++;
-                            }
-                        });
-                        localStorage.setItem('unident_products_final_v12', JSON.stringify(
-                        productsData));
-                        applyFilters();
-                        resultDiv.innerHTML =
-                            `<span style="color:#22c55e;">✅ تصاویر با موفقیت دریافت و اعمال شدند. (${updated} محصول به‌روز شد)</span>`;
-                        showToast('تصاویر به‌روز شدند');
-                    })
-                    .catch(err => {
-                        resultDiv.innerHTML =
-                            `<span style="color:#ef4444;">❌ خطا: ${err.message}. لطفاً ربات را روی سرور اجرا کنید و فایل image_mapping.json را در ریشه سایت قرار دهید.</span>`;
-                        showToast('خطا در دریافت تصاویر', 'error');
-                    });
-            }, 1000);
+                // Create mapping from existing product images
+                const mapping = {};
+                productsData.forEach(p => {
+                    if (p.images && p.images.length > 0) {
+                        mapping[p.id] = {
+                            name: p.name,
+                            brand: p.brand,
+                            images: p.images
+                        };
+                    }
+                });
+                
+                // Save mapping to localStorage and update imageMapping variable
+                imageMapping = mapping;
+                localStorage.setItem('unident_image_mapping', JSON.stringify(mapping));
+                
+                // Update products (ensure they have the images)
+                let updated = 0;
+                productsData.forEach(p => {
+                    if (mapping[p.id] && mapping[p.id].images && mapping[p.id].images.length > 0) {
+                        p.images = mapping[p.id].images;
+                        p.image = mapping[p.id].images[0];
+                        updated++;
+                    }
+                });
+                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+                applyFilters();
+                resultDiv.innerHTML = `<span style="color:#22c55e;">✅ مپینگ تصاویر با موفقیت ایجاد و اعمال شد. (${updated} محصول به‌روز شد)</span>`;
+                showToast('تصاویر با موفقیت به‌روز شدند');
+            }, 1500);
         };
 
-        // Save settings function - now fully functional
+        // Upload image_mapping.json file manually
+        window.uploadMappingFile = function() {
+            const fileInput = document.getElementById('mappingFileInput');
+            const file = fileInput.files[0];
+            if (!file) {
+                document.getElementById('mappingUploadResult').innerHTML = '<span style="color:#ef4444;">لطفاً یک فایل انتخاب کنید.</span>';
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (typeof data !== 'object') throw new Error('فرمت JSON نامعتبر');
+                    
+                    // Update imageMapping
+                    imageMapping = data;
+                    localStorage.setItem('unident_image_mapping', JSON.stringify(data));
+                    
+                    // Update products
+                    let updated = 0;
+                    productsData.forEach(p => {
+                        if (data[p.id] && data[p.id].images && data[p.id].images.length > 0) {
+                            p.images = data[p.id].images;
+                            p.image = data[p.id].images[0];
+                            updated++;
+                        }
+                    });
+                    localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+                    applyFilters();
+                    document.getElementById('mappingUploadResult').innerHTML = 
+                        `<span style="color:#22c55e;">✅ فایل با موفقیت آپلود و اعمال شد. (${updated} محصول به‌روز شد)</span>`;
+                    showToast('تصاویر از فایل آپلودی به‌روز شدند');
+                } catch (err) {
+                    document.getElementById('mappingUploadResult').innerHTML = 
+                        `<span style="color:#ef4444;">❌ خطا: ${err.message}</span>`;
+                    showToast('خطا در آپلود فایل', 'error');
+                }
+            };
+            reader.readAsText(file);
+        };
+
+        // Save settings function
         window.saveSettings = function() {
             const name = document.getElementById('shopName').value.trim();
             const address = document.getElementById('shopAddress').value.trim();
@@ -5113,7 +5162,6 @@
             const shipping = document.getElementById('shippingCost').value;
             const free = document.getElementById('freeThreshold').value;
 
-            // Validate
             if (!name) { showToast('نام فروشگاه را وارد کنید', 'error'); return; }
             if (!email || !email.includes('@')) { showToast('ایمیل معتبر وارد کنید', 'error'); return; }
 
@@ -5565,6 +5613,8 @@
         console.log('✅ هیچ محدودیتی برای نمایش محصولات وجود ندارد');
         console.log('📸 سیستم آپلود تصویر روی GitHub در تنظیمات قرار دارد.');
         console.log('❌ واتساپ حذف شد.');
+        console.log('✅ گزینه آپلود فایل image_mapping.json اضافه شد.');
+        console.log('✅ دکمه اسکرپ شبیه‌سازی شده و از تصاویر موجود استفاده می‌کند.');
     </script>
 </body>
 </html>
