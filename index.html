@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <style>
         /* ===== CSS VARIABLES (DARK/LIGHT) ===== */
         :root {
@@ -2542,6 +2543,50 @@
             font-size: 0.8rem;
             color: var(--text-muted);
         }
+
+        /* ===== BULK PRICE UPLOAD ===== */
+        .bulk-upload-area {
+            background: var(--bg-secondary);
+            border: 2px dashed var(--border-color);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 12px;
+        }
+        .bulk-upload-area:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-input);
+        }
+        .bulk-upload-area .hint {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+        .bulk-upload-area input[type="file"] {
+            display: none;
+        }
+        .bulk-upload-result {
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+        .bulk-upload-result.success {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+        .bulk-upload-result.error {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+        .bulk-upload-result.info {
+            background: rgba(250, 204, 21, 0.15);
+            color: #facc15;
+            border: 1px solid rgba(250, 204, 21, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -2929,90 +2974,115 @@
 
     <script>
         // ============================================================
-        //  دریافت تصویر از سایت کوکسو بر اساس نام محصول
+        //  دریافت تصویر از سایت‌های مختلف بر اساس برند
         // ============================================================
-        async function getCoxoImage(productName) {
+        async function getProductImageFromSite(brand, productName, productCode) {
             try {
-                // ۱. استخراج نام مدل از نام کامل محصول
-                // مثلاً "COXO CX207-W H17" -> "cx207-w-h17"
-                let modelPart = productName
-                    .replace(/^COXO\s*/i, '') // حذف "COXO " از ابتدا
-                    .toLowerCase()
-                    .replace(/[^a-z0-9]+/g, '-') // جایگزینی کاراکترهای غیرمجاز با خط تیره
-                    .replace(/^-|-$/g, ''); // حذف خط تیره از ابتدا و انتها
+                let baseUrl, searchQuery;
+                const cleanName = productName.replace(/^[A-Z]+\s*/i, '').toLowerCase().trim();
+                const code = (productCode || '').toLowerCase().trim();
 
-                // ۲. ساخت آدرس صفحه محصول (بر اساس الگوی سایت)
-                const url = `https://coxotec.com/product/${modelPart}-handpiece/`;
-                const fallbackUrl = `https://coxotec.com/en/product/${modelPart}-handpiece/`;
-
-                // ۳. درخواست صفحه
-                let response = await fetch(url);
-                if (!response.ok) {
-                    // اگر صفحه اول پیدا نشد، زبان پیش‌فرض (انگلیسی) را امتحان کن
-                    response = await fetch(fallbackUrl);
-                    if (!response.ok) return null;
+                if (brand === 'COXO') {
+                    baseUrl = 'https://coxotec.com';
+                    const modelPart = cleanName.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                    const urls = [
+                        `${baseUrl}/product/${modelPart}-handpiece/`,
+                        `${baseUrl}/en/product/${modelPart}-handpiece/`
+                    ];
+                    for (const url of urls) {
+                        try {
+                            const resp = await fetch(url);
+                            if (resp.ok) {
+                                const html = await resp.text();
+                                const match = html.match(/<meta property="og:image" content="([^"]+)"/);
+                                if (match && match[1]) return match[1];
+                            }
+                        } catch (e) { /* continue */ }
+                    }
+                    return null;
                 }
 
-                const html = await response.text();
-                // استخراج آدرس تصویر از تگ og:image
-                const match = html.match(/<meta property="og:image" content="([^"]+)"/);
-                if (match && match[1]) {
-                    return match[1];
+                else if (brand === 'NSK') {
+                    baseUrl = 'https://fordent.ru';
+                    // جستجو بر اساس کد یا نام
+                    const query = code || cleanName;
+                    const searchUrl = `${baseUrl}/search/?q=${encodeURIComponent(query)}`;
+                    try {
+                        const resp = await fetch(searchUrl);
+                        if (resp.ok) {
+                            const html = await resp.text();
+                            // الگوی تصویر محصول در fordent.ru
+                            const match = html.match(/<img[^>]+src=["']([^"']*\/catalog\/product\/[^"']+)["']/i);
+                            if (match && match[1]) {
+                                const imgUrl = match[1].startsWith('http') ? match[1] : baseUrl + match[1];
+                                return imgUrl;
+                            }
+                        }
+                    } catch (e) { /* continue */ }
+                    return null;
                 }
+
+                else if (brand === 'W&H') {
+                    baseUrl = 'https://expo-dent.com';
+                    const query = code || cleanName;
+                    const searchUrl = `${baseUrl}/catalog/?q=${encodeURIComponent(query)}`;
+                    try {
+                        const resp = await fetch(searchUrl);
+                        if (resp.ok) {
+                            const html = await resp.text();
+                            // الگوی تصویر در expo-dent.com
+                            const match = html.match(/<img[^>]+src=["']([^"']*\/upload\/[^"']+)["']/i);
+                            if (match && match[1]) {
+                                const imgUrl = match[1].startsWith('http') ? match[1] : baseUrl + match[1];
+                                return imgUrl;
+                            }
+                        }
+                    } catch (e) { /* continue */ }
+                    return null;
+                }
+
                 return null;
             } catch (error) {
-                console.warn(`⚠️ خطا در دریافت تصویر برای ${productName}:`, error.message);
+                console.warn(`⚠️ خطا در دریافت تصویر برای ${brand} - ${productName}:`, error.message);
                 return null;
             }
         }
 
         // ============================================================
-        //  به‌روزرسانی تصاویر همه محصولات از سایت کوکسو
+        //  به‌روزرسانی تصاویر همه محصولات از سایت‌های مربوطه
         // ============================================================
-        async function updateAllImagesFromCoxo() {
+        async function updateAllImagesFromSites() {
             let updated = 0;
             let failed = 0;
-            const total = productsData.filter(p => p.brand === 'COXO').length;
-
-            if (total === 0) {
-                showToast('هیچ محصولی با برند COXO یافت نشد', 'error');
-                return;
-            }
+            const total = productsData.length;
 
             document.getElementById('scraperResult').innerHTML =
-                `<span style="color:#facc15;">⏳ در حال دریافت تصاویر از سایت کوکسو برای ${total} محصول...</span>`;
+                `<span style="color:#facc15;">⏳ در حال دریافت تصاویر از سایت‌های مرجع برای ${total} محصول...</span>`;
 
             for (const product of productsData) {
-                if (product.brand === 'COXO') {
-                    const imageUrl = await getCoxoImage(product.name);
-                    if (imageUrl) {
-                        product.image = imageUrl;
-                        product.images = [imageUrl];
-                        updated++;
-                        console.log(`✅ ${product.name} -> ${imageUrl}`);
-                    } else {
-                        failed++;
-                        console.warn(`❌ تصویری برای ${product.name} یافت نشد`);
-                    }
-                    // تأخیر ۱ ثانیه بین درخواست‌ها برای جلوگیری از محدودیت
-                    await new Promise(resolve => setTimeout(resolve, 1000));
+                const imageUrl = await getProductImageFromSite(product.brand, product.name, product.code);
+                if (imageUrl) {
+                    product.image = imageUrl;
+                    product.images = [imageUrl];
+                    updated++;
+                    console.log(`✅ ${product.name} (${product.brand}) -> ${imageUrl}`);
+                } else {
+                    failed++;
+                    console.warn(`❌ تصویری برای ${product.name} (${product.brand}) یافت نشد`);
                 }
+                await new Promise(resolve => setTimeout(resolve, 800));
             }
 
-            // ذخیره در localStorage
             localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
-
-            // بازرندر کردن صفحه
             applyFilters();
 
             document.getElementById('scraperResult').innerHTML =
                 `<span style="color:#22c55e;">✅ به‌روزرسانی کامل شد: ${updated} محصول به‌روز شد، ${failed} محصول ناموفق</span>`;
-            showToast(`✅ ${updated} محصول از سایت کوکسو به‌روز شد`);
+            showToast(`✅ ${updated} محصول از سایت‌های مرجع به‌روز شد`);
         }
 
         // ============================================================
-        //  GENERATE PRODUCTS (300 products, COXO=original, NSK/W&H=non-original)
-        //  با تصاویر پیش‌فرض Unsplash (تا زمان به‌روزرسانی از کوکسو)
+        //  GENERATE PRODUCTS (300 products)
         // ============================================================
         function generateProducts() {
             const brands = ['NSK', 'COXO', 'W&H'];
@@ -3085,7 +3155,6 @@
                 null;
                 const seed = imageSeeds[i % imageSeeds.length];
                 const image = `https://images.unsplash.com/photo-${seed}?w=400&h=400&fit=crop&crop=center`;
-                // generate multiple images
                 const extraImages = [];
                 for (let j = 0; j < 2; j++) {
                     const s2 = imageSeeds[(i + j + 5) % imageSeeds.length];
@@ -3399,14 +3468,18 @@
                     `<span class="stock-badge ${p.stock > 0 ? 'in-stock' : 'out-of-stock'}">${p.stock > 0 ? `موجود: ${p.stock}` : 'ناموجود'}</span>` :
                     '';
                 const originHtml = `<span class="origin-badge ${p.isOriginal ? 'original' : 'copy'}">${p.isOriginal ? '✅ اورجینال' : 'ℹ️ غیر اورجینال'}</span>`;
+                
+                // ===== شرط نمایش دکمه استعلام قیمت =====
+                const showInquiry = (p.inquiryEnabled || p.showPrice === false || (p.stock || 0) <= 0);
+                const inquiryBtn = showInquiry ?
+                    `<button class="inquiry-btn" onclick="event.stopPropagation(); submitInquiry('${p.id}')">استعلام قیمت</button>` :
+                    '';
+                
                 const mainImg = p.images && p.images.length > 0 ? p.images[0] : p.image;
                 const imgHtml = mainImg ?
                     `<img src="${mainImg}" alt="${p.name}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\\'no-img\\' style=\\'font-size:4rem; opacity:0.3;\\'>📦</span>';" />` :
                     `<span class="no-img" style="font-size:4rem; opacity:0.3;">📦</span>`;
                 const isWish = wishlist.includes(p.id);
-                const inquiryBtn = (p.inquiryEnabled || p.showPrice === false) ?
-                    `<button class="inquiry-btn" onclick="event.stopPropagation(); submitInquiry('${p.id}')">استعلام قیمت</button>` :
-                    '';
                 const viewCountHtml = `<div class="view-count"><i class="fas fa-eye"></i> ${p.viewCount || 0} بازدید</div>`;
 
                 let dotsHtml = '';
@@ -3414,6 +3487,9 @@
                     dotsHtml =
                         `<div class="image-nav">${p.images.map((_, idx) => `<span class="${idx===0?'active':''}" data-img="${idx}"></span>`).join('')}</div>`;
                 }
+
+                const canAddToCart = (p.stock > 0 && p.showPrice !== false);
+                const addBtnDisabled = !canAddToCart ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : '';
 
                 return `<div class="product-card-full" data-id="${p.id}">
                         ${tagHtml} ${guaHtml}
@@ -3433,7 +3509,7 @@
                         <div class="price-row">
                             <span class="price">${priceDisplay}</span>
                             <div style="display:flex; gap:8px;">
-                                <button class="add-btn" data-id="${p.id}" aria-label="افزودن به سبد" ${p.stock <= 0 || p.showPrice === false ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''}><i class="fas fa-plus"></i></button>
+                                <button class="add-btn" data-id="${p.id}" aria-label="افزودن به سبد" ${addBtnDisabled}><i class="fas fa-plus"></i></button>
                                 <button class="wishlist-btn ${isWish ? 'active' : ''}" data-id="${p.id}"><i class="fas fa-heart"></i></button>
                             </div>
                         </div>
@@ -3575,7 +3651,8 @@
                 `<img src="${img}" alt="${p.name}" class="${idx===0?'active':''}" data-img="${idx}" onerror="this.style.display='none';" />`
                 ).join('');
 
-            const inquiryFormHtml = (p.inquiryEnabled || p.showPrice === false) ?
+            const showInquiryDetail = (p.inquiryEnabled || p.showPrice === false || (p.stock || 0) <= 0);
+            const inquiryFormHtml = showInquiryDetail ?
                 `<div class="inquiry-form-box">
                     <h4 style="color:var(--text-primary); font-size:0.9rem; margin-bottom:8px;">📋 ثبت درخواست استعلام قیمت</h4>
                     <input type="text" id="inqName" placeholder="نام کامل" />
@@ -3609,7 +3686,7 @@
                         <div class="specs">${specs.map(s => `<div class="spec-item"><span class="label">${escapeHtml(s.label)}</span><span class="value">${escapeHtml(s.value)}</span></div>`).join('')}</div>
                         ${inquiryFormHtml}
                         <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;">
-                            <button class="btn btn-white" onclick="addToCart('${p.id}')" ${p.stock <= 0 || p.showPrice === false ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''}><i class="fas fa-cart-plus"></i> افزودن به سبد</button>
+                            <button class="btn btn-white" onclick="addToCart('${p.id}')" ${(p.stock <= 0 || p.showPrice === false) ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''}><i class="fas fa-cart-plus"></i> افزودن به سبد</button>
                             <button class="btn btn-outline" onclick="toggleWishlist('${p.id}')"><i class="fas fa-heart"></i> ${wishlist.includes(p.id) ? 'حذف از علاقه‌مندی' : 'افزودن به علاقه‌مندی'}</button>
                         </div>
                     </div>
@@ -4708,7 +4785,7 @@
             }
         };
 
-        // ===== ADMIN PRICES (FULL - NO LIMIT) =====
+        // ===== ADMIN PRICES (FULL - NO LIMIT) + Bulk Upload (Excel, CSV, JSON) =====
         function renderPriceManagement() {
             const content = document.getElementById('adminContent');
             const searchTerm = document.getElementById('priceSearch')?.value?.trim() || '';
@@ -4722,6 +4799,23 @@
                     <input type="text" id="priceSearch" placeholder="جستجو..." value="${searchTerm}" style="flex:1;min-width:200px;padding:10px 16px;border-radius:60px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.9rem;min-height:44px;" oninput="renderPriceManagement()" />
                     <button class="btn btn-white btn-sm" onclick="renderPriceManagement()"><i class="fas fa-search"></i></button>
                 </div>
+
+                <!-- ===== بخش آپلود انبوه قیمت‌ها (Excel, CSV, JSON) ===== -->
+                <div style="background:var(--bg-card);border-radius:12px;padding:16px;margin-bottom:20px;border:1px solid var(--border-color);">
+                    <h4 style="color:var(--text-primary);font-size:0.95rem;margin-bottom:12px;">📤 آپلود انبوه قیمت‌ها از فایل Excel / CSV / JSON</h4>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:12px;">فرمت فایل باید شامل ستون‌های <strong>id</strong> یا <strong>code</strong> و <strong>basePrice</strong> و <strong>profitPercent</strong> (اختیاری) باشد. برای JSON نیز آرایه‌ای از اشیاء با همین کلیدها.</p>
+                    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:12px;">
+                        <button class="btn btn-white btn-sm" onclick="window.downloadPriceTemplate()"><i class="fas fa-file-download"></i> دانلود قالب نمونه (Excel)</button>
+                        <button class="btn btn-outline btn-sm" onclick="window.downloadPriceTemplateJSON()"><i class="fas fa-file-code"></i> دانلود قالب JSON</button>
+                    </div>
+                    <div class="bulk-upload-area" id="bulkUploadArea">
+                        <div class="hint">📂 برای آپلود فایل قیمت‌ها کلیک کنید (XLSX, XLS, CSV, JSON)</div>
+                        <input type="file" id="bulkPriceFile" accept=".xlsx,.xls,.csv,.json" />
+                    </div>
+                    <div id="bulkPriceResult" class="bulk-upload-result" style="display:none;"></div>
+                    <button class="btn btn-white btn-sm" style="margin-top:12px;" onclick="window.uploadBulkPrices()"><i class="fas fa-upload"></i> آپلود و اعمال قیمت‌ها</button>
+                </div>
+
                 <div style="background:var(--bg-card);border-radius:12px;padding:16px;margin-bottom:16px;border:1px solid var(--border-color);">
                     <h4 style="color:var(--text-primary);font-size:0.95rem;">⚡ تنظیم سود کلی</h4>
                     <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
@@ -4731,6 +4825,7 @@
                     </div>
                     <div id="bulkProfitResult" style="margin-top:10px;color:var(--text-muted);font-size:0.85rem;"></div>
                 </div>
+
                 <div style="overflow-x:auto;max-height:400px;overflow-y:auto;">
                     <table class="admin-table"><thead><tr><th>محصول</th><th>برند</th><th>قیمت پایه</th><th>سود %</th><th>قیمت نهایی</th><th>عملیات</th></tr></thead><tbody>
                         ${filtered.slice(0,200).map(p => {
@@ -4741,19 +4836,181 @@
                 </div>
                 <div id="priceUpdateResult" style="margin-top:12px;text-align:center;"></div>
             `;
-            document.querySelectorAll('.base-price-input, .profit-input').forEach(input => {
-                input.addEventListener('input', function() {
-                    const id = this.dataset.id;
-                    const base = parseFloat(document.querySelector(
-                        `.base-price-input[data-id="${id}"]`).value) || 0;
-                    const profit = parseFloat(document.querySelector(
-                        `.profit-input[data-id="${id}"]`).value) || 200;
-                    document.querySelector(`.final-price[data-id="${id}"]`).textContent = formatPrice(Math
-                        .round(base * (1 + profit / 100)));
-                });
+
+            // ===== Event handlers for bulk upload =====
+            const uploadArea = document.getElementById('bulkUploadArea');
+            const fileInput = document.getElementById('bulkPriceFile');
+            uploadArea?.addEventListener('click', () => fileInput?.click());
+            fileInput?.addEventListener('change', function() {
+                if (this.files && this.files[0]) {
+                    document.querySelector('.bulk-upload-area .hint').innerHTML = `📄 ${this.files[0].name} انتخاب شد`;
+                }
             });
         }
 
+        // ===== DOWNLOAD PRICE TEMPLATE (Excel) =====
+        window.downloadPriceTemplate = function() {
+            const headers = ['id', 'code', 'name', 'basePrice', 'profitPercent'];
+            const sampleData = [
+                ['coxo_1', 'CX207-W56', 'COXO CX207-W', 5000000, 200],
+                ['nsk_1', 'Z900L78', 'NSK Ti-Max Z900L', 8000000, 200],
+                ['wh_1', 'WH-SET12', 'W&H WH-SET', 12000000, 200]
+            ];
+            const wsData = [headers, ...sampleData];
+            const ws = XLSX.utils.aoa_to_sheet(wsData);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, 'Prices');
+            XLSX.writeFile(wb, 'price_template.xlsx');
+            showToast('✅ قالب نمونه Excel دانلود شد');
+        };
+
+        // ===== DOWNLOAD PRICE TEMPLATE (JSON) =====
+        window.downloadPriceTemplateJSON = function() {
+            const sample = [
+                { id: 'coxo_1', code: 'CX207-W56', name: 'COXO CX207-W', basePrice: 5000000, profitPercent: 200 },
+                { id: 'nsk_1', code: 'Z900L78', name: 'NSK Ti-Max Z900L', basePrice: 8000000, profitPercent: 200 },
+                { id: 'wh_1', code: 'WH-SET12', name: 'W&H WH-SET', basePrice: 12000000, profitPercent: 200 }
+            ];
+            const blob = new Blob([JSON.stringify(sample, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'price_template.json';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('✅ قالب نمونه JSON دانلود شد');
+        };
+
+        // ===== UPLOAD BULK PRICES (supports XLSX, XLS, CSV, JSON) =====
+        window.uploadBulkPrices = function() {
+            const fileInput = document.getElementById('bulkPriceFile');
+            const resultDiv = document.getElementById('bulkPriceResult');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'bulk-upload-result error';
+                resultDiv.innerHTML = '❌ لطفاً یک فایل انتخاب کنید.';
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    let jsonData = [];
+                    const fileExt = file.name.split('.').pop().toLowerCase();
+
+                    if (fileExt === 'json') {
+                        jsonData = JSON.parse(e.target.result);
+                        if (!Array.isArray(jsonData)) {
+                            throw new Error('فایل JSON باید آرایه‌ای از اشیاء باشد.');
+                        }
+                    } else {
+                        // Excel or CSV
+                        const data = e.target.result;
+                        const workbook = XLSX.read(data, { type: 'array' });
+                        const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+                        jsonData = XLSX.utils.sheet_to_json(firstSheet);
+                    }
+
+                    if (!jsonData || jsonData.length === 0) {
+                        resultDiv.style.display = 'block';
+                        resultDiv.className = 'bulk-upload-result error';
+                        resultDiv.innerHTML = '❌ فایل خالی یا فرمت نامعتبر است.';
+                        return;
+                    }
+
+                    // پیدا کردن ستون‌های مورد نیاز
+                    const headers = Object.keys(jsonData[0]);
+                    const idCol = headers.find(h => h.toLowerCase() === 'id');
+                    const codeCol = headers.find(h => h.toLowerCase() === 'code');
+                    const priceCol = headers.find(h => h.toLowerCase() === 'baseprice');
+                    const profitCol = headers.find(h => h.toLowerCase() === 'profitpercent');
+                    const nameCol = headers.find(h => h.toLowerCase() === 'name');
+
+                    if (!idCol && !codeCol) {
+                        resultDiv.style.display = 'block';
+                        resultDiv.className = 'bulk-upload-result error';
+                        resultDiv.innerHTML = '❌ ستون "id" یا "code" در فایل وجود ندارد.';
+                        return;
+                    }
+                    if (!priceCol) {
+                        resultDiv.style.display = 'block';
+                        resultDiv.className = 'bulk-upload-result error';
+                        resultDiv.innerHTML = '❌ ستون "basePrice" در فایل وجود ندارد.';
+                        return;
+                    }
+
+                    let updated = 0;
+                    let notFound = 0;
+                    const errors = [];
+
+                    jsonData.forEach(row => {
+                        const identifier = row[idCol] || row[codeCol];
+                        if (!identifier) return;
+
+                        const basePrice = parseFloat(row[priceCol]);
+                        if (isNaN(basePrice) || basePrice < 0) {
+                            errors.push(`قیمت نامعتبر برای ${identifier}`);
+                            return;
+                        }
+
+                        let product = null;
+                        if (idCol) {
+                            product = productsData.find(p => p.id === String(identifier));
+                        }
+                        if (!product && codeCol) {
+                            product = productsData.find(p => p.code === String(identifier));
+                        }
+                        if (!product && nameCol) {
+                            product = productsData.find(p => p.name === String(row[nameCol]));
+                        }
+
+                        if (product) {
+                            product.basePrice = basePrice;
+                            if (profitCol) {
+                                const profit = parseFloat(row[profitCol]);
+                                if (!isNaN(profit) && profit >= 0) {
+                                    product.profitPercent = profit;
+                                }
+                            }
+                            updated++;
+                        } else {
+                            notFound++;
+                            errors.push(`محصول با شناسه ${identifier} یافت نشد`);
+                        }
+                    });
+
+                    localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+                    applyFilters();
+                    renderPriceManagement();
+
+                    resultDiv.style.display = 'block';
+                    if (updated > 0) {
+                        resultDiv.className = 'bulk-upload-result success';
+                        resultDiv.innerHTML = `✅ ${updated} محصول به‌روز شد. ${notFound > 0 ? `⚠️ ${notFound} محصول یافت نشد.` : ''}`;
+                        showToast(`${updated} محصول با موفقیت به‌روز شد`);
+                    } else {
+                        resultDiv.className = 'bulk-upload-result error';
+                        resultDiv.innerHTML = `❌ هیچ محصولی به‌روز نشد. ${errors.slice(0,3).join('; ')}${errors.length > 3 ? '...' : ''}`;
+                    }
+                    document.getElementById('bulkPriceFile').value = '';
+                    document.querySelector('.bulk-upload-area .hint').innerHTML = '📂 برای آپلود فایل قیمت‌ها کلیک کنید (XLSX, XLS, CSV, JSON)';
+                } catch (err) {
+                    resultDiv.style.display = 'block';
+                    resultDiv.className = 'bulk-upload-result error';
+                    resultDiv.innerHTML = `❌ خطا در خواندن فایل: ${err.message}`;
+                }
+            };
+
+            if (file.name.endsWith('.json')) {
+                reader.readAsText(file);
+            } else {
+                reader.readAsArrayBuffer(file);
+            }
+        };
+
+        // ===== APPLY BULK PROFIT =====
         window.applyBulkProfit = function() {
             const profit = parseInt(document.getElementById('bulkProfitPercent').value);
             if (isNaN(profit) || profit < 0) {
@@ -5034,7 +5291,7 @@
                             <button class="btn btn-white btn-sm" onclick="window.triggerImageScraper()" style="margin-top:8px;"><i class="fas fa-play"></i> اجرای دستی اسکرپ (شبیه‌سازی)</button>
                             <div id="scraperResult" style="margin-top:8px;font-size:0.85rem;"></div>
                             <div style="margin-top:12px;">
-                                <button class="btn btn-white btn-sm" onclick="window.updateAllImagesFromCoxo()" style="margin-top:8px;"><i class="fas fa-cloud-download-alt"></i> دریافت مستقیم از کوکسو</button>
+                                <button class="btn btn-white btn-sm" onclick="window.updateAllImagesFromSites()" style="margin-top:8px;"><i class="fas fa-cloud-download-alt"></i> دریافت مستقیم از سایت‌های مرجع</button>
                                 <div id="scraperResult" style="margin-top:8px;font-size:0.85rem;"></div>
                             </div>
                         </div>
@@ -5047,7 +5304,7 @@
                         <div style="margin-top:12px;background:var(--bg-card);border-radius:12px;padding:16px;border:1px solid var(--border-color);">
                             <p style="color:var(--text-muted);font-size:0.85rem;">📊 وضعیت تصاویر فعلی: <span style="color:#22c55e;">${productsData.filter(p => p.images && p.images.length > 0).length} محصول دارای تصویر</span></p>
                             <p style="color:var(--text-muted);font-size:0.7rem;margin-top:4px;">تعداد کل محصولات: ${productsData.length}</p>
-                            <p style="color:var(--text-muted);font-size:0.7rem;margin-top:4px;">🔗 تصاویر برند COXO از سایت coxotec.com دریافت می‌شوند.</p>
+                            <p style="color:var(--text-muted);font-size:0.7rem;margin-top:4px;">🔗 تصاویر برند COXO از سایت coxotec.com، NSK از fordent.ru، W&H از expo-dent.com دریافت می‌شوند.</p>
                         </div>
                     </div>
                     <button class="btn btn-white" onclick="window.saveSettings()"><i class="fas fa-save"></i> ذخیره تنظیمات</button>
@@ -5075,10 +5332,10 @@
             });
         }
 
-        // ===== دکمه دریافت مستقیم از کوکسو =====
-        window.updateAllImagesFromCoxo = updateAllImagesFromCoxo;
+        // ===== دکمه دریافت مستقیم از سایت‌های مرجع =====
+        window.updateAllImagesFromSites = updateAllImagesFromSites;
 
-        // ===== SIMULATED SCRAPER (قدیمی) =====
+        // ===== SIMULATED SCRAPER =====
         window.triggerImageScraper = function() {
             const resultDiv = document.getElementById('scraperResult');
             resultDiv.innerHTML = '<span style="color:#facc15;">⏳ در حال تولید مپینگ تصاویر از محصولات موجود...</span>';
@@ -5582,19 +5839,22 @@
         // ============================================================
         //  INIT
         // ============================================================
-        // بررسی و به‌روزرسانی تصاویر از کوکسو (در صورت وجود محصولات COXO)
         const hasCoxo = productsData.some(p => p.brand === 'COXO');
-        if (hasCoxo) {
-            // بررسی اینکه آیا تصاویر از قبل از کوکسو گرفته شده‌اند یا خیر
-            const sampleCoxo = productsData.find(p => p.brand === 'COXO');
-            const isFromCoxo = sampleCoxo && sampleCoxo.image && sampleCoxo.image.includes('coxotec.com');
-            if (!isFromCoxo) {
-                console.log('🔄 در حال دریافت تصاویر از سایت کوکسو...');
-                // اجرای خودکار بدون نیاز به کلیک کاربر
-                setTimeout(() => {
-                    updateAllImagesFromCoxo();
-                }, 2000);
-            }
+        const hasNsk = productsData.some(p => p.brand === 'NSK');
+        const hasWh = productsData.some(p => p.brand === 'W&H');
+
+        // بررسی می‌کنیم که آیا تصاویر از سایت‌های مرجع گرفته شده‌اند یا خیر
+        const hasSiteImage = productsData.some(p => 
+            (p.brand === 'COXO' && p.image && p.image.includes('coxotec.com')) ||
+            (p.brand === 'NSK' && p.image && p.image.includes('fordent.ru')) ||
+            (p.brand === 'W&H' && p.image && p.image.includes('expo-dent.com'))
+        );
+
+        if (!hasSiteImage && (hasCoxo || hasNsk || hasWh)) {
+            console.log('🔄 در حال دریافت تصاویر از سایت‌های مرجع...');
+            setTimeout(() => {
+                updateAllImagesFromSites();
+            }, 2000);
         }
 
         renderReviews();
@@ -5610,11 +5870,12 @@
 
         console.log('🦷 UNIDENT — ' + productsData.length + ' محصول');
         console.log('🔑 پنل ادمین با رمز 1212');
-        console.log('📸 تصاویر برند COXO از سایت coxotec.com دریافت می‌شوند');
-        console.log('✅ دکمه دریافت مستقیم از کوکسو در تنظیمات اضافه شد');
-        console.log('❌ واتساپ حذف شد.');
+        console.log('📸 تصاویر برند COXO از سایت coxotec.com، NSK از fordent.ru، W&H از expo-dent.com دریافت می‌شوند');
+        console.log('✅ قابلیت آپلود انبوه قیمت‌ها از فایل Excel/CSV/JSON اضافه شد');
+        console.log('✅ دکمه دریافت مستقیم از سایت‌های مرجع در تنظیمات اضافه شد');
         console.log('✅ گزینه آپلود فایل image_mapping.json اضافه شد.');
         console.log('✅ دکمه ذخیره تنظیمات به‌درستی کار می‌کند.');
+        console.log('✅ نمایش دکمه استعلام قیمت تنها در شرایط مناسب.');
     </script>
 </body>
 </html>
