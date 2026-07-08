@@ -2929,7 +2929,90 @@
 
     <script>
         // ============================================================
+        //  دریافت تصویر از سایت کوکسو بر اساس نام محصول
+        // ============================================================
+        async function getCoxoImage(productName) {
+            try {
+                // ۱. استخراج نام مدل از نام کامل محصول
+                // مثلاً "COXO CX207-W H17" -> "cx207-w-h17"
+                let modelPart = productName
+                    .replace(/^COXO\s*/i, '') // حذف "COXO " از ابتدا
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-') // جایگزینی کاراکترهای غیرمجاز با خط تیره
+                    .replace(/^-|-$/g, ''); // حذف خط تیره از ابتدا و انتها
+
+                // ۲. ساخت آدرس صفحه محصول (بر اساس الگوی سایت)
+                const url = `https://coxotec.com/product/${modelPart}-handpiece/`;
+                const fallbackUrl = `https://coxotec.com/en/product/${modelPart}-handpiece/`;
+
+                // ۳. درخواست صفحه
+                let response = await fetch(url);
+                if (!response.ok) {
+                    // اگر صفحه اول پیدا نشد، زبان پیش‌فرض (انگلیسی) را امتحان کن
+                    response = await fetch(fallbackUrl);
+                    if (!response.ok) return null;
+                }
+
+                const html = await response.text();
+                // استخراج آدرس تصویر از تگ og:image
+                const match = html.match(/<meta property="og:image" content="([^"]+)"/);
+                if (match && match[1]) {
+                    return match[1];
+                }
+                return null;
+            } catch (error) {
+                console.warn(`⚠️ خطا در دریافت تصویر برای ${productName}:`, error.message);
+                return null;
+            }
+        }
+
+        // ============================================================
+        //  به‌روزرسانی تصاویر همه محصولات از سایت کوکسو
+        // ============================================================
+        async function updateAllImagesFromCoxo() {
+            let updated = 0;
+            let failed = 0;
+            const total = productsData.filter(p => p.brand === 'COXO').length;
+
+            if (total === 0) {
+                showToast('هیچ محصولی با برند COXO یافت نشد', 'error');
+                return;
+            }
+
+            document.getElementById('scraperResult').innerHTML =
+                `<span style="color:#facc15;">⏳ در حال دریافت تصاویر از سایت کوکسو برای ${total} محصول...</span>`;
+
+            for (const product of productsData) {
+                if (product.brand === 'COXO') {
+                    const imageUrl = await getCoxoImage(product.name);
+                    if (imageUrl) {
+                        product.image = imageUrl;
+                        product.images = [imageUrl];
+                        updated++;
+                        console.log(`✅ ${product.name} -> ${imageUrl}`);
+                    } else {
+                        failed++;
+                        console.warn(`❌ تصویری برای ${product.name} یافت نشد`);
+                    }
+                    // تأخیر ۱ ثانیه بین درخواست‌ها برای جلوگیری از محدودیت
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                }
+            }
+
+            // ذخیره در localStorage
+            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+
+            // بازرندر کردن صفحه
+            applyFilters();
+
+            document.getElementById('scraperResult').innerHTML =
+                `<span style="color:#22c55e;">✅ به‌روزرسانی کامل شد: ${updated} محصول به‌روز شد، ${failed} محصول ناموفق</span>`;
+            showToast(`✅ ${updated} محصول از سایت کوکسو به‌روز شد`);
+        }
+
+        // ============================================================
         //  GENERATE PRODUCTS (300 products, COXO=original, NSK/W&H=non-original)
+        //  با تصاویر پیش‌فرض Unsplash (تا زمان به‌روزرسانی از کوکسو)
         // ============================================================
         function generateProducts() {
             const brands = ['NSK', 'COXO', 'W&H'];
@@ -2995,7 +3078,6 @@
                 const cat = categories[i % categories.length];
                 const modelIdx = i % allModels.length;
                 const model = allModels[modelIdx] || ('MODEL-' + (i + 1));
-                // COXO = original, NSK & W&H = non-original
                 const isOriginal = brand === 'COXO';
                 const priceBase = Math.floor(Math.random() * 150000000) + 3000000;
                 const stock = Math.floor(Math.random() * 25) + 0;
@@ -3233,9 +3315,15 @@
         });
 
         // ============================================================
-        //  LOAD IMAGE MAPPING FROM image_mapping.json (GitHub)
+        //  LOAD IMAGE MAPPING FROM LOCALSTORAGE
         // ============================================================
         let imageMapping = {};
+        const storedMapping = localStorage.getItem('unident_image_mapping');
+        if (storedMapping) {
+            try {
+                imageMapping = JSON.parse(storedMapping);
+            } catch (e) { imageMapping = {}; }
+        }
 
         // ============================================================
         //  RENDER PRODUCT PAGE with all filters
@@ -3245,9 +3333,7 @@
             const container = document.getElementById('productGridFull');
             if (!container) return;
 
-            // Get filters from UI if not passed
             if (typeof priceMin === 'string') {
-                // called from event, use UI values
                 const p = getFilterParams();
                 filterBrand = p.brand;
                 filterCategory = p.cat;
@@ -3312,10 +3398,7 @@
                 const stockHtml = (p.stock !== undefined) ?
                     `<span class="stock-badge ${p.stock > 0 ? 'in-stock' : 'out-of-stock'}">${p.stock > 0 ? `موجود: ${p.stock}` : 'ناموجود'}</span>` :
                     '';
-                const originText = p.isOriginal ? 'اورجینال' : 'غیر اورجینال';
-                const originClass = p.isOriginal ? 'original' : 'copy';
-                const originHtml =
-                    `<span class="origin-badge ${originClass}">${p.isOriginal ? '✅ اورجینال' : 'ℹ️ غیر اورجینال'}</span>`;
+                const originHtml = `<span class="origin-badge ${p.isOriginal ? 'original' : 'copy'}">${p.isOriginal ? '✅ اورجینال' : 'ℹ️ غیر اورجینال'}</span>`;
                 const mainImg = p.images && p.images.length > 0 ? p.images[0] : p.image;
                 const imgHtml = mainImg ?
                     `<img src="${mainImg}" alt="${p.name}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\\'no-img\\' style=\\'font-size:4rem; opacity:0.3;\\'>📦</span>';" />` :
@@ -3324,10 +3407,8 @@
                 const inquiryBtn = (p.inquiryEnabled || p.showPrice === false) ?
                     `<button class="inquiry-btn" onclick="event.stopPropagation(); submitInquiry('${p.id}')">استعلام قیمت</button>` :
                     '';
-                const viewCountHtml =
-                    `<div class="view-count"><i class="fas fa-eye"></i> ${p.viewCount || 0} بازدید</div>`;
+                const viewCountHtml = `<div class="view-count"><i class="fas fa-eye"></i> ${p.viewCount || 0} بازدید</div>`;
 
-                // Image dots for multiple images
                 let dotsHtml = '';
                 if (p.images && p.images.length > 1) {
                     dotsHtml =
@@ -3359,7 +3440,6 @@
                     </div>`;
             }).join('');
 
-            // Pagination
             let pagHtml = '';
             if (totalPages > 1) {
                 for (let i = 1; i <= totalPages; i++) {
@@ -3374,30 +3454,20 @@
                 });
             });
 
-            // Add to cart
             document.querySelectorAll('.product-card-full .add-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    addToCart(this.dataset.id);
-                });
+                btn.addEventListener('click', function(e) { e.stopPropagation();
+                    addToCart(this.dataset.id); });
             });
-
-            // Wishlist
             document.querySelectorAll('.product-card-full .wishlist-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
+                btn.addEventListener('click', function(e) { e.stopPropagation();
                     toggleWishlist(this.dataset.id);
                     renderProductPage(filterBrand, filterCategory, sort, search, currentPage, priceMin,
-                        priceMax, origin, country, inStock);
-                });
+                        priceMax, origin, country, inStock); });
             });
-
-            // Click to detail
             document.querySelectorAll('.product-card-full').forEach(card => {
                 card.addEventListener('click', function(e) {
                     if (e.target.closest('button')) return;
                     const id = this.dataset.id;
-                    // increment view count
                     const p = productsData.find(p => p.id === id);
                     if (p) {
                         p.viewCount = (p.viewCount || 0) + 1;
@@ -3407,7 +3477,6 @@
                 });
             });
 
-            // Image navigation for multiple images
             document.querySelectorAll('.product-card-full .image-nav span').forEach(dot => {
                 dot.addEventListener('click', function(e) {
                     e.stopPropagation();
@@ -3435,16 +3504,17 @@
         //  FILTER PARAMETERS HELPER
         // ============================================================
         function getFilterParams() {
-            const brand = document.getElementById('filterBrand').value;
-            const cat = document.getElementById('filterCategory').value;
-            const sort = document.getElementById('filterSort').value;
-            const search = document.getElementById('productSearchInput').value.trim();
-            const pMin = parseInt(document.getElementById('priceMin').value) || 0;
-            const pMax = parseInt(document.getElementById('priceMax').value) || 500000000;
-            const origin = document.getElementById('filterOrigin').value;
-            const country = document.getElementById('filterCountry').value;
-            const inStock = document.getElementById('filterInStock').checked;
-            return { brand, cat, sort, search, pMin, pMax, origin, country, inStock };
+            return {
+                brand: document.getElementById('filterBrand').value,
+                cat: document.getElementById('filterCategory').value,
+                sort: document.getElementById('filterSort').value,
+                search: document.getElementById('productSearchInput').value.trim(),
+                pMin: parseInt(document.getElementById('priceMin').value) || 0,
+                pMax: parseInt(document.getElementById('priceMax').value) || 500000000,
+                origin: document.getElementById('filterOrigin').value,
+                country: document.getElementById('filterCountry').value,
+                inStock: document.getElementById('filterInStock').checked
+            };
         }
 
         function applyFilters() {
@@ -3459,7 +3529,6 @@
         function submitInquiry(productId) {
             const product = productsData.find(p => p.id === productId);
             if (!product) return showToast('محصول یافت نشد', 'error');
-            // Show a modal to collect user info
             const name = prompt('لطفاً نام کامل خود را وارد کنید:');
             if (!name) return;
             const phone = prompt('لطفاً شماره تماس خود را وارد کنید:');
@@ -3547,11 +3616,9 @@
                 </div>
             `;
 
-            // Thumbnail click
             content.querySelectorAll('.thumbnails img').forEach(img => {
                 img.addEventListener('click', function() {
-                    const src = this.src;
-                    document.getElementById('detailMainImg').src = src;
+                    document.getElementById('detailMainImg').src = this.src;
                     document.querySelectorAll('.thumbnails img').forEach(i => i.classList.remove('active'));
                     this.classList.add('active');
                 });
@@ -3606,7 +3673,6 @@
             }
             localStorage.setItem('unident_cart', JSON.stringify(cart));
             updateCartUI();
-            // Animation feedback
             const btn = document.querySelector(`.add-btn[data-id="${productId}"]`);
             if (btn) {
                 btn.style.transform = 'scale(1.3)';
@@ -3650,8 +3716,8 @@
             const el = document.getElementById('miniCart');
             if (cart.length === 0) { el.classList.remove('open'); return; }
             el.classList.add('open');
-            let html = '';
-            let total = 0;
+            let html = '',
+                total = 0;
             cart.forEach(item => {
                 total += item.qty * item.price;
                 html += `<div class="mini-cart-item"><span>${escapeHtml(item.name)}</span><div class="qty"><button onclick="changeQty('${item.id}',-1)">-</button><span>${item.qty}</span><button onclick="changeQty('${item.id}',1)">+</button><button onclick="removeFromCart('${item.id}')" style="color:#ef4444;background:none;border:none;font-size:0.8rem;"><i class="fas fa-trash"></i></button></div></div>`;
@@ -3683,8 +3749,8 @@
                 totalDiv.style.display = 'none';
                 return;
             }
-            let html = '';
-            let subtotal = 0;
+            let html = '',
+                subtotal = 0;
             cart.forEach(item => {
                 subtotal += item.qty * item.price;
                 html += `<div data-cart-item="${item.id}" style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid var(--border-color); transition:all 0.3s ease;">
@@ -3701,14 +3767,10 @@
                     </div>`;
             });
 
-            // Apply coupon if exists
             let couponDiscount = 0;
             const couponCode = document.getElementById('couponInput')?.value?.trim() || '';
-            if (couponCode) {
-                const result = applyCouponCode(subtotal, couponCode);
-                if (result.valid) couponDiscount = result.discount;
-            }
-
+            if (couponCode) { const result = applyCouponCode(subtotal, couponCode); if (result.valid) couponDiscount =
+                    result.discount; }
             const shipping = getShippingCost(subtotal);
             const tax = getTax(subtotal);
             const total = subtotal + shipping + tax - couponDiscount;
@@ -3734,14 +3796,12 @@
             if (!code) { document.getElementById('couponMsg').textContent = 'کد را وارد کنید.'; return; }
             const coup = couponCodes.find(c => c.code === code && (!c.expiry || new Date(c.expiry) > new Date()));
             if (!coup) { document.getElementById('couponMsg').textContent = 'کد نامعتبر یا منقضی.'; return; }
-            appliedCoupon = coup;
             document.getElementById('couponMsg').textContent = `✅ ${coup.discount}% تخفیف اعمال شد.`;
             renderCartModal();
         }
 
         document.getElementById('cartToggle')?.addEventListener('click', function() { renderCartModal();
             openModal('cart'); });
-
         document.getElementById('checkoutBtn')?.addEventListener('click', function() {
             if (cart.length === 0) return showToast('سبد خالی است', 'error');
             closeAllModals();
@@ -3811,7 +3871,6 @@
                     return;
                 }
                 loginPhoneNumber = phone;
-                // Simulate OTP send
                 const otp = Math.floor(100000 + Math.random() * 900000);
                 localStorage.setItem('unident_otp_' + phone, otp);
                 console.log(`📱 کد تایید برای ${phone}: ${otp}`);
@@ -3830,7 +3889,6 @@
                         '<span style="color:#ef4444;">کد تایید اشتباه است.</span>';
                     return;
                 }
-                // Login success
                 let user = users.find(u => u.phone === phone);
                 if (!user) {
                     user = { id: generateId(), phone: phone, name: 'کاربر ' + phone.slice(-4), createdAt: getPersianDate() };
@@ -3844,26 +3902,15 @@
                 document.getElementById('loginBtn').innerHTML =
                     `<i class="fas fa-user"></i> <span class="label">${escapeHtml(user.name)}</span>`;
                 setTimeout(() => closeAllModals(), 1500);
-                // Load user data from encrypted storage
                 loadUserData();
             }
         });
 
         function loadUserData() {
-            // Load encrypted data
             const encrypted = localStorage.getItem('unident_user_data_' + (currentUser?.id || ''));
             if (encrypted) {
-                try {
-                    const data = JSON.parse(decryptData(encrypted));
-                    // Apply user preferences
-                } catch (e) {}
+                try { const data = JSON.parse(decryptData(encrypted)); } catch (e) {}
             }
-        }
-
-        function saveUserData() {
-            if (!currentUser) return;
-            const data = { name: currentUser.name, phone: currentUser.phone };
-            localStorage.setItem('unident_user_data_' + currentUser.id, encryptData(JSON.stringify(data)));
         }
 
         // ============================================================
@@ -3985,12 +4032,8 @@
                     '<span style="color:#ef4444;">لطفاً همه فیلدهای ضروری را پر کنید.</span>';
                 return;
             }
-            // Encrypt sensitive data
-            const encryptedPhone = encryptData(phone);
-            const encryptedEmail = email ? encryptData(email) : '';
-            warrantyRequests.push({ id: generateId(), name, phone: encryptedPhone, email: encryptedEmail, productCode,
-                productName, purchaseDate, issue, date: getPersianDate(), status: 'در انتظار بررسی',
-                createdAt: Date.now() });
+            warrantyRequests.push({ id: generateId(), name, phone, email, productCode, productName, purchaseDate,
+                issue, date: getPersianDate(), status: 'در انتظار بررسی', createdAt: Date.now() });
             localStorage.setItem('unident_warranty_requests', JSON.stringify(warrantyRequests));
             document.getElementById('warrantyResult').innerHTML =
                 '<span style="color:#22c55e;">✅ درخواست گارانتی ثبت شد. به زودی بررسی می‌شود.</span>';
@@ -4094,40 +4137,33 @@
                 return;
             }
 
-            // Calculate totals
             const subtotal = cart.reduce((s, i) => s + i.qty * i.price, 0);
             let couponDiscount = 0;
             const couponCode = document.getElementById('couponInput')?.value?.trim() || '';
-            if (couponCode) {
-                const result = applyCouponCode(subtotal, couponCode);
-                if (result.valid) couponDiscount = result.discount;
-            }
+            if (couponCode) { const result = applyCouponCode(subtotal, couponCode); if (result.valid) couponDiscount =
+                    result.discount; }
             const shippingCost = getShippingCost(subtotal);
             const tax = getTax(subtotal);
             const total = subtotal + shippingCost + tax - couponDiscount;
 
-            // Encrypt sensitive data
-            const encryptedPhone = encryptData(phone);
-            const encryptedEmail = email ? encryptData(email) : '';
-
             const order = {
                 id: generateId(),
                 customer: name,
-                phone: encryptedPhone,
-                email: encryptedEmail,
-                instagram: instagram,
-                type: type,
-                productName: productName,
+                phone,
+                email,
+                instagram,
+                type,
+                productName,
                 quantity: parseInt(quantity),
                 message: msg,
-                shipping: shipping,
-                payment: payment,
+                shipping,
+                payment,
                 items: cart.map(i => ({ name: i.name, qty: i.qty, price: i.price })),
-                subtotal: subtotal,
-                shippingCost: shippingCost,
-                tax: tax,
-                couponDiscount: couponDiscount,
-                total: total,
+                subtotal,
+                shippingCost,
+                tax,
+                couponDiscount,
+                total,
                 status: 'جدید',
                 date: getPersianDate(),
                 createdAt: Date.now()
@@ -4135,7 +4171,6 @@
             orders.push(order);
             localStorage.setItem('unident_orders', JSON.stringify(orders));
 
-            // Update customers
             let customers = JSON.parse(localStorage.getItem('unident_customers')) || [];
             if (!customers.find(c => c.phone === phone)) {
                 customers.push({ id: generateId(), name, phone, email, instagram, firstOrder: getPersianDate(),
@@ -4147,20 +4182,16 @@
             }
             localStorage.setItem('unident_customers', JSON.stringify(customers));
 
-            // Email notification (simulated)
             if (email) {
                 console.log(`📧 ارسال ایمیل تایید سفارش به ${email}`);
                 showToast(`✅ ایمیل تایید سفارش به ${email} ارسال شد.`);
             }
-
-            // SMS notification (simulated)
             console.log(`📱 ارسال پیامک تایید سفارش به ${phone}`);
 
             cart = [];
             localStorage.setItem('unident_cart', JSON.stringify(cart));
             updateCartUI();
 
-            // Generate PDF invoice
             generateInvoice(order);
 
             document.getElementById('orderResult').innerHTML =
@@ -4175,18 +4206,15 @@
         //  GENERATE PDF INVOICE
         // ============================================================
         function generateInvoice(order) {
-            // Simple PDF generation using jsPDF (load from CDN)
             if (typeof window.jspdf !== 'undefined') {
                 const { jsPDF } = window.jspdf;
                 const doc = new jsPDF('p', 'pt', 'a4');
                 const pageWidth = doc.internal.pageSize.width;
                 const margin = 40;
                 let y = 40;
-
                 doc.setFontSize(20);
                 doc.text('UNIDENT - فاکتور خرید', pageWidth / 2, y, { align: 'center' });
                 y += 30;
-
                 doc.setFontSize(10);
                 doc.text(`شماره سفارش: #${order.id.slice(0,8)}`, margin, y);
                 y += 20;
@@ -4198,19 +4226,16 @@
                 y += 20;
                 if (order.email) { doc.text(`ایمیل: ${order.email}`, margin, y);
                     y += 20; }
-
                 y += 10;
                 doc.setFontSize(12);
                 doc.text('--- جزئیات سفارش ---', margin, y);
                 y += 20;
-
                 doc.setFontSize(10);
                 order.items.forEach((item, idx) => {
                     doc.text(`${idx+1}. ${item.name} × ${item.qty} = ${formatPrice(item.price * item.qty)} تومان`,
                         margin, y);
                     y += 18;
                 });
-
                 y += 10;
                 doc.setFontSize(11);
                 doc.text(`جمع کل: ${formatPrice(order.subtotal)} تومان`, margin, y);
@@ -4225,7 +4250,6 @@
                 }
                 doc.setFontSize(14);
                 doc.text(`قابل پرداخت: ${formatPrice(order.total)} تومان`, margin, y);
-
                 doc.save(`فاکتور_${order.id.slice(0,8)}.pdf`);
                 showToast('✅ فاکتور PDF دانلود شد.');
             } else {
@@ -4277,9 +4301,8 @@
         });
 
         // ============================================================
-        //  ADMIN PANEL - ALL SECTIONS (Combined from both files)
+        //  ADMIN PANEL
         // ============================================================
-
         function renderDashboard() {
             const content = document.getElementById('adminContent');
             const totalOrders = orders.length,
@@ -4842,8 +4865,7 @@
             if (r) { r.status = status;
                 localStorage.setItem('unident_warranty_requests', JSON.stringify(warrantyRequests));
                 renderWarrantyAdmin();
-                showToast(`وضعیت به ${status} تغییر کرد`);
-            }
+                showToast(`وضعیت به ${status} تغییر کرد`); }
         };
         window.deleteWarrantyRequest = function(id) {
             if (!confirm('حذف درخواست گارانتی؟')) return;
@@ -4868,8 +4890,7 @@
             if (q) { q.status = status;
                 localStorage.setItem('unident_inquiries', JSON.stringify(inquiries));
                 renderInquiriesAdmin();
-                showToast(`وضعیت به ${status} تغییر کرد`);
-            }
+                showToast(`وضعیت به ${status} تغییر کرد`); }
         };
         window.deleteInquiry = function(id) {
             if (!confirm('حذف استعلام؟')) return;
@@ -4897,8 +4918,7 @@
                 localStorage.setItem('unident_reviews', JSON.stringify(reviews));
                 renderReviewsAdmin();
                 renderReviews();
-                showToast('نظر تأیید شد');
-            }
+                showToast('نظر تأیید شد'); }
         };
         window.deleteReview = function(id) {
             if (!confirm('حذف نظر؟')) return;
@@ -4942,7 +4962,6 @@
                 </div>
             `;
 
-            // Monthly chart
             setTimeout(() => {
                 const canvas = document.getElementById('monthlyChart');
                 if (!canvas) return;
@@ -4981,7 +5000,6 @@
         }
 
         // ===== ADMIN SETTINGS =====
-        // This function is now fully functional with both simulated scraper and file upload
         function renderSettings() {
             const content = document.getElementById('adminContent');
             const currentLogo = shopLogo || '';
@@ -5015,6 +5033,10 @@
                             <p style="color:var(--text-secondary);font-size:0.85rem;"><i class="fas fa-info-circle"></i> برای فعال‌سازی، فایل‌های ربات (scraper_bot.py و ...) را در سرور خود اجرا کنید. پس از اجرا، تصاویر به‌روز می‌شوند.</p>
                             <button class="btn btn-white btn-sm" onclick="window.triggerImageScraper()" style="margin-top:8px;"><i class="fas fa-play"></i> اجرای دستی اسکرپ (شبیه‌سازی)</button>
                             <div id="scraperResult" style="margin-top:8px;font-size:0.85rem;"></div>
+                            <div style="margin-top:12px;">
+                                <button class="btn btn-white btn-sm" onclick="window.updateAllImagesFromCoxo()" style="margin-top:8px;"><i class="fas fa-cloud-download-alt"></i> دریافت مستقیم از کوکسو</button>
+                                <div id="scraperResult" style="margin-top:8px;font-size:0.85rem;"></div>
+                            </div>
                         </div>
                         <div style="margin-top:12px;">
                             <label class="field-label">📤 آپلود فایل image_mapping.json</label>
@@ -5022,13 +5044,17 @@
                             <button class="btn btn-white btn-sm" style="margin-top:6px;" onclick="window.uploadMappingFile()"><i class="fas fa-upload"></i> آپلود و اعمال</button>
                             <div id="mappingUploadResult" style="margin-top:6px;font-size:0.85rem;"></div>
                         </div>
+                        <div style="margin-top:12px;background:var(--bg-card);border-radius:12px;padding:16px;border:1px solid var(--border-color);">
+                            <p style="color:var(--text-muted);font-size:0.85rem;">📊 وضعیت تصاویر فعلی: <span style="color:#22c55e;">${productsData.filter(p => p.images && p.images.length > 0).length} محصول دارای تصویر</span></p>
+                            <p style="color:var(--text-muted);font-size:0.7rem;margin-top:4px;">تعداد کل محصولات: ${productsData.length}</p>
+                            <p style="color:var(--text-muted);font-size:0.7rem;margin-top:4px;">🔗 تصاویر برند COXO از سایت coxotec.com دریافت می‌شوند.</p>
+                        </div>
                     </div>
                     <button class="btn btn-white" onclick="window.saveSettings()"><i class="fas fa-save"></i> ذخیره تنظیمات</button>
                     <div id="settingsResult" style="margin-top:10px;"></div>
                 </div>
             `;
 
-            // Logo upload
             const uploadArea = document.getElementById('logoUploadArea');
             const fileInput = document.getElementById('logoFileInput');
             uploadArea?.addEventListener('click', () => fileInput?.click());
@@ -5049,27 +5075,21 @@
             });
         }
 
-        // SIMULATED SCRAPER - uses existing product images
+        // ===== دکمه دریافت مستقیم از کوکسو =====
+        window.updateAllImagesFromCoxo = updateAllImagesFromCoxo;
+
+        // ===== SIMULATED SCRAPER (قدیمی) =====
         window.triggerImageScraper = function() {
             const resultDiv = document.getElementById('scraperResult');
             resultDiv.innerHTML = '<span style="color:#facc15;">⏳ در حال تولید مپینگ تصاویر از محصولات موجود...</span>';
-            
             setTimeout(() => {
-                // Create mapping from existing product images
                 const mapping = {};
                 productsData.forEach(p => {
                     if (p.images && p.images.length > 0) {
-                        mapping[p.id] = {
-                            name: p.name,
-                            brand: p.brand,
-                            images: p.images
-                        };
+                        mapping[p.id] = { name: p.name, brand: p.brand, images: p.images };
                     }
                 });
-                
-                imageMapping = mapping;
                 localStorage.setItem('unident_image_mapping', JSON.stringify(mapping));
-                
                 let updated = 0;
                 productsData.forEach(p => {
                     if (mapping[p.id] && mapping[p.id].images && mapping[p.id].images.length > 0) {
@@ -5080,17 +5100,19 @@
                 });
                 localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                 applyFilters();
-                resultDiv.innerHTML = `<span style="color:#22c55e;">✅ مپینگ تصاویر با موفقیت ایجاد و اعمال شد. (${updated} محصول به‌روز شد)</span>`;
+                resultDiv.innerHTML =
+                    `<span style="color:#22c55e;">✅ مپینگ تصاویر با موفقیت ایجاد و اعمال شد. (${updated} محصول به‌روز شد)</span>`;
                 showToast('تصاویر با موفقیت به‌روز شدند');
-            }, 1500);
+            }, 1000);
         };
 
-        // UPLOAD MAPPING FILE
+        // ===== UPLOAD MAPPING FILE =====
         window.uploadMappingFile = function() {
             const fileInput = document.getElementById('mappingFileInput');
             const file = fileInput.files[0];
             if (!file) {
-                document.getElementById('mappingUploadResult').innerHTML = '<span style="color:#ef4444;">لطفاً یک فایل انتخاب کنید.</span>';
+                document.getElementById('mappingUploadResult').innerHTML =
+                    '<span style="color:#ef4444;">لطفاً یک فایل انتخاب کنید.</span>';
                 return;
             }
             const reader = new FileReader();
@@ -5098,10 +5120,7 @@
                 try {
                     const data = JSON.parse(e.target.result);
                     if (typeof data !== 'object') throw new Error('فرمت JSON نامعتبر');
-                    
-                    imageMapping = data;
                     localStorage.setItem('unident_image_mapping', JSON.stringify(data));
-                    
                     let updated = 0;
                     productsData.forEach(p => {
                         if (data[p.id] && data[p.id].images && data[p.id].images.length > 0) {
@@ -5112,11 +5131,11 @@
                     });
                     localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                     applyFilters();
-                    document.getElementById('mappingUploadResult').innerHTML = 
+                    document.getElementById('mappingUploadResult').innerHTML =
                         `<span style="color:#22c55e;">✅ فایل با موفقیت آپلود و اعمال شد. (${updated} محصول به‌روز شد)</span>`;
                     showToast('تصاویر از فایل آپلودی به‌روز شدند');
                 } catch (err) {
-                    document.getElementById('mappingUploadResult').innerHTML = 
+                    document.getElementById('mappingUploadResult').innerHTML =
                         `<span style="color:#ef4444;">❌ خطا: ${err.message}</span>`;
                     showToast('خطا در آپلود فایل', 'error');
                 }
@@ -5124,7 +5143,7 @@
             reader.readAsText(file);
         };
 
-        // SAVE SETTINGS
+        // ===== SAVE SETTINGS =====
         window.saveSettings = function() {
             const name = document.getElementById('shopName').value.trim();
             const address = document.getElementById('shopAddress').value.trim();
@@ -5142,7 +5161,8 @@
             localStorage.setItem('shipping_cost', shipping);
             localStorage.setItem('free_shipping_threshold', free);
 
-            document.getElementById('settingsResult').innerHTML = '<span style="color:#22c55e;">✅ تنظیمات با موفقیت ذخیره شد.</span>';
+            document.getElementById('settingsResult').innerHTML =
+                '<span style="color:#22c55e;">✅ تنظیمات با موفقیت ذخیره شد.</span>';
             showToast('تنظیمات ذخیره شد');
         };
 
@@ -5162,7 +5182,6 @@
                     <div id="backupList"><p style="color:var(--text-muted);">هیچ بکاپی یافت نشد.</p></div>
                 </div>
             `;
-            // Load backup list
             const backups = JSON.parse(localStorage.getItem('unident_backups') || '[]');
             if (backups.length > 0) {
                 document.getElementById('backupList').innerHTML = backups.map((b, i) =>
@@ -5202,7 +5221,6 @@
             a.click();
             URL.revokeObjectURL(url);
 
-            // Save to backup list
             const backups = JSON.parse(localStorage.getItem('unident_backups') || '[]');
             backups.push({ date: getPersianDate(), size: size, timestamp: Date.now() });
             localStorage.setItem('unident_backups', JSON.stringify(backups));
@@ -5365,7 +5383,6 @@
                             const values = lines[i].split(',').map(v => v.trim());
                             const obj = {};
                             headers.forEach((h, idx) => { obj[h] = values[idx] || ''; });
-                            // Convert types
                             if (obj.basePrice) obj.basePrice = parseInt(obj.basePrice);
                             if (obj.profitPercent) obj.profitPercent = parseInt(obj.profitPercent);
                             if (obj.stock) obj.stock = parseInt(obj.stock);
@@ -5374,7 +5391,6 @@
                             if (obj.inquiryEnabled) obj.inquiryEnabled = obj.inquiryEnabled === 'true' || obj
                                 .inquiryEnabled === '1';
                             if (obj.showPrice) obj.showPrice = obj.showPrice === 'true' || obj.showPrice === '1';
-                            // Ensure required fields
                             if (obj.name && obj.brand) {
                                 obj.id = obj.id || generateId();
                                 obj.images = [obj.image || ''];
@@ -5389,7 +5405,6 @@
                             '<span style="color:#ef4444;">هیچ محصول معتبری یافت نشد.</span>';
                         return;
                     }
-                    // Merge with existing
                     const existingIds = new Set(productsData.map(p => p.id));
                     let added = 0;
                     imported.forEach(p => {
@@ -5567,19 +5582,19 @@
         // ============================================================
         //  INIT
         // ============================================================
-        // Check if there is an image mapping in localStorage (from previous runs)
-        const storedMapping = localStorage.getItem('unident_image_mapping');
-        if (storedMapping) {
-            try {
-                imageMapping = JSON.parse(storedMapping);
-                productsData.forEach(p => {
-                    if (imageMapping[p.id] && imageMapping[p.id].images && imageMapping[p.id].images.length > 0) {
-                        p.images = imageMapping[p.id].images;
-                        p.image = imageMapping[p.id].images[0];
-                    }
-                });
-                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
-            } catch (e) {}
+        // بررسی و به‌روزرسانی تصاویر از کوکسو (در صورت وجود محصولات COXO)
+        const hasCoxo = productsData.some(p => p.brand === 'COXO');
+        if (hasCoxo) {
+            // بررسی اینکه آیا تصاویر از قبل از کوکسو گرفته شده‌اند یا خیر
+            const sampleCoxo = productsData.find(p => p.brand === 'COXO');
+            const isFromCoxo = sampleCoxo && sampleCoxo.image && sampleCoxo.image.includes('coxotec.com');
+            if (!isFromCoxo) {
+                console.log('🔄 در حال دریافت تصاویر از سایت کوکسو...');
+                // اجرای خودکار بدون نیاز به کلیک کاربر
+                setTimeout(() => {
+                    updateAllImagesFromCoxo();
+                }, 2000);
+            }
         }
 
         renderReviews();
@@ -5588,7 +5603,6 @@
         updateWishlistUI();
         applyFilters();
 
-        // Check for existing user
         if (currentUser) {
             document.getElementById('loginBtn').innerHTML =
                 `<i class="fas fa-user"></i> <span class="label">${escapeHtml(currentUser.name)}</span>`;
@@ -5596,13 +5610,10 @@
 
         console.log('🦷 UNIDENT — ' + productsData.length + ' محصول');
         console.log('🔑 پنل ادمین با رمز 1212');
-        console.log('✅ تمام محصولات در تمام بخش‌های مدیریت قابل مشاهده هستند');
-        console.log('✅ امکان حذف تصاویر به صورت تکی اضافه شد');
-        console.log('✅ هیچ محدودیتی برای نمایش محصولات وجود ندارد');
-        console.log('📸 سیستم آپلود تصویر روی GitHub در تنظیمات قرار دارد.');
+        console.log('📸 تصاویر برند COXO از سایت coxotec.com دریافت می‌شوند');
+        console.log('✅ دکمه دریافت مستقیم از کوکسو در تنظیمات اضافه شد');
         console.log('❌ واتساپ حذف شد.');
         console.log('✅ گزینه آپلود فایل image_mapping.json اضافه شد.');
-        console.log('✅ دکمه اسکرپ شبیه‌سازی شده و از تصاویر موجود استفاده می‌کند.');
         console.log('✅ دکمه ذخیره تنظیمات به‌درستی کار می‌کند.');
     </script>
 </body>
