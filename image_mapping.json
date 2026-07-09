@@ -9,5 +9,16 @@
       "images/wh_1/4.png",
       "images/wh_1/5.png"
     ]
+  },
+  "wh_2": {
+    "name": "W&H WH-TURBINE",
+    "brand": "W&H",
+    "images": [
+      "images/wh_2/1.jpg",
+      "images/wh_2/2.jpg",
+      "images/wh_2/3.png",
+      "images/wh_2/4.png",
+      "images/wh_2/5.png"
+    ]
   }
 }
