@@ -1,4 +1,12 @@
-requests>=2.31.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
-fake-useragent>=1.4.0
+[
+  {"id":"coxo_1","name":"COXO CX207-W Handpiece","brand":"COXO","code":"CX207-W"},
+  {"id":"coxo_2","name":"COXO CX207-G H16","brand":"COXO","code":"CX207-G"},
+  {"id":"coxo_3","name":"COXO C-SMART MINI AP+","brand":"COXO","code":"C-SMART-MINI"},
+  {"id":"coxo_4","name":"COXO C-PUMA Pro3","brand":"COXO","code":"C-PUMA-PRO3"},
+  {"id":"nsk_1","name":"NSK Ti-Max Z900L","brand":"NSK","code":"Z900L"},
+  {"id":"nsk_2","name":"NSK Ti-Max Z800L","brand":"NSK","code":"Z800L"},
+  {"id":"nsk_3","name":"NSK S-Max M600L","brand":"NSK","code":"M600L"},
+  {"id":"nsk_4","name":"NSK Varios 370","brand":"NSK","code":"Varios370"},
+  {"id":"wh_1","name":"W&H Synea Vision TK-100","brand":"W&H","code":"TK-100"},
+  {"id":"wh_2","name":"W&H Alegra TE-95","brand":"W&H","code":"TE-95"}
+]
