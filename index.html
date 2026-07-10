@@ -68,6 +68,7 @@
             --origin-original: #15803d;
             --origin-copy: #ca8a04;
         }
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -238,6 +239,7 @@
             transform: scale(1.1);
             color: var(--text-secondary);
         }
+        /* ===== KEYFRAMES ===== */
         @keyframes fadeUp {
             0% {
                 opacity: 0;
@@ -319,6 +321,7 @@
         .delay-5 {
             animation-delay: 0.5s;
         }
+        /* ===== NOISE & GLOW ===== */
         .noise {
             position: fixed;
             inset: 0;
@@ -374,6 +377,7 @@
                 transform: translateY(-100vh) rotate(360deg) scale(1.4);
             }
         }
+        /* ===== HEADER ===== */
         .header {
             position: fixed;
             top: 0;
@@ -669,6 +673,7 @@
                 min-height: 32px;
             }
         }
+        /* ===== THEME TOGGLE ===== */
         .theme-toggle {
             position: fixed;
             bottom: 80px;
@@ -705,6 +710,7 @@
                 min-height: 36px;
             }
         }
+        /* ===== HERO ===== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -860,6 +866,7 @@
                 gap: 16px;
             }
         }
+        /* ===== MARQUEE ===== */
         .marquee {
             padding: 24px 0;
             border-top: 1px solid var(--border-color);
@@ -886,6 +893,7 @@
             opacity: 1;
             color: var(--text-primary);
         }
+        /* ===== PRODUCT PAGE ===== */
         .product-page-section {
             padding-top: 30px;
             min-height: 70vh;
@@ -1176,6 +1184,7 @@
         .pagination button:hover {
             background: var(--bg-hover);
         }
+        /* ===== PRODUCT DETAIL ===== */
         .product-detail-modal .modal-content {
             max-width: 900px;
         }
@@ -1353,6 +1362,7 @@
                 font-size: 1.2rem;
             }
         }
+        /* ===== REVIEWS ===== */
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -1406,6 +1416,7 @@
             color: var(--text-muted);
             margin: 0;
         }
+        /* ===== SURVEY ===== */
         .survey-card {
             background: var(--bg-card);
             border-radius: 16px;
@@ -1432,6 +1443,7 @@
             opacity: 1;
             filter: grayscale(0);
         }
+        /* ===== NEWSLETTER ===== */
         .newsletter {
             background: var(--bg-card);
             border-radius: 16px;
@@ -1489,6 +1501,7 @@
                 font-size: 1.1rem;
             }
         }
+        /* ===== FOOTER ===== */
         .footer {
             padding: 40px 0 24px;
             border-top: 1px solid var(--border-color);
@@ -1636,6 +1649,7 @@
         .contact-social-links a i.fa-envelope {
             color: var(--text-primary);
         }
+        /* ===== FLOATING BUTTONS ===== */
         .floating-buttons {
             position: fixed;
             bottom: 24px;
@@ -1687,6 +1701,7 @@
                 min-height: 40px;
             }
         }
+        /* ===== SCROLL TOP ===== */
         .scroll-top {
             position: fixed;
             bottom: 24px;
@@ -1726,6 +1741,7 @@
                 min-height: 36px;
             }
         }
+        /* ===== MODALS ===== */
         .modal {
             display: none;
             position: fixed;
@@ -1880,6 +1896,7 @@
                 min-height: 18px;
             }
         }
+        /* ===== ADMIN PANEL ===== */
         .admin-panel {
             position: fixed;
             top: 0;
@@ -2048,6 +2065,7 @@
             background: rgba(34, 197, 94, 0.2);
             color: #22c55e;
         }
+        /* ===== TOAST ===== */
         .success-toast {
             position: fixed;
             bottom: 20px;
@@ -2069,6 +2087,7 @@
         .success-toast i {
             font-size: 1.1rem;
         }
+        /* ===== COOKIE ===== */
         .cookie-consent {
             position: fixed;
             bottom: 16px;
@@ -2089,6 +2108,7 @@
             display: none;
             color: var(--text-primary);
         }
+        /* ===== LOGO UPLOAD ===== */
         .logo-upload-area {
             background: var(--bg-secondary);
             border: 2px dashed var(--border-color);
@@ -2126,6 +2146,7 @@
         .logo-upload-area input[type="file"] {
             display: none;
         }
+        /* ===== ANDROID FIXES ===== */
         * {
             -webkit-overflow-scrolling: touch;
         }
@@ -2170,6 +2191,7 @@
                 padding-right: 12px;
             }
         }
+        /* ===== FEATURES ===== */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -2220,6 +2242,7 @@
                 font-size: 0.8rem;
             }
         }
+        /* ===== SHIPPING INFO ===== */
         .shipping-info {
             display: none;
             position: fixed;
@@ -2258,6 +2281,7 @@
         .shipping-info .close-shipping:hover {
             color: var(--text-primary);
         }
+        /* ===== ADMIN TOGGLE ===== */
         .admin-toggle-btn {
             background: var(--bg-input);
             border: 1px solid var(--border-color);
@@ -2292,6 +2316,7 @@
                 min-height: 32px;
             }
         }
+        /* ===== SURVEY MODAL ===== */
         .survey-options {
             display: flex;
             gap: 16px;
@@ -2315,6 +2340,7 @@
             color: var(--btn-text);
             border-color: var(--btn-bg);
         }
+        /* ===== RESPONSIVE TABLES ===== */
         @media (max-width: 768px) {
             .admin-table {
                 font-size: 0.6rem;
@@ -2324,6 +2350,7 @@
                 padding: 4px 3px;
             }
         }
+        /* ===== CHART CONTAINER ===== */
         .chart-container {
             background: var(--bg-card);
             border-radius: 12px;
@@ -2335,6 +2362,7 @@
             width: 100% !important;
             height: 200px !important;
         }
+        /* ===== PWA INSTALL ===== */
         .pwa-install-btn {
             position: fixed;
             bottom: 80px;
@@ -2366,6 +2394,7 @@
                 min-height: 36px;
             }
         }
+        /* ===== MINI CART ===== */
         .mini-cart {
             position: fixed;
             top: 70px;
@@ -2414,6 +2443,7 @@
             display: flex;
             justify-content: space-between;
         }
+        /* ===== SOCIAL PROOF ===== */
         .social-proof {
             display: flex;
             gap: 20px;
@@ -2429,6 +2459,7 @@
             color: var(--text-primary);
             margin-left: 6px;
         }
+        /* ===== PRICE RANGE SLIDER ===== */
         .price-slider-wrap {
             display: flex;
             gap: 12px;
@@ -2457,6 +2488,7 @@
             font-size: 0.8rem;
             color: var(--text-muted);
         }
+        /* ===== BULK PRICE UPLOAD ===== */
         .bulk-upload-area {
             background: var(--bg-secondary);
             border: 2px dashed var(--border-color);
@@ -2498,22 +2530,6 @@
             background: rgba(250, 204, 21, 0.15);
             color: #facc15;
             border: 1px solid rgba(250, 204, 21, 0.2);
-        }
-        .product-card-full .inquiry-btn {
-            background: var(--bg-input);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 3px 14px;
-            border-radius: 60px;
-            font-size: 0.7rem;
-            transition: all 0.3s;
-            cursor: pointer;
-            touch-action: manipulation;
-            min-height: 30px;
-        }
-        .product-card-full .inquiry-btn:hover {
-            background: var(--btn-bg);
-            color: var(--btn-text);
         }
         .inquiry-toggle-btn {
             font-size: 0.6rem;
@@ -2724,7 +2740,7 @@
     </div>
     <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
 
-    <!-- MODALS -->
+    <!-- ===== MODALS ===== -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -2865,6 +2881,7 @@
         </div>
     </div>
 
+    <!-- ===== ADMIN PANEL ===== -->
     <div id="adminPanel" class="admin-panel">
         <div class="admin-header">
             <h2><i class="fas fa-chart-line"></i> پنل مدیریت یونیدنت</h2>
@@ -2895,65 +2912,115 @@
 
     <script>
         // ============================================================
-        //  دریافت تصویر از سایت‌های مختلف بر اساس برند
+        //  دریافت تصویر از سایت‌های مختلف بر اساس برند (نسخه به‌روز)
         // ============================================================
         async function getProductImageFromSite(brand, productName, productCode) {
             try {
-                let baseUrl, searchQuery;
                 const cleanName = productName.replace(/^[A-Z]+\s*/i, '').toLowerCase().trim();
                 const code = (productCode || '').toLowerCase().trim();
 
+                // ===== COXO: سایت coxotec.com =====
                 if (brand === 'COXO') {
-                    baseUrl = 'https://coxotec.com';
                     const modelPart = cleanName.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
                     const urls = [
-                        `${baseUrl}/product/${modelPart}-handpiece/`,
-                        `${baseUrl}/en/product/${modelPart}-handpiece/`
+                        `https://coxotec.com/product/${modelPart}/`,
+                        `https://coxotec.com/en/product/${modelPart}/`,
+                        `https://coxotec.com/ja/product/${modelPart}/`,
+                        `https://coxotec.com/ru/product/${modelPart}/`
                     ];
                     for (const url of urls) {
                         try {
-                            const resp = await fetch(url);
+                            const resp = await fetch(url, {
+                                headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+                            });
                             if (resp.ok) {
                                 const html = await resp.text();
-                                const match = html.match(/<meta property="og:image" content="([^"]+)"/);
-                                if (match && match[1]) return match[1];
+                                const patterns = [
+                                    /<meta property="og:image" content="([^"]+)"/,
+                                    /<meta name="twitter:image" content="([^"]+)"/,
+                                    /<img[^>]+class="[^"]*product-image[^"]*"[^>]+src="([^"]+)"/,
+                                    /<img[^>]+src="([^"]*\/images\/product\/[^"]+\.(jpg|png|webp))"/i
+                                ];
+                                for (const pattern of patterns) {
+                                    const match = html.match(pattern);
+                                    if (match && match[1]) {
+                                        let imgUrl = match[1];
+                                        if (!imgUrl.startsWith('http')) {
+                                            imgUrl = 'https://coxotec.com' + imgUrl;
+                                        }
+                                        return imgUrl;
+                                    }
+                                }
                             }
                         } catch (e) { /* continue */ }
                     }
                     return null;
-                } else if (brand === 'NSK') {
-                    baseUrl = 'https://fordent.ru';
+                }
+
+                // ===== NSK: سایت fordent.ru =====
+                else if (brand === 'NSK') {
+                    const baseUrl = 'https://fordent.ru';
                     const query = code || cleanName;
                     const searchUrl = `${baseUrl}/search/?q=${encodeURIComponent(query)}`;
                     try {
-                        const resp = await fetch(searchUrl);
+                        const resp = await fetch(searchUrl, {
+                            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+                        });
                         if (resp.ok) {
                             const html = await resp.text();
-                            const match = html.match(/<img[^>]+src=["']([^"']*\/catalog\/product\/[^"']+)["']/i);
-                            if (match && match[1]) {
-                                const imgUrl = match[1].startsWith('http') ? match[1] : baseUrl + match[1];
-                                return imgUrl;
-                            }
-                        }
-                    } catch (e) { /* continue */ }
-                    return null;
-                } else if (brand === 'W&H') {
-                    baseUrl = 'https://expo-dent.com';
-                    const query = code || cleanName;
-                    const searchUrl = `${baseUrl}/catalog/?q=${encodeURIComponent(query)}`;
-                    try {
-                        const resp = await fetch(searchUrl);
-                        if (resp.ok) {
-                            const html = await resp.text();
-                            const match = html.match(/<img[^>]+src=["']([^"']*\/upload\/[^"']+)["']/i);
-                            if (match && match[1]) {
-                                const imgUrl = match[1].startsWith('http') ? match[1] : baseUrl + match[1];
-                                return imgUrl;
+                            const patterns = [
+                                /<img[^>]+src=["']([^"']*\/catalog\/product\/[^"']+)["']/i,
+                                /<img[^>]+data-src=["']([^"']*\/catalog\/product\/[^"']+)["']/i,
+                                /<img[^>]+src=["']([^"']*\/upload\/[^"']+\.(jpg|png|webp))["']/i,
+                                /<a[^>]+class="[^"]*product-item[^"]*"[^>]*>.*?<img[^>]+src=["']([^"']+)["']/is
+                            ];
+                            for (const pattern of patterns) {
+                                const match = html.match(pattern);
+                                if (match && match[1]) {
+                                    let imgUrl = match[1];
+                                    if (!imgUrl.startsWith('http')) {
+                                        imgUrl = baseUrl + imgUrl;
+                                    }
+                                    return imgUrl;
+                                }
                             }
                         }
                     } catch (e) { /* continue */ }
                     return null;
                 }
+
+                // ===== W&H: سایت swallowdental.co.uk =====
+                else if (brand === 'W&H') {
+                    const baseUrl = 'https://www.swallowdental.co.uk';
+                    const query = code || cleanName;
+                    const searchUrl = `${baseUrl}/search/${encodeURIComponent(query)}`;
+                    try {
+                        const resp = await fetch(searchUrl, {
+                            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+                        });
+                        if (resp.ok) {
+                            const html = await resp.text();
+                            const patterns = [
+                                /<img[^>]+class="[^"]*product-image[^"]*"[^>]+src="([^"]+)"/i,
+                                /<img[^>]+src=["']([^"']*\/media\/catalog\/product\/[^"']+)["']/i,
+                                /<img[^>]+data-src=["']([^"']*\/media\/catalog\/product\/[^"']+)["']/i,
+                                /<img[^>]+src=["']([^"']+\.(jpg|png|webp))["']/i
+                            ];
+                            for (const pattern of patterns) {
+                                const match = html.match(pattern);
+                                if (match && match[1]) {
+                                    let imgUrl = match[1];
+                                    if (!imgUrl.startsWith('http')) {
+                                        imgUrl = baseUrl + imgUrl;
+                                    }
+                                    return imgUrl;
+                                }
+                            }
+                        }
+                    } catch (e) { /* continue */ }
+                    return null;
+                }
+
                 return null;
             } catch (error) {
                 console.warn(`⚠️ خطا در دریافت تصویر برای ${brand} - ${productName}:`, error.message);
@@ -2961,6 +3028,9 @@
             }
         }
 
+        // ============================================================
+        //  به‌روزرسانی تصاویر از سایت‌های مرجع
+        // ============================================================
         async function updateAllImagesFromSites() {
             let updated = 0;
             let failed = 0;
@@ -2992,7 +3062,7 @@
         }
 
         // ============================================================
-        //  GENERATE PRODUCTS (300 products) با تصاویر جایگزین بهتر
+        //  GENERATE PRODUCTS (300 products) با تصاویر جایگزین
         // ============================================================
         function generateProducts() {
             const brands = ['NSK', 'COXO', 'W&H'];
@@ -3021,7 +3091,7 @@
             const whModels = ['WH-SET', 'WH-TURBINE', 'WH-ANGLE', 'WH-MOTOR'];
             const allModels = [...nskModels, ...coxoModels, ...whModels];
             const products = [];
-            // استفاده از تصاویر جایگزین با کیفیت بهتر و تنوع بیشتر
+            // تصاویر جایگزین با کیفیت بالا
             const placeholderImages = [
                 'https://picsum.photos/seed/dental1/400/400',
                 'https://picsum.photos/seed/dental2/400/400',
@@ -3043,7 +3113,6 @@
                 const priceBase = Math.floor(Math.random() * 150000000) + 3000000;
                 const stock = Math.floor(Math.random() * 25) + 0;
                 const tag = (i % 5 === 0) ? ['اورجینال', 'تخفیف', 'جدید', 'پرطرفدار', 'پرفروش', 'اقتصادی', 'لوکس'][i % 7] : null;
-                // استفاده از تصاویر جایگزین با seed متفاوت
                 const imgIdx = i % placeholderImages.length;
                 const image = placeholderImages[imgIdx];
                 const extraImages = [];
@@ -3286,7 +3355,7 @@
         }
 
         // ============================================================
-        //  RENDER PRODUCT PAGE with all filters و مدیریت خطای تصاویر
+        //  RENDER PRODUCT PAGE with all filters
         // ============================================================
         function renderProductPage(filterBrand = '', filterCategory = '', sort = 'name', search = '', page = 1,
             priceMin = 0, priceMax = 500000000, origin = '', country = '', inStock = false) {
@@ -3634,7 +3703,7 @@
         }
 
         // ============================================================
-        //  CART with animations, coupons, shipping, tax
+        //  CART
         // ============================================================
         function addToCart(productId) {
             const product = productsData.find(p => p.id === productId);
@@ -4278,8 +4347,10 @@
         });
 
         // ============================================================
-        //  ADMIN PANEL — ★★★ افزودن قابلیت تغییر حالت استعلام تکی و جمعی ★★★
+        //  ADMIN PANEL FUNCTIONS
         // ============================================================
+
+        // ===== DASHBOARD =====
         function renderDashboard() {
             const content = document.getElementById('adminContent');
             const totalOrders = orders.length,
@@ -4350,7 +4421,7 @@
             showToast('سفارش حذف شد');
         };
 
-        // ===== ADMIN PRODUCTS — ★★★ افزودن دکمه‌های تغییر حالت استعلام ★★★ =====
+        // ===== ADMIN PRODUCTS =====
         function renderProductsAdmin() {
             try {
                 const content = document.getElementById('adminContent');
@@ -4364,7 +4435,6 @@
                         <input type="text" id="adminProductSearch" placeholder="جستجو..." value="${searchTerm}" style="flex:1;min-width:200px;padding:10px 16px;border-radius:60px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.9rem;min-height:44px;" />
                         <button class="btn btn-white btn-sm" onclick="renderProductsAdmin()"><i class="fas fa-search"></i> جستجو</button>
                         <button class="btn btn-white btn-sm" onclick="window.showAddProductForm()"><i class="fas fa-plus"></i> افزودن</button>
-                        <!-- ★★★ دکمه تغییر حالت استعلام جمعی ★★★ -->
                         <button class="btn btn-outline btn-sm" onclick="window.bulkToggleInquiry()"><i class="fas fa-toggle-on"></i> تغییر حالت استعلام جمعی</button>
                     </div>
                     <div id="addProductForm" style="display:none;background:var(--bg-card);border-radius:12px;padding:16px;margin-bottom:16px;border:1px solid var(--border-color);">
@@ -4394,6 +4464,7 @@
                     html += `<p style="color:var(--text-muted);text-align:center;padding:40px 0;">هیچ محصولی یافت نشد.</p>`;
                 } else {
                     filtered.forEach(p => {
+                        // ساخت تصاویر
                         let imagesHtml = '';
                         if (p.images && p.images.length > 0) {
                             p.images.forEach((img, idx) => {
@@ -4425,7 +4496,6 @@
                                     <div style="display:flex;align-items:center;gap:4px;"><span style="color:var(--text-muted);font-size:0.65rem;">موجودی:</span><input type="number" class="product-stock-input" data-id="${p.id}" value="${p.stock||0}" min="0" style="width:50px;padding:2px 4px;border-radius:6px;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-primary);font-size:0.6rem;" /><button class="btn btn-sm btn-white" onclick="window.updateProductStock('${p.id}')" style="padding:2px 8px;font-size:0.55rem;">✓</button></div>
                                 </div>
                                 <div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
-                                    <!-- ★★★ دکمه تغییر حالت استعلام تکی ★★★ -->
                                     <button class="inquiry-toggle-btn ${inquiryBtnClass}" onclick="window.toggleSingleInquiry('${p.id}')">
                                         <i class="fas fa-${isInquiry ? 'check-circle' : 'circle'}"></i> ${inquiryLabel}
                                     </button>
@@ -4464,15 +4534,12 @@
         window.toggleSingleInquiry = function(id) {
             const p = productsData.find(p => p.id === id);
             if (!p) return;
-            // اگر در حالت استعلام باشد، خارج می‌کنیم و بالعکس
             const isInquiry = (p.showPrice === false || p.inquiryEnabled === true);
             if (isInquiry) {
-                // خروج از حالت استعلام: نمایش قیمت
                 p.showPrice = true;
                 p.inquiryEnabled = false;
                 showToast(`✅ ${p.name} از حالت استعلام خارج شد.`);
             } else {
-                // ورود به حالت استعلام: مخفی کردن قیمت
                 p.showPrice = false;
                 p.inquiryEnabled = true;
                 showToast(`🔔 ${p.name} به حالت استعلام قیمت رفت.`);
@@ -4484,18 +4551,16 @@
 
         window.bulkToggleInquiry = function() {
             const allInquiry = productsData.every(p => p.showPrice === false || p.inquiryEnabled === true);
-            const newMode = !allInquiry; // اگر همه در استعلام باشند، خارج می‌کنیم، در غیر این صورت همه را به استعلام می‌بریم
+            const newMode = !allInquiry;
             let changed = 0;
             productsData.forEach(p => {
                 if (newMode) {
-                    // رفتن به حالت استعلام
                     if (p.showPrice !== false || p.inquiryEnabled !== true) {
                         p.showPrice = false;
                         p.inquiryEnabled = true;
                         changed++;
                     }
                 } else {
-                    // خروج از حالت استعلام
                     if (p.showPrice !== true || p.inquiryEnabled !== false) {
                         p.showPrice = true;
                         p.inquiryEnabled = false;
@@ -4513,7 +4578,7 @@
             }
         };
 
-        // ===== بقیه توابع مدیریتی (حذف تصویر، به‌روزرسانی قیمت و ...) =====
+        // ===== توابع مدیریت تصاویر =====
         window.removeImage = function(productId, index) {
             const p = productsData.find(p => p.id === productId);
             if (!p || !p.images || p.images.length <= 1) {
@@ -4771,7 +4836,7 @@
             }
         };
 
-        // ===== ADMIN PRICES — ★★★ اصلاح شده: خروج خودکار از حالت استعلام ★★★ =====
+        // ===== ADMIN PRICES =====
         function renderPriceManagement() {
             const content = document.getElementById('adminContent');
             const searchTerm = document.getElementById('priceSearch')?.value?.trim() || '';
@@ -4786,10 +4851,9 @@
                     <button class="btn btn-white btn-sm" onclick="renderPriceManagement()"><i class="fas fa-search"></i></button>
                 </div>
 
-                <!-- Bulk Upload -->
                 <div style="background:var(--bg-card);border-radius:12px;padding:16px;margin-bottom:20px;border:1px solid var(--border-color);">
                     <h4 style="color:var(--text-primary);font-size:0.95rem;margin-bottom:12px;">📤 آپلود انبوه قیمت‌ها از فایل Excel / CSV / JSON</h4>
-                    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:12px;">فرمت فایل باید شامل ستون‌های <strong>id</strong> یا <strong>code</strong> و <strong>basePrice</strong> و <strong>profitPercent</strong> (اختیاری) باشد. برای JSON نیز آرایه‌ای از اشیاء با همین کلیدها.</p>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:12px;">فرمت فایل باید شامل ستون‌های <strong>id</strong> یا <strong>code</strong> و <strong>basePrice</strong> و <strong>profitPercent</strong> (اختیاری) باشد.</p>
                     <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:12px;">
                         <button class="btn btn-white btn-sm" onclick="window.downloadPriceTemplate()"><i class="fas fa-file-download"></i> دانلود قالب نمونه (Excel)</button>
                         <button class="btn btn-outline btn-sm" onclick="window.downloadPriceTemplateJSON()"><i class="fas fa-file-code"></i> دانلود قالب JSON</button>
@@ -4833,7 +4897,6 @@
             });
         }
 
-        // ===== دانلود قالب قیمت (Excel) =====
         window.downloadPriceTemplate = function() {
             const headers = ['id', 'code', 'name', 'basePrice', 'profitPercent'];
             const sampleData = [
@@ -4865,7 +4928,6 @@
             showToast('✅ قالب نمونه JSON دانلود شد');
         };
 
-        // ===== آپلود انبوه قیمت — ★★★ اصلاح شده ★★★ =====
         window.uploadBulkPrices = function() {
             const fileInput = document.getElementById('bulkPriceFile');
             const resultDiv = document.getElementById('bulkPriceResult');
@@ -4997,7 +5059,6 @@
             }
         };
 
-        // ===== اعمال سود کلی — ★★★ اصلاح شده ★★★ =====
         window.applyBulkProfit = function() {
             const profit = parseInt(document.getElementById('bulkProfitPercent').value);
             if (isNaN(profit) || profit < 0) {
@@ -5007,7 +5068,6 @@
             }
             productsData.forEach(p => {
                 p.profitPercent = profit;
-                // ★★★ خروج خودکار از حالت استعلام ★★★
                 p.showPrice = true;
                 p.inquiryEnabled = false;
             });
@@ -5018,7 +5078,6 @@
             applyFilters();
         };
 
-        // ===== به‌روزرسانی قیمت یک محصول — ★★★ اصلاح شده ★★★ =====
         window.updatePrice = function(id) {
             const base = parseFloat(document.querySelector(`.base-price-input[data-id="${id}"]`).value) || 0;
             const profit = parseFloat(document.querySelector(`.profit-input[data-id="${id}"]`).value) || 200;
@@ -5026,7 +5085,6 @@
             if (p) {
                 p.basePrice = base;
                 p.profitPercent = profit;
-                // ★★★ خروج خودکار از حالت استعلام ★★★
                 p.showPrice = true;
                 p.inquiryEnabled = false;
                 localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
@@ -5301,7 +5359,7 @@
                         <div style="margin-top:12px;background:var(--bg-card);border-radius:12px;padding:16px;border:1px solid var(--border-color);">
                             <p style="color:var(--text-muted);font-size:0.85rem;">📊 وضعیت تصاویر فعلی: <span style="color:#22c55e;">${productsData.filter(p => p.images && p.images.length > 0).length} محصول دارای تصویر</span></p>
                             <p style="color:var(--text-muted);font-size:0.7rem;margin-top:4px;">تعداد کل محصولات: ${productsData.length}</p>
-                            <p style="color:var(--text-muted);font-size:0.7rem;margin-top:4px;">🔗 تصاویر برند COXO از سایت coxotec.com، NSK از fordent.ru، W&H از expo-dent.com دریافت می‌شوند.</p>
+                            <p style="color:var(--text-muted);font-size:0.7rem;margin-top:4px;">🔗 تصاویر برند COXO از سایت coxotec.com، NSK از fordent.ru، W&H از swallowdental.co.uk دریافت می‌شوند.</p>
                         </div>
                     </div>
                     <button class="btn btn-white" onclick="window.saveSettings()"><i class="fas fa-save"></i> ذخیره تنظیمات</button>
@@ -5328,6 +5386,29 @@
                 reader.readAsDataURL(file);
             });
         }
+
+        // ===== تنظیمات =====
+        window.saveSettings = function() {
+            const name = document.getElementById('shopName').value.trim();
+            const address = document.getElementById('shopAddress').value.trim();
+            const phone = document.getElementById('shopPhone').value.trim();
+            const email = document.getElementById('shopEmail').value.trim();
+            const tax = document.getElementById('taxRate').value;
+            const shipping = document.getElementById('shippingCost').value;
+            const free = document.getElementById('freeThreshold').value;
+
+            if (!name) { showToast('نام فروشگاه را وارد کنید', 'error'); return; }
+            if (!email || !email.includes('@')) { showToast('ایمیل معتبر وارد کنید', 'error'); return; }
+
+            localStorage.setItem('shop_settings', JSON.stringify({ name, address, phone, email }));
+            localStorage.setItem('tax_rate', tax);
+            localStorage.setItem('shipping_cost', shipping);
+            localStorage.setItem('free_shipping_threshold', free);
+
+            document.getElementById('settingsResult').innerHTML =
+                '<span style="color:#22c55e;">✅ تنظیمات با موفقیت ذخیره شد.</span>';
+            showToast('تنظیمات ذخیره شد');
+        };
 
         window.updateAllImagesFromSites = updateAllImagesFromSites;
 
@@ -5392,28 +5473,6 @@
                 }
             };
             reader.readAsText(file);
-        };
-
-        window.saveSettings = function() {
-            const name = document.getElementById('shopName').value.trim();
-            const address = document.getElementById('shopAddress').value.trim();
-            const phone = document.getElementById('shopPhone').value.trim();
-            const email = document.getElementById('shopEmail').value.trim();
-            const tax = document.getElementById('taxRate').value;
-            const shipping = document.getElementById('shippingCost').value;
-            const free = document.getElementById('freeThreshold').value;
-
-            if (!name) { showToast('نام فروشگاه را وارد کنید', 'error'); return; }
-            if (!email || !email.includes('@')) { showToast('ایمیل معتبر وارد کنید', 'error'); return; }
-
-            localStorage.setItem('shop_settings', JSON.stringify({ name, address, phone, email }));
-            localStorage.setItem('tax_rate', tax);
-            localStorage.setItem('shipping_cost', shipping);
-            localStorage.setItem('free_shipping_threshold', free);
-
-            document.getElementById('settingsResult').innerHTML =
-                '<span style="color:#22c55e;">✅ تنظیمات با موفقیت ذخیره شد.</span>';
-            showToast('تنظیمات ذخیره شد');
         };
 
         // ===== ADMIN BACKUP =====
@@ -5839,7 +5898,7 @@
         const hasSiteImage = productsData.some(p =>
             (p.brand === 'COXO' && p.image && p.image.includes('coxotec.com')) ||
             (p.brand === 'NSK' && p.image && p.image.includes('fordent.ru')) ||
-            (p.brand === 'W&H' && p.image && p.image.includes('expo-dent.com'))
+            (p.brand === 'W&H' && p.image && p.image.includes('swallowdental.co.uk'))
         );
 
         if (!hasSiteImage && (hasCoxo || hasNsk || hasWh)) {
@@ -5865,6 +5924,7 @@
         console.log('✅ قیمت‌ها پس از به‌روزرسانی به‌صورت خودکار از حالت استعلام خارج می‌شوند.');
         console.log('✅ امکان تغییر حالت استعلام به‌صورت تکی و جمعی در بخش محصولات اضافه شد.');
         console.log('✅ تصاویر با استفاده از سرویس picsum تولید می‌شوند و در صورت خطا، جایگزین نمایش داده می‌شود.');
+        console.log('✅ تصاویر برند COXO از coxotec.com، NSK از fordent.ru، W&H از swallowdental.co.uk دریافت می‌شوند.');
 
         // ============================================================
         //  بارگیری خودکار تصاویر از گیت‌هاب
