@@ -1,24 +1,178 @@
 {
+  "nsk_1": {
+    "name": "NSK Ti-Max Z900L",
+    "brand": "NSK",
+    "images": [
+      "images/nsk_1/1.jpg",
+      "images/nsk_1/2.jpg",
+      "images/nsk_1/3.png",
+      "images/nsk_1/4.png",
+      "images/nsk_1/5.jpg",
+      "images/nsk_1/6.jpg",
+      "images/nsk_1/7.jpg",
+      "images/nsk_1/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/iblock/e0e/aohxambuhkxk3zp7n611fewpddau5ci5/ti-max-z900l-foto.jpg",
+      "https://fordent.ru/upload/iblock/d53/6hn7sl3cl8gsvudh5h03du2ybb635tqe/ti-max-z900l-foto.jpg",
+      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
+      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
+      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/f5e/1.jpg",
+      "https://fordent.ru/upload/iblock/dbe/mercury-332k3-foto.jpg"
+    ]
+  },
+  "nsk_2": {
+    "name": "NSK Ti-Max Z800L",
+    "brand": "NSK",
+    "images": [
+      "images/nsk_2/1.jpg",
+      "images/nsk_2/2.jpg",
+      "images/nsk_2/3.png",
+      "images/nsk_2/4.png",
+      "images/nsk_2/5.jpg",
+      "images/nsk_2/6.jpg",
+      "images/nsk_2/7.png",
+      "images/nsk_2/8.png"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/iblock/c7a/16ejz1o5qo7g6vt4jxww99ps4etlpmo1/ti-max-z800l-foto.jpg",
+      "https://fordent.ru/upload/iblock/c6c/5i4liajz52aj3vvg3wxcqh1l3yoq20mx/ti-max-z800l-foto.jpg",
+      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
+      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
+      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
+      "https://fordent.ru/upload/rk/0b8/9bd6nknjt4zmwez1cg8or2yoxw3ok1l2/810 × 450 (10).png",
+      "https://fordent.ru/upload/rk/a2a/ux52v8xa0wsmjzsz7r6mvkws8cqarflb/810_450.png"
+    ]
+  },
+  "nsk_3": {
+    "name": "NSK S-Max M600L",
+    "brand": "NSK",
+    "images": [
+      "images/nsk_3/1.jpg",
+      "images/nsk_3/2.jpg",
+      "images/nsk_3/3.jpg",
+      "images/nsk_3/4.jpg",
+      "images/nsk_3/5.png",
+      "images/nsk_3/6.png",
+      "images/nsk_3/7.jpg",
+      "images/nsk_3/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/iblock/06e/s-max-m600l-foto.jpg",
+      "https://fordent.ru/upload/iblock/1b2/dynaled-m600lg-m4-foto.jpg",
+      "https://fordent.ru/upload/iblock/5d2/dynaled-m600lg-b2-foto.jpg",
+      "https://fordent.ru/upload/iblock/a9f/s-max-m600l-foto.jpg",
+      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
+      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
+      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg"
+    ]
+  },
+  "nsk_4": {
+    "name": "NSK Varios 370",
+    "brand": "NSK",
+    "images": [
+      "images/nsk_4/1.jpg",
+      "images/nsk_4/2.jpg",
+      "images/nsk_4/3.jpg",
+      "images/nsk_4/4.jpg",
+      "images/nsk_4/5.jpg",
+      "images/nsk_4/6.jpg",
+      "images/nsk_4/7.jpg",
+      "images/nsk_4/8.png"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/iblock/56d/p48i25z4lhntjpu82q3u8hdjwwxqo1q9/7eb38aace284661dad4c4a7d0da4223c.jpg",
+      "https://fordent.ru/upload/iblock/ee2/7eb38aace284661dad4c4a7d0da4223c.jpg",
+      "https://fordent.ru/upload/iblock/e06/f9bc6cca41e18d8c21df9f8ceb5bf98b.jpg",
+      "https://fordent.ru/upload/iblock/9e7/9f1547c2e9fcdb5d24d7b9a006c27a65.jpg",
+      "https://fordent.ru/upload/iblock/260/dded5a052ec1467fb5aaba405869f267.jpg",
+      "https://fordent.ru/upload/iblock/70d/k9ub1xnamw3f9mwf9tyx3kd9lv2d0lru/2.jpg",
+      "https://fordent.ru/upload/iblock/a45/spmkpfmubtyq6eppsenieniptab75e1s/ovalis004_01.jpg",
+      "https://fordent.ru/upload/iblock/d82/t8mimnzaaplb2ibjvx2dqdwqk7vri5x8/f928709c-a107-11ec-affb-7085c29ac876_f928709e-a107-11ec-affb-7085c29ac876.png"
+    ]
+  },
   "wh_1": {
-    "name": "W&H WH-SET",
+    "name": "W&H Synea Vision TK-100",
     "brand": "W&H",
     "images": [
-      "images/wh_1/1.jpg",
-      "images/wh_1/2.jpg",
+      "images/wh_1/1.png",
+      "images/wh_1/2.png",
       "images/wh_1/3.png",
-      "images/wh_1/4.png",
-      "images/wh_1/5.png"
+      "images/wh_1/4.jpg",
+      "images/wh_1/5.png",
+      "images/wh_1/6.png",
+      "images/wh_1/7.png",
+      "images/wh_1/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/n/s/nsk_osseo_100_instrument.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_mf-100_plug_and_play_control_unit_without_motor.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_mf-100_plug_play_control_unit_with_em-12_motor.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/b/l/blunt_needle.jpg"
     ]
   },
   "wh_2": {
-    "name": "W&H WH-TURBINE",
+    "name": "W&H Alegra TE-95",
     "brand": "W&H",
     "images": [
-      "images/wh_2/1.jpg",
-      "images/wh_2/2.jpg",
+      "images/wh_2/1.png",
+      "images/wh_2/2.png",
       "images/wh_2/3.png",
       "images/wh_2/4.png",
-      "images/wh_2/5.png"
+      "images/wh_2/5.png",
+      "images/wh_2/6.jpg",
+      "images/wh_2/7.png",
+      "images/wh_2/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_rc-95_bc_power.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_motorhandpiece_support_for_implantmed_si-95.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_rc-95_rm_turbine_non-optic.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_bepro_wdd_cleaner_te_washer_disinfector_solution_5_litre.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30068000_te-97_1.png"
+    ]
+  },
+  "coxo_1": {
+    "name": "COXO CX207-W Handpiece",
+    "brand": "COXO",
+    "images": [
+      "https://placehold.co/400x400/1a1a1a/fff?text=COXO+CX207-W",
+      "https://placehold.co/400x400/1a1a1a/ddd?text=COXO+HANDPIECE"
+    ]
+  },
+  "coxo_2": {
+    "name": "COXO CX207-G H16",
+    "brand": "COXO",
+    "images": [
+      "https://placehold.co/400x400/1a1a1a/fff?text=COXO+CX207-G",
+      "https://placehold.co/400x400/1a1a1a/ddd?text=COXO+H16"
+    ]
+  },
+  "coxo_3": {
+    "name": "COXO C-SMART MINI AP+",
+    "brand": "COXO",
+    "images": [
+      "https://placehold.co/400x400/1a1a1a/fff?text=COXO+C-SMART",
+      "https://placehold.co/400x400/1a1a1a/ddd?text=COXO+MINI+AP"
+    ]
+  },
+  "coxo_4": {
+    "name": "COXO C-PUMA Pro3",
+    "brand": "COXO",
+    "images": [
+      "https://placehold.co/400x400/1a1a1a/fff?text=COXO+PUMA",
+      "https://placehold.co/400x400/1a1a1a/ddd?text=COXO+PRO3"
     ]
   }
 }
