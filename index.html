@@ -2642,7 +2642,7 @@
                         <span style="font-size:0.75rem;color:var(--text-muted);">قیمت:</span>
                         <input type="range" id="priceMin" min="0" max="50000000000" value="0" step="10000000" />
                         <input type="range" id="priceMax" min="0" max="50000000000" value="50000000000" step="10000000" />
-                        <span class="range-values" id="priceRangeDisplay">۰ - ۵۰۰,۰۰۰,۰۰۰</span>
+                        <span class="range-values" id="priceRangeDisplay">۰ - ۵۰,۰۰۰,۰۰۰,۰۰۰</span>
                     </div>
                     <select id="filterOrigin"><option value="">همه اصالت</option><option value="true">اورجینال</option><option value="false">کپی</option></select>
                     <select id="filterCountry"><option value="">همه کشورها</option><option value="چین">چین</option><option value="آلمان">آلمان</option><option value="ژاپن">ژاپن</option><option value="سوئیس">سوئیس</option></select>
@@ -3661,23 +3661,39 @@
         //  FILTER PARAMETERS HELPER
         // ============================================================
         function getFilterParams() {
-            return {
-                brand: document.getElementById('filterBrand').value,
-                cat: document.getElementById('filterCategory').value,
-                sort: document.getElementById('filterSort').value,
-                search: document.getElementById('productSearchInput').value.trim(),
-                pMin: parseInt(document.getElementById('priceMin').value) || 0,
-                pMax: parseInt(document.getElementById('priceMax').value) || 50000000000,
-                origin: document.getElementById('filterOrigin').value,
-                country: document.getElementById('filterCountry').value,
-                inStock: document.getElementById('filterInStock').checked
-            };
+            try {
+                const brandEl = document.getElementById('filterBrand');
+                const catEl = document.getElementById('filterCategory');
+                const sortEl = document.getElementById('filterSort');
+                const searchEl = document.getElementById('productSearchInput');
+                const pMinEl = document.getElementById('priceMin');
+                const pMaxEl = document.getElementById('priceMax');
+                const originEl = document.getElementById('filterOrigin');
+                const countryEl = document.getElementById('filterCountry');
+                const inStockEl = document.getElementById('filterInStock');
+                return {
+                    brand: brandEl ? brandEl.value : '',
+                    cat: catEl ? catEl.value : '',
+                    sort: sortEl ? sortEl.value : 'name',
+                    search: searchEl ? searchEl.value.trim() : '',
+                    pMin: (pMinEl && parseInt(pMinEl.value)) || 0,
+                    pMax: (pMaxEl && parseInt(pMaxEl.value)) || 50000000000,
+                    origin: originEl ? originEl.value : '',
+                    country: countryEl ? countryEl.value : '',
+                    inStock: inStockEl ? inStockEl.checked : false
+                };
+            } catch (e) {
+                return { brand: '', cat: '', sort: 'name', search: '', pMin: 0, pMax: 50000000000, origin: '', country: '', inStock: false };
+            }
         }
 
         function applyFilters() {
             const p = getFilterParams();
             renderProductPage(p.brand, p.cat, p.sort, p.search, 1, p.pMin, p.pMax, p.origin, p.country, p.inStock);
-            document.getElementById('priceRangeDisplay').textContent = `${formatPrice(p.pMin)} - ${formatPrice(p.pMax)}`;
+            const priceDisplay = document.getElementById('priceRangeDisplay');
+            if (priceDisplay) {
+                priceDisplay.textContent = `${formatPrice(p.pMin)} - ${formatPrice(p.pMax)}`;
+            }
         }
 
         // ============================================================
@@ -6011,16 +6027,6 @@
         // ============================================================
         //  INIT
         // ============================================================
-        const hasCoxo = productsData.some(p => p.brand === 'COXO');
-        const hasNsk = productsData.some(p => p.brand === 'NSK');
-        const hasWh = productsData.some(p => p.brand === 'W&H');
-
-        const hasSiteImage = productsData.some(p =>
-            (p.brand === 'COXO' && p.image && p.image.includes('coxotec.com')) ||
-            (p.brand === 'NSK' && p.image && p.image.includes('fordent.ru')) ||
-            (p.brand === 'W&H' && p.image && p.image.includes('swallowdental.co.uk'))
-        );
-
         // بارگیری تصاویر از image_mapping.json (محلی و گیت‌هاب) — اسکرپر در پس‌زمینه اجرا می‌شود
         setTimeout(() => {
             loadImagesFromGitHub().catch(err => {
