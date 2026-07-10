@@ -2640,8 +2640,8 @@
                     <select id="filterSort"><option value="name">مرتب‌سازی: نام</option><option value="price">قیمت</option><option value="stock">موجودی</option><option value="popular">پرفروش‌ترین</option></select>
                     <div class="price-slider-wrap">
                         <span style="font-size:0.75rem;color:var(--text-muted);">قیمت:</span>
-                        <input type="range" id="priceMin" min="0" max="5000000000" value="0" step="10000000" />
-                        <input type="range" id="priceMax" min="0" max="5000000000" value="5000000000" step="10000000" />
+                        <input type="range" id="priceMin" min="0" max="50000000000" value="0" step="10000000" />
+                        <input type="range" id="priceMax" min="0" max="50000000000" value="50000000000" step="10000000" />
                         <span class="range-values" id="priceRangeDisplay">۰ - ۵۰۰,۰۰۰,۰۰۰</span>
                     </div>
                     <select id="filterOrigin"><option value="">همه اصالت</option><option value="true">اورجینال</option><option value="false">کپی</option></select>
@@ -3077,10 +3077,20 @@
                 'Endo Mate DT', 'Varios 370', 'Z95L', 'Z25L', 'S-Max M500L',
                 'Pana-Max PLUS', 'Ti-Max X95L', 'FX-65m', 'FX-57m', 'Endo Mate TC2',
                 'iPexil', 'Ti-ENDO', 'EX-ENDO', 'S-Max Z45L', 'Z85L',
-                'Z84L', 'Z15L', 'Z10L', 'Z24L', 'Z25L',
-                'Z65L', 'Z12L', 'Z35L', 'X95EX', 'X65L',
-                'X12L', 'X35L', 'FX25m', 'FX15m', 'FX65m',
-                'FX75m', 'AR-EC', 'AR-ECM', 'EX-6B', 'MP-ER64'
+                'Z84L', 'Z15L', 'Z10L', 'Z24L', 'Z65L',
+                'Z12L', 'Z35L', 'X95EX', 'X65L', 'X12L',
+                'X35L', 'FX15m', 'FX65m', 'AR-EC', 'AR-ECM',
+                'EX-6B', 'MP-ER64', 'Ti-Max Z990L', 'Ti-Max X600L', 'FX-75m',
+                'S-Max M700L', 'Pana-Max3', 'Nano95LS-PRO', 'Varios 570', 'Z990L',
+                'Z50L', 'X75L', 'Ti-Max SG-50', 'Endo-Mate DT Pro', 'FX-25m Plus',
+                'Ti-Max Z500L', 'S-Max M300L', 'Pana-Air', 'Ti-Max X300', 'Surgic Pro',
+                'EX-8B', 'MP-ER128', 'Ti-Max Z750L', 'Nano85', 'X-Smart Plus',
+                'FX-35m', 'AR-EC Plus', 'Endo-Mate', 'Z200L', 'X150L',
+                'Ti-Max SG-65', 'FX-85m', 'S-Max M800L', 'Pana-Spray', 'Varios 970',
+                'Z330L', 'X50X', 'Ti-ENDO Pro', 'EX-10B', 'MP-ER256',
+                'Nano65', 'Ti-Max Z350L', 'FX-50m', 'S-Max M200L', 'Pana-Flow',
+                'Ti-Max X150', 'Z400L', 'X250L', 'AR-EC-X', 'EX-5B',
+                'Varios 770', 'Nano45', 'Ti-Max Z150L', 'FX-95m', 'S-Max M900L'
             ];
             const coxoModels = [
                 'CX207-W', 'CX207-F', 'C6-23', 'CX205-M', 'C-sailor Pro',
@@ -3089,9 +3099,43 @@
                 'C-File Mini', 'C-File Re', 'C-FR2', 'C-BLADE', 'C3-11KIT',
                 'C-PUMA PRO3', 'C-PUMA INT X', 'DB686 Q1', 'DB686 HALO', 'DB686 LATTE',
                 'C-BRIGHT', 'DL-300P', 'C-ROOT V', 'C-ROOT VI', 'C-SMART NOVA X',
-                'C-TW1', 'C-TW2', 'C-SK1', 'C-SK2', 'C-ROOT V'
+                'C-TW1', 'C-TW2', 'C-SK1', 'C-SK2', 'C-ROOT V',
+                'CX-207', 'C-Sailor', 'C-Flex', 'DB-686X', 'C-PUMA Mini',
+                'C-SMART ENDO', 'C-Root ZX', 'DB-686 PRO', 'CX-F1', 'CX-S1',
+                'C-CURE', 'C-HEAL', 'C-PROBE', 'C-TORQUE-X', 'CX-207 Pro',
+                'C-BLADE Pro', 'C-CLEAR Pro', 'CX-MINI', 'DB-686 Lite', 'C-SEAL',
+                'C-SMART-2 PRO', 'CX-F3', 'C-ROOT X', 'CX-B1', 'C-PUMA INT',
+                'DB-686 NK', 'C-CRACK', 'CX-W1', 'C-BOND', 'C-TEMP',
+                'CX-PRO', 'C-LUX', 'CX-MAX', 'DB-686 AIR', 'C-SPIN',
+                'CX-FX', 'C-SPEED', 'C-WAVE', 'C-FLOW', 'C-SMART-3',
+                'CX-R1', 'DB-688', 'C-ZOOM', 'C-PEEK', 'C-FORCE',
+                'CX-T1', 'C-SENSE', 'CX-NANO', 'C-GLOW', 'C-MESH',
+                'CX-CORE', 'C-LINK', 'DB-690', 'C-MAX', 'C-FLEX Pro',
+                'CX-EDGE', 'C-PLUS', 'C-ELITE', 'C-TECH', 'DB-692',
+                'C-PRIME', 'CX-VISION', 'C-SCOPE', 'C-PEAK', 'C-NOVA'
             ];
-            const whModels = ['WH-SET', 'WH-TURBINE', 'WH-ANGLE', 'WH-MOTOR'];
+            const whModels = [
+                'Synea Vision TK-100', 'Alegra TE-95', 'Synea TA-98', 'Alegra TE-97', 'Synea Fusion TK-94',
+                'Synea TA-98 LED', 'Alegra TE-98', 'Synea TA-90', 'Alegra TE-90', 'Synea Vision WK-99',
+                'Synea TA-85', 'Alegra TE-85', 'Synea WK-93', 'Alegra WK-92', 'Synea Fusion TA-91',
+                'Alegra TE-99', 'Synea TA-97', 'Synea WK-97', 'Alegra WK-95', 'Synea Fusion WK-90',
+                'Synea TA-99 LED', 'Alegra TE-100', 'Synea TA-96', 'Alegra WK-98', 'Synea WK-99 LED',
+                'Synea TA-94', 'Alegra TE-96', 'Synea WK-95', 'Alegra WK-96', 'Synea TA-93',
+                'Alegra TE-94', 'Synea WK-92', 'Alegra WK-94', 'Synea Fusion TA-98', 'Alegra TE-93',
+                'Synea TA-92', 'Synea WK-91', 'Alegra TE-92', 'Synea WK-98 LED', 'Alegra WK-97',
+                'Synea TA-91', 'Alegra TE-91', 'Synea WK-90', 'Alegra WK-93', 'Synea TA-95 LED',
+                'Alegra WK-99', 'Synea Fusion TE-100', 'Synea TA-89', 'Alegra TE-89', 'Synea WK-89',
+                'Alegra WK-88', 'Synea TA-88', 'Alegra TE-88', 'Synea WK-88', 'Alegra WK-87',
+                'Synea Fusion TE-99', 'Synea TA-87', 'Synea WK-87', 'Alegra WK-86', 'Synea TA-86',
+                'Alegra TE-87', 'Synea WK-86', 'Synea Fusion WK-85', 'Alegra WK-85', 'Synea TA-84',
+                'Alegra TE-86', 'Synea WK-84', 'Alegra WK-84', 'Synea TA-83', 'Alegra TE-84',
+                'Synea Fusion WK-95', 'Synea WK-83', 'Synea TA-82', 'Alegra WK-83', 'Alegra TE-83',
+                'Synea WK-82', 'Alegra WK-82', 'Synea TA-81', 'Synea Fusion TE-95', 'Alegra TE-82',
+                'Synea WK-81', 'Alegra WK-81', 'Synea TA-80', 'Alegra TE-81', 'Synea WK-80',
+                'Alegra WK-80', 'Synea TA-79', 'Alegra TE-80', 'Synea WK-79', 'Synea Fusion TA-90',
+                'Alegra WK-79', 'Synea TA-78', 'Alegra TE-79', 'Synea WK-78', 'Synea Fusion WK-75',
+                'Alegra WK-78', 'Synea TA-77', 'Alegra TE-78', 'Synea WK-77', 'Synea Fusion TE-90'
+            ];
             const products = [];
             // تصاویر جایگزین با کیفیت بالا
             const placeholderImages = [
@@ -3140,7 +3184,7 @@
                     name: `${brand} ${model}`,
                     brand: brand,
                     category: cat,
-                    code: model.replace(/\s/g, '') + (i % 100 + 10),
+                    code: model.replace(/[\s&]+/g, '-').toUpperCase(),
                     'اصالت': isOriginal ? 'اورجینال' : 'غیر اورجینال',
                     'سیستم LED': i % 2 === 0 ? 'دارد' : 'ندارد',
                     'سیستم آبرسانی': ['تک', 'Quattro', 'سه جت', '۳ کاناله', 'خارجی', 'داخلی'][i % 6],
@@ -3247,7 +3291,7 @@
         // ============================================================
         //  EXCHANGE RATE: USDT/Toman from arzdigital.com
         // ============================================================
-        const USD_TO_TOMAN_DEFAULT = 1780000;
+        const USD_TO_TOMAN_DEFAULT = 17800000;
         let usdToTomanRate = parseFloat(localStorage.getItem('unident_tether_rate')) || USD_TO_TOMAN_DEFAULT;
         let tetherRateUpdatedAt = localStorage.getItem('unident_tether_rate_updated') || null;
 
@@ -3429,7 +3473,7 @@
         //  RENDER PRODUCT PAGE with all filters
         // ============================================================
         function renderProductPage(filterBrand = '', filterCategory = '', sort = 'name', search = '', page = 1,
-            priceMin = 0, priceMax = 5000000000, origin = '', country = '', inStock = false) {
+            priceMin = 0, priceMax = 50000000000, origin = '', country = '', inStock = false) {
             const container = document.getElementById('productGridFull');
             if (!container) return;
 
@@ -3623,7 +3667,7 @@
                 sort: document.getElementById('filterSort').value,
                 search: document.getElementById('productSearchInput').value.trim(),
                 pMin: parseInt(document.getElementById('priceMin').value) || 0,
-                pMax: parseInt(document.getElementById('priceMax').value) || 5000000000,
+                pMax: parseInt(document.getElementById('priceMax').value) || 50000000000,
                 origin: document.getElementById('filterOrigin').value,
                 country: document.getElementById('filterCountry').value,
                 inStock: document.getElementById('filterInStock').checked
@@ -5977,12 +6021,12 @@
             (p.brand === 'W&H' && p.image && p.image.includes('swallowdental.co.uk'))
         );
 
-        if (!hasSiteImage && (hasCoxo || hasNsk || hasWh)) {
-            console.log('🔄 در حال دریافت تصاویر از سایت‌های مرجع...');
-            setTimeout(() => {
-                updateAllImagesFromSites();
-            }, 2000);
-        }
+        // بارگیری تصاویر از image_mapping.json (محلی و گیت‌هاب) — اسکرپر در پس‌زمینه اجرا می‌شود
+        setTimeout(() => {
+            loadImagesFromGitHub().catch(err => {
+                console.warn('خطا در بارگیری تصاویر:', err);
+            });
+        }, 3000);
 
         renderReviews();
         renderStats();
@@ -5999,7 +6043,7 @@
         console.log('🔑 پنل ادمین با رمز 1212');
         console.log('✅ قیمت‌ها پس از به‌روزرسانی به‌صورت خودکار از حالت استعلام خارج می‌شوند.');
         console.log('✅ امکان تغییر حالت استعلام به‌صورت تکی و جمعی در بخش محصولات اضافه شد.');
-        console.log('✅ تصاویر با استفاده از سرویس picsum تولید می‌شوند و در صورت خطا، جایگزین نمایش داده می‌شود.');
+        console.log('✅ تصاویر پیش‌فرض از placehold.co استفاده می‌شوند و در صورت موجود بودن در image_mapping.json جایگزین می‌شوند.');
         console.log('✅ تصاویر برند COXO از coxotec.com، NSK از fordent.ru، W&H از swallowdental.co.uk دریافت می‌شوند.');
 
         // ============================================================
@@ -6071,13 +6115,6 @@
                 console.log(`✅ ${changed} محصول به حالت استعلام قیمت تغییر یافت`);
             }
         }
-
-        // اجرای بارگیری خودکار ۳ ثانیه بعد از بارگذاری صفحه
-        setTimeout(() => {
-            loadImagesFromGitHub().catch(err => {
-                console.warn('⚠️ خطا در بارگیری خودکار تصاویر:', err);
-            });
-        }, 3000);
 
         // حالت استعلام قیمت: غیرفعال (محصولات با قیمت نمایش داده می‌شوند)
         // setAllProductsToInquiry();
