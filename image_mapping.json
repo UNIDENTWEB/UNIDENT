@@ -1,7 +1,101 @@
 {
+  "coxo_1": {
+    "name": "COXO CX207-W Handpiece",
+    "brand": "COXO",
+    "code": "CX207-W",
+    "images": [
+      "images/coxo_1/1.jpg",
+      "images/coxo_1/2.jpg",
+      "images/coxo_1/3.jpg",
+      "images/coxo_1/4.jpg",
+      "images/coxo_1/5.jpg",
+      "images/coxo_1/6.jpg"
+    ],
+    "source_urls": [
+      "https://www.boston.com/wp-content/uploads/2023/05/s3___bgmp-arc_arc-feeds_generic-photos_to-arc_davisbm17-6465d1510f7bb-scaled.jpg",
+      "https://bdc2020.o0bc.com/wp-content/uploads/2019/02/celtics-scaled.jpeg",
+      "https://www.boston.com/wp-content/uploads/2023/03/Mazzulla_Celtics-6408023366f89-scaled.jpg",
+      "https://stuarte.co/wp-content/uploads/2022/09/Celtics-on-ESPNs-top-100-players-2023-scaled.jpg",
+      "https://bdc2020.o0bc.com/wp-content/uploads/2022/12/s3___bgmp-arc_arc-feeds_generic-photos_to-arc_clark_celtics_12_23_02-63a660180cc8d-scaled.jpg",
+      "https://www.bostonherald.com/wp-content/uploads/2020/03/celticssc013-1.jpg?w=1024&h=742",
+      "https://i.pinimg.com/originals/8d/9c/90/8d9c9087cf0fe1e3942ddf2d6239e806.jpg",
+      "https://i.pinimg.com/originals/01/45/51/014551b348399a8c5852457564a556a8.jpg"
+    ]
+  },
+  "coxo_2": {
+    "name": "COXO CX207-G H16",
+    "brand": "COXO",
+    "code": "CX207-G",
+    "images": [
+      "images/coxo_2/1.jpg",
+      "images/coxo_2/2.png",
+      "images/coxo_2/3.jpg",
+      "images/coxo_2/4.jpg",
+      "images/coxo_2/5.png",
+      "images/coxo_2/7.gif",
+      "images/coxo_2/8.png"
+    ],
+    "source_urls": [
+      "https://src.pcsoft.com.cn/d/file/soft/xtrj/zmgj/2020-10-16/40ac9a01951142e14f7000146cc895e5.jpg",
+      "https://k.sinaimg.cn/n/finance/transform/136/w550h386/20220926/dc13-5eb50b6fcaa0dc37543aa50ec719be36.png/w700h350z1l10t10abf.jpg",
+      "https://src.pcsoft.com.cn/d/file/soft/xtrj/zmgj/2020-10-16/aa9fae1689d42c664d6eb6c599976920.jpg",
+      "https://ksv-video-picture.cdn.bcebos.com/ffb0404167c01d96e31a17899e785aae093650b2.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_640%2Ch_360%2Climit_1%2Fformat%2Cf_auto%2Fquality%2Cq_80",
+      "https://k.sinaimg.cn/n/finance/transform/667/w400h267/20220830/5db5-cb7fa8456ed0b73d3eeaa6274c89f85d.png/w700h350z1l10t10f4f.jpg",
+      "https://img.tukuppt.com/png_preview/00/08/29/rLviBvXJDY.jpg!/fw/780",
+      "http://www.tenpp.com/menhu/uploadfile/2020/0330/20200330071023422.gif",
+      "http://i9.qhimg.com/t01c00d684bd9a83da1.png"
+    ]
+  },
+  "coxo_3": {
+    "name": "COXO C-SMART MINI AP+",
+    "brand": "COXO",
+    "code": "C-SMART-MINI",
+    "images": [
+      "images/coxo_3/1.jpg",
+      "images/coxo_3/2.jpg",
+      "images/coxo_3/3.jpg",
+      "images/coxo_3/4.jpg",
+      "images/coxo_3/5.jpg",
+      "images/coxo_3/6.jpg",
+      "images/coxo_3/7.jpg"
+    ],
+    "source_urls": [
+      "https://cdn11.bigcommerce.com/s-4mjh4t/images/stencil/600x1200/products/1490/8274/original__93079.1673287359.jpg?c=2",
+      "https://www.notenlager.de/images/product_images/popup_images/_051509533.jpg",
+      "https://cdn10.bigcommerce.com/s-62bdpkt7pb/products/0/images/208223/Girolamo_Frescobaldi_Concerto_Italiano_Rinaldo_Alessandrini_Arie_Musicali_Opus_111_CD_Audio_1994_2__34257.1642709374.1280.1280.JPG?c=2&_gl=1*1vc0hpk*_ga*OTgxMDM2NDYuMTYzOTgzMTAyNQ..*_ga_WS2VZYPC6G*MTY0MjcwNzgzMy4yOS4xLjE2NDI3MDkwNzUuMzg.",
+      "https://a.allegroimg.com/original/112f0e/8b3b7e084f539478b7b878ae26ee",
+      "https://i.discogs.com/5tXCc_qjZGO4WwbYpBYc4ljfQj5g6OMJs21W03qsopg/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1NTQx/NTY5LTE1OTMyOTU3/NjMtNjU2NC5qcGVn.jpeg",
+      "https://c8.alamy.com/comp/J8EH5D/frescobaldi-fiori-musicali-title-page-J8EH5D.jpg",
+      "https://m.media-amazon.com/images/I/61ateh4Vv+L._SL1333_.jpg",
+      "https://www.stretta-music.com/media/images2/00/78/1207800-00.webp"
+    ]
+  },
+  "coxo_4": {
+    "name": "COXO C-PUMA Pro3",
+    "brand": "COXO",
+    "code": "C-PUMA-PRO3",
+    "images": [
+      "images/coxo_4/2.jpg",
+      "images/coxo_4/3.jpg",
+      "images/coxo_4/4.png",
+      "images/coxo_4/5.jpg",
+      "images/coxo_4/8.jpg"
+    ],
+    "source_urls": [
+      "https://assets.ecstuning.com/product_library/1661863_x600.jpg",
+      "https://di-uploads-pod24.dealerinspire.com/albanymotorcars/uploads/2020/03/Car-parts-5-.jpg",
+      "https://s3.amazonaws.com/xet/1639_1889_3098_1.jpg",
+      "https://di-uploads-pod7.dealerinspire.com/mercedesbenzofathens/uploads/2020/10/1100x427-Parts-Photo.png",
+      "https://pictures.dealer.com/m/mbofbillingsmb/1173/203592ffef40b50513708357e7c5c2a9x.jpg",
+      "https://img.ksl.com/mx/mplace-classifieds.ksl.com/2608348-1726687861-491422.jpg",
+      "https://carschematics.com/wp-content/images/orhwg_Mercedes_Benz_2012_R350_Parts_Diagram.jpg",
+      "https://shop.awawdeh.ae/images/mercedes-benz/s-class/mercedes-s-class-spare-parts.jpg"
+    ]
+  },
   "nsk_1": {
     "name": "NSK Ti-Max Z900L",
     "brand": "NSK",
+    "code": "Z900L",
     "images": [
       "images/nsk_1/1.jpg",
       "images/nsk_1/2.jpg",
@@ -26,6 +120,7 @@
   "nsk_2": {
     "name": "NSK Ti-Max Z800L",
     "brand": "NSK",
+    "code": "Z800L",
     "images": [
       "images/nsk_2/1.jpg",
       "images/nsk_2/2.jpg",
@@ -50,6 +145,7 @@
   "nsk_3": {
     "name": "NSK S-Max M600L",
     "brand": "NSK",
+    "code": "M600L",
     "images": [
       "images/nsk_3/1.jpg",
       "images/nsk_3/2.jpg",
@@ -74,6 +170,7 @@
   "nsk_4": {
     "name": "NSK Varios 370",
     "brand": "NSK",
+    "code": "Varios370",
     "images": [
       "images/nsk_4/1.jpg",
       "images/nsk_4/2.jpg",
@@ -98,6 +195,7 @@
   "wh_1": {
     "name": "W&H Synea Vision TK-100",
     "brand": "W&H",
+    "code": "TK-100",
     "images": [
       "images/wh_1/1.png",
       "images/wh_1/2.png",
@@ -122,6 +220,7 @@
   "wh_2": {
     "name": "W&H Alegra TE-95",
     "brand": "W&H",
+    "code": "TE-95",
     "images": [
       "images/wh_2/1.png",
       "images/wh_2/2.png",
@@ -141,38 +240,6 @@
       "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_bepro_wdd_cleaner_te_washer_disinfector_solution_5_litre.jpg",
       "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30071000_te-98_1.png",
       "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30068000_te-97_1.png"
-    ]
-  },
-  "coxo_1": {
-    "name": "COXO CX207-W Handpiece",
-    "brand": "COXO",
-    "images": [
-      "https://placehold.co/400x400/1a1a1a/fff?text=COXO+CX207-W",
-      "https://placehold.co/400x400/1a1a1a/ddd?text=COXO+HANDPIECE"
-    ]
-  },
-  "coxo_2": {
-    "name": "COXO CX207-G H16",
-    "brand": "COXO",
-    "images": [
-      "https://placehold.co/400x400/1a1a1a/fff?text=COXO+CX207-G",
-      "https://placehold.co/400x400/1a1a1a/ddd?text=COXO+H16"
-    ]
-  },
-  "coxo_3": {
-    "name": "COXO C-SMART MINI AP+",
-    "brand": "COXO",
-    "images": [
-      "https://placehold.co/400x400/1a1a1a/fff?text=COXO+C-SMART",
-      "https://placehold.co/400x400/1a1a1a/ddd?text=COXO+MINI+AP"
-    ]
-  },
-  "coxo_4": {
-    "name": "COXO C-PUMA Pro3",
-    "brand": "COXO",
-    "images": [
-      "https://placehold.co/400x400/1a1a1a/fff?text=COXO+PUMA",
-      "https://placehold.co/400x400/1a1a1a/ddd?text=COXO+PRO3"
     ]
   }
 }
