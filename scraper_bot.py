@@ -1,383 +1,314 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
 """
-🤖 ربات اسکرپر تصاویر محصولات دندانپزشکی - نسخه پیشرفته
-✅ پشتیبانی از COXO, NSK, W&H
-✅ مدیریت خطا و retry
-✅ User-Agent تصادفی
-✅ ذخیره تصاویر در پوشه images/ و تولید image_mapping.json
+ربات اسکرپر یونیدنت
+دریافت تصاویر محصولات از سایت‌های مرجع:
+- COXO: coxotec.com
+- NSK: fordent.ru
+- W&H: swallowdental.co.uk
 """
 
 import os
 import json
 import time
 import re
-import random
-from urllib.parse import urljoin, quote
-import requests
+import asyncio
+from typing import Dict, List, Optional
+import aiohttp
 from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
+from urllib.parse import urljoin, urlparse
 
-# ============================================================
-#  تنظیمات
-# ============================================================
-CONFIG = {
-    'PRODUCTS_FILE': 'products.json',
-    'OUTPUT_DIR': 'images',
-    'MAPPING_FILE': 'image_mapping.json',
-    'MIN_IMAGES': 2,
-    'MAX_IMAGES': 5,
-    'DELAY': 1.5,
-    'RETRY_COUNT': 3,
-    'TIMEOUT': 20
-}
-
-# ============================================================
-#  کلاس اصلی ربات
-# ============================================================
-class DentalImageScraper:
-    def __init__(self):
-        self.ua = UserAgent()
-        self.session = requests.Session()
-        self.session.headers.update({'User-Agent': self.ua.random})
-        self.products = []
-        self.mapping = {}
-        self.load_products()
-        self.load_mapping()
-        os.makedirs(CONFIG['OUTPUT_DIR'], exist_ok=True)
-        print(f"🔹 ربات راه‌اندازی شد | {len(self.products)} محصول")
-
-    def load_products(self):
-        try:
-            with open(CONFIG['PRODUCTS_FILE'], 'r', encoding='utf-8') as f:
-                self.products = json.load(f)
-        except FileNotFoundError:
-            print("❌ products.json یافت نشد! نمونه ساخته شد.")
-            self.create_sample_products()
-
-    def create_sample_products(self):
-        sample = []
-        for i in range(10):
-            sample.append({
-                'id': f'coxo_{i+1}',
-                'name': f'COXO CX207-{chr(65+i)}',
-                'brand': 'COXO',
-                'code': f'CX207-{chr(65+i)}'
-            })
-        with open(CONFIG['PRODUCTS_FILE'], 'w', encoding='utf-8') as f:
-            json.dump(sample, f, ensure_ascii=False, indent=2)
-        self.products = sample
-
-    def load_mapping(self):
-        try:
-            with open(CONFIG['MAPPING_FILE'], 'r', encoding='utf-8') as f:
-                self.mapping = json.load(f)
-        except:
-            self.mapping = {}
-
-    def get_headers(self):
-        return {'User-Agent': self.ua.random}
-
-    def fetch_with_retry(self, url, method='GET', **kwargs):
-        for attempt in range(CONFIG['RETRY_COUNT']):
-            try:
-                headers = self.get_headers()
-                if 'headers' in kwargs:
-                    headers.update(kwargs['headers'])
-                kwargs['headers'] = headers
-                kwargs['timeout'] = CONFIG['TIMEOUT']
-                response = self.session.request(method, url, **kwargs)
-                if response.status_code == 200:
-                    return response
-            except Exception as e:
-                print(f"   ⚠️ تلاش {attempt+1} ناموفق: {e}")
-                time.sleep(2 ** attempt)
-        return None
-
-    def extract_images_from_html(self, html, base_url):
-        """استخراج تصاویر از HTML با اولویت‌بندی"""
-        if not html:
-            return []
+class DentalScraper:
+    """ربات اسکرپر محصولات دندانپزشکی"""
+    
+    def __init__(self, delay: float = 2.0):
+        self.delay = delay
+        self.session = None
+        self.results = {}
+        self.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         
-        soup = BeautifulSoup(html, 'lxml')
-        images = []
-        seen = set()
-
-        # 1. متا og:image (معمولاً بهترین کیفیت)
-        og = soup.find('meta', property='og:image')
-        if og and og.get('content'):
-            img_url = self.normalize_url(og['content'], base_url)
-            if img_url and img_url not in seen:
-                seen.add(img_url)
-                images.append(img_url)
-
-        # 2. متا twitter:image
-        twitter = soup.find('meta', attrs={'name': 'twitter:image'})
-        if twitter and twitter.get('content'):
-            img_url = self.normalize_url(twitter['content'], base_url)
-            if img_url and img_url not in seen:
-                seen.add(img_url)
-                images.append(img_url)
-
-        # 3. تصاویر داخل المنت‌های اصلی
-        for selector in ['.product-image img', '.product-gallery img', '.product-photo img', '.main-image img', '.image img']:
-            for img in soup.select(selector):
-                src = img.get('src') or img.get('data-src')
-                if src:
-                    img_url = self.normalize_url(src, base_url)
-                    if img_url and img_url not in seen and self.is_image_url(img_url):
-                        seen.add(img_url)
-                        images.append(img_url)
-
-        # 4. تصاویر با کلاس‌های خاص
-        for img in soup.find_all('img', class_=re.compile(r'(product|main|gallery|photo|image|slide)')):
-            src = img.get('src') or img.get('data-src')
-            if src:
-                img_url = self.normalize_url(src, base_url)
-                if img_url and img_url not in seen and self.is_image_url(img_url):
-                    seen.add(img_url)
-                    images.append(img_url)
-
-        # 5. تمام تصاویر با پسوند مناسب
-        for img in soup.find_all('img', src=True):
-            src = img['src']
-            img_url = self.normalize_url(src, base_url)
-            if img_url and self.is_image_url(img_url) and not self.is_excluded(img_url):
-                if img_url not in seen:
-                    seen.add(img_url)
-                    images.append(img_url)
-
-        return images[:CONFIG['MAX_IMAGES'] * 2]  # بیشتر برای فیلتر نهایی
-
-    def normalize_url(self, url, base_url):
-        if not url:
+    async def __aenter__(self):
+        timeout = aiohttp.ClientTimeout(total=30)
+        self.session = aiohttp.ClientSession(
+            timeout=timeout,
+            headers={"User-Agent": self.user_agent}
+        )
+        return self
+        
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        if self.session:
+            await self.session.close()
+    
+    async def fetch_html(self, url: str) -> Optional[str]:
+        """دریافت محتوای HTML از یک URL"""
+        try:
+            async with self.session.get(url, allow_redirects=True) as response:
+                if response.status == 200:
+                    return await response.text()
+                return None
+        except Exception as e:
+            print(f"⚠️ خطا در دریافت {url}: {e}")
             return None
-        if url.startswith('//'):
-            url = 'https:' + url
-        elif url.startswith('/'):
-            url = urljoin(base_url, url)
-        elif not url.startswith(('http://', 'https://')):
-            url = urljoin(base_url, url)
-        # حذف پارامترهای اضافی
-        return re.sub(r'\?.*$', '', url)
-
-    def is_image_url(self, url):
-        return bool(re.search(r'\.(jpg|jpeg|png|webp|gif|svg)', url, re.I))
-
-    def is_excluded(self, url):
-        excluded = ['logo', 'icon', 'thumb', 'small', 'banner', 'placeholder', 'no-image', 'default']
-        return any(x in url.lower() for x in excluded)
-
-    # ============================================================
-    #  جستجوی اختصاصی هر برند
-    # ============================================================
-
-    def search_coxo(self, product):
-        name = product.get('name', '')
-        code = product.get('code', '')
-        base = 'https://coxotec.com'
+    
+    def extract_images_from_html(self, html: str, base_url: str) -> List[str]:
+        """استخراج تصاویر از HTML"""
+        soup = BeautifulSoup(html, 'html.parser')
+        images = []
         
-        # تولید slug از نام
-        slug = re.sub(r'[^\w\-]', '', name.lower().replace(' ', '-'))
-        
-        urls = [
-            f"{base}/product/{slug}/",
-            f"{base}/product/{slug}-handpiece/",
-            f"{base}/en/product/{slug}/",
-            f"{base}/search/?q={quote(code)}"
+        # الگوهای مختلف برای یافتن تصاویر
+        patterns = [
+            # متا تگ‌های Open Graph
+            soup.find('meta', property='og:image'),
+            soup.find('meta', attrs={'name': 'twitter:image'}),
+            # تگ‌های img با کلاس‌های خاص
+            soup.find('img', class_='product-image'),
+            soup.find('img', class_='product-img'),
+            soup.find('img', class_='main-image'),
+            soup.find('img', class_='featured-image'),
+            # اولین تصویر بزرگ در صفحه
+            soup.find('img', {'itemprop': 'image'}),
         ]
         
-        all_images = []
+        for img in patterns:
+            if img:
+                src = img.get('content') or img.get('src')
+                if src:
+                    if not src.startswith('http'):
+                        src = urljoin(base_url, src)
+                    images.append(src)
+        
+        # جستجوی تمام تصاویر در مسیرهای خاص
+        img_tags = soup.find_all('img')
+        for img in img_tags:
+            src = img.get('src') or img.get('data-src')
+            if src:
+                # فیلتر کردن تصاویر کوچک و آیکون‌ها
+                if any(pattern in src.lower() for pattern in ['product', 'catalog', 'upload', 'media', 'image']):
+                    if not src.startswith('http'):
+                        src = urljoin(base_url, src)
+                    if src not in images:
+                        images.append(src)
+        
+        return images
+    
+    async def scrape_coxo(self, model_name: str, product_code: str) -> Dict:
+        """اسکرپ سایت COXO (coxotec.com)"""
+        clean_name = re.sub(r'^[A-Z]+\s*', '', model_name).lower().strip()
+        clean_name = re.sub(r'[^a-z0-9]+', '-', clean_name).strip('-')
+        code = product_code.lower().strip() if product_code else ''
+        
+        urls = [
+            f'https://coxotec.com/product/{clean_name}/',
+            f'https://coxotec.com/en/product/{clean_name}/',
+            f'https://coxotec.com/ja/product/{clean_name}/',
+            f'https://coxotec.com/ru/product/{clean_name}/'
+        ]
+        
         for url in urls:
-            resp = self.fetch_with_retry(url)
-            if resp and resp.status_code == 200:
-                images = self.extract_images_from_html(resp.text, base)
-                all_images.extend(images)
-                if len(all_images) >= CONFIG['MAX_IMAGES']:
-                    break
-            time.sleep(0.3)
-        
-        return list(dict.fromkeys(all_images))[:CONFIG['MAX_IMAGES']]
-
-    def search_nsk(self, product):
-        name = product.get('name', '')
-        code = product.get('code', '')
-        base = 'https://fordent.ru'
-        query = code if code else name
-        
-        # جستجو در fordent.ru
-        search_url = f"{base}/search/?q={quote(query)}"
-        resp = self.fetch_with_retry(search_url)
-        if not resp:
-            return []
-        
-        soup = BeautifulSoup(resp.text, 'lxml')
-        images = []
-        
-        # استخراج تصاویر از نتایج جستجو
-        for img in soup.find_all('img', src=True):
-            src = img['src']
-            if '/catalog/product/' in src:
-                img_url = self.normalize_url(src, base)
-                if img_url and self.is_image_url(img_url):
-                    images.append(img_url)
-        
-        # اگر تصویری نبود، لینک اولین محصول را دنبال کن
-        if not images:
-            first_link = soup.find('a', href=re.compile(r'/product/'))
-            if first_link:
-                prod_url = urljoin(base, first_link['href'])
-                resp2 = self.fetch_with_retry(prod_url)
-                if resp2:
-                    images = self.extract_images_from_html(resp2.text, base)
-        
-        return list(dict.fromkeys(images))[:CONFIG['MAX_IMAGES']]
-
-    def search_wh(self, product):
-        name = product.get('name', '')
-        code = product.get('code', '')
-        base = 'https://expo-dent.com'
-        query = code if code else name
-        
-        search_url = f"{base}/catalog/?q={quote(query)}"
-        resp = self.fetch_with_retry(search_url)
-        if not resp:
-            return []
-        
-        soup = BeautifulSoup(resp.text, 'lxml')
-        images = []
-        
-        # استخراج تصاویر از نتایج جستجو
-        for img in soup.find_all('img', src=True):
-            src = img['src']
-            if '/upload/' in src:
-                img_url = self.normalize_url(src, base)
-                if img_url and self.is_image_url(img_url):
-                    images.append(img_url)
-        
-        # اگر تصویری نبود، لینک اولین محصول را دنبال کن
-        if not images:
-            first_link = soup.find('a', href=re.compile(r'/product/'))
-            if first_link:
-                prod_url = urljoin(base, first_link['href'])
-                resp2 = self.fetch_with_retry(prod_url)
-                if resp2:
-                    images = self.extract_images_from_html(resp2.text, base)
-        
-        return list(dict.fromkeys(images))[:CONFIG['MAX_IMAGES']]
-
-    # ============================================================
-    #  دانلود و ذخیره‌سازی
-    # ============================================================
-
-    def find_images(self, product):
-        brand = product.get('brand', '').upper()
-        if brand == 'COXO':
-            return self.search_coxo(product)
-        elif brand == 'NSK':
-            return self.search_nsk(product)
-        elif brand == 'W&H':
-            return self.search_wh(product)
-        else:
-            return []
-
-    def download_images(self, product_id, urls):
-        folder = os.path.join(CONFIG['OUTPUT_DIR'], product_id)
-        os.makedirs(folder, exist_ok=True)
-        
-        saved = []
-        for i, url in enumerate(urls[:CONFIG['MAX_IMAGES']], 1):
-            try:
-                resp = self.fetch_with_retry(url)
-                if resp and resp.status_code == 200:
-                    # تشخیص پسوند
-                    content_type = resp.headers.get('content-type', '')
-                    ext = 'jpg'
-                    if 'png' in content_type:
-                        ext = 'png'
-                    elif 'webp' in content_type:
-                        ext = 'webp'
-                    elif 'svg' in content_type:
-                        ext = 'svg'
-                    elif 'gif' in content_type:
-                        ext = 'gif'
-                    else:
-                        # استخراج از URL
-                        m = re.search(r'\.(jpg|jpeg|png|webp|gif|svg)', url, re.I)
-                        if m:
-                            ext = m.group(1).lower()
-                    
-                    filename = f"{i}.{ext}"
-                    filepath = os.path.join(folder, filename)
-                    with open(filepath, 'wb') as f:
-                        f.write(resp.content)
-                    saved.append(filepath)
-                    print(f"   ✅ دانلود: {filename}")
-            except Exception as e:
-                print(f"   ❌ خطا در دانلود {url}: {e}")
-            time.sleep(0.3)
-        
-        return saved
-
-    # ============================================================
-    #  اجرای اصلی
-    # ============================================================
-
-    def run(self):
-        total = len(self.products)
-        success = 0
-        failed = 0
-        skipped = 0
-        
-        for idx, product in enumerate(self.products, 1):
-            pid = product.get('id')
-            if not pid:
-                continue
-                
-            # اگر قبلاً تصویر دارد، رد کن
-            if pid in self.mapping:
-                skipped += 1
-                continue
-                
-            print(f"\n📦 [{idx}/{total}] {product.get('name')} ({product.get('brand')})")
-            
-            # جستجوی تصاویر
-            image_urls = self.find_images(product)
-            print(f"   🔍 {len(image_urls)} تصویر پیدا شد")
-            
-            if len(image_urls) >= CONFIG['MIN_IMAGES']:
-                saved = self.download_images(pid, image_urls)
-                if saved:
-                    self.mapping[pid] = {
-                        'name': product.get('name'),
-                        'brand': product.get('brand'),
-                        'images': saved
+            html = await self.fetch_html(url)
+            if html:
+                images = self.extract_images_from_html(html, url)
+                # فیلتر تصاویر محصول
+                product_images = [img for img in images if any(x in img for x in ['product', 'handpiece', 'motor'])]
+                if product_images:
+                    return {
+                        'url': url,
+                        'images': product_images[:5],
+                        'source': 'coxotec.com'
                     }
-                    success += 1
-                    print(f"   ✅ {len(saved)} تصویر ذخیره شد")
-                else:
-                    failed += 1
-            else:
-                failed += 1
-                print(f"   ❌ تعداد تصاویر کافی نیست ({len(image_urls)})")
-            
-            # ذخیره مپینگ بعد از هر محصول (برای جلوگیری از از دست رفتن)
-            with open(CONFIG['MAPPING_FILE'], 'w', encoding='utf-8') as f:
-                json.dump(self.mapping, f, ensure_ascii=False, indent=2)
-            
-            time.sleep(CONFIG['DELAY'])
+                time.sleep(self.delay)
         
-        # گزارش نهایی
-        print("\n" + "="*50)
-        print(f"✅ موفق: {success} محصول")
-        print(f"❌ ناموفق: {failed} محصول")
-        print(f"⏩ رد شده: {skipped} محصول (قبلاً ذخیره شده)")
-        print(f"📁 تصاویر ذخیره شده در: {CONFIG['OUTPUT_DIR']}")
-        print(f"📄 مپینگ: {CONFIG['MAPPING_FILE']}")
+        return {'url': None, 'images': [], 'source': 'coxotec.com'}
+    
+    async def scrape_nsk(self, model_name: str, product_code: str) -> Dict:
+        """اسکرپ سایت NSK (fordent.ru)"""
+        query = product_code or model_name
+        base_url = 'https://fordent.ru'
+        search_url = f'{base_url}/search/?q={query}'
+        
+        html = await self.fetch_html(search_url)
+        if not html:
+            return {'url': None, 'images': [], 'source': 'fordent.ru'}
+        
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        # پیدا کردن لینک محصول
+        product_links = []
+        for link in soup.find_all('a', href=True):
+            href = link.get('href', '')
+            if '/catalog/product/' in href or '/product/' in href:
+                full_url = urljoin(base_url, href)
+                product_links.append(full_url)
+        
+        # بررسی اولین لینک محصول
+        for product_url in product_links[:3]:
+            product_html = await self.fetch_html(product_url)
+            if product_html:
+                images = self.extract_images_from_html(product_html, product_url)
+                if images:
+                    return {
+                        'url': product_url,
+                        'images': images[:5],
+                        'source': 'fordent.ru'
+                    }
+                time.sleep(self.delay)
+        
+        return {'url': None, 'images': [], 'source': 'fordent.ru'}
+    
+    async def scrape_wh(self, model_name: str, product_code: str) -> Dict:
+        """اسکرپ سایت W&H (swallowdental.co.uk)"""
+        query = product_code or model_name
+        base_url = 'https://www.swallowdental.co.uk'
+        search_url = f'{base_url}/search/{query}'
+        
+        html = await self.fetch_html(search_url)
+        if not html:
+            return {'url': None, 'images': [], 'source': 'swallowdental.co.uk'}
+        
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        # پیدا کردن لینک محصول
+        product_links = []
+        for link in soup.find_all('a', href=True):
+            href = link.get('href', '')
+            if '/product/' in href or '/catalog/product/' in href:
+                full_url = urljoin(base_url, href)
+                product_links.append(full_url)
+        
+        for product_url in product_links[:3]:
+            product_html = await self.fetch_html(product_url)
+            if product_html:
+                images = self.extract_images_from_html(product_html, product_url)
+                if images:
+                    return {
+                        'url': product_url,
+                        'images': images[:5],
+                        'source': 'swallowdental.co.uk'
+                    }
+                time.sleep(self.delay)
+        
+        return {'url': None, 'images': [], 'source': 'swallowdental.co.uk'}
+    
+    async def scrape_product(self, product: Dict) -> Dict:
+        """اسکرپ یک محصول بر اساس برند آن"""
+        brand = product.get('brand', '')
+        name = product.get('name', '')
+        code = product.get('code', '')
+        product_id = product.get('id', '')
+        
+        result = {
+            'id': product_id,
+            'name': name,
+            'brand': brand,
+            'code': code,
+            'images': [],
+            'source_url': None,
+            'source': ''
+        }
+        
+        try:
+            if brand.upper() == 'COXO':
+                data = await self.scrape_coxo(name, code)
+            elif brand.upper() == 'NSK':
+                data = await self.scrape_nsk(name, code)
+            elif brand.upper() == 'W&H':
+                data = await self.scrape_wh(name, code)
+            else:
+                return result
+            
+            if data.get('images'):
+                result['images'] = data['images']
+                result['source_url'] = data.get('url')
+                result['source'] = data.get('source', '')
+                print(f"✅ {brand} - {name}: {len(result['images'])} تصویر یافت شد")
+            else:
+                print(f"❌ {brand} - {name}: تصویری یافت نشد")
+                
+        except Exception as e:
+            print(f"⚠️ خطا در اسکرپ {brand} - {name}: {e}")
+        
+        return result
+    
+    async def scrape_products(self, products: List[Dict]) -> Dict:
+        """اسکرپ لیست محصولات"""
+        results = {}
+        total = len(products)
+        
+        for idx, product in enumerate(products):
+            print(f"⏳ اسکرپ محصول {idx+1}/{total}: {product.get('name', '')}")
+            result = await self.scrape_product(product)
+            results[result['id']] = result
+            await asyncio.sleep(self.delay)
+        
+        return results
 
-# ============================================================
-#  اجرا
-# ============================================================
-if __name__ == "__main__":
-    scraper = DentalImageScraper()
-    scraper.run()
+
+def load_products_from_localstorage() -> List[Dict]:
+    """بارگذاری محصولات از فایل JSON (شبیه‌سازی localStorage)"""
+    try:
+        with open('products_data.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print("⚠️ فایل products_data.json یافت نشد.")
+        return []
+
+
+def generate_image_mapping(scrape_results: Dict, products: List[Dict]) -> Dict:
+    """تولید فایل mapping تصاویر"""
+    mapping = {}
+    
+    for product in products:
+        product_id = product.get('id', '')
+        if product_id in scrape_results:
+            result = scrape_results[product_id]
+            if result.get('images'):
+                mapping[product_id] = {
+                    'name': product.get('name', ''),
+                    'brand': product.get('brand', ''),
+                    'images': result['images'],
+                    'source_url': result.get('source_url', ''),
+                    'source': result.get('source', '')
+                }
+    
+    return mapping
+
+
+async def main():
+    """تابع اصلی"""
+    print("🦷 ربات اسکرپر یونیدنت")
+    print("=" * 50)
+    
+    # بارگذاری محصولات
+    products = load_products_from_localstorage()
+    if not products:
+        print("⚠️ هیچ محصولی برای اسکرپ یافت نشد.")
+        print("📝 لطفاً فایل products_data.json را در مسیر جاری قرار دهید.")
+        return
+    
+    print(f"📊 تعداد محصولات: {len(products)}")
+    
+    # اجرای اسکرپ
+    async with DentalScraper(delay=1.5) as scraper:
+        results = await scraper.scrape_products(products)
+    
+    # تولید mapping
+    mapping = generate_image_mapping(results, products)
+    
+    # ذخیره نتایج
+    with open('image_mapping.json', 'w', encoding='utf-8') as f:
+        json.dump(mapping, f, ensure_ascii=False, indent=2)
+    
+    # ذخیره نتایج کامل
+    with open('scrape_results.json', 'w', encoding='utf-8') as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+    
+    print("=" * 50)
+    print(f"✅ اسکرپ کامل شد!")
+    print(f"📁 تعداد محصولات اسکرپ شده: {len(results)}")
+    print(f"📁 تعداد محصولات با تصویر: {len([r for r in results.values() if r.get('images')])}")
+    print(f"📁 فایل image_mapping.json ذخیره شد.")
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
