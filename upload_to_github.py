@@ -54,7 +54,6 @@ class GitHubUploader:
             return True
         else:
             print(f"❌ خطا در آپلود {remote_path}: {response.status_code}")
-            print(response.text)
             return False
 
 def main():

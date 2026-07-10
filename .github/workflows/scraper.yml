@@ -31,6 +31,6 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add image_mapping.json
-          git commit -m "🔄 Auto-update images [skip ci]" || echo "No changes"
-          git push
+          git add image_mapping.json products.json
+          git commit -m "Auto-update images [skip ci]" || echo "No changes"
+          git push origin HEAD

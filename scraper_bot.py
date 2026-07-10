@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # scraper_bot.py - دریافت تصاویر از سایت‌های مرجع با requests
 
-import os
 import json
+import re
 import time
 import requests
 from bs4 import BeautifulSoup
@@ -13,8 +13,7 @@ HEADERS = {
 }
 
 def get_coxo_image(product_name, product_code):
-    """دریافت تصویر از coxotec.com"""
-    clean_name = product_name.replace(/^[A-Z]+\s*/i, '').lower().strip()
+    clean_name = re.sub(r'^[A-Z]+\s*', '', product_name, flags=re.IGNORECASE).lower().strip()
     model_part = '-'.join(clean_name.split())
     urls = [
         f'https://coxotec.com/product/{model_part}/',
@@ -35,7 +34,7 @@ def get_coxo_image(product_name, product_code):
                 img = soup.find('img', class_='product-image')
                 if img and img.get('src'):
                     return urljoin(url, img['src'])
-        except:
+        except requests.RequestException:
             continue
     return None
 
@@ -52,7 +51,7 @@ def get_nsk_image(product_name, product_code):
             img = soup.find('img', src=lambda x: x and ('/catalog/product/' in x or '/upload/' in x))
             if img and img.get('src'):
                 return urljoin(base, img['src'])
-    except:
+    except requests.RequestException:
         pass
     return None
 
@@ -69,7 +68,7 @@ def get_wh_image(product_name, product_code):
                   soup.find('img', src=lambda x: x and '/media/catalog/product/' in x)
             if img and img.get('src'):
                 return urljoin(base, img['src'])
-    except:
+    except requests.RequestException:
         pass
     return None
 
