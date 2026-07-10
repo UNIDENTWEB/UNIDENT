@@ -1,30 +1,36 @@
 name: Auto Scraper
+
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 0 * * *'   # هر روز ساعت 00:00 UTC
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install requests beautifulsoup4 lxml
+          pip install -r requirements.txt
+
+      - name: Generate products (if needed)
+        run: python generate_products.py
+
       - name: Run scraper
         run: python scraper_bot.py
-      - name: Commit and push
+
+      - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add images/ image_mapping.json products.json || true
-          git diff --staged --quiet || git commit -m "auto-update images $(date +'%Y-%m-%d %H:%M')"
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add image_mapping.json
+          git commit -m "🔄 Auto-update images [skip ci]" || echo "No changes"
           git push
