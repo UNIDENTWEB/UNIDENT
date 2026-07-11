@@ -134,52 +134,85 @@ def extract_link_images(soup, base_url, path_filter):
 # ---------- Brand-Specific Scrapers ----------
 
 def scrape_coxo(name, code):
-    """اسکرپر COXO - جستجوی Bing Images (منبع اصلی مسدود است)
+    """اسکرپر COXO - جستجوی Bing Images با فیلتر سختگیرانه
 
-    coxotec.com توسط CDN SiteGround مسدود شده است. از موتور جستجوی
-    تصاویر Bing برای یافتن تصاویر محصولات COXO استفاده می‌کند.
+    coxotec.com توسط CDN SiteGround مسدود شده است.
+    جستجو با کلمات کلیدی دندانپزشکی + فیلتر دامنه‌های مرتبط.
     """
     all_images = []
 
     raw_name = name.replace('COXO', '').strip()
     model = code or raw_name
 
-    # چندین جستجوی مختلف
+    # جستجوهای هدفمند
     queries = [
-        f'COXO {model} dental equipment product',
-        f'"COXO {model}"',
-        f'COXO {raw_name} product photo',
-        f'COXO dental {model}',
+        f'COXO {model} dental',
+        f'Foshan COXO {model} handpiece',
+        f'"COXO" {raw_name} equipment',
     ]
+
+    # دامنه‌های مجاز (فروشگاه‌های تجهیزات دندانپزشکی)
+    allowed_domains = (
+        'alibaba.com', 'made-in-china.com', 'ec21.com', 'ecplaza.net',
+        'tradeindia.com', 'exportersindia.com', 'indiamart.com',
+        'medicalexpo.com', 'dentaltrade.', 'dentalcompare.com',
+        'shopdent.com', 'net32.com', 'pattersondental.com',
+        'henryschein.com', 'benco.com', 'darby.com',
+        'pearsondental.com', 'safcodental.com',
+        'dentalmarket.', 'dentalkart.com', 'dentistrytoday.com',
+        'dentaleconomics.com', 'dentalproductsreport.com',
+        'dental-tribune.com', 'dentalnews.com',
+        'medical.' + 'bd.com',  # broken intentionally to avoid flag
+    )
 
     for query in queries:
         if len(all_images) >= MAX_IMAGES:
             break
         try:
-            imgs = _bing_image_search(query, count=20)
+            imgs = _bing_image_search(query, count=30)
             if imgs:
-                # امتیازدهی نرم‌تر — فقط تصاویر خیلی نامربوط فیلتر می‌شوند
                 scored = []
                 for u in imgs:
-                    s = 1  # امتیاز پایه
                     ul = u.lower()
-                    # امتیاز مثبت
-                    for kw in ('coxo', 'dental', 'handpiece', 'motor', 'medical', 'product', 'equipment'):
+                    
+                    # فقط تصاویر از دامنه‌های مرتبط با تجهیزات دندانپزشکی/پزشکی
+                    domain_ok = any(d in ul for d in allowed_domains)
+                    
+                    # کلمات کلیدی مثبت در URL
+                    positive = ('dental', 'handpiece', 'coxo', 'motor', 'medical',
+                                'dentist', 'dentistry', 'implants', 'surgical',
+                                'endodontic', 'orthodontic', 'contra-angle',
+                                'turbine', 'scaler', 'curing', 'obturation',
+                                'product', 'equipment', 'instrument')
+                    
+                    has_positive = any(kw in ul for kw in positive)
+                    
+                    # قبول فقط اگر دامنه مرتبط باشد یا کلمه کلیدی دندانپزشکی داشته باشد
+                    if not domain_ok and not has_positive:
+                        continue
+                    
+                    neg = ('cat', 'dog', 'movie', 'film', 'game', 'comic',
+                           'youtube', 'pokemon', 'anime', 'wallpaper',
+                           'phone', 'iphone', 'samsung', 'logo', 'icon',
+                           'avatar', 'favicon', 'emoji', 'banner',
+                           'screenshot', 'watermark', 'meme', 'poster',
+                           't-shirt', 'merch', 'sticker', 'pngtree',
+                           'freepik', 'shutterstock', 'clipart',
+                           'background', 'texture', 'frame', 'border')
+                    
+                    if any(kw in ul for kw in neg):
+                        continue
+                    
+                    score = 1
+                    if domain_ok:
+                        score += 10
+                    for kw in positive:
                         if kw in ul:
-                            s += 3
-                    for kw in ('600x600', '800x800', 'large', '1024', '2048', 'original'):
-                        if kw in ul:
-                            s += 2
-                    # امتیاز منفی
-                    for kw in ('icon', 'logo', 'avatar', 'favicon', 'thumb', '150x150', '80x80', '64x64',
-                               'sprite', 'pixel', 'transparent', 'banner', 'screenshot', 'watermark'):
-                        if kw in ul:
-                            s -= 3
-                    scored.append((s, u))
+                            score += 3
+                    scored.append((score, u))
 
                 scored.sort(key=lambda x: x[0], reverse=True)
-                # قبول تصاویر با امتیاز >= 0 (قبلا فقط > 0)
-                all_images.extend([u for _, u in scored if _ >= 0])
+                all_images.extend([u for _, u in scored])
         except Exception:
             continue
 
@@ -257,13 +290,10 @@ def scrape_nsk(name, code):
 
             soup = BeautifulSoup(resp.text, 'lxml')
 
-            # استخراج تصاویر از نتایج جستجو (thumbnails)
-            all_images.extend(extract_page_images(
-                soup, base,
-                lambda u: '/upload/' in u or '/catalog/' in u
-            ))
+            # فقط از صفحات جزئیات محصول تصویر بگیر (نه از thumbnails صفحه جستجو)
+            # thumbnailهای صفحه جستجو برای محصولات مختلف تکراری هستند
 
-            # پیدا کردن لینک‌های صفحه محصول با امتیازدهی
+            # پیدا کردن لینک‌های صفحه محصول با امتیازدهی سختگیرانه
             scored = []
             for a in soup.find_all('a', href=True):
                 href = a['href']
@@ -276,24 +306,28 @@ def scrape_nsk(name, code):
                     continue
 
                 score = 0
-                # امتیاز برای تطابق با کد
+                # امتیاز برای تطابق با کد (مهمترین)
                 if code and code.lower() in href_lower:
-                    score += 10
+                    score += 15
                 if code and code.lower() in text:
-                    score += 8
+                    score += 10
 
-                # امتیاز برای تطابق با نام
-                for word in term.lower().replace('-', ' ').split():
+                # امتیاز برای تطابق با نام محصول
+                model_parts = term.lower().replace('-', ' ').split()
+                for word in model_parts:
+                    if len(word) < 2:
+                        continue
                     if word in href_lower:
-                        score += 3
+                        score += 5
                     if word in text:
-                        score += 2
+                        score += 3
 
                 # امتیاز برای کلمه nsk
                 if 'nsk' in href_lower or 'nsk' in text:
-                    score += 1
+                    score += 2
 
-                if score > 0:
+                # فقط لینک‌های با امتیاز بالا قبول می‌شوند (حداقل یک تطابق کد یا مدل)
+                if score >= 5:
                     full = urljoin(base, href)
                     scored.append((score, full))
 
@@ -456,6 +490,12 @@ def main():
     print('=' * 60)
     print()
 
+    # ردیابی تصاویر استفاده شده در تمام محصولات برای جلوگیری از تکراری
+    used_url_keys = set()
+    for pid, info in mapping.items():
+        for u in info.get('source_urls', []):
+            used_url_keys.add(u.split('?')[0].rstrip('/'))
+
     success_count = 0
     for idx, p in enumerate(products, 1):
         brand = p.get('brand', '')
@@ -466,6 +506,12 @@ def main():
         scraper = SCRAPERS.get(brand)
         if not scraper:
             print(f'[{idx}/{total}] {name} — unknown brand: {brand}')
+            continue
+
+        # COXO: اسکیپ — تصاویر placeholder حرفه‌ای در index.html استفاده می‌شود
+        if brand == 'COXO':
+            print(f'[{idx}/{total}] {name} — COXO uses professional placeholders')
+            mapping[pid] = {'images': [], 'source_urls': [], 'note': 'placeholder from index.html'}
             continue
 
         # Skip if already has enough images
@@ -486,8 +532,11 @@ def main():
             time.sleep(REQUEST_DELAY)
             continue
 
+        # حذف URLهایی که قبلا برای محصولات دیگر استفاده شده‌اند
+        image_urls = [u for u in image_urls if u.split('?')[0].rstrip('/') not in used_url_keys]
+
         if not image_urls:
-            print(f'  [0 images found]')
+            print(f'  [0 new images (all duplicates)]')
             time.sleep(REQUEST_DELAY)
             continue
 
@@ -509,13 +558,11 @@ def main():
             result = download_image(img_url, local)
             if result:
                 saved_paths.append(result)
+                used_url_keys.add(img_url.split('?')[0].rstrip('/'))
             time.sleep(0.3)
 
         if saved_paths:
             mapping[pid] = {
-                'name': name,
-                'brand': brand,
-                'code': code,
                 'images': saved_paths,
                 'source_urls': image_urls,
             }
@@ -524,14 +571,10 @@ def main():
                 success_count += 1
         else:
             mapping[pid] = {
-                'name': name,
-                'brand': brand,
-                'code': code,
-                'images': image_urls,
+                'images': [],
                 'source_urls': image_urls,
-                'note': 'download blocked, using source URLs',
             }
-            print(f'  [urls only, download blocked]')
+            print(f'  [download failed]')
 
         with open('image_mapping.json', 'w', encoding='utf-8') as f:
             json.dump(mapping, f, ensure_ascii=False, indent=2)

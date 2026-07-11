@@ -3137,19 +3137,12 @@
                 'Alegra WK-78', 'Synea TA-77', 'Alegra TE-78', 'Synea WK-77', 'Synea Fusion TE-90'
             ];
             const products = [];
-            // تصاویر جایگزین با کیفیت بالا
-            const placeholderImages = [
-                'https://placehold.co/400x400/111111/ffffff?text=DENTAL',
-                'https://placehold.co/400x400/222222/cccccc?text=UNIDENT',
-                'https://placehold.co/400x400/1a1a1a/eee?text=MEDICAL',
-                'https://placehold.co/400x400/0d0d0d/aaa?text=TOOLS',
-                'https://placehold.co/400x400/111/fff?text=ORIGINAL',
-                'https://placehold.co/400x400/1a1a1a/ccc?text=SCALER',
-                'https://placehold.co/400x400/222/eee?text=HANDPIECE',
-                'https://placehold.co/400x400/0d0d0d/bbb?text=IMPLANT',
-                'https://placehold.co/400x400/111/aaa?text=TURBINE',
-                'https://placehold.co/400x400/1a1a1a/ddd?text=MOTOR'
-            ];
+            // رنگ‌های اختصاصی هر برند برای تصاویر placeholder
+            const brandColors = {
+                'NSK': { bg: '0d47a1', fg: 'ffffff' },
+                'COXO': { bg: 'e65100', fg: 'ffffff' },
+                'W&H': { bg: '2e7d32', fg: 'ffffff' }
+            };
             for (let i = 0; i < 300; i++) {
                 const brandIdx = i % brands.length;
                 const brand = brands[brandIdx];
@@ -3169,12 +3162,13 @@
                 const priceBase = Math.round((Math.random() * 2500 + 50) * 100) / 100;
                 const stock = Math.floor(Math.random() * 25) + 0;
                 const tag = (i % 5 === 0) ? ['اورجینال', 'تخفیف', 'جدید', 'پرطرفدار', 'پرفروش', 'اقتصادی', 'لوکس'][i % 7] : null;
-                const imgIdx = i % placeholderImages.length;
-                const image = placeholderImages[imgIdx];
-                const extraImages = [];
-                for (let j = 0; j < 2; j++) {
-                    extraImages.push(placeholderImages[(imgIdx + j + 1) % placeholderImages.length]);
-                }
+                const colors = brandColors[brand] || { bg: '333333', fg: 'ffffff' };
+                const encodedModel = encodeURIComponent(model);
+                const image = `https://placehold.co/400x400/${colors.bg}/${colors.fg}?text=${encodeURIComponent(brand)}+${encodedModel}`;
+                const extraImages = [
+                    `https://placehold.co/400x400/${colors.bg}/${colors.fg}?text=${encodeURIComponent(brand)}`,
+                    `https://placehold.co/400x400/${colors.bg}/${colors.fg}?text=DENTAL+EQUIPMENT`
+                ];
                 const inquiryEnabled = i % 5 === 0;
                 const description =
                     `✅ **محصول:** ${brand} ${model}\n✅ **کاربرد:** مناسب برای ${cat === 'ایمپلنت' ? 'کاشت ایمپلنت' : cat === 'توربین' ? 'تراش و برش' : cat === 'آنگل' ? 'دسترسی به نقاط سخت' : cat === 'ایرموتور' ? 'کار با سرعت بالا' : cat === 'ست هندپیس' ? 'مجموعه کامل ابزار' : cat === 'اندو' ? 'درمان ریشه' : 'ارتودنسی و اصلاح دندان'}\n✅ **ویژگی‌ها:** طراحی ارگونومیک، کیفیت ساخت بالا، گارانتی معتبر\n✅ **محصول شامل:** ${brand} ${model} + کابل اتصال (در صورت نیاز) + گارانتی ۱ ساله + دفترچه راهنما\n✅ **نوع:** ${isOriginal ? 'اورجینال' : 'غیر اورجینال'}\n✅ **گارانتی:** ${isOriginal ? 'گارانتی ۲ ساله شرکت سازنده' : 'گارانتی ۱ ساله فروشگاه'}\n✅ **کشور سازنده:** ${brand === 'COXO' ? 'چین' : brand === 'NSK' ? 'ژاپن' : 'آلمان'}`;
