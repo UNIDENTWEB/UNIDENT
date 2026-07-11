@@ -486,15 +486,9 @@ def main():
     total = len(products)
     print(f'Scraping images for {total} products')
     print(f'Target: {MIN_IMAGES}-{MAX_IMAGES} images each')
-    print(f'Reference sites: COXO=coxotec.com, NSK=fordent.ru, W&H=swallowdental.co.uk')
+    print(f'Reference sites: COXO=placeholder, NSK=fordent.ru, W&H=swallowdental.co.uk')
     print('=' * 60)
     print()
-
-    # ردیابی تصاویر استفاده شده در تمام محصولات برای جلوگیری از تکراری
-    used_url_keys = set()
-    for pid, info in mapping.items():
-        for u in info.get('source_urls', []):
-            used_url_keys.add(u.split('?')[0].rstrip('/'))
 
     success_count = 0
     for idx, p in enumerate(products, 1):
@@ -532,11 +526,8 @@ def main():
             time.sleep(REQUEST_DELAY)
             continue
 
-        # حذف URLهایی که قبلا برای محصولات دیگر استفاده شده‌اند
-        image_urls = [u for u in image_urls if u.split('?')[0].rstrip('/') not in used_url_keys]
-
         if not image_urls:
-            print(f'  [0 new images (all duplicates)]')
+            print(f'  [0 images found]')
             time.sleep(REQUEST_DELAY)
             continue
 
@@ -558,7 +549,6 @@ def main():
             result = download_image(img_url, local)
             if result:
                 saved_paths.append(result)
-                used_url_keys.add(img_url.split('?')[0].rstrip('/'))
             time.sleep(0.3)
 
         if saved_paths:
