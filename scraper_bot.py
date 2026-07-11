@@ -25,11 +25,6 @@ HEADERS = {
     'Accept-Language': 'en-US,en;q=0.9,ru;q=0.8,fa;q=0.7',
 }
 
-HEADERS_CURL = {
-    'User-Agent': 'curl/8.0',
-    'Accept': 'text/html,application/xhtml+xml',
-}
-
 OUTPUT_DIR = 'images'
 MIN_IMAGES = 3
 MAX_IMAGES = 8
@@ -148,12 +143,7 @@ def scrape_coxo(name, code):
     if images:
         return images
     
-    # Source 2: Google Images (more accurate than Bing)
-    images = _google_image_search(f'COXO {model} dental handpiece', count=20)
-    if images:
-        return images
-    
-    # Source 3: Bing with strict filter
+    # Source 2: Bing with strict filter
     all_images = []
     queries = [
         f'COXO {model} dental',
@@ -252,44 +242,6 @@ def _scrape_alibaba(model, max_images=8):
         pass
     
     return []
-
-
-def _google_image_search(query, count=20):
-    """جستجوی Google Images و استخراج URL تصاویر"""
-    try:
-        from googlesearch import search as gsearch
-        urls = []
-        search_query = f'{query} site:alibaba.com OR site:made-in-china.com OR site:medicalexpo.com'
-        for url in gsearch(search_query, num_results=count):
-            urls.append(url)
-        return urls
-    except ImportError:
-        pass
-    
-    # Fallback: direct Google image search via requests
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.8',
-    }
-    url = f'https://www.google.com/search?tbm=isch&q={quote_plus(query)}'
-    
-    try:
-        resp = requests.get(url, headers=headers, timeout=TIMEOUT)
-        if resp.status_code != 200:
-            return []
-        
-        images = set()
-        # استخراج URL تصاویر از HTML
-        for m in re.finditer(r'"(https?://[^"]+\.(?:jpg|jpeg|png|webp))"', resp.text):
-            u = m.group(1)
-            if len(u) < 500 and not is_logo_or_icon(u):
-                images.add(u)
-        
-        valid = [u for u in images 
-                 if not any(d in u.lower() for d in ('google.com', 'gstatic.com', 'facebook.com', 'twitter.com', 'instagram.com'))]
-        return deduplicate(valid)[:count]
-    except Exception:
-        return []
 
 
 def _bing_image_search(query, count=16):

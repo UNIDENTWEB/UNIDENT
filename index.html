@@ -3242,12 +3242,7 @@
         let chartInstance = null;
 
         // ============================================================
-        //  ENCRYPTION (simple base64 for demo)
         // ============================================================
-        function encryptData(data) {
-            return btoa(encodeURIComponent(data));
-        }
-
         function decryptData(data) {
             try { return decodeURIComponent(atob(data)); } catch (e) { return data; }
         }
@@ -4262,8 +4257,6 @@
             localStorage.setItem('unident_cart', JSON.stringify(cart));
             updateCartUI();
 
-            generateInvoice(order);
-
             document.getElementById('orderResult').innerHTML =
                 '<span style="color:#22c55e;">✅ سفارش ثبت شد. فاکتور PDF دانلود شد. به زودی تماس می‌گیریم.</span>';
             this.reset();
@@ -4271,61 +4264,6 @@
             setTimeout(() => { closeAllModals();
                 document.getElementById('orderResult').innerHTML = ''; }, 2500);
         });
-
-        // ============================================================
-        //  GENERATE PDF INVOICE
-        // ============================================================
-        function generateInvoice(order) {
-            if (typeof window.jspdf !== 'undefined') {
-                const { jsPDF } = window.jspdf;
-                const doc = new jsPDF('p', 'pt', 'a4');
-                const pageWidth = doc.internal.pageSize.width;
-                const margin = 40;
-                let y = 40;
-                doc.setFontSize(20);
-                doc.text('UNIDENT - فاکتور خرید', pageWidth / 2, y, { align: 'center' });
-                y += 30;
-                doc.setFontSize(10);
-                doc.text(`شماره سفارش: #${order.id.slice(0,8)}`, margin, y);
-                y += 20;
-                doc.text(`تاریخ: ${order.date}`, margin, y);
-                y += 20;
-                doc.text(`مشتری: ${order.customer}`, margin, y);
-                y += 20;
-                doc.text(`تماس: ${order.phone}`, margin, y);
-                y += 20;
-                if (order.email) { doc.text(`ایمیل: ${order.email}`, margin, y);
-                    y += 20; }
-                y += 10;
-                doc.setFontSize(12);
-                doc.text('--- جزئیات سفارش ---', margin, y);
-                y += 20;
-                doc.setFontSize(10);
-                order.items.forEach((item, idx) => {
-                    doc.text(`${idx+1}. ${item.name} × ${item.qty} = ${formatPrice(item.price * item.qty)} تومان`,
-                        margin, y);
-                    y += 18;
-                });
-                y += 10;
-                doc.setFontSize(11);
-                doc.text(`جمع کل: ${formatPrice(order.subtotal)} تومان`, margin, y);
-                y += 18;
-                doc.text(`هزینه ارسال: ${formatPrice(order.shippingCost)} تومان`, margin, y);
-                y += 18;
-                doc.text(`مالیات: ${formatPrice(order.tax)} تومان`, margin, y);
-                y += 18;
-                if (order.couponDiscount > 0) {
-                    doc.text(`تخفیف کوپن: -${formatPrice(order.couponDiscount)} تومان`, margin, y);
-                    y += 18;
-                }
-                doc.setFontSize(14);
-                doc.text(`قابل پرداخت: ${formatPrice(order.total)} تومان`, margin, y);
-                doc.save(`فاکتور_${order.id.slice(0,8)}.pdf`);
-                showToast('✅ فاکتور PDF دانلود شد.');
-            } else {
-                showToast('⚠️ کتابخانه PDF بارگذاری نشد، لطفاً اتصال اینترنت را بررسی کنید.', 'error');
-            }
-        }
 
         // ============================================================
         //  STATS
@@ -5339,7 +5277,7 @@
                             <div id="scraperResult" style="margin-top:8px;font-size:0.85rem;"></div>
                             <div style="margin-top:12px;">
                                 <button class="btn btn-white btn-sm" onclick="window.updateAllImagesFromSites()" style="margin-top:8px;"><i class="fas fa-cloud-download-alt"></i> دریافت مستقیم از سایت‌های مرجع</button>
-                                <div id="scraperResult" style="margin-top:8px;font-size:0.85rem;"></div>
+                                <div id="siteScraperResult" style="margin-top:8px;font-size:0.85rem;"></div>
                             </div>
                         </div>
                         <div style="margin-top:12px;">
@@ -5742,7 +5680,7 @@
                     renderProductsAdmin();
                     break;
                 case 'reviews':
-                    renderReviewsAdmin();
+                    renderReviews();
                     break;
                 case 'inventory':
                     renderInventoryAdmin();
@@ -5952,34 +5890,12 @@
             }
         }
 
-        // ============================================================
-        //  اعمال حالت استعلام قیمت برای همه محصولات (فقط در شروع)
-        // ============================================================
-        function setAllProductsToInquiry() {
-            let changed = 0;
-            productsData.forEach(p => {
-                if (p.showPrice !== false) {
-                    p.showPrice = false;
-                    p.inquiryEnabled = true;
-                    changed++;
-                }
-            });
-            if (changed > 0) {
-                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
-                applyFilters();
-                console.log(`✅ ${changed} محصول به حالت استعلام قیمت تغییر یافت`);
-            }
-        }
-
         // اجرای بارگیری خودکار ۳ ثانیه بعد از بارگذاری صفحه
         setTimeout(() => {
             loadImagesFromGitHub().catch(err => {
-                console.warn('⚠️ خطا در بارگیری خودکار تصاویر:', err);
+                console.warn('خطا در بارگیری خودکار تصاویر:', err);
             });
         }, 3000);
-
-        // اعمال حالت استعلام قیمت برای همه محصولات در ابتدای بارگذاری
-        setAllProductsToInquiry();
     </script>
 </body>
 </html>
