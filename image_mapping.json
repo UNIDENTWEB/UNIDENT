@@ -1,13 +1,45 @@
 {
   "coxo_1": {
-    "images": [],
-    "source_urls": [],
-    "note": "placeholder from index.html"
+    "name": "COXO CX207-W",
+    "brand": "COXO",
+    "code": "CX207-W",
+    "images": [
+      "images/coxo_1/1.gif",
+      "images/coxo_1/3.jpg",
+      "images/coxo_1/5.jpg",
+      "images/coxo_1/8.png"
+    ],
+    "source_urls": [
+      "https://s.alicdn.com/@img/imgextra/i3/O1CN01NDkRgy1iRNGWwPxzZ_!!6000000004409-1-tps-196-196.gif",
+      "https://s.alicdn.com/@img/imgextra/i2/O1CN01hTXhRt1nonbKQJoSr_!!6000000005137-2-tps-48-48.png",
+      "https://s.alicdn.com/@sc04/kf/H97d0b06aed5547de9dc2d96e47493da3i.jpg_300x300.jpg",
+      "https://s.alicdn.com/@img/imgextra/i1/O1CN01skevju1mJMrEIZqWk_!!6000000004933-55-tps-21-21.svg",
+      "https://s.alicdn.com/@img/imgextra/i1/O1CN01H0fqnK1Gpp8Bpra4W_!!6000000000672-55-tps-20-21.svg",
+      "https://s.alicdn.com/@sc01/kf/He15f3630b6674cb697c45c43f49fc3752.png",
+      "https://s.alicdn.com/@img/imgextra/i2/O1CN01ricZup1bUObEz6vZ3_!!6000000003468-2-tps-34-34.png",
+      "https://s.alicdn.com/@sc01/kf/H62868c75e7eb4fbba8f8eb600d749c2aR.png"
+    ]
   },
   "coxo_2": {
-    "images": [],
-    "source_urls": [],
-    "note": "placeholder from index.html"
+    "name": "COXO CX207-F",
+    "brand": "COXO",
+    "code": "CX207-F",
+    "images": [
+      "images/coxo_2/1.gif",
+      "images/coxo_2/3.png",
+      "images/coxo_2/5.jpg",
+      "images/coxo_2/8.jpg"
+    ],
+    "source_urls": [
+      "https://s.alicdn.com/@img/imgextra/i3/O1CN01NDkRgy1iRNGWwPxzZ_!!6000000004409-1-tps-196-196.gif",
+      "https://s.alicdn.com/@img/imgextra/i2/O1CN01hTXhRt1nonbKQJoSr_!!6000000005137-2-tps-48-48.png",
+      "https://s.alicdn.com/@sc04/kf/H3a5242bf35fa42aabd849806294fee2d2.png_300x300.png",
+      "https://s.alicdn.com/@img/imgextra/i1/O1CN01skevju1mJMrEIZqWk_!!6000000004933-55-tps-21-21.svg",
+      "https://s.alicdn.com/@img/imgextra/i1/O1CN01H0fqnK1Gpp8Bpra4W_!!6000000000672-55-tps-20-21.svg",
+      "https://s.alicdn.com/@img/imgextra/i2/O1CN01ricZup1bUObEz6vZ3_!!6000000003468-2-tps-34-34.png",
+      "https://s.alicdn.com/@img/imgextra/i2/O1CN01lUQbI41ymTPgE2qXM_!!6000000006621-55-tps-12-10.svg",
+      "https://s.alicdn.com/@sc04/kf/He3c1efef2b514811b8fcb724ccadd5e4O.jpg_300x300.jpg"
+    ]
   },
   "coxo_3": {
     "images": [],
@@ -356,19 +388,53 @@
     ]
   },
   "nsk_8": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_8/1.png",
+      "images/nsk_8/2.jpg",
+      "images/nsk_8/3.jpg",
+      "images/nsk_8/4.jpg",
+      "images/nsk_8/5.jpg",
+      "images/nsk_8/6.jpg",
+      "images/nsk_8/7.jpg",
+      "images/nsk_8/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/rk/5be/igyqzm08mdr5b4zkcrq6jp73dpe8vikx/1230_110.png",
+      "https://fordent.ru/upload/rk/744/x4gawwy2wnj1w40fpjn319usu09jemsw/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/17c/p18u5h4gmzqxndokoi3v5vugh28fcy6c/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/43a/bng5mjvejfr8v3hs4i57myj1yt929w9x/hl8260-dlya-slt-foto.jpg",
+      "https://fordent.ru/upload/iblock/5e3/tsv4pbuwx3kzq6owqyyoelvy80xgqgiq/hl8200-dlya-sle-magnetic-foto.jpg",
+      "https://fordent.ru/upload/iblock/251/nilsg9u3fzyzu9oog45k705em69laoon/hl8200-foto.jpg",
+      "https://fordent.ru/upload/iblock/39e/0yai0dblvi8djc8wwlud2z3ki5xkd4ov/hl8000-besprovodnoy-foto.jpg",
+      "https://fordent.ru/upload/iblock/692/hl8000-foto.jpg"
+    ]
   },
   "coxo_8": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_8": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_8/1.png",
+      "images/wh_8/2.png",
+      "images/wh_8/3.png",
+      "images/wh_8/4.png",
+      "images/wh_8/5.png",
+      "images/wh_8/6.jpg",
+      "images/wh_8/7.png",
+      "images/wh_8/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_spray_head_90_for_proxeo_aura_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_american-extract_extracting_forceps_90.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/g/wg-900_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/g/wg-900_lt_1.png"
+    ]
   },
   "nsk_9": {
     "images": [],
@@ -378,12 +444,29 @@
   "coxo_9": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_9": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_9/1.png",
+      "images/wh_9/2.png",
+      "images/wh_9/3.png",
+      "images/wh_9/4.png",
+      "images/wh_9/5.png",
+      "images/wh_9/6.jpg",
+      "images/wh_9/7.png",
+      "images/wh_9/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30068000_te-97_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/e/we-99_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_we-56_led_g_contra-angle_dental_handpiece_-_ref_10255600_v1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/e/we-66_led_g_1.jpg"
+    ]
   },
   "nsk_10": {
     "images": [],
@@ -393,12 +476,29 @@
   "coxo_10": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_10": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_10/1.jpg",
+      "images/wh_10/2.jpg",
+      "images/wh_10/3.jpg",
+      "images/wh_10/4.jpg",
+      "images/wh_10/5.jpg",
+      "images/wh_10/6.jpg",
+      "images/wh_10/7.jpg",
+      "images/wh_10/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-56_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-56_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-66_lt.png"
+    ]
   },
   "nsk_11": {
     "images": [],
@@ -408,42 +508,127 @@
   "coxo_11": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_11": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_11/1.png",
+      "images/wh_11/2.png",
+      "images/wh_11/3.png",
+      "images/wh_11/4.png",
+      "images/wh_11/5.png",
+      "images/wh_11/6.png",
+      "images/wh_11/7.png",
+      "images/wh_11/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_dos_k_851_200-240v_50hz.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_pivot-point_root_elevator_85_b_3.5_mm.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_pivot-point_root_elevator_85_u_3.0_mm.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_pivot-point_root_elevator_85_b_3.0_mm.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_pivot-point_root_elevator_85.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png"
+    ]
   },
   "nsk_12": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_12/1.png",
+      "images/nsk_12/2.jpg",
+      "images/nsk_12/3.jpg",
+      "images/nsk_12/4.jpg",
+      "images/nsk_12/5.jpg",
+      "images/nsk_12/6.png",
+      "images/nsk_12/7.jpg",
+      "images/nsk_12/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/rk/5be/igyqzm08mdr5b4zkcrq6jp73dpe8vikx/1230_110.png",
+      "https://fordent.ru/upload/rk/744/x4gawwy2wnj1w40fpjn319usu09jemsw/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/17c/p18u5h4gmzqxndokoi3v5vugh28fcy6c/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/c1b/ultratech-sd-780-foto.jpg",
+      "https://fordent.ru/upload/rk/637/dlasy704wyib3hndqyqfmyn7dd7ujyex/1230_110.jpg",
+      "https://fordent.ru/upload/rk/41a/mjctdvn251zsmbxpzyu7em3wajle54xw/1230 × 110.png",
+      "https://fordent.ru/upload/rk/795/25hfnrxxykvdyvyl1wuoso4oqn82exye/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/8cf/vnj6ypjxc4t8l6xbuh5e0jaadajlbt0g/green-smart-12x9-foto.jpg"
+    ]
   },
   "coxo_12": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_12": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_12/1.png",
+      "images/wh_12/2.png",
+      "images/wh_12/3.png",
+      "images/wh_12/4.png",
+      "images/wh_12/5.png",
+      "images/wh_12/6.png",
+      "images/wh_12/7.png",
+      "images/wh_12/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30068000_te-97_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_dos_k_851_200-240v_50hz.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_pivot-point_root_elevator_85_b_3.5_mm.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_pivot-point_root_elevator_85_u_3.0_mm.png"
+    ]
   },
   "nsk_13": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_13/1.jpg",
+      "images/nsk_13/2.png",
+      "images/nsk_13/3.jpg",
+      "images/nsk_13/4.jpg",
+      "images/nsk_13/5.jpg",
+      "images/nsk_13/6.png",
+      "images/nsk_13/7.jpg",
+      "images/nsk_13/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/rk/17c/p18u5h4gmzqxndokoi3v5vugh28fcy6c/1230_110.jpg",
+      "https://fordent.ru/upload/rk/5be/igyqzm08mdr5b4zkcrq6jp73dpe8vikx/1230_110.png",
+      "https://fordent.ru/upload/rk/744/x4gawwy2wnj1w40fpjn319usu09jemsw/1230_110-2.jpg",
+      "https://fordent.ru/upload/iblock/c1b/ultratech-sd-780-foto.jpg",
+      "https://fordent.ru/upload/rk/637/dlasy704wyib3hndqyqfmyn7dd7ujyex/1230_110.jpg",
+      "https://fordent.ru/upload/rk/41a/mjctdvn251zsmbxpzyu7em3wajle54xw/1230 × 110.png",
+      "https://fordent.ru/upload/rk/795/25hfnrxxykvdyvyl1wuoso4oqn82exye/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/8cf/vnj6ypjxc4t8l6xbuh5e0jaadajlbt0g/green-smart-12x9-foto.jpg"
+    ]
   },
   "coxo_13": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_13": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_13/1.jpg",
+      "images/wh_13/2.jpg",
+      "images/wh_13/3.jpg",
+      "images/wh_13/4.jpg",
+      "images/wh_13/5.jpg",
+      "images/wh_13/6.jpg",
+      "images/wh_13/7.jpg",
+      "images/wh_13/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-56_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-56_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-66_lt.png"
+    ]
   },
   "nsk_14": {
     "images": [],
@@ -453,132 +638,421 @@
   "coxo_14": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_14": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_14/1.png",
+      "images/wh_14/2.png",
+      "images/wh_14/3.png",
+      "images/wh_14/4.png",
+      "images/wh_14/5.jpg",
+      "images/wh_14/6.jpg",
+      "images/wh_14/7.jpg",
+      "images/wh_14/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_ws-92_l_contra-angle_handpiece.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_he-43_alegra_straight_dental_handpiece_-_ref_30119000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_we-57.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30118000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_s.jpg"
+    ]
   },
   "nsk_15": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_15/1.png",
+      "images/nsk_15/2.png",
+      "images/nsk_15/3.png",
+      "images/nsk_15/4.png",
+      "images/nsk_15/5.jpg",
+      "images/nsk_15/6.png",
+      "images/nsk_15/7.jpg",
+      "images/nsk_15/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/rk/fd6/gyqecbf92hndb78cn0lxggjwjc3b5hx1/1230 × 110 (5).png",
+      "https://fordent.ru/upload/rk/ad4/lwbj94siefdod536iiqitthi6mbkl65f/1230 × 110 (3).png",
+      "https://fordent.ru/upload/rk/506/90pziuezfj397hewlpj5g055dielq2sj/1230 × 110 (3).png",
+      "https://fordent.ru/upload/rk/5be/igyqzm08mdr5b4zkcrq6jp73dpe8vikx/1230_110.png",
+      "https://fordent.ru/upload/rk/744/x4gawwy2wnj1w40fpjn319usu09jemsw/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/754/x324gi0hfamkeoc1p4zd5pzocl3pd1tk/1230_110.png",
+      "https://fordent.ru/upload/rk/17c/p18u5h4gmzqxndokoi3v5vugh28fcy6c/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/20c/l3il5dbcl3qopmvygfrrj4sx8ihqztwb/3shape-trios-basic-foto.jpeg"
+    ]
   },
   "coxo_15": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_15": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_15/1.jpg",
+      "images/wh_15/2.png",
+      "images/wh_15/3.jpg",
+      "images/wh_15/4.jpg",
+      "images/wh_15/5.png",
+      "images/wh_15/6.png",
+      "images/wh_15/7.jpg",
+      "images/wh_15/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/c/o/contra-angle_wg-66_a.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/g/wg-56_a.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/c/o/contra-angle_wg-56_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wg-99.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wg-67_a.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wg-67_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wg-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/t/u/turbine_tg-97_image_001030_00_150dpi_2.jpg"
+    ]
   },
   "nsk_16": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_16/1.png",
+      "images/nsk_16/2.png",
+      "images/nsk_16/3.jpg",
+      "images/nsk_16/4.jpg",
+      "images/nsk_16/5.jpg",
+      "images/nsk_16/6.jpg",
+      "images/nsk_16/7.jpg",
+      "images/nsk_16/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/rk/5be/igyqzm08mdr5b4zkcrq6jp73dpe8vikx/1230_110.png",
+      "https://fordent.ru/upload/rk/119/fo1ncuhru38dkvibr5a4ylsmhmaxpgmf/1230 × 110 (4).png",
+      "https://fordent.ru/upload/rk/744/x4gawwy2wnj1w40fpjn319usu09jemsw/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/17c/p18u5h4gmzqxndokoi3v5vugh28fcy6c/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/8e6/nqir8aubxk0nco8maab33yapmgdvs2xk/isd900-foto.jpg",
+      "https://fordent.ru/upload/iblock/dbd/endo-mate-tc2-mp-y-foto.jpg",
+      "https://fordent.ru/upload/iblock/9a4/j9vk3lss2bpizioiqdwduv85aq1tkzre/endo-mate-tc2-mpa-foto.jpg",
+      "https://fordent.ru/upload/iblock/339/endo-mate-at-foto.jpg"
+    ]
   },
   "coxo_16": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_16": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_16/1.png",
+      "images/wh_16/2.png",
+      "images/wh_16/3.jpg",
+      "images/wh_16/4.png",
+      "images/wh_16/5.png",
+      "images/wh_16/6.png",
+      "images/wh_16/7.png",
+      "images/wh_16/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/e/we-99_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30068000_te-97_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_he-43_alegra_straight_dental_handpiece_-_ref_30119000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_we-57.jpg"
+    ]
   },
   "nsk_17": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_17/1.webp",
+      "images/nsk_17/2.webp",
+      "images/nsk_17/3.webp",
+      "images/nsk_17/4.webp",
+      "images/nsk_17/5.png",
+      "images/nsk_17/6.png",
+      "images/nsk_17/7.jpg",
+      "images/nsk_17/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/iblock/cb3/g9fjlb8p7huse9spmj800tovgybvd3fv/variosurg3-foto.webp",
+      "https://fordent.ru/upload/iblock/981/efw5av0w36wlgwvxk8zg4u1r57vyia2j/variosurg3_ultrazvukovaya_hirurgicheskaya_sistema_c_optikoy_i_pedalyu_846-650x650.webp",
+      "https://fordent.ru/upload/iblock/113/i2qclnhksn3q04d4vnk6d5ogw7ufqiya/variosurg3_ultrazvukovaya_hirurgicheskaya_sistema_c_optikoy_i_pedalyu_826-650x650.webp",
+      "https://fordent.ru/upload/iblock/2a8/c24my265an3zbldfw7g0nkiizy4ogivw/variosurg3-foto.webp",
+      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
+      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
+      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg"
+    ]
   },
   "coxo_17": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_17": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_17/1.png",
+      "images/wh_17/2.jpg",
+      "images/wh_17/3.jpg",
+      "images/wh_17/4.png",
+      "images/wh_17/5.png",
+      "images/wh_17/6.png",
+      "images/wh_17/7.png",
+      "images/wh_17/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/t/u/turbine_tg-97_image_001030_00_150dpi_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/t/u/turbine_tg-97_l_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_rk-97_l_primea_advanced_air_handpiece.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_rg-97_l_primea_advanced_air_turbine.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30068000_te-97_1.png"
+    ]
   },
   "nsk_18": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_18/1.jpg",
+      "images/nsk_18/2.jpg",
+      "images/nsk_18/3.png",
+      "images/nsk_18/4.png",
+      "images/nsk_18/5.jpg",
+      "images/nsk_18/6.jpg",
+      "images/nsk_18/7.jpg",
+      "images/nsk_18/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/iblock/b9f/ti-max-z95l-foto.jpg",
+      "https://fordent.ru/upload/iblock/0d4/ti-max-z95l-foto.jpg",
+      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
+      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
+      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/f5e/1.jpg",
+      "https://fordent.ru/upload/iblock/c6f/t2-line-a-40-l-foto.jpg"
+    ]
   },
   "coxo_18": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_18": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_18/1.png",
+      "images/wh_18/2.jpg",
+      "images/wh_18/3.jpg",
+      "images/wh_18/4.jpg",
+      "images/wh_18/5.jpg",
+      "images/wh_18/6.jpg",
+      "images/wh_18/7.jpg",
+      "images/wh_18/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/t/u/turbine_tg-97_image_001030_00_150dpi_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-56_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-56_lt_s.jpg"
+    ]
   },
   "nsk_19": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_19/1.jpg",
+      "images/nsk_19/2.jpg",
+      "images/nsk_19/3.png",
+      "images/nsk_19/4.png",
+      "images/nsk_19/5.jpg",
+      "images/nsk_19/6.jpg",
+      "images/nsk_19/7.jpg",
+      "images/nsk_19/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/iblock/c9b/ti-max-z25l-foto.jpg",
+      "https://fordent.ru/upload/iblock/5f6/ti-max-z25l-foto.jpg",
+      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
+      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
+      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/f5e/1.jpg",
+      "https://fordent.ru/upload/iblock/c6f/t2-line-a-40-l-foto.jpg"
+    ]
   },
   "coxo_19": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_19": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_19/1.png",
+      "images/wh_19/2.png",
+      "images/wh_19/3.png",
+      "images/wh_19/4.png",
+      "images/wh_19/5.png",
+      "images/wh_19/6.png",
+      "images/wh_19/7.jpg",
+      "images/wh_19/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_rc-95_bc_power.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_motorhandpiece_support_for_implantmed_si-95.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_rc-95_rm_turbine_non-optic.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_he-43_alegra_straight_dental_handpiece_-_ref_30119000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_we-57.jpg"
+    ]
   },
   "nsk_20": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_20/1.png",
+      "images/nsk_20/2.jpg",
+      "images/nsk_20/3.jpg",
+      "images/nsk_20/4.jpg",
+      "images/nsk_20/5.jpg",
+      "images/nsk_20/6.jpg",
+      "images/nsk_20/7.jpg",
+      "images/nsk_20/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/rk/5be/igyqzm08mdr5b4zkcrq6jp73dpe8vikx/1230_110.png",
+      "https://fordent.ru/upload/rk/482/0cnpo9y9cp0eedns1iwe2uod8gkz9xmp/1230_110.jpg",
+      "https://fordent.ru/upload/rk/744/x4gawwy2wnj1w40fpjn319usu09jemsw/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/17c/p18u5h4gmzqxndokoi3v5vugh28fcy6c/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/ac6/x2193lrw6uo6r1zze1dcigm48ltn4hwn/zumax-sle-foto.jpg",
+      "https://fordent.ru/upload/iblock/7c4/q3ofnsrpi5nux566zgacemili2tsg3a4/zumax-slh-4x-hl8200-foto.jpg",
+      "https://fordent.ru/upload/iblock/934/w2vuy4sdne816azqntm46cgah23vgpgc/zumax-dfk-sports-frame-foto.jpg",
+      "https://fordent.ru/upload/iblock/736/tfcsq8wbdunlqwde2yrimte4fsikp3og/slt-kepler-foto.jpg"
+    ]
   },
   "coxo_20": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_20": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_20/1.jpg",
+      "images/wh_20/2.jpg",
+      "images/wh_20/3.png",
+      "images/wh_20/4.jpg",
+      "images/wh_20/5.jpg",
+      "images/wh_20/6.jpg",
+      "images/wh_20/7.jpg",
+      "images/wh_20/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/c/o/contra-angle_wg-66_a.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/g/wg-56_a.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/c/o/contra-angle_wg-56_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-56_lt.jpg"
+    ]
   },
   "nsk_21": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_21/1.jpg",
+      "images/nsk_21/2.png",
+      "images/nsk_21/3.jpg",
+      "images/nsk_21/4.jpg",
+      "images/nsk_21/5.jpg",
+      "images/nsk_21/6.jpg",
+      "images/nsk_21/7.jpg",
+      "images/nsk_21/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/rk/482/0cnpo9y9cp0eedns1iwe2uod8gkz9xmp/1230_110.jpg",
+      "https://fordent.ru/upload/rk/5be/igyqzm08mdr5b4zkcrq6jp73dpe8vikx/1230_110.png",
+      "https://fordent.ru/upload/rk/17c/p18u5h4gmzqxndokoi3v5vugh28fcy6c/1230_110.jpg",
+      "https://fordent.ru/upload/rk/744/x4gawwy2wnj1w40fpjn319usu09jemsw/1230_110-2.jpg",
+      "https://fordent.ru/upload/iblock/ac6/x2193lrw6uo6r1zze1dcigm48ltn4hwn/zumax-sle-foto.jpg",
+      "https://fordent.ru/upload/iblock/7c4/q3ofnsrpi5nux566zgacemili2tsg3a4/zumax-slh-4x-hl8200-foto.jpg",
+      "https://fordent.ru/upload/iblock/934/w2vuy4sdne816azqntm46cgah23vgpgc/zumax-dfk-sports-frame-foto.jpg",
+      "https://fordent.ru/upload/iblock/736/tfcsq8wbdunlqwde2yrimte4fsikp3og/slt-kepler-foto.jpg"
+    ]
   },
   "coxo_21": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_21": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_21/1.jpg",
+      "images/wh_21/2.jpg",
+      "images/wh_21/3.jpg",
+      "images/wh_21/4.jpg",
+      "images/wh_21/5.jpg",
+      "images/wh_21/6.jpg",
+      "images/wh_21/7.jpg",
+      "images/wh_21/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/e/we-99_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wg-99.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wg-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/t/u/turbine_tg-97_l_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png"
+    ]
   },
   "nsk_22": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_22/1.png",
+      "images/nsk_22/2.jpg",
+      "images/nsk_22/3.jpg",
+      "images/nsk_22/4.jpg",
+      "images/nsk_22/5.jpg",
+      "images/nsk_22/6.jpg",
+      "images/nsk_22/7.jpg",
+      "images/nsk_22/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/rk/5be/igyqzm08mdr5b4zkcrq6jp73dpe8vikx/1230_110.png",
+      "https://fordent.ru/upload/rk/17c/p18u5h4gmzqxndokoi3v5vugh28fcy6c/1230_110.jpg",
+      "https://fordent.ru/upload/rk/744/x4gawwy2wnj1w40fpjn319usu09jemsw/1230_110-2.jpg",
+      "https://fordent.ru/upload/iblock/43a/bng5mjvejfr8v3hs4i57myj1yt929w9x/hl8260-dlya-slt-foto.jpg",
+      "https://fordent.ru/upload/iblock/5e3/tsv4pbuwx3kzq6owqyyoelvy80xgqgiq/hl8200-dlya-sle-magnetic-foto.jpg",
+      "https://fordent.ru/upload/iblock/251/nilsg9u3fzyzu9oog45k705em69laoon/hl8200-foto.jpg",
+      "https://fordent.ru/upload/iblock/39e/0yai0dblvi8djc8wwlud2z3ki5xkd4ov/hl8000-besprovodnoy-foto.jpg",
+      "https://fordent.ru/upload/iblock/692/hl8000-foto.jpg"
+    ]
   },
   "coxo_22": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_22": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_22/1.png",
+      "images/wh_22/2.png",
+      "images/wh_22/3.png",
+      "images/wh_22/4.png",
+      "images/wh_22/5.png",
+      "images/wh_22/6.jpg",
+      "images/wh_22/7.png",
+      "images/wh_22/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30068000_te-97_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/e/we-99_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_he-43_alegra_straight_dental_handpiece_-_ref_30119000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_we-56_led_g_contra-angle_dental_handpiece_-_ref_10255600_v1.png"
+    ]
   },
   "nsk_23": {
     "images": [],
@@ -588,12 +1062,29 @@
   "coxo_23": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_23": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_23/1.png",
+      "images/wh_23/2.jpg",
+      "images/wh_23/3.png",
+      "images/wh_23/4.png",
+      "images/wh_23/5.png",
+      "images/wh_23/6.jpg",
+      "images/wh_23/7.png",
+      "images/wh_23/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_d1296_p.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/1/d1296_a_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/g/wg-900_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/g/wg-900_lt_1.png"
+    ]
   },
   "nsk_24": {
     "images": [],
@@ -603,17 +1094,51 @@
   "coxo_24": {
     "images": [],
     "source_urls": [],
-    "updated_at": ""
+    "note": "placeholder from index.html"
   },
   "wh_24": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/wh_24/1.png",
+      "images/wh_24/2.png",
+      "images/wh_24/3.png",
+      "images/wh_24/4.jpg",
+      "images/wh_24/5.jpg",
+      "images/wh_24/6.png",
+      "images/wh_24/7.png",
+      "images/wh_24/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/t/u/turbine_tg-98.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/t/u/turbine_tg-98_l_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_he-43_alegra_straight_dental_handpiece_-_ref_30119000.png"
+    ]
   },
   "nsk_25": {
-    "images": [],
-    "source_urls": [],
-    "updated_at": ""
+    "images": [
+      "images/nsk_25/1.png",
+      "images/nsk_25/2.png",
+      "images/nsk_25/3.jpg",
+      "images/nsk_25/4.jpg",
+      "images/nsk_25/5.jpg",
+      "images/nsk_25/6.jpg",
+      "images/nsk_25/7.jpg",
+      "images/nsk_25/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/rk/5be/igyqzm08mdr5b4zkcrq6jp73dpe8vikx/1230_110.png",
+      "https://fordent.ru/upload/rk/119/fo1ncuhru38dkvibr5a4ylsmhmaxpgmf/1230 × 110 (4).png",
+      "https://fordent.ru/upload/rk/744/x4gawwy2wnj1w40fpjn319usu09jemsw/1230_110-2.jpg",
+      "https://fordent.ru/upload/rk/17c/p18u5h4gmzqxndokoi3v5vugh28fcy6c/1230_110.jpg",
+      "https://fordent.ru/upload/iblock/8e6/nqir8aubxk0nco8maab33yapmgdvs2xk/isd900-foto.jpg",
+      "https://fordent.ru/upload/iblock/dbd/endo-mate-tc2-mp-y-foto.jpg",
+      "https://fordent.ru/upload/iblock/9a4/j9vk3lss2bpizioiqdwduv85aq1tkzre/endo-mate-tc2-mpa-foto.jpg",
+      "https://fordent.ru/upload/iblock/339/endo-mate-at-foto.jpg"
+    ]
   },
   "coxo_25": {
     "images": [],

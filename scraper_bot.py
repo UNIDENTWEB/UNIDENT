@@ -134,35 +134,38 @@ def extract_link_images(soup, base_url, path_filter):
 # ---------- Brand-Specific Scrapers ----------
 
 def scrape_coxo(name, code):
-    """اسکرپر COXO - جستجوی Bing Images با فیلتر سختگیرانه
+    """اسکرپر COXO - Multi-source fallback
 
-    coxotec.com توسط CDN SiteGround مسدود شده است.
-    جستجو با کلمات کلیدی دندانپزشکی + فیلتر دامنه‌های مرتبط.
+    1. جستجوی مستقیم Alibaba (قابل اعتمادترین — عکس‌های واقعی محصول)
+    2. Fallback: Bing Images با فیلتر فوق‌سختگیرانه
+    3. Fallback: placeholders حرفه‌ای
     """
-    all_images = []
-
     raw_name = name.replace('COXO', '').strip()
     model = code or raw_name
-
-    # جستجوهای هدفمند
+    
+    # Source 1: Alibaba product search
+    images = _scrape_alibaba(model)
+    if images:
+        return images
+    
+    # Source 2: Google Images (more accurate than Bing)
+    images = _google_image_search(f'COXO {model} dental handpiece', count=20)
+    if images:
+        return images
+    
+    # Source 3: Bing with strict filter
+    all_images = []
     queries = [
         f'COXO {model} dental',
         f'Foshan COXO {model} handpiece',
-        f'"COXO" {raw_name} equipment',
+        f'"COXO" "{model}" dental equipment',
     ]
 
-    # دامنه‌های مجاز (فروشگاه‌های تجهیزات دندانپزشکی)
     allowed_domains = (
-        'alibaba.com', 'made-in-china.com', 'ec21.com', 'ecplaza.net',
+        'alibaba.com', 'made-in-china.com', 'medicalexpo.com',
+        'shopdent.com', 'net32.com', 'dentistrytoday.com',
+        'dentaleconomics.com', 'dentalkart.com',
         'tradeindia.com', 'exportersindia.com', 'indiamart.com',
-        'medicalexpo.com', 'dentaltrade.', 'dentalcompare.com',
-        'shopdent.com', 'net32.com', 'pattersondental.com',
-        'henryschein.com', 'benco.com', 'darby.com',
-        'pearsondental.com', 'safcodental.com',
-        'dentalmarket.', 'dentalkart.com', 'dentistrytoday.com',
-        'dentaleconomics.com', 'dentalproductsreport.com',
-        'dental-tribune.com', 'dentalnews.com',
-        'medical.' + 'bd.com',  # broken intentionally to avoid flag
     )
 
     for query in queries:
@@ -174,23 +177,14 @@ def scrape_coxo(name, code):
                 scored = []
                 for u in imgs:
                     ul = u.lower()
-                    
-                    # فقط تصاویر از دامنه‌های مرتبط با تجهیزات دندانپزشکی/پزشکی
                     domain_ok = any(d in ul for d in allowed_domains)
-                    
-                    # کلمات کلیدی مثبت در URL
                     positive = ('dental', 'handpiece', 'coxo', 'motor', 'medical',
                                 'dentist', 'dentistry', 'implants', 'surgical',
-                                'endodontic', 'orthodontic', 'contra-angle',
-                                'turbine', 'scaler', 'curing', 'obturation',
-                                'product', 'equipment', 'instrument')
-                    
+                                'endodontic', 'contra-angle', 'turbine', 'scaler',
+                                'curing', 'obturation', 'product', 'equipment', 'instrument')
                     has_positive = any(kw in ul for kw in positive)
-                    
-                    # قبول فقط اگر دامنه مرتبط باشد یا کلمه کلیدی دندانپزشکی داشته باشد
                     if not domain_ok and not has_positive:
                         continue
-                    
                     neg = ('cat', 'dog', 'movie', 'film', 'game', 'comic',
                            'youtube', 'pokemon', 'anime', 'wallpaper',
                            'phone', 'iphone', 'samsung', 'logo', 'icon',
@@ -199,10 +193,8 @@ def scrape_coxo(name, code):
                            't-shirt', 'merch', 'sticker', 'pngtree',
                            'freepik', 'shutterstock', 'clipart',
                            'background', 'texture', 'frame', 'border')
-                    
                     if any(kw in ul for kw in neg):
                         continue
-                    
                     score = 1
                     if domain_ok:
                         score += 10
@@ -210,7 +202,6 @@ def scrape_coxo(name, code):
                         if kw in ul:
                             score += 3
                     scored.append((score, u))
-
                 scored.sort(key=lambda x: x[0], reverse=True)
                 all_images.extend([u for _, u in scored])
         except Exception:
@@ -220,6 +211,85 @@ def scrape_coxo(name, code):
     result = [u for u in result if not is_logo_or_icon(u)]
     result = prefer_large_images(result)
     return result[:MAX_IMAGES]
+
+
+def _scrape_alibaba(model, max_images=8):
+    """جستجوی Alibaba و استخراج تصاویر محصول واقعی"""
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+    }
+    query = quote_plus(f'COXO {model}')
+    url = f'https://www.alibaba.com/trade/search?IndexArea=product_en&SearchText={query}'
+    
+    try:
+        resp = requests.get(url, headers=headers, timeout=TIMEOUT)
+        if resp.status_code != 200:
+            return []
+        
+        soup = BeautifulSoup(resp.text, 'lxml')
+        images = []
+        
+        # استخراج از img tags با src شامل jpg/png
+        for img in soup.find_all('img'):
+            src = img.get('src') or img.get('data-src') or ''
+            if not src:
+                continue
+            full = urljoin('https://www.alibaba.com', src)
+            lo = full.lower()
+            # Alibaba product images
+            if any(pat in lo for pat in ('alicdn.com', 'alibaba.com', 'sc01.alicdn.com')):
+                if not is_logo_or_icon(full):
+                    # حذف thumbnailها
+                    if '60x60' in lo or '100x100' in lo or '50x50' in lo:
+                        continue
+                    images.append(full)
+        
+        if images:
+            return deduplicate(images)[:max_images]
+    except requests.RequestException:
+        pass
+    
+    return []
+
+
+def _google_image_search(query, count=20):
+    """جستجوی Google Images و استخراج URL تصاویر"""
+    try:
+        from googlesearch import search as gsearch
+        urls = []
+        search_query = f'{query} site:alibaba.com OR site:made-in-china.com OR site:medicalexpo.com'
+        for url in gsearch(search_query, num_results=count):
+            urls.append(url)
+        return urls
+    except ImportError:
+        pass
+    
+    # Fallback: direct Google image search via requests
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.8',
+    }
+    url = f'https://www.google.com/search?tbm=isch&q={quote_plus(query)}'
+    
+    try:
+        resp = requests.get(url, headers=headers, timeout=TIMEOUT)
+        if resp.status_code != 200:
+            return []
+        
+        images = set()
+        # استخراج URL تصاویر از HTML
+        for m in re.finditer(r'"(https?://[^"]+\.(?:jpg|jpeg|png|webp))"', resp.text):
+            u = m.group(1)
+            if len(u) < 500 and not is_logo_or_icon(u):
+                images.add(u)
+        
+        valid = [u for u in images 
+                 if not any(d in u.lower() for d in ('google.com', 'gstatic.com', 'facebook.com', 'twitter.com', 'instagram.com'))]
+        return deduplicate(valid)[:count]
+    except Exception:
+        return []
 
 
 def _bing_image_search(query, count=16):
@@ -398,11 +468,28 @@ def scrape_wh(name, code):
 
             soup = BeautifulSoup(resp.text, 'lxml')
 
-            # تصاویر از نتایج جستجو
-            all_images.extend(extract_page_images(
-                soup, base,
-                lambda u: '/media/catalog/product' in u
-            ))
+            # تصاویر از نتایج جستجو — فقط اگر با نام/کد محصول تطابق داشته باشند
+            raw_code = code.strip().lower() if code else ''
+            for img in soup.find_all('img'):
+                src = img.get('src') or img.get('data-src') or ''
+                if not src:
+                    continue
+                full = urljoin(base, src)
+                if '/media/catalog/product' not in full:
+                    continue
+                if is_logo_or_icon(full):
+                    continue
+                # فقط تصاویری که در alt یا parent anchor با نام محصول تطابق دارند
+                alt = (img.get('alt') or '').lower()
+                parent_text = ''
+                parent_a = img.find_parent('a')
+                if parent_a:
+                    parent_text = parent_a.get_text(strip=True).lower()
+                product_text = alt + ' ' + parent_text
+                name_lower = raw.lower()
+                if (raw_code and raw_code in product_text) or \
+                   any(w in product_text for w in name_lower.split() if len(w) > 3):
+                    all_images.append(full)
 
             # لینک صفحات جزئیات
             for a in soup.find_all('a', href=True):
@@ -486,7 +573,7 @@ def main():
     total = len(products)
     print(f'Scraping images for {total} products')
     print(f'Target: {MIN_IMAGES}-{MAX_IMAGES} images each')
-    print(f'Reference sites: COXO=placeholder, NSK=fordent.ru, W&H=swallowdental.co.uk')
+    print(f'Reference sites: COXO=alibaba+bing, NSK=fordent.ru, W&H=swallowdental.co.uk')
     print('=' * 60)
     print()
 
@@ -502,17 +589,16 @@ def main():
             print(f'[{idx}/{total}] {name} — unknown brand: {brand}')
             continue
 
-        # COXO: اسکیپ — تصاویر placeholder حرفه‌ای در index.html استفاده می‌شود
-        if brand == 'COXO':
-            print(f'[{idx}/{total}] {name} — COXO uses professional placeholders')
-            mapping[pid] = {'images': [], 'source_urls': [], 'note': 'placeholder from index.html'}
-            continue
-
-        # Skip if already has enough images
+        # Skip if already has enough images — but still update metadata
         if pid in mapping:
             existing = mapping[pid].get('images', [])
             if existing and len(existing) >= MIN_IMAGES:
                 count = len(existing)
+                # Update name/brand/code in case they're missing from previous runs
+                if not mapping[pid].get('name'):
+                    mapping[pid]['name'] = name
+                    mapping[pid]['brand'] = brand
+                    mapping[pid]['code'] = code
                 print(f'[{idx}/{total}] {name} — has {count} images, skipping')
                 success_count += 1
                 continue
@@ -528,6 +614,14 @@ def main():
 
         if not image_urls:
             print(f'  [0 images found]')
+            if pid not in mapping or not mapping[pid].get('images'):
+                mapping[pid] = {
+                    'name': name,
+                    'brand': brand,
+                    'code': code,
+                    'images': [],
+                    'source_urls': [],
+                }
             time.sleep(REQUEST_DELAY)
             continue
 
@@ -553,6 +647,9 @@ def main():
 
         if saved_paths:
             mapping[pid] = {
+                'name': name,
+                'brand': brand,
+                'code': code,
                 'images': saved_paths,
                 'source_urls': image_urls,
             }
@@ -561,6 +658,9 @@ def main():
                 success_count += 1
         else:
             mapping[pid] = {
+                'name': name,
+                'brand': brand,
+                'code': code,
                 'images': [],
                 'source_urls': image_urls,
             }
