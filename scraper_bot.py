@@ -28,8 +28,8 @@ HEADERS = {
 OUTPUT_DIR = 'images'
 MIN_IMAGES = 3
 MAX_IMAGES = 8
-TIMEOUT = 15
-REQUEST_DELAY = 1.0
+TIMEOUT = 10
+REQUEST_DELAY = 0.5
 
 # ---------- Helpers ----------
 
@@ -190,28 +190,29 @@ def scrape_coxo(name, code):
 
 
 def scrape_nsk(name, code):
-    """اسکرپر NSK از fordent.ru
-
-    در fordent.ru/search/?q= جستجو می‌کند، نتایج را بر اساس کد/نام امتیازدهی
-    می‌کند و از بهترین صفحه محصول جزئیات، تصاویر را استخراج می‌کند.
+    """اسکرپر NSK — فقط fordent.ru با تطابق دقیق کد محصول
+    
+    جستجو در fordent.ru، استخراج product-card با تطابق کد،
+    فقط یک صفحه محصول دقیقاً منطبق انتخاب می‌شود.
     """
     base = 'https://fordent.ru'
     all_images = []
 
-    # کلمات جستجو: کد محصول مهمترین است
     search_terms = []
     if code:
+        # حذف dashes برای جستجوی بهتر
+        clean_code = code.replace('-', ' ').strip()
+        search_terms.append(clean_code)
         search_terms.append(code.strip())
     raw = name.replace('NSK', '').strip()
-    # استخراج مدل از نام
-    model_match = re.search(r'(?:Ti-Max|S-Max|Varios|Pana-Max|FX|Z\d+|M\d+)[^\s,]*', raw, re.I)
+    model_match = re.search(r'(?:Ti-Max|S-Max|Varios|Pana-Max|Endo|FX|Surgic|Z\d+|M\d+|X\d+|NAC|FPB|EX|AR|Nano)[^\s,]*', raw, re.I)
     if model_match:
         search_terms.append(model_match.group(0))
-    search_terms.append(slugify(raw))
 
-    detail_pages = []
+    best_url = None
+    best_match_text = ''
 
-    for term in search_terms[:2]:  # حداکثر ۲ جستجو
+    for term in search_terms[:2]:
         try:
             search_url = f'{base}/search/?q={quote_plus(term)}'
             resp = requests.get(search_url, headers=HEADERS, timeout=TIMEOUT)
@@ -220,79 +221,48 @@ def scrape_nsk(name, code):
 
             soup = BeautifulSoup(resp.text, 'lxml')
 
-            # فقط از صفحات جزئیات محصول تصویر بگیر (نه از thumbnails صفحه جستجو)
-            # thumbnailهای صفحه جستجو برای محصولات مختلف تکراری هستند
-
-            # پیدا کردن لینک‌های صفحه محصول با امتیازدهی سختگیرانه
-            scored = []
-            for a in soup.find_all('a', href=True):
-                href = a['href']
-                text = a.get_text(strip=True).lower()
-                href_lower = href.lower()
-
-                if not ('/products/' in href_lower or '/product/' in href_lower):
+            # جستجوی product-card — این عناصر لینک مستقیم به صفحه محصول هستند
+            for card in soup.find_all(class_='product-card'):
+                a_tag = card.find('a', href=True)
+                if not a_tag:
                     continue
-                if href.startswith('#'):
-                    continue
+                href = a_tag['href']
+                card_text = card.get_text(strip=True).lower()
+                
+                if code and code.lower().replace('-', '').replace(' ', '') in card_text.replace('-', '').replace(' ', ''):
+                    best_url = urljoin(base, href)
+                    best_match_text = card_text
+                    break  # exact match found
 
-                score = 0
-                # امتیاز برای تطابق با کد (مهمترین)
-                if code and code.lower() in href_lower:
-                    score += 15
-                if code and code.lower() in text:
-                    score += 10
-
-                # امتیاز برای تطابق با نام محصول
-                model_parts = term.lower().replace('-', ' ').split()
-                for word in model_parts:
-                    if len(word) < 2:
-                        continue
-                    if word in href_lower:
-                        score += 5
-                    if word in text:
-                        score += 3
-
-                # امتیاز برای کلمه nsk
-                if 'nsk' in href_lower or 'nsk' in text:
-                    score += 2
-
-                # فقط لینک‌های با امتیاز بالا قبول می‌شوند (حداقل یک تطابق کد یا مدل)
-                if score >= 5:
-                    full = urljoin(base, href)
-                    scored.append((score, full))
-
-            scored.sort(key=lambda x: x[0], reverse=True)
-            for _, url in scored:
-                if url not in detail_pages:
-                    detail_pages.append(url)
-
-            if detail_pages:
-                break  # جستجوی اول نتیجه داد
+            if best_url:
+                break
 
         except requests.RequestException:
             continue
 
-    # دنبال کردن صفحات جزئیات (بهترین امتیازها اول)
-    for detail_url in detail_pages[:3]:
-        try:
-            time.sleep(0.5)
-            dr = requests.get(detail_url, headers=HEADERS, timeout=TIMEOUT)
-            if dr.status_code != 200:
-                continue
-            ds = BeautifulSoup(dr.text, 'lxml')
+    if not best_url:
+        return []
 
-            all_images.extend(extract_page_images(
-                ds, base,
-                lambda u: '/upload/' in u or '/catalog/' in u
-            ))
+    try:
+        time.sleep(0.5)
+        dr = requests.get(best_url, headers=HEADERS, timeout=TIMEOUT)
+        if dr.status_code != 200:
+            return []
 
-            all_images.extend(extract_link_images(
-                ds, base,
-                lambda u: '/upload/' in u or '/catalog/' in u
-            ))
+        ds = BeautifulSoup(dr.text, 'lxml')
 
-        except requests.RequestException:
-            continue
+        # استخراج تصاویر از صفحه جزئیات محصول
+        all_images.extend(extract_page_images(
+            ds, base,
+            lambda u: '/upload/' in u or '/catalog/' in u
+        ))
+        all_images.extend(extract_link_images(
+            ds, base,
+            lambda u: '/upload/' in u or '/catalog/' in u
+        ))
+
+    except requests.RequestException:
+        return []
 
     result = deduplicate(all_images)
     result = prefer_large_images(result)
@@ -300,24 +270,29 @@ def scrape_nsk(name, code):
 
 
 def scrape_wh(name, code):
-    """اسکرپر W&H از swallowdental.co.uk
-
-    در swallowdental.co.uk/catalogsearch/result/?q= جستجو می‌کند.
+    """اسکرپر W&H — فقط swallowdental.co.uk با تطابق دقیق کد محصول
+    
+    استراتژی: جستجوی مدل محصول، پیدا کردن product-item-info با تطابق مدل،
+    استخراج لینک صفحه جزئیات از parent <a>، ویزیت صفحه و دریافت همه تصاویر.
     """
     base = 'https://www.swallowdental.co.uk'
     all_images = []
-    detail_pages = []
 
-    # کلمات جستجو
-    search_terms = []
+    model_code = None
+    model_search = None
     if code:
-        search_terms.append(code.strip())
-    raw = name.replace('W&H', '').replace('WH-', '').strip()
-    search_terms.append(slugify(raw))
-    # حذف کلمات اضافی
-    clean = re.sub(r'\b(synea|vision|alegra|handpiece|set)\b', '', raw, flags=re.I).strip()
-    if clean and slugify(clean) not in search_terms:
-        search_terms.append(slugify(clean))
+        model_match = re.search(r'([A-Z]{2,3})[-\s]?(\d{2,3}[A-Z]*)', code, re.I)
+        if model_match:
+            model_code = (model_match.group(1) + model_match.group(2)).lower()
+            model_search = f'{model_match.group(1).lower()}-{model_match.group(2).lower()}'
+
+    search_terms = []
+    if model_search:
+        search_terms.append(model_search)
+    elif code:
+        search_terms.append(code.strip().lower())
+
+    detail_url = None
 
     for term in search_terms[:2]:
         try:
@@ -328,77 +303,62 @@ def scrape_wh(name, code):
 
             soup = BeautifulSoup(resp.text, 'lxml')
 
-            # تصاویر از نتایج جستجو — فقط اگر با نام/کد محصول تطابق داشته باشند
-            raw_code = code.strip().lower() if code else ''
-            for img in soup.find_all('img'):
-                src = img.get('src') or img.get('data-src') or ''
-                if not src:
+            # استخراج تصاویر از صفحه نتایج + پیدا کردن لینک صفحه جزئیات
+            for item in soup.select('.product-item-info'):
+                # چک کن آیا این product-item برای مدل ماست
+                item_text = item.get_text(strip=True).lower()
+                if model_code and model_code not in item_text.replace('-', '').replace(' ', ''):
                     continue
-                full = urljoin(base, src)
-                if '/media/catalog/product' not in full:
-                    continue
-                if is_logo_or_icon(full):
-                    continue
-                # فقط تصاویری که در alt یا parent anchor با نام محصول تطابق دارند
-                alt = (img.get('alt') or '').lower()
-                parent_text = ''
-                parent_a = img.find_parent('a')
-                if parent_a:
-                    parent_text = parent_a.get_text(strip=True).lower()
-                product_text = alt + ' ' + parent_text
-                name_lower = raw.lower()
-                if (raw_code and raw_code in product_text) or \
-                   any(w in product_text for w in name_lower.split() if len(w) > 3):
-                    all_images.append(full)
 
-            # لینک صفحات جزئیات
-            for a in soup.find_all('a', href=True):
-                href = a['href']
-                href_lower = href.lower()
-                if '/catalog/product/' in href_lower or href_lower.endswith('.html'):
-                    full = urljoin(base, href)
-                    if full not in detail_pages:
-                        detail_pages.append(full)
+                # پیدا کردن لینک صفحه محصول
+                a_tag = item.find('a', href=True)
+                if a_tag:
+                    href = a_tag['href']
+                    if '/catalog/product/' in href or href.endswith('.html'):
+                        detail_url = urljoin(base, href)
 
-            # لینک‌های دسته‌بندی
-            for a in soup.find_all('a', href=True):
-                href = a['href']
-                href_lower = href.lower()
-                term_lower = term.lower()
-                if '/catalog/category/' in href_lower and any(
-                    w in href_lower for w in term_lower.replace('-', ' ').split()
-                ):
-                    full = urljoin(base, href)
-                    if full not in detail_pages:
-                        detail_pages.append(full)
+                # جمع‌آوری تصاویر از نتایج جستجو
+                for img in item.find_all('img'):
+                    src = img.get('src') or img.get('data-src') or ''
+                    if not src:
+                        continue
+                    full = urljoin(base, src)
+                    if '/media/catalog/product' not in full:
+                        continue
+                    if is_logo_or_icon(full):
+                        continue
+                    url_lower = full.lower()
+                    if model_code and model_code in url_lower.replace('-', '').replace('_', '').replace(' ', ''):
+                        all_images.append(full)
 
-            if detail_pages or all_images:
+            if detail_url or all_images:
                 break
 
         except requests.RequestException:
             continue
 
-    # صفحات جزئیات
-    for detail_url in detail_pages[:3]:
+    # ویزیت صفحه جزئیات برای دریافت همه تصاویر
+    if detail_url:
         try:
             time.sleep(0.5)
             dr = requests.get(detail_url, headers=HEADERS, timeout=TIMEOUT)
-            if dr.status_code != 200:
-                continue
-            ds = BeautifulSoup(dr.text, 'lxml')
-
-            all_images.extend(extract_page_images(
-                ds, base,
-                lambda u: '/media/catalog/product' in u
-            ))
-
-            all_images.extend(extract_link_images(
-                ds, base,
-                lambda u: '/media/catalog/product' in u
-            ))
-
+            if dr.status_code == 200:
+                ds = BeautifulSoup(dr.text, 'lxml')
+                all_images.extend(extract_page_images(
+                    ds, base,
+                    lambda u: '/media/catalog/product' in u
+                ))
+                all_images.extend(extract_link_images(
+                    ds, base,
+                    lambda u: '/media/catalog/product' in u
+                ))
         except requests.RequestException:
-            continue
+            pass
+
+    # فیلتر نهایی: فقط تصاویر با تطابق مدل
+    if model_code:
+        all_images = [u for u in all_images 
+                      if model_code in u.lower().replace('-', '').replace('_', '').replace(' ', '')]
 
     result = deduplicate(all_images)
     result = prefer_large_images(result)
