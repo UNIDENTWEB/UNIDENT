@@ -5,7 +5,7 @@
 دقیق‌ترین صفحه محصول را پیدا کرده، تصاویر را استخراج و دانلود می‌کند.
 
 سایت‌های مرجع:
-  COXO -> coxotec.com
+  COXO -> jmudental.com (Shopify API)
   NSK  -> fordent.ru
   W&H  -> swallowdental.co.uk
 """
@@ -129,156 +129,64 @@ def extract_link_images(soup, base_url, path_filter):
 # ---------- Brand-Specific Scrapers ----------
 
 def scrape_coxo(name, code):
-    """اسکرپر COXO - Multi-source fallback
-
-    1. جستجوی مستقیم Alibaba (قابل اعتمادترین — عکس‌های واقعی محصول)
-    2. Fallback: Bing Images با فیلتر فوق‌سختگیرانه
-    3. Fallback: placeholders حرفه‌ای
+    """اسکرپر COXO — از کاتالوگ محلی jmudental.com (products.json)
+    
+    کاتالوگ یکبار از Shopify API دانلود شده و در فایل coxo_catalog.json ذخیره شده.
+    تطابق بر اساس کد مدل با scoring دقیق انجام می‌شود.
     """
     raw_name = name.replace('COXO', '').strip()
     model = code or raw_name
-    
-    # Source 1: Alibaba product search
-    images = _scrape_alibaba(model)
-    if images:
-        return images
-    
-    # Source 2: Bing with strict filter
-    all_images = []
-    queries = [
-        f'COXO {model} dental',
-        f'Foshan COXO {model} handpiece',
-        f'"COXO" "{model}" dental equipment',
-    ]
 
-    allowed_domains = (
-        'alibaba.com', 'made-in-china.com', 'medicalexpo.com',
-        'shopdent.com', 'net32.com', 'dentistrytoday.com',
-        'dentaleconomics.com', 'dentalkart.com',
-        'tradeindia.com', 'exportersindia.com', 'indiamart.com',
-    )
-
-    for query in queries:
-        if len(all_images) >= MAX_IMAGES:
-            break
+    # Load catalog once
+    if not hasattr(scrape_coxo, '_catalog'):
         try:
-            imgs = _bing_image_search(query, count=30)
-            if imgs:
-                scored = []
-                for u in imgs:
-                    ul = u.lower()
-                    domain_ok = any(d in ul for d in allowed_domains)
-                    positive = ('dental', 'handpiece', 'coxo', 'motor', 'medical',
-                                'dentist', 'dentistry', 'implants', 'surgical',
-                                'endodontic', 'contra-angle', 'turbine', 'scaler',
-                                'curing', 'obturation', 'product', 'equipment', 'instrument')
-                    has_positive = any(kw in ul for kw in positive)
-                    if not domain_ok and not has_positive:
-                        continue
-                    neg = ('cat', 'dog', 'movie', 'film', 'game', 'comic',
-                           'youtube', 'pokemon', 'anime', 'wallpaper',
-                           'phone', 'iphone', 'samsung', 'logo', 'icon',
-                           'avatar', 'favicon', 'emoji', 'banner',
-                           'screenshot', 'watermark', 'meme', 'poster',
-                           't-shirt', 'merch', 'sticker', 'pngtree',
-                           'freepik', 'shutterstock', 'clipart',
-                           'background', 'texture', 'frame', 'border')
-                    if any(kw in ul for kw in neg):
-                        continue
-                    score = 1
-                    if domain_ok:
-                        score += 10
-                    for kw in positive:
-                        if kw in ul:
-                            score += 3
-                    scored.append((score, u))
-                scored.sort(key=lambda x: x[0], reverse=True)
-                all_images.extend([u for _, u in scored])
-        except Exception:
-            continue
+            with open('coxo_catalog.json') as f:
+                scrape_coxo._catalog = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            scrape_coxo._catalog = {}
+        # Build index for each catalog entry
+        scrape_coxo._index = {}
+        for handle, info in scrape_coxo._catalog.items():
+            codes = set()
+            for m in re.finditer(r'(cx\d+[a-z]*-?\d*|c\d+-?\d+[a-z]*|db\d+|dl-?\d+|c-\w+|c\s*\d+)', handle, re.I):
+                codes.add(re.sub(r'[-\s]', '', m.group(0).upper()))
+            for m in re.finditer(r'(CX\d+[A-Z]*-?\d*|C\d+-?\d+[A-Z]*|DB\d+|DL-?\d+)', info['title']):
+                codes.add(re.sub(r'[-\s]', '', m.group(0).upper()))
+            scrape_coxo._index[handle] = codes
 
-    result = deduplicate(all_images)
-    result = [u for u in result if not is_logo_or_icon(u)]
-    result = prefer_large_images(result)
-    return result[:MAX_IMAGES]
-
-
-def _scrape_alibaba(model, max_images=8):
-    """جستجوی Alibaba و استخراج تصاویر محصول واقعی"""
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.9',
-    }
-    query = quote_plus(f'COXO {model}')
-    url = f'https://www.alibaba.com/trade/search?IndexArea=product_en&SearchText={query}'
-    
-    try:
-        resp = requests.get(url, headers=headers, timeout=TIMEOUT)
-        if resp.status_code != 200:
-            return []
-        
-        soup = BeautifulSoup(resp.text, 'lxml')
-        images = []
-        
-        # استخراج از img tags با src شامل jpg/png
-        for img in soup.find_all('img'):
-            src = img.get('src') or img.get('data-src') or ''
-            if not src:
-                continue
-            full = urljoin('https://www.alibaba.com', src)
-            lo = full.lower()
-            # Alibaba product images
-            if any(pat in lo for pat in ('alicdn.com', 'alibaba.com', 'sc01.alicdn.com')):
-                if not is_logo_or_icon(full):
-                    # حذف thumbnailها
-                    if '60x60' in lo or '100x100' in lo or '50x50' in lo:
-                        continue
-                    images.append(full)
-        
-        if images:
-            return deduplicate(images)[:max_images]
-    except requests.RequestException:
-        pass
-    
-    return []
-
-
-def _bing_image_search(query, count=16):
-    """جستجوی Bing Images و استخراج URL تصاویر"""
-    import html as html_mod
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.9',
-    }
-    url = f'https://www.bing.com/images/search?q={quote_plus(query)}&first=1'
-    try:
-        resp = requests.get(url, headers=headers, timeout=TIMEOUT)
-        if resp.status_code != 200:
-            return []
-
-        all_urls = set()
-        for m in re.finditer(r'murl&quot;:&quot;(.+?)&quot;', resp.text):
-            raw = m.group(1)
-            clean = html_mod.unescape(raw)
-            clean = clean.replace('\\u002f', '/').replace('\\u003a', ':').replace('\\/', '/')
-            if clean.startswith('http') and len(clean) < 400:
-                all_urls.add(clean)
-
-        skip_domains = ('google.com', 'gstatic.com', 'bing.com', 'microsoft.com',
-                        'facebook.com', 'twitter.com', 'instagram.com', 'youtube.com')
-        valid = []
-        for u in all_urls:
-            if any(d in u.lower() for d in skip_domains):
-                continue
-            if 'icon' in u.lower() or 'logo' in u.lower() or 'avatar' in u.lower():
-                continue
-            valid.append(u)
-
-        return valid[:count]
-    except Exception:
+    if not scrape_coxo._catalog:
         return []
+
+    # Match our product against catalog
+    search_code = model.upper().replace('-', '').replace(' ', '')
+    search_name = raw_name.upper()
+    
+    best_handle = None
+    best_score = 0
+    
+    for handle, chandles in scrape_coxo._index.items():
+        score = 0
+        for hc in chandles:
+            if hc and search_code and hc in search_code:
+                score += 20
+            elif hc and search_code and search_code in hc:
+                score += 15
+        
+        title = scrape_coxo._catalog[handle]['title'].upper()
+        product_words = set(search_name.split())
+        title_words = set(title.split())
+        common = product_words & title_words - {'COXO', 'DENTAL', 'HAND', 'WITH', 'AND', 'FOR', 'THE', 'OF', 'IN', 'TO', 'A'}
+        score += len(common) * 5
+        
+        if score > best_score:
+            best_score = score
+            best_handle = handle
+
+    # Only return if confident (code match required)
+    if best_handle and best_score >= 20:
+        return scrape_coxo._catalog[best_handle]['images'][:MAX_IMAGES]
+
+    return []
 
 
 def scrape_nsk(name, code):
@@ -525,7 +433,7 @@ def main():
     total = len(products)
     print(f'Scraping images for {total} products')
     print(f'Target: {MIN_IMAGES}-{MAX_IMAGES} images each')
-    print(f'Reference sites: COXO=alibaba+bing, NSK=fordent.ru, W&H=swallowdental.co.uk')
+    print(f'Reference sites: COXO=jmudental.com, NSK=fordent.ru, W&H=swallowdental.co.uk')
     print('=' * 60)
     print()
 
