@@ -351,8 +351,26 @@
     "name": "COXO C-SMART-1 PRO",
     "brand": "COXO",
     "code": "C-SMART-1-PRO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_14/1.jpg",
+      "images/coxo_14/2.jpg",
+      "images/coxo_14/3.jpg",
+      "images/coxo_14/4.jpg",
+      "images/coxo_14/5.jpg",
+      "images/coxo_14/6.jpg",
+      "images/coxo_14/7.jpg",
+      "images/coxo_14/8.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_086ff87e-8a2e-4556-817d-9bbc5bcef367.jpg?v=1721405944",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/06_2ed33b88-a8db-42b2-b879-0f0c7e931827.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_aac31824-65f8-4c18-87c6-bbb35663f174.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_c107dd6a-4ae6-42bd-9ee3-121ac98fa9b8.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/12_0b1c893e-462c-4efa-806a-97b335c87a12.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/07_5456dbac-4f38-45ef-87e2-ae353c41d468.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/15_be0b72a4-871b-4a13-bd26-864c1e3079ad.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/4_f7ac7ac3-6f8f-4a7e-923b-b78f795c241f.jpg?v=1773048063"
+    ]
   },
   "wh_14": {
     "name": "W&H Alegra WK-92",
@@ -365,8 +383,26 @@
     "name": "COXO C-SMART MINI AP",
     "brand": "COXO",
     "code": "C-SMART-MINI-AP",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_15/1.jpg",
+      "images/coxo_15/2.jpg",
+      "images/coxo_15/3.jpg",
+      "images/coxo_15/4.jpg",
+      "images/coxo_15/5.jpg",
+      "images/coxo_15/6.jpg",
+      "images/coxo_15/7.jpg",
+      "images/coxo_15/8.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_086ff87e-8a2e-4556-817d-9bbc5bcef367.jpg?v=1721405944",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/06_2ed33b88-a8db-42b2-b879-0f0c7e931827.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_aac31824-65f8-4c18-87c6-bbb35663f174.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_c107dd6a-4ae6-42bd-9ee3-121ac98fa9b8.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/12_0b1c893e-462c-4efa-806a-97b335c87a12.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/07_5456dbac-4f38-45ef-87e2-ae353c41d468.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/15_be0b72a4-871b-4a13-bd26-864c1e3079ad.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/4_f7ac7ac3-6f8f-4a7e-923b-b78f795c241f.jpg?v=1773048063"
+    ]
   },
   "wh_15": {
     "name": "W&H Synea Fusion TA-91",
@@ -661,8 +697,20 @@
     "name": "COXO C-ROOT V",
     "brand": "COXO",
     "code": "C-ROOT-V",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_28/1.jpg",
+      "images/coxo_28/2.jpg",
+      "images/coxo_28/3.jpg",
+      "images/coxo_28/4.jpg",
+      "images/coxo_28/5.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_26823180-2c53-45cf-860e-0e1d709dd944.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_b39783b9-0b98-42e0-9df4-b6f23aa59ef8.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/02_c02f6f7e-ab92-4aee-8cff-05f7d6716915.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_64371cba-9995-4834-9c2e-31f0e2b9054b.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/04_8410d8fe-9ce5-44a5-9d96-227b49de3f24.jpg?v=1735107550"
+    ]
   },
   "wh_28": {
     "name": "W&H Synea WK-95",
@@ -675,8 +723,20 @@
     "name": "COXO C-ROOT VI",
     "brand": "COXO",
     "code": "C-ROOT-VI",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_29/1.jpg",
+      "images/coxo_29/2.jpg",
+      "images/coxo_29/3.jpg",
+      "images/coxo_29/4.jpg",
+      "images/coxo_29/5.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_26823180-2c53-45cf-860e-0e1d709dd944.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_b39783b9-0b98-42e0-9df4-b6f23aa59ef8.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/02_c02f6f7e-ab92-4aee-8cff-05f7d6716915.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_64371cba-9995-4834-9c2e-31f0e2b9054b.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/04_8410d8fe-9ce5-44a5-9d96-227b49de3f24.jpg?v=1735107550"
+    ]
   },
   "wh_29": {
     "name": "W&H Alegra WK-96",
@@ -689,8 +749,26 @@
     "name": "COXO C-SMART NOVA X",
     "brand": "COXO",
     "code": "C-SMART-NOVA-X",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_30/1.jpg",
+      "images/coxo_30/2.jpg",
+      "images/coxo_30/3.jpg",
+      "images/coxo_30/4.jpg",
+      "images/coxo_30/5.jpg",
+      "images/coxo_30/6.jpg",
+      "images/coxo_30/7.jpg",
+      "images/coxo_30/8.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_086ff87e-8a2e-4556-817d-9bbc5bcef367.jpg?v=1721405944",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/06_2ed33b88-a8db-42b2-b879-0f0c7e931827.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_aac31824-65f8-4c18-87c6-bbb35663f174.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_c107dd6a-4ae6-42bd-9ee3-121ac98fa9b8.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/12_0b1c893e-462c-4efa-806a-97b335c87a12.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/07_5456dbac-4f38-45ef-87e2-ae353c41d468.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/15_be0b72a4-871b-4a13-bd26-864c1e3079ad.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/4_f7ac7ac3-6f8f-4a7e-923b-b78f795c241f.jpg?v=1773048063"
+    ]
   },
   "wh_30": {
     "name": "W&H Synea TA-93",
@@ -759,8 +837,20 @@
     "name": "COXO C-ROOT V",
     "brand": "COXO",
     "code": "C-ROOT-V",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_35/1.jpg",
+      "images/coxo_35/2.jpg",
+      "images/coxo_35/3.jpg",
+      "images/coxo_35/4.jpg",
+      "images/coxo_35/5.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_26823180-2c53-45cf-860e-0e1d709dd944.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_b39783b9-0b98-42e0-9df4-b6f23aa59ef8.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/02_c02f6f7e-ab92-4aee-8cff-05f7d6716915.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_64371cba-9995-4834-9c2e-31f0e2b9054b.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/04_8410d8fe-9ce5-44a5-9d96-227b49de3f24.jpg?v=1735107550"
+    ]
   },
   "wh_35": {
     "name": "W&H Alegra TE-93",
@@ -869,8 +959,26 @@
     "name": "COXO C-SMART ENDO",
     "brand": "COXO",
     "code": "C-SMART-ENDO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_41/1.jpg",
+      "images/coxo_41/2.jpg",
+      "images/coxo_41/3.jpg",
+      "images/coxo_41/4.jpg",
+      "images/coxo_41/5.jpg",
+      "images/coxo_41/6.jpg",
+      "images/coxo_41/7.jpg",
+      "images/coxo_41/8.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_086ff87e-8a2e-4556-817d-9bbc5bcef367.jpg?v=1721405944",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/06_2ed33b88-a8db-42b2-b879-0f0c7e931827.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_aac31824-65f8-4c18-87c6-bbb35663f174.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_c107dd6a-4ae6-42bd-9ee3-121ac98fa9b8.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/12_0b1c893e-462c-4efa-806a-97b335c87a12.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/07_5456dbac-4f38-45ef-87e2-ae353c41d468.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/15_be0b72a4-871b-4a13-bd26-864c1e3079ad.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/4_f7ac7ac3-6f8f-4a7e-923b-b78f795c241f.jpg?v=1773048063"
+    ]
   },
   "wh_41": {
     "name": "W&H Synea TA-91",
@@ -883,8 +991,20 @@
     "name": "COXO C-Root ZX",
     "brand": "COXO",
     "code": "C-ROOT-ZX",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_42/1.jpg",
+      "images/coxo_42/2.jpg",
+      "images/coxo_42/3.jpg",
+      "images/coxo_42/4.jpg",
+      "images/coxo_42/5.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_26823180-2c53-45cf-860e-0e1d709dd944.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_b39783b9-0b98-42e0-9df4-b6f23aa59ef8.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/02_c02f6f7e-ab92-4aee-8cff-05f7d6716915.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_64371cba-9995-4834-9c2e-31f0e2b9054b.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/04_8410d8fe-9ce5-44a5-9d96-227b49de3f24.jpg?v=1735107550"
+    ]
   },
   "wh_42": {
     "name": "W&H Alegra TE-91",
@@ -1185,8 +1305,26 @@
     "name": "COXO C-SMART-2 PRO",
     "brand": "COXO",
     "code": "C-SMART-2-PRO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_56/1.jpg",
+      "images/coxo_56/2.jpg",
+      "images/coxo_56/3.jpg",
+      "images/coxo_56/4.jpg",
+      "images/coxo_56/5.jpg",
+      "images/coxo_56/6.jpg",
+      "images/coxo_56/7.jpg",
+      "images/coxo_56/8.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_086ff87e-8a2e-4556-817d-9bbc5bcef367.jpg?v=1721405944",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/06_2ed33b88-a8db-42b2-b879-0f0c7e931827.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_aac31824-65f8-4c18-87c6-bbb35663f174.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_c107dd6a-4ae6-42bd-9ee3-121ac98fa9b8.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/12_0b1c893e-462c-4efa-806a-97b335c87a12.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/07_5456dbac-4f38-45ef-87e2-ae353c41d468.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/15_be0b72a4-871b-4a13-bd26-864c1e3079ad.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/4_f7ac7ac3-6f8f-4a7e-923b-b78f795c241f.jpg?v=1773048063"
+    ]
   },
   "wh_56": {
     "name": "W&H Synea Fusion TE-99",
@@ -1213,8 +1351,20 @@
     "name": "COXO C-ROOT X",
     "brand": "COXO",
     "code": "C-ROOT-X",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_58/1.jpg",
+      "images/coxo_58/2.jpg",
+      "images/coxo_58/3.jpg",
+      "images/coxo_58/4.jpg",
+      "images/coxo_58/5.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_26823180-2c53-45cf-860e-0e1d709dd944.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_b39783b9-0b98-42e0-9df4-b6f23aa59ef8.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/02_c02f6f7e-ab92-4aee-8cff-05f7d6716915.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_64371cba-9995-4834-9c2e-31f0e2b9054b.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/04_8410d8fe-9ce5-44a5-9d96-227b49de3f24.jpg?v=1735107550"
+    ]
   },
   "wh_58": {
     "name": "W&H Synea WK-87",
@@ -1515,8 +1665,26 @@
     "name": "COXO C-SMART-3",
     "brand": "COXO",
     "code": "C-SMART-3",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_75/1.jpg",
+      "images/coxo_75/2.jpg",
+      "images/coxo_75/3.jpg",
+      "images/coxo_75/4.jpg",
+      "images/coxo_75/5.jpg",
+      "images/coxo_75/6.jpg",
+      "images/coxo_75/7.jpg",
+      "images/coxo_75/8.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_086ff87e-8a2e-4556-817d-9bbc5bcef367.jpg?v=1721405944",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/06_2ed33b88-a8db-42b2-b879-0f0c7e931827.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_aac31824-65f8-4c18-87c6-bbb35663f174.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_c107dd6a-4ae6-42bd-9ee3-121ac98fa9b8.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/12_0b1c893e-462c-4efa-806a-97b335c87a12.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/07_5456dbac-4f38-45ef-87e2-ae353c41d468.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/15_be0b72a4-871b-4a13-bd26-864c1e3079ad.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/4_f7ac7ac3-6f8f-4a7e-923b-b78f795c241f.jpg?v=1773048063"
+    ]
   },
   "wh_75": {
     "name": "W&H Alegra TE-83",
@@ -3436,8 +3604,26 @@
     "name": "NSK X-Smart Plus",
     "brand": "NSK",
     "code": "X-SMART-PLUS",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/nsk_70/1.jpg",
+      "images/nsk_70/2.jpg",
+      "images/nsk_70/3.jpg",
+      "images/nsk_70/4.jpg",
+      "images/nsk_70/5.jpg",
+      "images/nsk_70/6.png",
+      "images/nsk_70/7.png",
+      "images/nsk_70/8.jpg"
+    ],
+    "source_urls": [
+      "https://fordent.ru/upload/iblock/dfc/x-smart-plus-foto.jpg",
+      "https://fordent.ru/upload/iblock/920/b609f200f3f7e802854d295df8b24b1a.jpg",
+      "https://fordent.ru/upload/iblock/a54/a32015273405af45f0173d844f0faf59.jpg",
+      "https://fordent.ru/upload/iblock/d29/852fa91a20dcc4c0bf382bf4b5a95f71.jpg",
+      "https://fordent.ru/upload/rk/0f5/aiyydcgniq6mapemfn1yuiq8xbmm8a3j/1230_110.jpg",
+      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
+      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
+      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg"
+    ]
   },
   "nsk_71": {
     "name": "NSK FX-35m",
