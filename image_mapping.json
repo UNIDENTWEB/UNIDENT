@@ -1,29 +1,4 @@
 {
-  "nsk_1": {
-    "name": "NSK Ti-Max Z900L",
-    "brand": "NSK",
-    "code": "TI-MAX-Z900L",
-    "images": [
-      "images/nsk_1/1.jpg",
-      "images/nsk_1/2.jpg",
-      "images/nsk_1/3.png",
-      "images/nsk_1/4.png",
-      "images/nsk_1/5.jpg",
-      "images/nsk_1/6.jpg",
-      "images/nsk_1/7.jpg",
-      "images/nsk_1/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/d53/6hn7sl3cl8gsvudh5h03du2ybb635tqe/ti-max-z900l-foto.jpg",
-      "https://fordent.ru/upload/iblock/e0e/aohxambuhkxk3zp7n611fewpddau5ci5/ti-max-z900l-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/dbe/mercury-332k3-foto.jpg"
-    ]
-  },
   "coxo_1": {
     "name": "COXO CX207-W",
     "brand": "COXO",
@@ -49,36 +24,23 @@
     "code": "SYNEA-VISION-TK-100",
     "images": [
       "images/wh_1/1.png",
-      "images/wh_1/2.png"
+      "images/wh_1/2.png",
+      "images/wh_1/3.jpg",
+      "images/wh_1/4.png",
+      "images/wh_1/5.jpg",
+      "images/wh_1/6.jpg",
+      "images/wh_1/7.jpg",
+      "images/wh_1/8.jpg"
     ],
     "source_urls": [
       "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
-      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png"
-    ]
-  },
-  "nsk_2": {
-    "name": "NSK Ti-Max Z800L",
-    "brand": "NSK",
-    "code": "TI-MAX-Z800L",
-    "images": [
-      "images/nsk_2/1.jpg",
-      "images/nsk_2/2.jpg",
-      "images/nsk_2/3.png",
-      "images/nsk_2/4.png",
-      "images/nsk_2/5.jpg",
-      "images/nsk_2/6.jpg",
-      "images/nsk_2/7.jpg",
-      "images/nsk_2/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/c6c/5i4liajz52aj3vvg3wxcqh1l3yoq20mx/ti-max-z800l-foto.jpg",
-      "https://fordent.ru/upload/iblock/c7a/16ejz1o5qo7g6vt4jxww99ps4etlpmo1/ti-max-z800l-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/dbe/mercury-332k3-foto.jpg"
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-91_12.7_surgical_contra-angle_with_45_head.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-93_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30118000.jpg"
     ]
   },
   "coxo_2": {
@@ -106,36 +68,23 @@
     "code": "ALEGRA-TE-95",
     "images": [
       "images/wh_2/1.png",
-      "images/wh_2/2.png"
+      "images/wh_2/2.png",
+      "images/wh_2/3.png",
+      "images/wh_2/4.png",
+      "images/wh_2/5.jpg",
+      "images/wh_2/6.png",
+      "images/wh_2/7.png",
+      "images/wh_2/8.png"
     ],
     "source_urls": [
       "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
-      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png"
-    ]
-  },
-  "nsk_3": {
-    "name": "NSK S-Max M600L",
-    "brand": "NSK",
-    "code": "S-MAX-M600L",
-    "images": [
-      "images/nsk_3/1.jpg",
-      "images/nsk_3/2.jpg",
-      "images/nsk_3/3.png",
-      "images/nsk_3/4.png",
-      "images/nsk_3/5.jpg",
-      "images/nsk_3/6.jpg",
-      "images/nsk_3/7.jpg",
-      "images/nsk_3/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/a9f/s-max-m600l-foto.jpg",
-      "https://fordent.ru/upload/iblock/06e/s-max-m600l-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/130/rxu3j3gmpzj4i5giljtiavk89k2x37h0/ptl-cl-led-foto.jpg"
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_hk-43_lt_synea_vision_straight_dental_handpiece_-_ref_30028000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-91_12.7_surgical_contra-angle_with_45_head.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_10207550.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-86_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_alegra_11_contra-angle_dental_handpiece_-_ref_30116000.png"
     ]
   },
   "coxo_3": {
@@ -151,31 +100,6 @@
     "code": "SYNEA-TA-98",
     "images": [],
     "source_urls": []
-  },
-  "nsk_4": {
-    "name": "NSK S-Max pico",
-    "brand": "NSK",
-    "code": "S-MAX-PICO",
-    "images": [
-      "images/nsk_4/1.jpg",
-      "images/nsk_4/2.png",
-      "images/nsk_4/3.png",
-      "images/nsk_4/4.jpg",
-      "images/nsk_4/5.jpg",
-      "images/nsk_4/6.jpg",
-      "images/nsk_4/7.jpg",
-      "images/nsk_4/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/575/s-max-pico-bl-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/dbe/mercury-332k3-foto.jpg",
-      "https://fordent.ru/upload/iblock/1b2/dynaled-m600lg-m4-foto.jpg"
-    ]
   },
   "coxo_4": {
     "name": "COXO CX205-M",
@@ -199,31 +123,6 @@
       "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30068000_te-97_1.png"
     ]
   },
-  "nsk_5": {
-    "name": "NSK Ti-Max X450L",
-    "brand": "NSK",
-    "code": "TI-MAX-X450L",
-    "images": [
-      "images/nsk_5/1.jpg",
-      "images/nsk_5/2.jpg",
-      "images/nsk_5/3.png",
-      "images/nsk_5/4.png",
-      "images/nsk_5/5.jpg",
-      "images/nsk_5/6.jpg",
-      "images/nsk_5/7.jpg",
-      "images/nsk_5/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/24d/nouyya9tpxk7x607zqs3t6ybphxuw0ed/ti-max-x450l-foto.jpg",
-      "https://fordent.ru/upload/iblock/202/6ery756zollxn660207z760gynqhc03g/ti-max-x450l-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/dbe/mercury-332k3-foto.jpg"
-    ]
-  },
   "coxo_5": {
     "name": "COXO C-sailor Pro",
     "brand": "COXO",
@@ -237,26 +136,43 @@
     "code": "SYNEA-FUSION-TK-94",
     "images": [
       "images/wh_5/1.jpg",
-      "images/wh_5/2.jpg"
+      "images/wh_5/2.jpg",
+      "images/wh_5/3.jpg",
+      "images/wh_5/4.png",
+      "images/wh_5/5.png",
+      "images/wh_5/6.png",
+      "images/wh_5/7.jpg",
+      "images/wh_5/8.png"
     ],
     "source_urls": [
       "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-94_lm_1.jpg",
-      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-94_lm_1.jpg"
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-97_l_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/g/wg-56_a.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_10207550.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-98_l_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30074000_te-95_bc_1.png"
     ]
-  },
-  "nsk_6": {
-    "name": "NSK Pana-Max2",
-    "brand": "NSK",
-    "code": "PANA-MAX2",
-    "images": [],
-    "source_urls": []
   },
   "coxo_6": {
     "name": "COXO C-Root I",
     "brand": "COXO",
     "code": "C-ROOT-I",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_6/1.jpg",
+      "images/coxo_6/2.jpg",
+      "images/coxo_6/3.jpg",
+      "images/coxo_6/4.jpg",
+      "images/coxo_6/5.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_26823180-2c53-45cf-860e-0e1d709dd944.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_b39783b9-0b98-42e0-9df4-b6f23aa59ef8.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/02_c02f6f7e-ab92-4aee-8cff-05f7d6716915.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_64371cba-9995-4834-9c2e-31f0e2b9054b.jpg?v=1735107550",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/04_8410d8fe-9ce5-44a5-9d96-227b49de3f24.jpg?v=1735107550"
+    ]
   },
   "wh_6": {
     "name": "W&H Synea TA-98 LED",
@@ -265,37 +181,30 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_7": {
-    "name": "NSK Ti-Max Z95L",
-    "brand": "NSK",
-    "code": "TI-MAX-Z95L",
-    "images": [
-      "images/nsk_7/1.jpg",
-      "images/nsk_7/2.jpg",
-      "images/nsk_7/3.png",
-      "images/nsk_7/4.png",
-      "images/nsk_7/5.jpg",
-      "images/nsk_7/6.jpg",
-      "images/nsk_7/7.jpg",
-      "images/nsk_7/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/b9f/ti-max-z95l-foto.jpg",
-      "https://fordent.ru/upload/iblock/0d4/ti-max-z95l-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/c6f/t2-line-a-40-l-foto.jpg"
-    ]
-  },
   "coxo_7": {
     "name": "COXO C-Smart I Pro",
     "brand": "COXO",
     "code": "C-SMART-I-PRO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_7/1.jpg",
+      "images/coxo_7/2.jpg",
+      "images/coxo_7/3.jpg",
+      "images/coxo_7/4.jpg",
+      "images/coxo_7/5.jpg",
+      "images/coxo_7/6.jpg",
+      "images/coxo_7/7.jpg",
+      "images/coxo_7/8.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_086ff87e-8a2e-4556-817d-9bbc5bcef367.jpg?v=1721405944",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/06_2ed33b88-a8db-42b2-b879-0f0c7e931827.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/09_aac31824-65f8-4c18-87c6-bbb35663f174.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/08_c107dd6a-4ae6-42bd-9ee3-121ac98fa9b8.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/12_0b1c893e-462c-4efa-806a-97b335c87a12.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/07_5456dbac-4f38-45ef-87e2-ae353c41d468.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/15_be0b72a4-871b-4a13-bd26-864c1e3079ad.jpg?v=1759204100",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/4_f7ac7ac3-6f8f-4a7e-923b-b78f795c241f.jpg?v=1773048063"
+    ]
   },
   "wh_7": {
     "name": "W&H Alegra TE-98",
@@ -312,13 +221,6 @@
       "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30067000_te-98_lq_1.png"
     ]
   },
-  "nsk_8": {
-    "name": "NSK Ti-Max Z45L",
-    "brand": "NSK",
-    "code": "TI-MAX-Z45L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_8": {
     "name": "COXO PT Master",
     "brand": "COXO",
@@ -333,13 +235,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_9": {
-    "name": "NSK nano95LS",
-    "brand": "NSK",
-    "code": "NANO95LS",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_9": {
     "name": "COXO GENI PRO",
     "brand": "COXO",
@@ -351,13 +246,6 @@
     "name": "W&H Alegra TE-90",
     "brand": "W&H",
     "code": "ALEGRA-TE-90",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_10": {
-    "name": "NSK X25L",
-    "brand": "NSK",
-    "code": "X25L",
     "images": [],
     "source_urls": []
   },
@@ -395,13 +283,6 @@
       "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_wk-99_lt_s.jpg"
     ]
   },
-  "nsk_11": {
-    "name": "NSK FX25m",
-    "brand": "NSK",
-    "code": "FX25M",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_11": {
     "name": "COXO DB686",
     "brand": "COXO",
@@ -430,13 +311,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_12": {
-    "name": "NSK NAC-EC",
-    "brand": "NSK",
-    "code": "NAC-EC",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_12": {
     "name": "COXO C-CLEAR-2",
     "brand": "COXO",
@@ -451,13 +325,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_13": {
-    "name": "NSK FPB-EC",
-    "brand": "NSK",
-    "code": "FPB-EC",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_13": {
     "name": "COXO CP-1",
     "brand": "COXO",
@@ -469,15 +336,16 @@
     "name": "W&H Synea WK-93",
     "brand": "W&H",
     "code": "SYNEA-WK-93",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_14": {
-    "name": "NSK FX-205M",
-    "brand": "NSK",
-    "code": "FX-205M",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_13/1.jpg",
+      "images/wh_13/2.jpg",
+      "images/wh_13/3.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_wk-93_lt_1.jpg"
+    ]
   },
   "coxo_14": {
     "name": "COXO C-SMART-1 PRO",
@@ -493,31 +361,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_15": {
-    "name": "NSK Surgic AP",
-    "brand": "NSK",
-    "code": "SURGIC-AP",
-    "images": [
-      "images/nsk_15/1.jpg",
-      "images/nsk_15/2.jpg",
-      "images/nsk_15/3.jpg",
-      "images/nsk_15/4.png",
-      "images/nsk_15/5.png",
-      "images/nsk_15/6.jpg",
-      "images/nsk_15/7.jpg",
-      "images/nsk_15/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/a77/surgic-ap-foto.jpg",
-      "https://fordent.ru/upload/iblock/e2e/NSK Surgic AP-2.jpg",
-      "https://fordent.ru/upload/iblock/a48/NSK Surgic AP-1.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg"
-    ]
-  },
   "coxo_15": {
     "name": "COXO C-SMART MINI AP",
     "brand": "COXO",
@@ -532,31 +375,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_16": {
-    "name": "NSK Endo Mate DT",
-    "brand": "NSK",
-    "code": "ENDO-MATE-DT",
-    "images": [
-      "images/nsk_16/1.jpg",
-      "images/nsk_16/2.jpg",
-      "images/nsk_16/3.jpg",
-      "images/nsk_16/4.png",
-      "images/nsk_16/5.png",
-      "images/nsk_16/6.jpg",
-      "images/nsk_16/7.jpg",
-      "images/nsk_16/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/7c0/endo-mate-dt-foto.jpg",
-      "https://fordent.ru/upload/iblock/9fb/fdff38a8d42b937ee8d15faa4a5e0ec8.jpg",
-      "https://fordent.ru/upload/iblock/da5/endo-mate-dt-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg"
-    ]
-  },
   "coxo_16": {
     "name": "COXO C-File Mini",
     "brand": "COXO",
@@ -568,13 +386,6 @@
     "name": "W&H Alegra TE-99",
     "brand": "W&H",
     "code": "ALEGRA-TE-99",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_17": {
-    "name": "NSK Varios 370",
-    "brand": "NSK",
-    "code": "VARIOS-370",
     "images": [],
     "source_urls": []
   },
@@ -592,31 +403,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_18": {
-    "name": "NSK Z95L",
-    "brand": "NSK",
-    "code": "Z95L",
-    "images": [
-      "images/nsk_18/1.jpg",
-      "images/nsk_18/2.jpg",
-      "images/nsk_18/3.png",
-      "images/nsk_18/4.png",
-      "images/nsk_18/5.jpg",
-      "images/nsk_18/6.jpg",
-      "images/nsk_18/7.jpg",
-      "images/nsk_18/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/b9f/ti-max-z95l-foto.jpg",
-      "https://fordent.ru/upload/iblock/0d4/ti-max-z95l-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/c6f/t2-line-a-40-l-foto.jpg"
-    ]
-  },
   "coxo_18": {
     "name": "COXO C-FR2",
     "brand": "COXO",
@@ -631,37 +417,26 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_19": {
-    "name": "NSK Z25L",
-    "brand": "NSK",
-    "code": "Z25L",
-    "images": [
-      "images/nsk_19/1.jpg",
-      "images/nsk_19/2.jpg",
-      "images/nsk_19/3.png",
-      "images/nsk_19/4.png",
-      "images/nsk_19/5.jpg",
-      "images/nsk_19/6.jpg",
-      "images/nsk_19/7.jpg",
-      "images/nsk_19/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/c9b/ti-max-z25l-foto.jpg",
-      "https://fordent.ru/upload/iblock/5f6/ti-max-z25l-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/c6f/t2-line-a-40-l-foto.jpg"
-    ]
-  },
   "coxo_19": {
     "name": "COXO C-BLADE",
     "brand": "COXO",
     "code": "C-BLADE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_19/1.jpg",
+      "images/coxo_19/2.jpg",
+      "images/coxo_19/3.jpg",
+      "images/coxo_19/4.jpg",
+      "images/coxo_19/5.jpg",
+      "images/coxo_19/6.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_00ed3d75-06e7-4886-8f2a-09b05ec2d4d1.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/02_9922d376-7420-435b-9b4d-ebbf374de06d.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/03_492b8eef-aefc-4e64-888b-709a7e328a33.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/05_5fe8cd59-214b-4f3e-b8b7-d6eb163ed422.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/06_cef11bb1-f0a3-48ef-b4d1-3c9077266e37.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/07_98c10057-5db4-4d92-b7a0-e886a613dbb0.jpg?v=1740363618"
+    ]
   },
   "wh_19": {
     "name": "W&H Alegra WK-95",
@@ -669,31 +444,6 @@
     "code": "ALEGRA-WK-95",
     "images": [],
     "source_urls": []
-  },
-  "nsk_20": {
-    "name": "NSK S-Max M500L",
-    "brand": "NSK",
-    "code": "S-MAX-M500L",
-    "images": [
-      "images/nsk_20/1.jpg",
-      "images/nsk_20/2.jpg",
-      "images/nsk_20/3.png",
-      "images/nsk_20/4.png",
-      "images/nsk_20/5.jpg",
-      "images/nsk_20/6.jpg",
-      "images/nsk_20/7.jpg",
-      "images/nsk_20/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/839/s-max-m500l-foto.jpg",
-      "https://fordent.ru/upload/iblock/ba7/s-max-m500l-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/130/rxu3j3gmpzj4i5giljtiavk89k2x37h0/ptl-cl-led-foto.jpg"
-    ]
   },
   "coxo_20": {
     "name": "COXO C3-11KIT",
@@ -706,32 +456,25 @@
     "name": "W&H Synea Fusion WK-90",
     "brand": "W&H",
     "code": "SYNEA-FUSION-WK-90",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_21": {
-    "name": "NSK Pana-Max PLUS",
-    "brand": "NSK",
-    "code": "PANA-MAX-PLUS",
     "images": [
-      "images/nsk_21/1.jpg",
-      "images/nsk_21/2.jpg",
-      "images/nsk_21/3.jpg",
-      "images/nsk_21/4.jpg",
-      "images/nsk_21/5.png",
-      "images/nsk_21/6.png",
-      "images/nsk_21/7.jpg",
-      "images/nsk_21/8.jpg"
+      "images/wh_20/1.jpg",
+      "images/wh_20/2.jpg",
+      "images/wh_20/3.jpg",
+      "images/wh_20/4.jpg",
+      "images/wh_20/5.png",
+      "images/wh_20/6.png",
+      "images/wh_20/7.png",
+      "images/wh_20/8.jpg"
     ],
     "source_urls": [
-      "https://fordent.ru/upload/iblock/ba5/pana-max-plus-su-m4-foto.jpg",
-      "https://fordent.ru/upload/iblock/6d1/7.jpg",
-      "https://fordent.ru/upload/iblock/721/8.jpg",
-      "https://fordent.ru/upload/iblock/149/pana-max-plus-su-m4-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg"
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-75_l_g.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-12.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92_lg.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-86_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-97_l_2.jpg"
     ]
   },
   "coxo_21": {
@@ -748,31 +491,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_22": {
-    "name": "NSK Ti-Max X95L",
-    "brand": "NSK",
-    "code": "TI-MAX-X95L",
-    "images": [
-      "images/nsk_22/1.jpg",
-      "images/nsk_22/2.jpg",
-      "images/nsk_22/3.png",
-      "images/nsk_22/4.png",
-      "images/nsk_22/5.jpg",
-      "images/nsk_22/6.jpg",
-      "images/nsk_22/7.png",
-      "images/nsk_22/8.png"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/98c/ti-max-x95l-foto.jpg",
-      "https://fordent.ru/upload/iblock/3ca/ti-max-x95l-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/rk/a2a/ux52v8xa0wsmjzsz7r6mvkws8cqarflb/810_450.png",
-      "https://fordent.ru/upload/rk/0b8/9bd6nknjt4zmwez1cg8or2yoxw3ok1l2/810 × 450 (10).png"
-    ]
-  },
   "coxo_22": {
     "name": "COXO C-PUMA INT X",
     "brand": "COXO",
@@ -784,15 +502,26 @@
     "name": "W&H Alegra TE-100",
     "brand": "W&H",
     "code": "ALEGRA-TE-100",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_23": {
-    "name": "NSK FX-65m",
-    "brand": "NSK",
-    "code": "FX-65M",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_22/1.png",
+      "images/wh_22/2.png",
+      "images/wh_22/3.jpg",
+      "images/wh_22/4.jpg",
+      "images/wh_22/5.jpg",
+      "images/wh_22/6.jpg",
+      "images/wh_22/7.jpg",
+      "images/wh_22/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/i/m/img_4902.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/i/m/img_4902.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/c/a/cassette_28x18_nv_modele_-_182068_1_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/c/a/cassette_18x14_nv_modele_-_182066_1_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/c/a/cassette18x7_-_182069_2_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/m/i/micro1_1_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/1/8/182735_1_1_1_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/n/i/nichrominox_photo_cassette_3.png"
+    ]
   },
   "coxo_23": {
     "name": "COXO DB686 Q1",
@@ -819,13 +548,6 @@
     "name": "W&H Synea TA-96",
     "brand": "W&H",
     "code": "SYNEA-TA-96",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_24": {
-    "name": "NSK FX-57m",
-    "brand": "NSK",
-    "code": "FX-57M",
     "images": [],
     "source_urls": []
   },
@@ -856,31 +578,6 @@
     "code": "ALEGRA-WK-98",
     "images": [],
     "source_urls": []
-  },
-  "nsk_25": {
-    "name": "NSK Endo Mate TC2",
-    "brand": "NSK",
-    "code": "ENDO-MATE-TC2",
-    "images": [
-      "images/nsk_25/1.jpg",
-      "images/nsk_25/2.jpg",
-      "images/nsk_25/3.png",
-      "images/nsk_25/4.png",
-      "images/nsk_25/5.jpg",
-      "images/nsk_25/6.jpg",
-      "images/nsk_25/7.jpg",
-      "images/nsk_25/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/5ec/endo-mate-tc2-mp-y-foto.jpg",
-      "https://fordent.ru/upload/iblock/dbd/endo-mate-tc2-mp-y-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/785/rr0kv2ma97fw23v96fm175skhmsirqvd/endo-radar-foto.jpg"
-    ]
   },
   "coxo_25": {
     "name": "COXO DB686 LATTE",
@@ -920,13 +617,6 @@
       "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-99_lt.jpg"
     ]
   },
-  "nsk_26": {
-    "name": "NSK iPexil",
-    "brand": "NSK",
-    "code": "IPEXIL",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_26": {
     "name": "COXO C-BRIGHT",
     "brand": "COXO",
@@ -938,13 +628,6 @@
     "name": "W&H Synea TA-94",
     "brand": "W&H",
     "code": "SYNEA-TA-94",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_27": {
-    "name": "NSK Ti-ENDO",
-    "brand": "NSK",
-    "code": "TI-ENDO",
     "images": [],
     "source_urls": []
   },
@@ -974,13 +657,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_28": {
-    "name": "NSK EX-ENDO",
-    "brand": "NSK",
-    "code": "EX-ENDO",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_28": {
     "name": "COXO C-ROOT V",
     "brand": "COXO",
@@ -992,13 +668,6 @@
     "name": "W&H Synea WK-95",
     "brand": "W&H",
     "code": "SYNEA-WK-95",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_29": {
-    "name": "NSK S-Max Z45L",
-    "brand": "NSK",
-    "code": "S-MAX-Z45L",
     "images": [],
     "source_urls": []
   },
@@ -1016,13 +685,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_30": {
-    "name": "NSK Z85L",
-    "brand": "NSK",
-    "code": "Z85L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_30": {
     "name": "COXO C-SMART NOVA X",
     "brand": "COXO",
@@ -1034,13 +696,6 @@
     "name": "W&H Synea TA-93",
     "brand": "W&H",
     "code": "SYNEA-TA-93",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_31": {
-    "name": "NSK Z84L",
-    "brand": "NSK",
-    "code": "Z84L",
     "images": [],
     "source_urls": []
   },
@@ -1058,31 +713,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_32": {
-    "name": "NSK Z15L",
-    "brand": "NSK",
-    "code": "Z15L",
-    "images": [
-      "images/nsk_32/1.jpg",
-      "images/nsk_32/2.jpg",
-      "images/nsk_32/3.png",
-      "images/nsk_32/4.png",
-      "images/nsk_32/5.jpg",
-      "images/nsk_32/6.jpg",
-      "images/nsk_32/7.jpg",
-      "images/nsk_32/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/128/ti-max-z15l-foto.jpg",
-      "https://fordent.ru/upload/iblock/907/ti-max-z15l-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/c6f/t2-line-a-40-l-foto.jpg"
-    ]
-  },
   "coxo_32": {
     "name": "COXO C-TW2",
     "brand": "COXO",
@@ -1097,31 +727,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_33": {
-    "name": "NSK Z10L",
-    "brand": "NSK",
-    "code": "Z10L",
-    "images": [
-      "images/nsk_33/1.jpg",
-      "images/nsk_33/2.jpg",
-      "images/nsk_33/3.png",
-      "images/nsk_33/4.png",
-      "images/nsk_33/5.jpg",
-      "images/nsk_33/6.jpg",
-      "images/nsk_33/7.jpg",
-      "images/nsk_33/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/145/ti-max-z10l-foto.jpg",
-      "https://fordent.ru/upload/iblock/0c8/ti-max-z10l-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/c6f/t2-line-a-40-l-foto.jpg"
-    ]
-  },
   "coxo_33": {
     "name": "COXO C-SK1",
     "brand": "COXO",
@@ -1133,13 +738,6 @@
     "name": "W&H Alegra WK-94",
     "brand": "W&H",
     "code": "ALEGRA-WK-94",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_34": {
-    "name": "NSK Z24L",
-    "brand": "NSK",
-    "code": "Z24L",
     "images": [],
     "source_urls": []
   },
@@ -1157,13 +755,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_35": {
-    "name": "NSK Z65L",
-    "brand": "NSK",
-    "code": "Z65L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_35": {
     "name": "COXO C-ROOT V",
     "brand": "COXO",
@@ -1175,13 +766,6 @@
     "name": "W&H Alegra TE-93",
     "brand": "W&H",
     "code": "ALEGRA-TE-93",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_36": {
-    "name": "NSK Z12L",
-    "brand": "NSK",
-    "code": "Z12L",
     "images": [],
     "source_urls": []
   },
@@ -1211,13 +795,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_37": {
-    "name": "NSK Z35L",
-    "brand": "NSK",
-    "code": "Z35L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_37": {
     "name": "COXO C-Sailor",
     "brand": "COXO",
@@ -1229,13 +806,6 @@
     "name": "W&H Synea WK-91",
     "brand": "W&H",
     "code": "SYNEA-WK-91",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_38": {
-    "name": "NSK X95EX",
-    "brand": "NSK",
-    "code": "X95EX",
     "images": [],
     "source_urls": []
   },
@@ -1252,31 +822,6 @@
     "code": "ALEGRA-TE-92",
     "images": [],
     "source_urls": []
-  },
-  "nsk_39": {
-    "name": "NSK X65L",
-    "brand": "NSK",
-    "code": "X65L",
-    "images": [
-      "images/nsk_39/1.jpg",
-      "images/nsk_39/2.jpg",
-      "images/nsk_39/3.png",
-      "images/nsk_39/4.png",
-      "images/nsk_39/5.jpg",
-      "images/nsk_39/6.jpg",
-      "images/nsk_39/7.jpg",
-      "images/nsk_39/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/9ff/ti-max-x65l-foto.jpg",
-      "https://fordent.ru/upload/iblock/d43/ti-max-x65l-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/0da/sgs-es-foto.jpg"
-    ]
   },
   "coxo_39": {
     "name": "COXO DB-686X",
@@ -1306,31 +851,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_40": {
-    "name": "NSK X12L",
-    "brand": "NSK",
-    "code": "X12L",
-    "images": [
-      "images/nsk_40/1.jpg",
-      "images/nsk_40/2.jpg",
-      "images/nsk_40/3.png",
-      "images/nsk_40/4.png",
-      "images/nsk_40/5.jpg",
-      "images/nsk_40/6.jpg",
-      "images/nsk_40/7.jpg",
-      "images/nsk_40/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/6ff/ti-max-x12l-foto.jpg",
-      "https://fordent.ru/upload/iblock/53d/ti-max-x12l-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/c6f/t2-line-a-40-l-foto.jpg"
-    ]
-  },
   "coxo_40": {
     "name": "COXO C-PUMA Mini",
     "brand": "COXO",
@@ -1342,13 +862,6 @@
     "name": "W&H Alegra WK-97",
     "brand": "W&H",
     "code": "ALEGRA-WK-97",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_41": {
-    "name": "NSK X35L",
-    "brand": "NSK",
-    "code": "X35L",
     "images": [],
     "source_urls": []
   },
@@ -1366,13 +879,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_42": {
-    "name": "NSK FX15m",
-    "brand": "NSK",
-    "code": "FX15M",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_42": {
     "name": "COXO C-Root ZX",
     "brand": "COXO",
@@ -1384,13 +890,6 @@
     "name": "W&H Alegra TE-91",
     "brand": "W&H",
     "code": "ALEGRA-TE-91",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_43": {
-    "name": "NSK FX65m",
-    "brand": "NSK",
-    "code": "FX65M",
     "images": [],
     "source_urls": []
   },
@@ -1419,15 +918,26 @@
     "name": "W&H Synea WK-90",
     "brand": "W&H",
     "code": "SYNEA-WK-90",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_44": {
-    "name": "NSK AR-EC",
-    "brand": "NSK",
-    "code": "AR-EC",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_43/1.jpg",
+      "images/wh_43/2.jpg",
+      "images/wh_43/3.png",
+      "images/wh_43/4.png",
+      "images/wh_43/5.png",
+      "images/wh_43/6.jpg",
+      "images/wh_43/7.png",
+      "images/wh_43/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_10207550.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-56_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-9.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30056000.png"
+    ]
   },
   "coxo_44": {
     "name": "COXO CX-F1",
@@ -1451,13 +961,6 @@
       "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_wk-93_lt_1.jpg"
     ]
   },
-  "nsk_45": {
-    "name": "NSK AR-ECM",
-    "brand": "NSK",
-    "code": "AR-ECM",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_45": {
     "name": "COXO CX-S1",
     "brand": "COXO",
@@ -1469,13 +972,6 @@
     "name": "W&H Synea TA-95 LED",
     "brand": "W&H",
     "code": "SYNEA-TA-95-LED",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_46": {
-    "name": "NSK EX-6B",
-    "brand": "NSK",
-    "code": "EX-6B",
     "images": [],
     "source_urls": []
   },
@@ -1501,13 +997,6 @@
       "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_wk-99_lt_s.jpg"
     ]
   },
-  "nsk_47": {
-    "name": "NSK MP-ER64",
-    "brand": "NSK",
-    "code": "MP-ER64",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_47": {
     "name": "COXO C-HEAL",
     "brand": "COXO",
@@ -1519,15 +1008,26 @@
     "name": "W&H Synea Fusion TE-100",
     "brand": "W&H",
     "code": "SYNEA-FUSION-TE-100",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_48": {
-    "name": "NSK Ti-Max Z990L",
-    "brand": "NSK",
-    "code": "TI-MAX-Z990L",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_47/1.png",
+      "images/wh_47/2.png",
+      "images/wh_47/3.jpg",
+      "images/wh_47/4.jpg",
+      "images/wh_47/5.jpg",
+      "images/wh_47/6.jpg",
+      "images/wh_47/7.jpg",
+      "images/wh_47/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/i/m/img_4902.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/i/m/img_4902.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/c/a/cassette_28x18_nv_modele_-_182068_1_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/c/a/cassette_18x14_nv_modele_-_182066_1_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/c/a/cassette18x7_-_182069_2_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/m/i/micro1_1_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/1/8/182735_1_1_1_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/n/i/nichrominox_photo_cassette_3.png"
+    ]
   },
   "coxo_48": {
     "name": "COXO C-PROBE",
@@ -1543,31 +1043,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_49": {
-    "name": "NSK Ti-Max X600L",
-    "brand": "NSK",
-    "code": "TI-MAX-X600L",
-    "images": [
-      "images/nsk_49/1.jpg",
-      "images/nsk_49/2.png",
-      "images/nsk_49/3.png",
-      "images/nsk_49/4.jpg",
-      "images/nsk_49/5.jpg",
-      "images/nsk_49/6.jpg",
-      "images/nsk_49/7.jpg",
-      "images/nsk_49/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/641/ti-max-x600l-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/130/rxu3j3gmpzj4i5giljtiavk89k2x37h0/ptl-cl-led-foto.jpg",
-      "https://fordent.ru/upload/iblock/dbe/mercury-332k3-foto.jpg"
-    ]
-  },
   "coxo_49": {
     "name": "COXO C-TORQUE-X",
     "brand": "COXO",
@@ -1579,13 +1054,6 @@
     "name": "W&H Alegra TE-89",
     "brand": "W&H",
     "code": "ALEGRA-TE-89",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_50": {
-    "name": "NSK FX-75m",
-    "brand": "NSK",
-    "code": "FX-75M",
     "images": [],
     "source_urls": []
   },
@@ -1615,31 +1083,31 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_51": {
-    "name": "NSK S-Max M700L",
-    "brand": "NSK",
-    "code": "S-MAX-M700L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_51": {
     "name": "COXO C-BLADE Pro",
     "brand": "COXO",
     "code": "C-BLADE-PRO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_51/1.jpg",
+      "images/coxo_51/2.jpg",
+      "images/coxo_51/3.jpg",
+      "images/coxo_51/4.jpg",
+      "images/coxo_51/5.jpg",
+      "images/coxo_51/6.jpg"
+    ],
+    "source_urls": [
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/01_00ed3d75-06e7-4886-8f2a-09b05ec2d4d1.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/02_9922d376-7420-435b-9b4d-ebbf374de06d.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/03_492b8eef-aefc-4e64-888b-709a7e328a33.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/05_5fe8cd59-214b-4f3e-b8b7-d6eb163ed422.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/06_cef11bb1-f0a3-48ef-b4d1-3c9077266e37.jpg?v=1740363618",
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/07_98c10057-5db4-4d92-b7a0-e886a613dbb0.jpg?v=1740363618"
+    ]
   },
   "wh_51": {
     "name": "W&H Alegra WK-88",
     "brand": "W&H",
     "code": "ALEGRA-WK-88",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_52": {
-    "name": "NSK Pana-Max3",
-    "brand": "NSK",
-    "code": "PANA-MAX3",
     "images": [],
     "source_urls": []
   },
@@ -1657,13 +1125,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_53": {
-    "name": "NSK Nano95LS-PRO",
-    "brand": "NSK",
-    "code": "NANO95LS-PRO",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_53": {
     "name": "COXO CX-MINI",
     "brand": "COXO",
@@ -1675,13 +1136,6 @@
     "name": "W&H Alegra TE-88",
     "brand": "W&H",
     "code": "ALEGRA-TE-88",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_54": {
-    "name": "NSK Varios 570",
-    "brand": "NSK",
-    "code": "VARIOS-570",
     "images": [],
     "source_urls": []
   },
@@ -1713,13 +1167,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_55": {
-    "name": "NSK Z990L",
-    "brand": "NSK",
-    "code": "Z990L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_55": {
     "name": "COXO C-SEAL",
     "brand": "COXO",
@@ -1731,13 +1178,6 @@
     "name": "W&H Alegra WK-87",
     "brand": "W&H",
     "code": "ALEGRA-WK-87",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_56": {
-    "name": "NSK Z50L",
-    "brand": "NSK",
-    "code": "Z50L",
     "images": [],
     "source_urls": []
   },
@@ -1755,13 +1195,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_57": {
-    "name": "NSK X75L",
-    "brand": "NSK",
-    "code": "X75L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_57": {
     "name": "COXO CX-F3",
     "brand": "COXO",
@@ -1773,13 +1206,6 @@
     "name": "W&H Synea TA-87",
     "brand": "W&H",
     "code": "SYNEA-TA-87",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_58": {
-    "name": "NSK Ti-Max SG-50",
-    "brand": "NSK",
-    "code": "TI-MAX-SG-50",
     "images": [],
     "source_urls": []
   },
@@ -1797,13 +1223,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_59": {
-    "name": "NSK Endo-Mate DT Pro",
-    "brand": "NSK",
-    "code": "ENDO-MATE-DT-PRO",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_59": {
     "name": "COXO CX-B1",
     "brand": "COXO",
@@ -1817,19 +1236,24 @@
     "code": "ALEGRA-WK-86",
     "images": [
       "images/wh_59/1.png",
-      "images/wh_59/2.png"
+      "images/wh_59/2.png",
+      "images/wh_59/3.jpg",
+      "images/wh_59/4.png",
+      "images/wh_59/5.jpg",
+      "images/wh_59/6.jpg",
+      "images/wh_59/7.png",
+      "images/wh_59/8.png"
     ],
     "source_urls": [
       "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-86_lt.png",
-      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_wk-86_lt.png"
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_wk-86_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-99_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-75_l_g.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rq-54_roto_quick_coupling.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_led_g_contra-angle_dental_handpiece_-_ref_10255600_v1.png"
     ]
-  },
-  "nsk_60": {
-    "name": "NSK FX-25m Plus",
-    "brand": "NSK",
-    "code": "FX-25M-PLUS",
-    "images": [],
-    "source_urls": []
   },
   "coxo_60": {
     "name": "COXO C-PUMA INT",
@@ -1842,13 +1266,6 @@
     "name": "W&H Synea TA-86",
     "brand": "W&H",
     "code": "SYNEA-TA-86",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_61": {
-    "name": "NSK Ti-Max Z500L",
-    "brand": "NSK",
-    "code": "TI-MAX-Z500L",
     "images": [],
     "source_urls": []
   },
@@ -1880,13 +1297,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_62": {
-    "name": "NSK S-Max M300L",
-    "brand": "NSK",
-    "code": "S-MAX-M300L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_62": {
     "name": "COXO C-CRACK",
     "brand": "COXO",
@@ -1900,19 +1310,24 @@
     "code": "SYNEA-WK-86",
     "images": [
       "images/wh_62/1.png",
-      "images/wh_62/2.png"
+      "images/wh_62/2.png",
+      "images/wh_62/3.png",
+      "images/wh_62/4.png",
+      "images/wh_62/5.png",
+      "images/wh_62/6.jpg",
+      "images/wh_62/7.png",
+      "images/wh_62/8.png"
     ],
     "source_urls": [
       "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-86_lt.png",
-      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_wk-86_lt.png"
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_wk-86_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-9.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-15_surgical_handpiece_straight_11_-_ref_30060000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-75.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt.png"
     ]
-  },
-  "nsk_63": {
-    "name": "NSK Pana-Air",
-    "brand": "NSK",
-    "code": "PANA-AIR",
-    "images": [],
-    "source_urls": []
   },
   "coxo_63": {
     "name": "COXO CX-W1",
@@ -1925,13 +1340,6 @@
     "name": "W&H Synea Fusion WK-85",
     "brand": "W&H",
     "code": "SYNEA-FUSION-WK-85",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_64": {
-    "name": "NSK Ti-Max X300",
-    "brand": "NSK",
-    "code": "TI-MAX-X300",
     "images": [],
     "source_urls": []
   },
@@ -1949,31 +1357,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_65": {
-    "name": "NSK Surgic Pro",
-    "brand": "NSK",
-    "code": "SURGIC-PRO",
-    "images": [
-      "images/nsk_65/1.jpg",
-      "images/nsk_65/2.png",
-      "images/nsk_65/3.jpg",
-      "images/nsk_65/4.png",
-      "images/nsk_65/5.png",
-      "images/nsk_65/6.jpg",
-      "images/nsk_65/7.jpg",
-      "images/nsk_65/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/fe7/0nbw950l02darki46he977d2yoomg8d1/surgic-pro-2-opt-foto.jpg",
-      "https://fordent.ru/upload/iblock/48b/ui3ybz9o4v0rexy643fk6hoj60eok68c/1.png",
-      "https://fordent.ru/upload/iblock/e2e/n7i5gvua8o1id6kvq3eivk34mpqowme7/surgic-pro-2-opt-foto.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/937/nu9201bze84r06fnlmjnsq16m3rxf42e/05.jpg"
-    ]
-  },
   "coxo_65": {
     "name": "COXO C-TEMP",
     "brand": "COXO",
@@ -1985,13 +1368,6 @@
     "name": "W&H Synea TA-84",
     "brand": "W&H",
     "code": "SYNEA-TA-84",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_66": {
-    "name": "NSK EX-8B",
-    "brand": "NSK",
-    "code": "EX-8B",
     "images": [],
     "source_urls": []
   },
@@ -2009,13 +1385,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_67": {
-    "name": "NSK MP-ER128",
-    "brand": "NSK",
-    "code": "MP-ER128",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_67": {
     "name": "COXO C-LUX",
     "brand": "COXO",
@@ -2030,13 +1399,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_68": {
-    "name": "NSK Ti-Max Z750L",
-    "brand": "NSK",
-    "code": "TI-MAX-Z750L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_68": {
     "name": "COXO CX-MAX",
     "brand": "COXO",
@@ -2048,13 +1410,6 @@
     "name": "W&H Alegra WK-84",
     "brand": "W&H",
     "code": "ALEGRA-WK-84",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_69": {
-    "name": "NSK Nano85",
-    "brand": "NSK",
-    "code": "NANO85",
     "images": [],
     "source_urls": []
   },
@@ -2086,31 +1441,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_70": {
-    "name": "NSK X-Smart Plus",
-    "brand": "NSK",
-    "code": "X-SMART-PLUS",
-    "images": [
-      "images/nsk_70/1.jpg",
-      "images/nsk_70/2.jpg",
-      "images/nsk_70/3.jpg",
-      "images/nsk_70/4.jpg",
-      "images/nsk_70/5.png",
-      "images/nsk_70/6.png",
-      "images/nsk_70/7.jpg",
-      "images/nsk_70/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/dfc/x-smart-plus-foto.jpg",
-      "https://fordent.ru/upload/iblock/920/b609f200f3f7e802854d295df8b24b1a.jpg",
-      "https://fordent.ru/upload/iblock/a54/a32015273405af45f0173d844f0faf59.jpg",
-      "https://fordent.ru/upload/iblock/d29/852fa91a20dcc4c0bf382bf4b5a95f71.jpg",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg"
-    ]
-  },
   "coxo_70": {
     "name": "COXO C-SPIN",
     "brand": "COXO",
@@ -2122,13 +1452,6 @@
     "name": "W&H Alegra TE-84",
     "brand": "W&H",
     "code": "ALEGRA-TE-84",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_71": {
-    "name": "NSK FX-35m",
-    "brand": "NSK",
-    "code": "FX-35M",
     "images": [],
     "source_urls": []
   },
@@ -2146,13 +1469,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_72": {
-    "name": "NSK AR-EC Plus",
-    "brand": "NSK",
-    "code": "AR-EC-PLUS",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_72": {
     "name": "COXO C-SPEED",
     "brand": "COXO",
@@ -2167,31 +1483,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_73": {
-    "name": "NSK Endo-Mate",
-    "brand": "NSK",
-    "code": "ENDO-MATE",
-    "images": [
-      "images/nsk_73/1.jpg",
-      "images/nsk_73/2.jpg",
-      "images/nsk_73/3.png",
-      "images/nsk_73/4.png",
-      "images/nsk_73/5.jpg",
-      "images/nsk_73/6.jpg",
-      "images/nsk_73/7.jpg",
-      "images/nsk_73/8.jpg"
-    ],
-    "source_urls": [
-      "https://fordent.ru/upload/iblock/5ec/endo-mate-tc2-mp-y-foto.jpg",
-      "https://fordent.ru/upload/iblock/dbd/endo-mate-tc2-mp-y-foto.jpg",
-      "https://fordent.ru/upload/rk/374/angnns0f9n95wzm0291buoulpz1lr57w/1230_110.png",
-      "https://fordent.ru/upload/rk/e43/w3m0l6k1a540f1recbv6iiijg9oq8gxz/1230 × 110 (4).png",
-      "https://fordent.ru/upload/rk/4a2/ip88tfp7j8s2iio0k3o90v29x9ziqw3e/1230_110-2.jpg",
-      "https://fordent.ru/upload/rk/3c6/wlmn2mzcx2kdmb2yk0yklrjr3rwbb7fn/1230_110.jpg",
-      "https://fordent.ru/upload/iblock/f5e/1.jpg",
-      "https://fordent.ru/upload/iblock/785/rr0kv2ma97fw23v96fm175skhmsirqvd/endo-radar-foto.jpg"
-    ]
-  },
   "coxo_73": {
     "name": "COXO C-WAVE",
     "brand": "COXO",
@@ -2203,13 +1494,6 @@
     "name": "W&H Synea TA-82",
     "brand": "W&H",
     "code": "SYNEA-TA-82",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_74": {
-    "name": "NSK Z200L",
-    "brand": "NSK",
-    "code": "Z200L",
     "images": [],
     "source_urls": []
   },
@@ -2227,13 +1511,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_75": {
-    "name": "NSK X150L",
-    "brand": "NSK",
-    "code": "X150L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_75": {
     "name": "COXO C-SMART-3",
     "brand": "COXO",
@@ -2245,13 +1522,6 @@
     "name": "W&H Alegra TE-83",
     "brand": "W&H",
     "code": "ALEGRA-TE-83",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_76": {
-    "name": "NSK Ti-Max SG-65",
-    "brand": "NSK",
-    "code": "TI-MAX-SG-65",
     "images": [],
     "source_urls": []
   },
@@ -2269,13 +1539,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_77": {
-    "name": "NSK FX-85m",
-    "brand": "NSK",
-    "code": "FX-85M",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_77": {
     "name": "COXO DB-688",
     "brand": "COXO",
@@ -2287,13 +1550,6 @@
     "name": "W&H Alegra WK-82",
     "brand": "W&H",
     "code": "ALEGRA-WK-82",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_78": {
-    "name": "NSK S-Max M800L",
-    "brand": "NSK",
-    "code": "S-MAX-M800L",
     "images": [],
     "source_urls": []
   },
@@ -2311,13 +1567,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_79": {
-    "name": "NSK Pana-Spray",
-    "brand": "NSK",
-    "code": "PANA-SPRAY",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_79": {
     "name": "COXO C-PEEK",
     "brand": "COXO",
@@ -2331,19 +1580,24 @@
     "code": "SYNEA-FUSION-TE-95",
     "images": [
       "images/wh_79/1.png",
-      "images/wh_79/2.png"
+      "images/wh_79/2.png",
+      "images/wh_79/3.jpg",
+      "images/wh_79/4.jpg",
+      "images/wh_79/5.png",
+      "images/wh_79/6.png",
+      "images/wh_79/7.png",
+      "images/wh_79/8.jpg"
     ],
     "source_urls": [
       "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
-      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png"
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/e/we-99_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_he-43_alegra_straight_dental_handpiece_-_ref_30119000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/h/a/handpiece_hg-43_a_image_001068_00_150dpi_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_hk-43_lt_synea_vision_straight_dental_handpiece_-_ref_30028000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-99.jpg"
     ]
-  },
-  "nsk_80": {
-    "name": "NSK Varios 970",
-    "brand": "NSK",
-    "code": "VARIOS-970",
-    "images": [],
-    "source_urls": []
   },
   "coxo_80": {
     "name": "COXO C-FORCE",
@@ -2356,13 +1610,6 @@
     "name": "W&H Alegra TE-82",
     "brand": "W&H",
     "code": "ALEGRA-TE-82",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_81": {
-    "name": "NSK Z330L",
-    "brand": "NSK",
-    "code": "Z330L",
     "images": [],
     "source_urls": []
   },
@@ -2380,13 +1627,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_82": {
-    "name": "NSK X50X",
-    "brand": "NSK",
-    "code": "X50X",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_82": {
     "name": "COXO C-SENSE",
     "brand": "COXO",
@@ -2398,13 +1638,6 @@
     "name": "W&H Alegra WK-81",
     "brand": "W&H",
     "code": "ALEGRA-WK-81",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_83": {
-    "name": "NSK Ti-ENDO Pro",
-    "brand": "NSK",
-    "code": "TI-ENDO-PRO",
     "images": [],
     "source_urls": []
   },
@@ -2422,13 +1655,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_84": {
-    "name": "NSK EX-10B",
-    "brand": "NSK",
-    "code": "EX-10B",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_84": {
     "name": "COXO C-GLOW",
     "brand": "COXO",
@@ -2440,13 +1666,6 @@
     "name": "W&H Alegra TE-81",
     "brand": "W&H",
     "code": "ALEGRA-TE-81",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_85": {
-    "name": "NSK MP-ER256",
-    "brand": "NSK",
-    "code": "MP-ER256",
     "images": [],
     "source_urls": []
   },
@@ -2464,13 +1683,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_86": {
-    "name": "NSK Nano65",
-    "brand": "NSK",
-    "code": "NANO65",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_86": {
     "name": "COXO CX-CORE",
     "brand": "COXO",
@@ -2482,13 +1694,6 @@
     "name": "W&H Alegra WK-80",
     "brand": "W&H",
     "code": "ALEGRA-WK-80",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_87": {
-    "name": "NSK Ti-Max Z350L",
-    "brand": "NSK",
-    "code": "TI-MAX-Z350L",
     "images": [],
     "source_urls": []
   },
@@ -2506,13 +1711,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_88": {
-    "name": "NSK FX-50m",
-    "brand": "NSK",
-    "code": "FX-50M",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_88": {
     "name": "COXO DB-690",
     "brand": "COXO",
@@ -2524,13 +1722,6 @@
     "name": "W&H Alegra TE-80",
     "brand": "W&H",
     "code": "ALEGRA-TE-80",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_89": {
-    "name": "NSK S-Max M200L",
-    "brand": "NSK",
-    "code": "S-MAX-M200L",
     "images": [],
     "source_urls": []
   },
@@ -2548,13 +1739,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_90": {
-    "name": "NSK Pana-Flow",
-    "brand": "NSK",
-    "code": "PANA-FLOW",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_90": {
     "name": "COXO C-FLEX Pro",
     "brand": "COXO",
@@ -2566,13 +1750,6 @@
     "name": "W&H Synea Fusion TA-90",
     "brand": "W&H",
     "code": "SYNEA-FUSION-TA-90",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_91": {
-    "name": "NSK Ti-Max X150",
-    "brand": "NSK",
-    "code": "TI-MAX-X150",
     "images": [],
     "source_urls": []
   },
@@ -2590,13 +1767,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_92": {
-    "name": "NSK Z400L",
-    "brand": "NSK",
-    "code": "Z400L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_92": {
     "name": "COXO C-PLUS",
     "brand": "COXO",
@@ -2608,13 +1778,6 @@
     "name": "W&H Synea TA-78",
     "brand": "W&H",
     "code": "SYNEA-TA-78",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_93": {
-    "name": "NSK X250L",
-    "brand": "NSK",
-    "code": "X250L",
     "images": [],
     "source_urls": []
   },
@@ -2632,13 +1795,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_94": {
-    "name": "NSK AR-EC-X",
-    "brand": "NSK",
-    "code": "AR-EC-X",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_94": {
     "name": "COXO C-TECH",
     "brand": "COXO",
@@ -2650,13 +1806,6 @@
     "name": "W&H Synea WK-78",
     "brand": "W&H",
     "code": "SYNEA-WK-78",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_95": {
-    "name": "NSK EX-5B",
-    "brand": "NSK",
-    "code": "EX-5B",
     "images": [],
     "source_urls": []
   },
@@ -2674,13 +1823,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_96": {
-    "name": "NSK Varios 770",
-    "brand": "NSK",
-    "code": "VARIOS-770",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_96": {
     "name": "COXO C-PRIME",
     "brand": "COXO",
@@ -2692,13 +1834,6 @@
     "name": "W&H Alegra WK-78",
     "brand": "W&H",
     "code": "ALEGRA-WK-78",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_97": {
-    "name": "NSK Nano45",
-    "brand": "NSK",
-    "code": "NANO45",
     "images": [],
     "source_urls": []
   },
@@ -2716,13 +1851,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_98": {
-    "name": "NSK Ti-Max Z150L",
-    "brand": "NSK",
-    "code": "TI-MAX-Z150L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_98": {
     "name": "COXO C-SCOPE",
     "brand": "COXO",
@@ -2734,13 +1862,6 @@
     "name": "W&H Alegra TE-78",
     "brand": "W&H",
     "code": "ALEGRA-TE-78",
-    "images": [],
-    "source_urls": []
-  },
-  "nsk_99": {
-    "name": "NSK FX-95m",
-    "brand": "NSK",
-    "code": "FX-95M",
     "images": [],
     "source_urls": []
   },
@@ -2758,13 +1879,6 @@
     "images": [],
     "source_urls": []
   },
-  "nsk_100": {
-    "name": "NSK S-Max M900L",
-    "brand": "NSK",
-    "code": "S-MAX-M900L",
-    "images": [],
-    "source_urls": []
-  },
   "coxo_100": {
     "name": "COXO C-NOVA",
     "brand": "COXO",
@@ -2778,5 +1892,1762 @@
     "code": "SYNEA-FUSION-TE-90",
     "images": [],
     "source_urls": []
+  },
+  "nsk_1": {
+    "name": "NSK Ti-Max Z900L",
+    "brand": "NSK",
+    "code": "TI-MAX-Z900L",
+    "images": [
+      "images/nsk_1/1.png",
+      "images/nsk_1/2.png",
+      "images/nsk_1/3.png",
+      "images/nsk_1/4.png",
+      "images/nsk_1/5.png",
+      "images/nsk_1/6.png",
+      "images/nsk_1/7.png",
+      "images/nsk_1/8.png",
+      "images/nsk_1/9.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Two_way_left.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Two_way_right.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TWOWAY_LAST.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_Two_Way_Spray.png"
+    ]
+  },
+  "nsk_2": {
+    "name": "NSK Ti-Max Z800L",
+    "brand": "NSK",
+    "code": "TI-MAX-Z800L",
+    "images": [
+      "images/nsk_2/1.png",
+      "images/nsk_2/2.png",
+      "images/nsk_2/3.png",
+      "images/nsk_2/4.png",
+      "images/nsk_2/5.png",
+      "images/nsk_2/6.png",
+      "images/nsk_2/7.png",
+      "images/nsk_2/8.png",
+      "images/nsk_2/9.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Two_way_left.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Two_way_right.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TWOWAY_LAST.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_Two_Way_Spray.png"
+    ]
+  },
+  "nsk_3": {
+    "name": "NSK S-Max M600L",
+    "brand": "NSK",
+    "code": "S-MAX-M600L",
+    "images": [
+      "images/nsk_3/1.jpg",
+      "images/nsk_3/2.png",
+      "images/nsk_3/3.png",
+      "images/nsk_3/4.png",
+      "images/nsk_3/5.png",
+      "images/nsk_3/6.png",
+      "images/nsk_3/7.png",
+      "images/nsk_3/8.jpg",
+      "images/nsk_3/9.jpg",
+      "images/nsk_3/10.jpg",
+      "images/nsk_3/11.jpg",
+      "images/nsk_3/12.jpg"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_sp_1215.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_x65l-1.png"
+    ]
+  },
+  "nsk_4": {
+    "name": "NSK S-Max pico",
+    "brand": "NSK",
+    "code": "S-MAX-PICO",
+    "images": [
+      "images/nsk_4/1.png",
+      "images/nsk_4/2.png",
+      "images/nsk_4/3.jpg",
+      "images/nsk_4/4.png",
+      "images/nsk_4/5.png",
+      "images/nsk_4/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_pico_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_01-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_pico_04_220629.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/s_max_pico.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/s_max_pico_kl-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/s_max_pico_sl-1.png"
+    ]
+  },
+  "nsk_5": {
+    "name": "NSK Ti-Max X450L",
+    "brand": "NSK",
+    "code": "TI-MAX-X450L",
+    "images": [
+      "images/nsk_5/1.png",
+      "images/nsk_5/2.png",
+      "images/nsk_5/3.png",
+      "images/nsk_5/4.png",
+      "images/nsk_5/5.png",
+      "images/nsk_5/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png"
+    ]
+  },
+  "nsk_6": {
+    "name": "NSK Pana-Max2",
+    "brand": "NSK",
+    "code": "PANA-MAX2",
+    "images": [
+      "images/nsk_6/1.png",
+      "images/nsk_6/2.png",
+      "images/nsk_6/3.png",
+      "images/nsk_6/4.png",
+      "images/nsk_6/5.png",
+      "images/nsk_6/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_BASIC_pana-max2_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_BASIC_pana-max2_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_BASIC_pana-max2_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_BASIC_pana-max2_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_01-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png"
+    ]
+  },
+  "nsk_7": {
+    "name": "NSK Ti-Max Z95L",
+    "brand": "NSK",
+    "code": "TI-MAX-Z95L",
+    "images": [
+      "images/nsk_7/1.png",
+      "images/nsk_7/2.png",
+      "images/nsk_7/3.png",
+      "images/nsk_7/4.png",
+      "images/nsk_7/5.png",
+      "images/nsk_7/6.png",
+      "images/nsk_7/7.png",
+      "images/nsk_7/8.png",
+      "images/nsk_7/9.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Two_way_left.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Two_way_right.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TWOWAY_LAST.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_Two_Way_Spray.png"
+    ]
+  },
+  "nsk_8": {
+    "name": "NSK Ti-Max Z45L",
+    "brand": "NSK",
+    "code": "TI-MAX-Z45L",
+    "images": [
+      "images/nsk_8/1.png",
+      "images/nsk_8/2.png",
+      "images/nsk_8/3.png",
+      "images/nsk_8/4.png",
+      "images/nsk_8/5.png",
+      "images/nsk_8/6.png",
+      "images/nsk_8/7.png",
+      "images/nsk_8/8.png",
+      "images/nsk_8/9.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_z45_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_z45_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_9": {
+    "name": "NSK nano95LS",
+    "brand": "NSK",
+    "code": "NANO95LS",
+    "images": [
+      "images/nsk_9/1.png",
+      "images/nsk_9/2.png",
+      "images/nsk_9/3.png",
+      "images/nsk_9/4.png",
+      "images/nsk_9/5.png",
+      "images/nsk_9/6.png",
+      "images/nsk_9/7.png",
+      "images/nsk_9/8.png",
+      "images/nsk_9/9.png",
+      "images/nsk_9/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_micro_fn_quickstop.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/smax_micro_special_fn2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/smax_micro_special_fn3.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/smax_micro_special_fn4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_06.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_nano_95ls.png"
+    ]
+  },
+  "nsk_10": {
+    "name": "NSK X25L",
+    "brand": "NSK",
+    "code": "X25L",
+    "images": [
+      "images/nsk_10/1.png",
+      "images/nsk_10/2.png",
+      "images/nsk_10/3.png",
+      "images/nsk_10/4.png",
+      "images/nsk_10/5.png",
+      "images/nsk_10/6.png",
+      "images/nsk_10/7.png",
+      "images/nsk_10/8.png",
+      "images/nsk_10/9.png",
+      "images/nsk_10/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_11": {
+    "name": "NSK FX25m",
+    "brand": "NSK",
+    "code": "FX25M",
+    "images": [
+      "images/nsk_11/1.png",
+      "images/nsk_11/2.png",
+      "images/nsk_11/3.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/kf_2_micromotors.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/air_x205l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/m205_lg.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_S-MaxM205_M4_500Ã275_230908.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/fx205.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_z_z95l_2020.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_7_TiX57L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_6_TiX55L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/FX57_y_al_1410.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_NLZ_NLZ-Endo-handpiece_380Ã240_231114_0_NLZ.png"
+    ]
+  },
+  "nsk_12": {
+    "name": "NSK NAC-EC",
+    "brand": "NSK",
+    "code": "NAC-EC",
+    "images": [
+      "images/nsk_12/1.png",
+      "images/nsk_12/2.png",
+      "images/nsk_12/3.png",
+      "images/nsk_12/4.png",
+      "images/nsk_12/5.png",
+      "images/nsk_12/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_nac_ec-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_6d.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_5b.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_fpb-y_m.png"
+    ]
+  },
+  "nsk_13": {
+    "name": "NSK FPB-EC",
+    "brand": "NSK",
+    "code": "FPB-EC",
+    "images": [
+      "images/nsk_13/1.png",
+      "images/nsk_13/2.png",
+      "images/nsk_13/3.png",
+      "images/nsk_13/4.png",
+      "images/nsk_13/5.png",
+      "images/nsk_13/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_nac_ec-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_6d.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_5b.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_fpb-y_m.png"
+    ]
+  },
+  "nsk_14": {
+    "name": "NSK FX-205M",
+    "brand": "NSK",
+    "code": "FX-205M",
+    "images": [
+      "images/nsk_14/1.png",
+      "images/nsk_14/2.png",
+      "images/nsk_14/3.png",
+      "images/nsk_14/4.png",
+      "images/nsk_14/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/kf_2_micromotors.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/air_x205l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/m205_lg.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_S-MaxM205_M4_500Ã275_230908.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/fx205.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_z_z95l_2020.png"
+    ]
+  },
+  "nsk_15": {
+    "name": "NSK Surgic AP",
+    "brand": "NSK",
+    "code": "SURGIC-AP",
+    "images": [
+      "images/nsk_15/1.png",
+      "images/nsk_15/2.png",
+      "images/nsk_15/3.png",
+      "images/nsk_15/4.png",
+      "images/nsk_15/5.png",
+      "images/nsk_15/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro_06-1.png"
+    ]
+  },
+  "nsk_16": {
+    "name": "NSK Endo Mate DT",
+    "brand": "NSK",
+    "code": "ENDO-MATE-DT",
+    "images": [
+      "images/nsk_16/1.png",
+      "images/nsk_16/2.png",
+      "images/nsk_16/3.png",
+      "images/nsk_16/4.png",
+      "images/nsk_16/5.png",
+      "images/nsk_16/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_06.png"
+    ]
+  },
+  "nsk_17": {
+    "name": "NSK Varios 370",
+    "brand": "NSK",
+    "code": "VARIOS-370",
+    "images": [
+      "images/nsk_17/1.png",
+      "images/nsk_17/2.png",
+      "images/nsk_17/3.png",
+      "images/nsk_17/4.png",
+      "images/nsk_17/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/VA2HP_441x193pix_241004a.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/oral_varios_ultrasonic_370_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/oral_variosseries_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/VA2HP_hand_497x376pix_241003a.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/oral_variosseries_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Varios_1000Ã500_231116_3_Vario-170.png"
+    ]
+  },
+  "nsk_18": {
+    "name": "NSK Z95L",
+    "brand": "NSK",
+    "code": "Z95L",
+    "images": [
+      "images/nsk_18/1.png",
+      "images/nsk_18/2.png",
+      "images/nsk_18/3.png",
+      "images/nsk_18/4.png",
+      "images/nsk_18/5.png",
+      "images/nsk_18/6.png",
+      "images/nsk_18/7.png",
+      "images/nsk_18/8.png",
+      "images/nsk_18/9.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Two_way_left.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Two_way_right.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TWOWAY_LAST.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_Two_Way_Spray.png"
+    ]
+  },
+  "nsk_19": {
+    "name": "NSK Z25L",
+    "brand": "NSK",
+    "code": "Z25L",
+    "images": [
+      "images/nsk_19/1.png",
+      "images/nsk_19/2.png",
+      "images/nsk_19/3.png",
+      "images/nsk_19/4.png",
+      "images/nsk_19/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_20": {
+    "name": "NSK S-Max M500L",
+    "brand": "NSK",
+    "code": "S-MAX-M500L",
+    "images": [
+      "images/nsk_20/1.jpg",
+      "images/nsk_20/2.png",
+      "images/nsk_20/3.png",
+      "images/nsk_20/4.png",
+      "images/nsk_20/5.png",
+      "images/nsk_20/6.png",
+      "images/nsk_20/7.png",
+      "images/nsk_20/8.jpg",
+      "images/nsk_20/9.jpg",
+      "images/nsk_20/10.jpg",
+      "images/nsk_20/11.jpg",
+      "images/nsk_20/12.jpg"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_sp_1215.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_x65l-1.png"
+    ]
+  },
+  "nsk_21": {
+    "name": "NSK Pana-Max PLUS",
+    "brand": "NSK",
+    "code": "PANA-MAX-PLUS",
+    "images": [
+      "images/nsk_21/1.png",
+      "images/nsk_21/2.png",
+      "images/nsk_21/3.png",
+      "images/nsk_21/4.png",
+      "images/nsk_21/5.png",
+      "images/nsk_21/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_01-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_3_PAP-SUM4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_1_PAP-MUM4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_2_PAP-SUB2.png"
+    ]
+  },
+  "nsk_22": {
+    "name": "NSK Ti-Max X95L",
+    "brand": "NSK",
+    "code": "TI-MAX-X95L",
+    "images": [
+      "images/nsk_22/1.png",
+      "images/nsk_22/2.png",
+      "images/nsk_22/3.png",
+      "images/nsk_22/4.png",
+      "images/nsk_22/5.png",
+      "images/nsk_22/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png"
+    ]
+  },
+  "nsk_23": {
+    "name": "NSK FX-65m",
+    "brand": "NSK",
+    "code": "FX-65M",
+    "images": [
+      "images/nsk_23/1.png",
+      "images/nsk_23/2.png",
+      "images/nsk_23/3.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_7_TiX57L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_6_TiX55L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/FX57_y_al_1410.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_NLZ_NLZ-Endo-handpiece_380Ã240_231114_0_NLZ.png"
+    ]
+  },
+  "nsk_24": {
+    "name": "NSK FX-57m",
+    "brand": "NSK",
+    "code": "FX-57M",
+    "images": [
+      "images/nsk_24/1.png",
+      "images/nsk_24/2.png",
+      "images/nsk_24/3.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_7_TiX57L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_6_TiX55L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/FX57_y_al_1410.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_NLZ_NLZ-Endo-handpiece_380Ã240_231114_0_NLZ.png"
+    ]
+  },
+  "nsk_25": {
+    "name": "NSK Endo Mate TC2",
+    "brand": "NSK",
+    "code": "ENDO-MATE-TC2",
+    "images": [
+      "images/nsk_25/1.png",
+      "images/nsk_25/2.png",
+      "images/nsk_25/3.png",
+      "images/nsk_25/4.png",
+      "images/nsk_25/5.png",
+      "images/nsk_25/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_TC2_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_TC2_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_TC2_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_TC2_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_TC2_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_TC2_06.png"
+    ]
+  },
+  "nsk_26": {
+    "name": "NSK iPexil",
+    "brand": "NSK",
+    "code": "IPEXIL",
+    "images": [
+      "images/nsk_26/1.png",
+      "images/nsk_26/2.png",
+      "images/nsk_26/3.png",
+      "images/nsk_26/4.png",
+      "images/nsk_26/5.png",
+      "images/nsk_26/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_IPEX_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_IPEX_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ipex2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_mate_dt_normal_set_s.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_mate_tc2_normal_set_s.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/UK_Endodontics_thumbnail.png"
+    ]
+  },
+  "nsk_27": {
+    "name": "NSK Ti-ENDO",
+    "brand": "NSK",
+    "code": "TI-ENDO",
+    "images": [
+      "images/nsk_27/1.png",
+      "images/nsk_27/2.png",
+      "images/nsk_27/3.png",
+      "images/nsk_27/4.png",
+      "images/nsk_27/5.png",
+      "images/nsk_27/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_9_TiX35.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_mp-y_m.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_mpa-y_m.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_mpas-y_m.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/NML-Y_1207.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_head_nrs2-y_m.png"
+    ]
+  },
+  "nsk_28": {
+    "name": "NSK EX-ENDO",
+    "brand": "NSK",
+    "code": "EX-ENDO",
+    "images": [],
+    "source_urls": []
+  },
+  "nsk_29": {
+    "name": "NSK S-Max Z45L",
+    "brand": "NSK",
+    "code": "S-MAX-Z45L",
+    "images": [
+      "images/nsk_29/1.png",
+      "images/nsk_29/2.png",
+      "images/nsk_29/3.png",
+      "images/nsk_29/4.png",
+      "images/nsk_29/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_30": {
+    "name": "NSK Z85L",
+    "brand": "NSK",
+    "code": "Z85L",
+    "images": [
+      "images/nsk_30/1.png",
+      "images/nsk_30/2.png",
+      "images/nsk_30/3.png",
+      "images/nsk_30/4.png",
+      "images/nsk_30/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_31": {
+    "name": "NSK Z84L",
+    "brand": "NSK",
+    "code": "Z84L",
+    "images": [
+      "images/nsk_31/1.png",
+      "images/nsk_31/2.png",
+      "images/nsk_31/3.png",
+      "images/nsk_31/4.png",
+      "images/nsk_31/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_32": {
+    "name": "NSK Z15L",
+    "brand": "NSK",
+    "code": "Z15L",
+    "images": [
+      "images/nsk_32/1.png",
+      "images/nsk_32/2.png",
+      "images/nsk_32/3.png",
+      "images/nsk_32/4.png",
+      "images/nsk_32/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_33": {
+    "name": "NSK Z10L",
+    "brand": "NSK",
+    "code": "Z10L",
+    "images": [
+      "images/nsk_33/1.png",
+      "images/nsk_33/2.png",
+      "images/nsk_33/3.png",
+      "images/nsk_33/4.png",
+      "images/nsk_33/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_34": {
+    "name": "NSK Z24L",
+    "brand": "NSK",
+    "code": "Z24L",
+    "images": [
+      "images/nsk_34/1.png",
+      "images/nsk_34/2.png",
+      "images/nsk_34/3.png",
+      "images/nsk_34/4.png",
+      "images/nsk_34/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_35": {
+    "name": "NSK Z65L",
+    "brand": "NSK",
+    "code": "Z65L",
+    "images": [
+      "images/nsk_35/1.png",
+      "images/nsk_35/2.png",
+      "images/nsk_35/3.png",
+      "images/nsk_35/4.png",
+      "images/nsk_35/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_36": {
+    "name": "NSK Z12L",
+    "brand": "NSK",
+    "code": "Z12L",
+    "images": [
+      "images/nsk_36/1.png",
+      "images/nsk_36/2.png",
+      "images/nsk_36/3.png",
+      "images/nsk_36/4.png",
+      "images/nsk_36/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_37": {
+    "name": "NSK Z35L",
+    "brand": "NSK",
+    "code": "Z35L",
+    "images": [
+      "images/nsk_37/1.png",
+      "images/nsk_37/2.png",
+      "images/nsk_37/3.png",
+      "images/nsk_37/4.png",
+      "images/nsk_37/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_38": {
+    "name": "NSK X95EX",
+    "brand": "NSK",
+    "code": "X95EX",
+    "images": [
+      "images/nsk_38/1.png",
+      "images/nsk_38/2.png",
+      "images/nsk_38/3.png",
+      "images/nsk_38/4.png",
+      "images/nsk_38/5.png",
+      "images/nsk_38/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png"
+    ]
+  },
+  "nsk_39": {
+    "name": "NSK X65L",
+    "brand": "NSK",
+    "code": "X65L",
+    "images": [
+      "images/nsk_39/1.png",
+      "images/nsk_39/2.png",
+      "images/nsk_39/3.png",
+      "images/nsk_39/4.png",
+      "images/nsk_39/5.png",
+      "images/nsk_39/6.png",
+      "images/nsk_39/7.png",
+      "images/nsk_39/8.png",
+      "images/nsk_39/9.png",
+      "images/nsk_39/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_40": {
+    "name": "NSK X12L",
+    "brand": "NSK",
+    "code": "X12L",
+    "images": [
+      "images/nsk_40/1.png",
+      "images/nsk_40/2.png",
+      "images/nsk_40/3.png",
+      "images/nsk_40/4.png",
+      "images/nsk_40/5.png",
+      "images/nsk_40/6.png",
+      "images/nsk_40/7.png",
+      "images/nsk_40/8.png",
+      "images/nsk_40/9.png",
+      "images/nsk_40/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_41": {
+    "name": "NSK X35L",
+    "brand": "NSK",
+    "code": "X35L",
+    "images": [
+      "images/nsk_41/1.png",
+      "images/nsk_41/2.png",
+      "images/nsk_41/3.png",
+      "images/nsk_41/4.png",
+      "images/nsk_41/5.png",
+      "images/nsk_41/6.png",
+      "images/nsk_41/7.png",
+      "images/nsk_41/8.png",
+      "images/nsk_41/9.png",
+      "images/nsk_41/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_42": {
+    "name": "NSK FX15m",
+    "brand": "NSK",
+    "code": "FX15M",
+    "images": [
+      "images/nsk_42/1.png",
+      "images/nsk_42/2.png",
+      "images/nsk_42/3.png",
+      "images/nsk_42/4.png",
+      "images/nsk_42/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/kf_2_micromotors.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/air_x205l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/m205_lg.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_S-MaxM205_M4_500Ã275_230908.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/fx205.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_z_z95l_2020.png"
+    ]
+  },
+  "nsk_43": {
+    "name": "NSK FX65m",
+    "brand": "NSK",
+    "code": "FX65M",
+    "images": [
+      "images/nsk_43/1.png",
+      "images/nsk_43/2.png",
+      "images/nsk_43/3.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_7_TiX57L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_6_TiX55L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/FX57_y_al_1410.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_NLZ_NLZ-Endo-handpiece_380Ã240_231114_0_NLZ.png"
+    ]
+  },
+  "nsk_44": {
+    "name": "NSK AR-EC",
+    "brand": "NSK",
+    "code": "AR-EC",
+    "images": [
+      "images/nsk_44/1.png",
+      "images/nsk_44/2.png",
+      "images/nsk_44/3.png",
+      "images/nsk_44/4.png",
+      "images/nsk_44/5.png",
+      "images/nsk_44/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_nac_ec-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_6d.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_5b.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_fpb-y_m.png"
+    ]
+  },
+  "nsk_45": {
+    "name": "NSK AR-ECM",
+    "brand": "NSK",
+    "code": "AR-ECM",
+    "images": [
+      "images/nsk_45/1.png",
+      "images/nsk_45/2.png",
+      "images/nsk_45/3.png",
+      "images/nsk_45/4.png",
+      "images/nsk_45/5.png",
+      "images/nsk_45/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_nac_ec-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_6d.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_5b.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_fpb-y_m.png"
+    ]
+  },
+  "nsk_46": {
+    "name": "NSK EX-6B",
+    "brand": "NSK",
+    "code": "EX-6B",
+    "images": [
+      "images/nsk_46/1.png",
+      "images/nsk_46/2.png",
+      "images/nsk_46/3.png",
+      "images/nsk_46/4.png",
+      "images/nsk_46/5.png",
+      "images/nsk_46/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_nac_ec-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_6d.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_5b.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_fpb-y_m.png"
+    ]
+  },
+  "nsk_47": {
+    "name": "NSK MP-ER64",
+    "brand": "NSK",
+    "code": "MP-ER64",
+    "images": [],
+    "source_urls": []
+  },
+  "nsk_48": {
+    "name": "NSK Ti-Max Z990L",
+    "brand": "NSK",
+    "code": "TI-MAX-Z990L",
+    "images": [
+      "images/nsk_48/1.png",
+      "images/nsk_48/2.jpg",
+      "images/nsk_48/3.jpg",
+      "images/nsk_48/4.jpg",
+      "images/nsk_48/5.png",
+      "images/nsk_48/6.png",
+      "images/nsk_48/7.png",
+      "images/nsk_48/8.png",
+      "images/nsk_48/9.png",
+      "images/nsk_48/10.jpg",
+      "images/nsk_48/11.jpg"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_Dynamic_Power_System.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_Powerful_grip_realized_by_the_wedge-effect.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_New_quick_stop_function.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_Water_injection_spray_for_improved_cooling_effect.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_Lightweight_titanium_body.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_49": {
+    "name": "NSK Ti-Max X600L",
+    "brand": "NSK",
+    "code": "TI-MAX-X600L",
+    "images": [
+      "images/nsk_49/1.png",
+      "images/nsk_49/2.png",
+      "images/nsk_49/3.png",
+      "images/nsk_49/4.png",
+      "images/nsk_49/5.png",
+      "images/nsk_49/6.png",
+      "images/nsk_49/7.png",
+      "images/nsk_49/8.png",
+      "images/nsk_49/9.png",
+      "images/nsk_49/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_50": {
+    "name": "NSK FX-75m",
+    "brand": "NSK",
+    "code": "FX-75M",
+    "images": [
+      "images/nsk_50/1.png",
+      "images/nsk_50/2.png",
+      "images/nsk_50/3.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_7_TiX57L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_6_TiX55L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/FX57_y_al_1410.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_NLZ_NLZ-Endo-handpiece_380Ã240_231114_0_NLZ.png"
+    ]
+  },
+  "nsk_51": {
+    "name": "NSK S-Max M700L",
+    "brand": "NSK",
+    "code": "S-MAX-M700L",
+    "images": [
+      "images/nsk_51/1.jpg",
+      "images/nsk_51/2.png",
+      "images/nsk_51/3.png",
+      "images/nsk_51/4.png",
+      "images/nsk_51/5.png",
+      "images/nsk_51/6.png",
+      "images/nsk_51/7.png",
+      "images/nsk_51/8.jpg",
+      "images/nsk_51/9.jpg",
+      "images/nsk_51/10.jpg",
+      "images/nsk_51/11.jpg",
+      "images/nsk_51/12.jpg"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_sp_1215.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_x65l-1.png"
+    ]
+  },
+  "nsk_52": {
+    "name": "NSK Pana-Max3",
+    "brand": "NSK",
+    "code": "PANA-MAX3",
+    "images": [],
+    "source_urls": []
+  },
+  "nsk_53": {
+    "name": "NSK Nano95LS-PRO",
+    "brand": "NSK",
+    "code": "NANO95LS-PRO",
+    "images": [
+      "images/nsk_53/1.png",
+      "images/nsk_53/2.png",
+      "images/nsk_53/3.png",
+      "images/nsk_53/4.png",
+      "images/nsk_53/5.png",
+      "images/nsk_53/6.png",
+      "images/nsk_53/7.png",
+      "images/nsk_53/8.png",
+      "images/nsk_53/9.png",
+      "images/nsk_53/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_micro_fn_quickstop.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/smax_micro_special_fn2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/smax_micro_special_fn3.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/smax_micro_special_fn4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_06.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_nano_95ls.png"
+    ]
+  },
+  "nsk_54": {
+    "name": "NSK Varios 570",
+    "brand": "NSK",
+    "code": "VARIOS-570",
+    "images": [
+      "images/nsk_54/1.png",
+      "images/nsk_54/2.png",
+      "images/nsk_54/3.png",
+      "images/nsk_54/4.png",
+      "images/nsk_54/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/VA2HP_441x193pix_241004a.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/oral_varios_ultrasonic_370_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/oral_variosseries_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/VA2HP_hand_497x376pix_241003a.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/oral_variosseries_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Varios_1000Ã500_231116_3_Vario-170.png"
+    ]
+  },
+  "nsk_55": {
+    "name": "NSK Z990L",
+    "brand": "NSK",
+    "code": "Z990L",
+    "images": [
+      "images/nsk_55/1.png",
+      "images/nsk_55/2.jpg",
+      "images/nsk_55/3.jpg",
+      "images/nsk_55/4.jpg",
+      "images/nsk_55/5.png",
+      "images/nsk_55/6.png",
+      "images/nsk_55/7.png",
+      "images/nsk_55/8.png",
+      "images/nsk_55/9.png",
+      "images/nsk_55/10.jpg",
+      "images/nsk_55/11.jpg"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_Dynamic_Power_System.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_Powerful_grip_realized_by_the_wedge-effect.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_New_quick_stop_function.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_Water_injection_spray_for_improved_cooling_effect.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/TZ2023_Lightweight_titanium_body.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_56": {
+    "name": "NSK Z50L",
+    "brand": "NSK",
+    "code": "Z50L",
+    "images": [
+      "images/nsk_56/1.png",
+      "images/nsk_56/2.png",
+      "images/nsk_56/3.png",
+      "images/nsk_56/4.png",
+      "images/nsk_56/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_57": {
+    "name": "NSK X75L",
+    "brand": "NSK",
+    "code": "X75L",
+    "images": [
+      "images/nsk_57/1.png",
+      "images/nsk_57/2.png",
+      "images/nsk_57/3.png",
+      "images/nsk_57/4.png",
+      "images/nsk_57/5.png",
+      "images/nsk_57/6.png",
+      "images/nsk_57/7.png",
+      "images/nsk_57/8.png",
+      "images/nsk_57/9.png",
+      "images/nsk_57/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_58": {
+    "name": "NSK Ti-Max SG-50",
+    "brand": "NSK",
+    "code": "TI-MAX-SG-50",
+    "images": [
+      "images/nsk_58/1.png",
+      "images/nsk_58/2.png",
+      "images/nsk_58/3.png",
+      "images/nsk_58/4.png",
+      "images/nsk_58/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_HP_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_HP_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_HP_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_59": {
+    "name": "NSK Endo-Mate DT Pro",
+    "brand": "NSK",
+    "code": "ENDO-MATE-DT-PRO",
+    "images": [
+      "images/nsk_59/1.png",
+      "images/nsk_59/2.png",
+      "images/nsk_59/3.png",
+      "images/nsk_59/4.png",
+      "images/nsk_59/5.png",
+      "images/nsk_59/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT_06.png"
+    ]
+  },
+  "nsk_60": {
+    "name": "NSK FX-25m Plus",
+    "brand": "NSK",
+    "code": "FX-25M-PLUS",
+    "images": [
+      "images/nsk_60/1.png",
+      "images/nsk_60/2.png",
+      "images/nsk_60/3.png",
+      "images/nsk_60/4.png",
+      "images/nsk_60/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_7_TiX57L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_6_TiX55L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/FX57_y_al_1410.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_NLZ_NLZ-Endo-handpiece_380Ã240_231114_0_NLZ.png"
+    ]
+  },
+  "nsk_61": {
+    "name": "NSK Ti-Max Z500L",
+    "brand": "NSK",
+    "code": "TI-MAX-Z500L",
+    "images": [
+      "images/nsk_61/1.png",
+      "images/nsk_61/2.png",
+      "images/nsk_61/3.png",
+      "images/nsk_61/4.png",
+      "images/nsk_61/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_62": {
+    "name": "NSK S-Max M300L",
+    "brand": "NSK",
+    "code": "S-MAX-M300L",
+    "images": [
+      "images/nsk_62/1.jpg",
+      "images/nsk_62/2.png",
+      "images/nsk_62/3.png",
+      "images/nsk_62/4.png",
+      "images/nsk_62/5.png",
+      "images/nsk_62/6.png",
+      "images/nsk_62/7.png",
+      "images/nsk_62/8.jpg",
+      "images/nsk_62/9.jpg",
+      "images/nsk_62/10.jpg",
+      "images/nsk_62/11.jpg",
+      "images/nsk_62/12.jpg"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_sp_1215.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_x65l-1.png"
+    ]
+  },
+  "nsk_63": {
+    "name": "NSK Pana-Air",
+    "brand": "NSK",
+    "code": "PANA-AIR",
+    "images": [],
+    "source_urls": []
+  },
+  "nsk_64": {
+    "name": "NSK Ti-Max X300",
+    "brand": "NSK",
+    "code": "TI-MAX-X300",
+    "images": [
+      "images/nsk_64/1.png",
+      "images/nsk_64/2.png",
+      "images/nsk_64/3.png",
+      "images/nsk_64/4.png",
+      "images/nsk_64/5.png",
+      "images/nsk_64/6.png",
+      "images/nsk_64/7.png",
+      "images/nsk_64/8.png",
+      "images/nsk_64/9.png",
+      "images/nsk_64/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_65": {
+    "name": "NSK Surgic Pro",
+    "brand": "NSK",
+    "code": "SURGIC-PRO",
+    "images": [
+      "images/nsk_65/1.png",
+      "images/nsk_65/2.png",
+      "images/nsk_65/3.png",
+      "images/nsk_65/4.png",
+      "images/nsk_65/5.png",
+      "images/nsk_65/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro2_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro2_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro2_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro2_04-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro2_07_vs4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_surgicpro2_02_vs4.png"
+    ]
+  },
+  "nsk_66": {
+    "name": "NSK EX-8B",
+    "brand": "NSK",
+    "code": "EX-8B",
+    "images": [
+      "images/nsk_66/1.png",
+      "images/nsk_66/2.png",
+      "images/nsk_66/3.png",
+      "images/nsk_66/4.png",
+      "images/nsk_66/5.png",
+      "images/nsk_66/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_nac_ec-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_6d.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_5b.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_fpb-y_m.png"
+    ]
+  },
+  "nsk_67": {
+    "name": "NSK MP-ER128",
+    "brand": "NSK",
+    "code": "MP-ER128",
+    "images": [],
+    "source_urls": []
+  },
+  "nsk_68": {
+    "name": "NSK Ti-Max Z750L",
+    "brand": "NSK",
+    "code": "TI-MAX-Z750L",
+    "images": [
+      "images/nsk_68/1.png",
+      "images/nsk_68/2.png",
+      "images/nsk_68/3.png",
+      "images/nsk_68/4.png",
+      "images/nsk_68/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_69": {
+    "name": "NSK Nano85",
+    "brand": "NSK",
+    "code": "NANO85",
+    "images": [
+      "images/nsk_69/1.png",
+      "images/nsk_69/2.png",
+      "images/nsk_69/3.png",
+      "images/nsk_69/4.png",
+      "images/nsk_69/5.png",
+      "images/nsk_69/6.png",
+      "images/nsk_69/7.png",
+      "images/nsk_69/8.png",
+      "images/nsk_69/9.png",
+      "images/nsk_69/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_micro_fn_quickstop.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/smax_micro_special_fn2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/smax_micro_special_fn3.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/smax_micro_special_fn4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_special_06.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_nano_95ls.png"
+    ]
+  },
+  "nsk_70": {
+    "name": "NSK X-Smart Plus",
+    "brand": "NSK",
+    "code": "X-SMART-PLUS",
+    "images": [],
+    "source_urls": []
+  },
+  "nsk_71": {
+    "name": "NSK FX-35m",
+    "brand": "NSK",
+    "code": "FX-35M",
+    "images": [
+      "images/nsk_71/1.png",
+      "images/nsk_71/2.png",
+      "images/nsk_71/3.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_7_TiX57L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_6_TiX55L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/FX57_y_al_1410.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_NLZ_NLZ-Endo-handpiece_380Ã240_231114_0_NLZ.png"
+    ]
+  },
+  "nsk_72": {
+    "name": "NSK AR-EC Plus",
+    "brand": "NSK",
+    "code": "AR-EC-PLUS",
+    "images": [
+      "images/nsk_72/1.png",
+      "images/nsk_72/2.png",
+      "images/nsk_72/3.png",
+      "images/nsk_72/4.png",
+      "images/nsk_72/5.png",
+      "images/nsk_72/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_nac_ec-1.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_6d.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_5b.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/ex_head_fpb-y_m.png"
+    ]
+  },
+  "nsk_73": {
+    "name": "NSK Endo-Mate",
+    "brand": "NSK",
+    "code": "ENDO-MATE",
+    "images": [
+      "images/nsk_73/1.png",
+      "images/nsk_73/2.png",
+      "images/nsk_73/3.png",
+      "images/nsk_73/4.png",
+      "images/nsk_73/5.png",
+      "images/nsk_73/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/dt2_special01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT2_func05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT2_func06.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT2_func01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT2_func02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT2_func03.png"
+    ]
+  },
+  "nsk_74": {
+    "name": "NSK Z200L",
+    "brand": "NSK",
+    "code": "Z200L",
+    "images": [
+      "images/nsk_74/1.png",
+      "images/nsk_74/2.png",
+      "images/nsk_74/3.png",
+      "images/nsk_74/4.png",
+      "images/nsk_74/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_AVANCED_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_Air_Turbine.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_05.png"
+    ]
+  },
+  "nsk_75": {
+    "name": "NSK X150L",
+    "brand": "NSK",
+    "code": "X150L",
+    "images": [
+      "images/nsk_75/1.png",
+      "images/nsk_75/2.png",
+      "images/nsk_75/3.png",
+      "images/nsk_75/4.png",
+      "images/nsk_75/5.png",
+      "images/nsk_75/6.png",
+      "images/nsk_75/7.png",
+      "images/nsk_75/8.png",
+      "images/nsk_75/9.png",
+      "images/nsk_75/10.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/timax_x_x450l.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_76": {
+    "name": "NSK Ti-Max SG-65",
+    "brand": "NSK",
+    "code": "TI-MAX-SG-65",
+    "images": [
+      "images/nsk_76/1.png",
+      "images/nsk_76/2.png",
+      "images/nsk_76/3.png",
+      "images/nsk_76/4.png",
+      "images/nsk_76/5.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_HP_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_HP_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/surgical_HP_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_special_450_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_PREMIUM_LB_03.png"
+    ]
+  },
+  "nsk_77": {
+    "name": "NSK FX-85m",
+    "brand": "NSK",
+    "code": "FX-85M",
+    "images": [
+      "images/nsk_77/1.png",
+      "images/nsk_77/2.png",
+      "images/nsk_77/3.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_BASIC_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_7_TiX57L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Xcontra_1000x500_231115_6_TiX55L.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_ar_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ex_eva_er4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/FX57_y_al_1410.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_NLZ_NLZ-Endo-handpiece_380Ã240_231114_0_NLZ.png"
+    ]
+  },
+  "nsk_78": {
+    "name": "NSK S-Max M800L",
+    "brand": "NSK",
+    "code": "S-MAX-M800L",
+    "images": [
+      "images/nsk_78/1.jpg",
+      "images/nsk_78/2.png",
+      "images/nsk_78/3.png",
+      "images/nsk_78/4.png",
+      "images/nsk_78/5.png",
+      "images/nsk_78/6.png",
+      "images/nsk_78/7.png",
+      "images/nsk_78/8.jpg",
+      "images/nsk_78/9.jpg",
+      "images/nsk_78/10.jpg",
+      "images/nsk_78/11.jpg",
+      "images/nsk_78/12.jpg"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c03_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c04_sp_1214.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_web_1223-1.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/SP02_S_Max_M_Turbine_c05_sp_1215.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_angles_kf_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/2020_CHS_ContraAngle.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_04.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_ADVANCED2019_05.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/contra_x65l-1.png"
+    ]
+  },
+  "nsk_79": {
+    "name": "NSK Pana-Spray",
+    "brand": "NSK",
+    "code": "PANA-SPRAY",
+    "images": [
+      "images/nsk_79/1.png",
+      "images/nsk_79/2.png",
+      "images/nsk_79/3.png",
+      "images/nsk_79/4.png",
+      "images/nsk_79/5.png",
+      "images/nsk_79/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/pana_spray_plus.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Tip-Nozzle_1402-2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/spray_nozzle_nsk_m.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/spray_nozzle_kv_m.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/spray_nozzle_sr_m.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/spray_nozzle_wh_m.png"
+    ]
   }
 }

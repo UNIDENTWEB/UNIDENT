@@ -14,6 +14,7 @@ import json
 import os
 import re
 import time
+import signal
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse, quote_plus
@@ -28,10 +29,28 @@ HEADERS = {
 OUTPUT_DIR = 'images'
 MIN_IMAGES = 3
 MAX_IMAGES = 8
-TIMEOUT = 10
-REQUEST_DELAY = 0.5
+TIMEOUT = 8
+REQUEST_DELAY = 0.3
+SCRAPE_TIMEOUT = 30  # max seconds per product scrape
 
 # ---------- Helpers ----------
+
+class TimeoutError(Exception):
+    pass
+
+def with_timeout(seconds, func, *args, **kwargs):
+    """Run func with a timeout, return [] on timeout."""
+    def handler(signum, frame):
+        raise TimeoutError()
+    old = signal.signal(signal.SIGALRM, handler)
+    signal.alarm(seconds)
+    try:
+        return func(*args, **kwargs)
+    except TimeoutError:
+        return []
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, old)
 
 def slugify(text):
     t = text.lower().strip()
@@ -129,22 +148,20 @@ def extract_link_images(soup, base_url, path_filter):
 # ---------- Brand-Specific Scrapers ----------
 
 def scrape_coxo(name, code):
-    """اسکرپر COXO — از کاتالوگ محلی jmudental.com (products.json)
+    """اسکرپر COXO — کاتالوگ گسترده jmudental.com (58 محصول) + جستجوی زنده
     
-    کاتالوگ یکبار از Shopify API دانلود شده و در فایل coxo_catalog.json ذخیره شده.
+    کاتالوگ شامل همه محصولات COXO از jmudental.com است.
     تطابق بر اساس کد مدل با scoring دقیق انجام می‌شود.
     """
     raw_name = name.replace('COXO', '').strip()
     model = code or raw_name
 
-    # Load catalog once
     if not hasattr(scrape_coxo, '_catalog'):
         try:
             with open('coxo_catalog.json') as f:
                 scrape_coxo._catalog = json.load(f)
         except (FileNotFoundError, json.JSONDecodeError):
             scrape_coxo._catalog = {}
-        # Build index for each catalog entry
         scrape_coxo._index = {}
         for handle, info in scrape_coxo._catalog.items():
             codes = set()
@@ -157,7 +174,6 @@ def scrape_coxo(name, code):
     if not scrape_coxo._catalog:
         return []
 
-    # Match our product against catalog
     search_code = model.upper().replace('-', '').replace(' ', '')
     search_name = raw_name.upper()
     
@@ -182,87 +198,216 @@ def scrape_coxo(name, code):
             best_score = score
             best_handle = handle
 
-    # Only return if confident (code match required)
     if best_handle and best_score >= 20:
         return scrape_coxo._catalog[best_handle]['images'][:MAX_IMAGES]
 
-    return []
+    # Fallback: live jmudental.com search
+    all_images = []
+    search_terms = []
+    if code:
+        search_terms.append(code.strip())
+        search_terms.append(code.replace('-', ' ').strip())
+    if raw_name:
+        search_terms.append(raw_name)
+
+    for term in search_terms[:3]:
+        try:
+            search_url = f'https://jmudental.com/search?q={quote_plus(term)}&type=product'
+            resp = requests.get(search_url, headers=HEADERS, timeout=TIMEOUT)
+            if resp.status_code != 200:
+                continue
+            soup = BeautifulSoup(resp.text, 'lxml')
+            
+            for a in soup.select('a[href*="/products/"]'):
+                href = a.get('href', '')
+                link_text = a.get_text(strip=True).lower()
+                if not link_text:
+                    continue
+                if code and code.lower().replace('-', '').replace(' ', '') not in link_text.replace('-', '').replace(' ', ''):
+                    continue
+                
+                product_url = urljoin('https://jmudental.com', href)
+                try:
+                    time.sleep(0.5)
+                    dr = requests.get(product_url, headers=HEADERS, timeout=TIMEOUT)
+                    if dr.status_code != 200:
+                        continue
+                    ds = BeautifulSoup(dr.text, 'lxml')
+                    all_images.extend(extract_page_images(
+                        ds, 'https://jmudental.com',
+                        lambda u: 'cdn.shopify.com' in u or '/files/' in u
+                    ))
+                except requests.RequestException:
+                    continue
+
+            if all_images:
+                break
+        except requests.RequestException:
+            continue
+
+    result = deduplicate(all_images)
+    result = prefer_large_images(result)
+    return result[:MAX_IMAGES]
 
 
 def scrape_nsk(name, code):
-    """اسکرپر NSK — فقط fordent.ru با تطابق دقیق کد محصول
+    """اسکرپر NSK — nsk-dental.com (رسمی) + fordent.ru (فال‌بک)
     
-    جستجو در fordent.ru، استخراج product-card با تطابق کد،
-    فقط یک صفحه محصول دقیقاً منطبق انتخاب می‌شود.
+    منبع اصلی: nsk-dental.com - کاتالوگ رسمی 55 صفحه محصول
+    منبع فال‌بک: fordent.ru - کاتالوگ + جستجوی زنده
     """
-    base = 'https://fordent.ru'
     all_images = []
 
+    # Load NSK official catalog once
+    if not hasattr(scrape_nsk, '_official_catalog'):
+        try:
+            with open('nsk_official_catalog.json') as f:
+                scrape_nsk._official_catalog = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            scrape_nsk._official_catalog = {}
+
+    # Try nsk-dental.com official catalog first
+    if scrape_nsk._official_catalog and code:
+        search_code = code.lower().replace('-', '').replace(' ', '')
+        code_keywords = set(re.findall(r'[a-z]+\d+|\d+[a-z]*|[a-z]{3,}', search_code))
+        for part in code.lower().replace('-', ' ').split():
+            if len(part) >= 3:
+                code_keywords.add(part)
+        # Remove too-common short words that match everything
+        code_keywords.discard('pro')
+        code_keywords.discard('max')
+        code_keywords.discard('led')
+        code_keywords.discard('air')
+        
+        best_page = None
+        best_score = 0
+        for path, info in scrape_nsk._official_catalog.items():
+            page_text = info.get('text', '').lower()
+            score = 0
+            if code.lower().replace('-', '') in page_text.replace('-', '').replace(' ', ''):
+                score += 50
+            for kw in code_keywords:
+                if kw in page_text:
+                    score += 10
+            if score > best_score:
+                best_score = score
+                best_page = path
+        
+        if best_page and best_score >= 50:
+            page_info = scrape_nsk._official_catalog[best_page]
+            for img_url in page_info.get('images', []):
+                url_lower = img_url.lower()
+                img_name = url_lower.rsplit('/', 1)[-1]
+                img_clean = img_name.replace('-', '').replace('_', '')
+                
+                matched = False
+                for kw in code_keywords:
+                    if kw and kw in img_clean:
+                        matched = True
+                        break
+                
+                if not matched and search_code:
+                    if search_code in img_clean:
+                        matched = True
+                
+                if matched:
+                    all_images.append(img_url)
+            
+            if all_images:
+                return all_images[:MAX_IMAGES]
+
+    # Try fordent.ru catalog as fallback
+    if not hasattr(scrape_nsk, '_fordent_catalog'):
+        try:
+            with open('nsk_fordent_catalog.json') as f:
+                scrape_nsk._fordent_catalog = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            scrape_nsk._fordent_catalog = {}
+
+    if scrape_nsk._fordent_catalog and code:
+        search_code = code.lower().replace('-', '').replace(' ', '')
+        code_keywords = set(re.findall(r'[a-z]+\d+|\d+[a-z]*|[a-z]{3,}', search_code))
+        for part in code.lower().replace('-', ' ').split():
+            if len(part) >= 3 and part not in ('pro','max','led','air'):
+                code_keywords.add(part)
+        
+        for url, info in scrape_nsk._fordent_catalog.items():
+            page_text = info.get('text', '').lower()
+            if search_code not in page_text.replace('-', '').replace(' ', ''):
+                continue
+            
+            for img_url in info.get('images', []):
+                img_name = img_url.lower().rsplit('/', 1)[-1]
+                img_clean = img_name.replace('-', '').replace('_', '').replace(' ', '')
+                matched = False
+                for kw in code_keywords:
+                    if kw and kw in img_clean:
+                        matched = True
+                        break
+                if matched:
+                    all_images.append(img_url)
+            
+            if all_images:
+                break
+    
+    if all_images:
+        result = deduplicate(all_images)
+        return result[:MAX_IMAGES]
+
+    # Live search on fordent.ru as last resort
+    base = 'https://fordent.ru'
     search_terms = []
     if code:
-        # حذف dashes برای جستجوی بهتر
-        clean_code = code.replace('-', ' ').strip()
-        search_terms.append(clean_code)
+        search_terms.append(code.replace('-', ' ').strip())
         search_terms.append(code.strip())
+        parts = code.replace('-', ' ').split()
+        if len(parts) >= 2:
+            search_terms.append(' '.join(parts[:2]))
+            search_terms.append(parts[-1])
     raw = name.replace('NSK', '').strip()
-    model_match = re.search(r'(?:Ti-Max|S-Max|Varios|Pana-Max|Endo|FX|Surgic|Z\d+|M\d+|X\d+|NAC|FPB|EX|AR|Nano)[^\s,]*', raw, re.I)
+    model_match = re.search(r'(?:Ti-Max|S-Max|Varios|Pana-Max|Endo|FX|Surgic|Z\d+|M\d+|X\d+|NAC|FPB|EX|AR|Nano|NLX|Ti-Power|Ti-Premium|Pana)[^\s,]*', raw, re.I)
     if model_match:
         search_terms.append(model_match.group(0))
+    
+    seen_terms = set()
+    unique_terms = [t for t in search_terms if not (t in seen_terms or seen_terms.add(t))]
 
     best_url = None
-    best_match_text = ''
+    fallback_urls = []
 
-    for term in search_terms[:2]:
+    for term in unique_terms[:3]:
         try:
             search_url = f'{base}/search/?q={quote_plus(term)}'
             resp = requests.get(search_url, headers=HEADERS, timeout=TIMEOUT)
             if resp.status_code != 200:
                 continue
-
             soup = BeautifulSoup(resp.text, 'lxml')
-
-            # جستجوی product-card — این عناصر لینک مستقیم به صفحه محصول هستند
             for card in soup.find_all(class_='product-card'):
                 a_tag = card.find('a', href=True)
                 if not a_tag:
                     continue
                 href = a_tag['href']
                 card_text = card.get_text(strip=True).lower()
-                
                 if code and code.lower().replace('-', '').replace(' ', '') in card_text.replace('-', '').replace(' ', ''):
                     best_url = urljoin(base, href)
-                    best_match_text = card_text
-                    break  # exact match found
-
+                    break
             if best_url:
                 break
-
         except requests.RequestException:
             continue
 
-    if not best_url:
-        return []
-
-    try:
-        time.sleep(0.5)
-        dr = requests.get(best_url, headers=HEADERS, timeout=TIMEOUT)
-        if dr.status_code != 200:
-            return []
-
-        ds = BeautifulSoup(dr.text, 'lxml')
-
-        # استخراج تصاویر از صفحه جزئیات محصول
-        all_images.extend(extract_page_images(
-            ds, base,
-            lambda u: '/upload/' in u or '/catalog/' in u
-        ))
-        all_images.extend(extract_link_images(
-            ds, base,
-            lambda u: '/upload/' in u or '/catalog/' in u
-        ))
-
-    except requests.RequestException:
-        return []
+    urls_to_visit = [best_url] if best_url else []
+    for url in urls_to_visit[:1]:
+        try:
+            time.sleep(0.5)
+            dr = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+            if dr.status_code != 200:
+                continue
+            ds = BeautifulSoup(dr.text, 'lxml')
+            all_images.extend(extract_page_images(ds, base, lambda u: '/upload/' in u or '/catalog/' in u))
+            all_images.extend(extract_link_images(ds, base, lambda u: '/upload/' in u or '/catalog/' in u))
+        except requests.RequestException:
+            continue
 
     result = deduplicate(all_images)
     result = prefer_large_images(result)
@@ -274,6 +419,7 @@ def scrape_wh(name, code):
     
     استراتژی: جستجوی مدل محصول، پیدا کردن product-item-info با تطابق مدل،
     استخراج لینک صفحه جزئیات از parent <a>، ویزیت صفحه و دریافت همه تصاویر.
+    تصاویر نتایج جستجو نیز جمع‌آوری می‌شوند.
     """
     base = 'https://www.swallowdental.co.uk'
     all_images = []
@@ -289,12 +435,18 @@ def scrape_wh(name, code):
     search_terms = []
     if model_search:
         search_terms.append(model_search)
+        search_terms.append(f'{model_match.group(1).lower()} {model_match.group(2).lower()}')
     elif code:
         search_terms.append(code.strip().lower())
 
+    raw = name.replace('W&H', '').replace('W&H', '').strip()
+    name_match = re.search(r'([A-Z]{2,3})\s*[-]?\s*(\d{2,3}[A-Z]*)', raw, re.I)
+    if name_match and f'{name_match.group(1)}-{name_match.group(2)}'.lower() not in [t.lower() for t in search_terms]:
+        search_terms.append(f'{name_match.group(1).lower()}-{name_match.group(2).lower()}')
+
     detail_url = None
 
-    for term in search_terms[:2]:
+    for term in search_terms[:3]:
         try:
             search_url = f'{base}/catalogsearch/result/?q={quote_plus(term)}'
             resp = requests.get(search_url, headers=HEADERS, timeout=TIMEOUT)
@@ -303,21 +455,17 @@ def scrape_wh(name, code):
 
             soup = BeautifulSoup(resp.text, 'lxml')
 
-            # استخراج تصاویر از صفحه نتایج + پیدا کردن لینک صفحه جزئیات
             for item in soup.select('.product-item-info'):
-                # چک کن آیا این product-item برای مدل ماست
                 item_text = item.get_text(strip=True).lower()
                 if model_code and model_code not in item_text.replace('-', '').replace(' ', ''):
                     continue
 
-                # پیدا کردن لینک صفحه محصول
                 a_tag = item.find('a', href=True)
                 if a_tag:
                     href = a_tag['href']
                     if '/catalog/product/' in href or href.endswith('.html'):
                         detail_url = urljoin(base, href)
 
-                # جمع‌آوری تصاویر از نتایج جستجو
                 for img in item.find_all('img'):
                     src = img.get('src') or img.get('data-src') or ''
                     if not src:
@@ -327,9 +475,7 @@ def scrape_wh(name, code):
                         continue
                     if is_logo_or_icon(full):
                         continue
-                    url_lower = full.lower()
-                    if model_code and model_code in url_lower.replace('-', '').replace('_', '').replace(' ', ''):
-                        all_images.append(full)
+                    all_images.append(full)
 
             if detail_url or all_images:
                 break
@@ -337,7 +483,6 @@ def scrape_wh(name, code):
         except requests.RequestException:
             continue
 
-    # ویزیت صفحه جزئیات برای دریافت همه تصاویر
     if detail_url:
         try:
             time.sleep(0.5)
@@ -355,13 +500,17 @@ def scrape_wh(name, code):
         except requests.RequestException:
             pass
 
-    # فیلتر نهایی: فقط تصاویر با تطابق مدل
-    if model_code:
-        all_images = [u for u in all_images 
-                      if model_code in u.lower().replace('-', '').replace('_', '').replace(' ', '')]
-
     result = deduplicate(all_images)
     result = prefer_large_images(result)
+    
+    # Strict filter for >= 3 images, relaxed for < 3
+    if model_code:
+        strict = [u for u in result 
+                  if model_code in u.lower().replace('-', '').replace('_', '').replace(' ', '')]
+        if len(strict) >= MIN_IMAGES:
+            return strict[:MAX_IMAGES]
+        result = strict + [u for u in result if u not in strict]
+    
     return result[:MAX_IMAGES]
 
 
@@ -426,7 +575,7 @@ def main():
         print(f'[{idx}/{total}] {name} (code: {code})', end='', flush=True)
 
         try:
-            image_urls = scraper(name, code)
+            image_urls = with_timeout(SCRAPE_TIMEOUT, scraper, name, code)
         except Exception as e:
             print(f'  ERROR: {e}')
             time.sleep(REQUEST_DELAY)
