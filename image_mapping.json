@@ -91,8 +91,22 @@
     "name": "COXO C6-23",
     "brand": "COXO",
     "code": "C6-23",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_3/1.jpg",
+      "images/coxo_3/2.jpg",
+      "images/coxo_3/3.jpg",
+      "images/coxo_3/4.jpg",
+      "images/coxo_3/5.jpg",
+      "images/coxo_3/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)"
+    ]
   },
   "wh_3": {
     "name": "W&H Synea TA-98",
@@ -123,8 +137,22 @@
     "name": "COXO CX205-M",
     "brand": "COXO",
     "code": "CX205-M",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_4/1.jpg",
+      "images/coxo_4/2.jpg",
+      "images/coxo_4/3.jpg",
+      "images/coxo_4/4.jpg",
+      "images/coxo_4/5.jpg",
+      "images/coxo_4/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)"
+    ]
   },
   "wh_4": {
     "name": "W&H Alegra TE-97",
@@ -649,8 +677,22 @@
     "name": "COXO C-File Mini",
     "brand": "COXO",
     "code": "C-FILE-MINI",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_16/1.jpg",
+      "images/coxo_16/2.jpg",
+      "images/coxo_16/3.jpg",
+      "images/coxo_16/4.jpg",
+      "images/coxo_16/5.jpg",
+      "images/coxo_16/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)"
+    ]
   },
   "wh_16": {
     "name": "W&H Alegra TE-99",
@@ -681,8 +723,22 @@
     "name": "COXO C-File Re",
     "brand": "COXO",
     "code": "C-FILE-RE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_17/1.jpg",
+      "images/coxo_17/2.jpg",
+      "images/coxo_17/3.jpg",
+      "images/coxo_17/4.jpg",
+      "images/coxo_17/5.jpg",
+      "images/coxo_17/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)"
+    ]
   },
   "wh_17": {
     "name": "W&H Synea TA-97",
@@ -908,8 +964,22 @@
     "name": "COXO C-PUMA INT X",
     "brand": "COXO",
     "code": "C-PUMA-INT-X",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_22/1.jpg",
+      "images/coxo_22/2.jpg",
+      "images/coxo_22/3.jpg",
+      "images/coxo_22/4.jpg",
+      "images/coxo_22/5.jpg",
+      "images/coxo_22/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar: coxo_csmart_ipro)"
+    ]
   },
   "wh_22": {
     "name": "W&H Alegra TE-100",
@@ -1402,8 +1472,22 @@
     "name": "COXO C-SK1",
     "brand": "COXO",
     "code": "C-SK1",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_33/1.jpg",
+      "images/coxo_33/2.jpg",
+      "images/coxo_33/3.jpg",
+      "images/coxo_33/4.jpg",
+      "images/coxo_33/5.jpg",
+      "images/coxo_33/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)"
+    ]
   },
   "wh_33": {
     "name": "W&H Alegra WK-94",
@@ -1434,8 +1518,22 @@
     "name": "COXO C-SK2",
     "brand": "COXO",
     "code": "C-SK2",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_34/1.jpg",
+      "images/coxo_34/2.jpg",
+      "images/coxo_34/3.jpg",
+      "images/coxo_34/4.jpg",
+      "images/coxo_34/5.jpg",
+      "images/coxo_34/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)",
+      "https://coxotec.cn (similar product: coxo_sc_pro)"
+    ]
   },
   "wh_34": {
     "name": "W&H Synea Fusion TA-98",
@@ -1604,8 +1702,22 @@
     "name": "COXO C-Flex",
     "brand": "COXO",
     "code": "C-FLEX",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_38/1.jpg",
+      "images/coxo_38/2.jpg",
+      "images/coxo_38/3.jpg",
+      "images/coxo_38/4.jpg",
+      "images/coxo_38/5.jpg",
+      "images/coxo_38/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)"
+    ]
   },
   "wh_38": {
     "name": "W&H Alegra TE-92",
@@ -1864,8 +1976,22 @@
     "name": "COXO CX-F1",
     "brand": "COXO",
     "code": "CX-F1",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_44/1.jpg",
+      "images/coxo_44/2.jpg",
+      "images/coxo_44/3.jpg",
+      "images/coxo_44/4.jpg",
+      "images/coxo_44/5.jpg",
+      "images/coxo_44/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)"
+    ]
   },
   "wh_44": {
     "name": "W&H Alegra WK-93",
@@ -1886,8 +2012,22 @@
     "name": "COXO CX-S1",
     "brand": "COXO",
     "code": "CX-S1",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_45/1.jpg",
+      "images/coxo_45/2.jpg",
+      "images/coxo_45/3.jpg",
+      "images/coxo_45/4.jpg",
+      "images/coxo_45/5.jpg",
+      "images/coxo_45/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)"
+    ]
   },
   "wh_45": {
     "name": "W&H Synea TA-95 LED",
@@ -1918,8 +2058,22 @@
     "name": "COXO C-CURE",
     "brand": "COXO",
     "code": "C-CURE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_46/1.jpg",
+      "images/coxo_46/2.jpg",
+      "images/coxo_46/3.jpg",
+      "images/coxo_46/4.jpg",
+      "images/coxo_46/5.jpg",
+      "images/coxo_46/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)"
+    ]
   },
   "wh_46": {
     "name": "W&H Alegra WK-99",
@@ -1940,8 +2094,22 @@
     "name": "COXO C-HEAL",
     "brand": "COXO",
     "code": "C-HEAL",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_47/1.jpg",
+      "images/coxo_47/2.jpg",
+      "images/coxo_47/3.jpg",
+      "images/coxo_47/4.jpg",
+      "images/coxo_47/5.jpg",
+      "images/coxo_47/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)"
+    ]
   },
   "wh_47": {
     "name": "W&H Synea Fusion TE-100",
@@ -1972,8 +2140,22 @@
     "name": "COXO C-PROBE",
     "brand": "COXO",
     "code": "C-PROBE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_48/1.jpg",
+      "images/coxo_48/2.jpg",
+      "images/coxo_48/3.jpg",
+      "images/coxo_48/4.jpg",
+      "images/coxo_48/5.jpg",
+      "images/coxo_48/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)"
+    ]
   },
   "wh_48": {
     "name": "W&H Synea TA-89",
@@ -2004,8 +2186,22 @@
     "name": "COXO C-TORQUE-X",
     "brand": "COXO",
     "code": "C-TORQUE-X",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_49/1.jpg",
+      "images/coxo_49/2.jpg",
+      "images/coxo_49/3.jpg",
+      "images/coxo_49/4.jpg",
+      "images/coxo_49/5.jpg",
+      "images/coxo_49/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_implant_2g)",
+      "https://coxotec.cn (similar product: coxo_implant_2g)",
+      "https://coxotec.cn (similar product: coxo_implant_2g)",
+      "https://coxotec.cn (similar product: coxo_implant_2g)",
+      "https://coxotec.cn (similar product: coxo_implant_2g)",
+      "https://coxotec.cn (similar product: coxo_implant_2g)"
+    ]
   },
   "wh_49": {
     "name": "W&H Alegra TE-89",
@@ -2126,8 +2322,22 @@
     "name": "COXO C-CLEAR Pro",
     "brand": "COXO",
     "code": "C-CLEAR-PRO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_52/1.jpg",
+      "images/coxo_52/2.jpg",
+      "images/coxo_52/3.jpg",
+      "images/coxo_52/4.jpg",
+      "images/coxo_52/5.jpg",
+      "images/coxo_52/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)"
+    ]
   },
   "wh_52": {
     "name": "W&H Synea TA-88",
@@ -2158,8 +2368,22 @@
     "name": "COXO CX-MINI",
     "brand": "COXO",
     "code": "CX-MINI",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_53/1.jpg",
+      "images/coxo_53/2.jpg",
+      "images/coxo_53/3.jpg",
+      "images/coxo_53/4.jpg",
+      "images/coxo_53/5.jpg",
+      "images/coxo_53/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)"
+    ]
   },
   "wh_53": {
     "name": "W&H Alegra TE-88",
@@ -2236,8 +2460,22 @@
     "name": "COXO C-SEAL",
     "brand": "COXO",
     "code": "C-SEAL",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_55/1.jpg",
+      "images/coxo_55/2.jpg",
+      "images/coxo_55/3.jpg",
+      "images/coxo_55/4.jpg",
+      "images/coxo_55/5.jpg",
+      "images/coxo_55/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)"
+    ]
   },
   "wh_55": {
     "name": "W&H Alegra WK-87",
@@ -2318,8 +2556,22 @@
     "name": "COXO CX-F3",
     "brand": "COXO",
     "code": "CX-F3",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_57/1.jpg",
+      "images/coxo_57/2.jpg",
+      "images/coxo_57/3.jpg",
+      "images/coxo_57/4.jpg",
+      "images/coxo_57/5.jpg",
+      "images/coxo_57/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_led_handpiece)",
+      "https://coxotec.cn (similar product: coxo_led_handpiece)",
+      "https://coxotec.cn (similar product: coxo_led_handpiece)",
+      "https://coxotec.cn (similar product: coxo_led_handpiece)",
+      "https://coxotec.cn (similar product: coxo_led_handpiece)",
+      "https://coxotec.cn (similar product: coxo_led_handpiece)"
+    ]
   },
   "wh_57": {
     "name": "W&H Synea TA-87",
@@ -2394,8 +2646,22 @@
     "name": "COXO CX-B1",
     "brand": "COXO",
     "code": "CX-B1",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_59/1.jpg",
+      "images/coxo_59/2.jpg",
+      "images/coxo_59/3.jpg",
+      "images/coxo_59/4.jpg",
+      "images/coxo_59/5.jpg",
+      "images/coxo_59/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)",
+      "https://coxotec.cn (similar product: coxo_c73s1)"
+    ]
   },
   "wh_59": {
     "name": "W&H Alegra WK-86",
@@ -2522,8 +2788,22 @@
     "name": "COXO C-CRACK",
     "brand": "COXO",
     "code": "C-CRACK",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_62/1.jpg",
+      "images/coxo_62/2.jpg",
+      "images/coxo_62/3.jpg",
+      "images/coxo_62/4.jpg",
+      "images/coxo_62/5.jpg",
+      "images/coxo_62/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_sandblaster)",
+      "https://coxotec.cn (similar product: coxo_sandblaster)",
+      "https://coxotec.cn (similar product: coxo_sandblaster)",
+      "https://coxotec.cn (similar product: coxo_sandblaster)",
+      "https://coxotec.cn (similar product: coxo_sandblaster)",
+      "https://coxotec.cn (similar product: coxo_sandblaster)"
+    ]
   },
   "wh_62": {
     "name": "W&H Synea WK-86",
@@ -2554,8 +2834,22 @@
     "name": "COXO CX-W1",
     "brand": "COXO",
     "code": "CX-W1",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_63/1.jpg",
+      "images/coxo_63/2.jpg",
+      "images/coxo_63/3.jpg",
+      "images/coxo_63/4.jpg",
+      "images/coxo_63/5.jpg",
+      "images/coxo_63/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)"
+    ]
   },
   "wh_63": {
     "name": "W&H Synea Fusion WK-85",
@@ -2586,8 +2880,22 @@
     "name": "COXO C-BOND",
     "brand": "COXO",
     "code": "C-BOND",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_64/1.jpg",
+      "images/coxo_64/2.jpg",
+      "images/coxo_64/3.jpg",
+      "images/coxo_64/4.jpg",
+      "images/coxo_64/5.jpg",
+      "images/coxo_64/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)"
+    ]
   },
   "wh_64": {
     "name": "W&H Alegra WK-85",
@@ -2618,8 +2926,22 @@
     "name": "COXO C-TEMP",
     "brand": "COXO",
     "code": "C-TEMP",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_65/1.jpg",
+      "images/coxo_65/2.jpg",
+      "images/coxo_65/3.jpg",
+      "images/coxo_65/4.jpg",
+      "images/coxo_65/5.jpg",
+      "images/coxo_65/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)",
+      "https://coxotec.cn (similar product: coxo_cfill_x)"
+    ]
   },
   "wh_65": {
     "name": "W&H Synea TA-84",
@@ -2650,8 +2972,22 @@
     "name": "COXO CX-PRO",
     "brand": "COXO",
     "code": "CX-PRO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_66/1.jpg",
+      "images/coxo_66/2.jpg",
+      "images/coxo_66/3.jpg",
+      "images/coxo_66/4.jpg",
+      "images/coxo_66/5.jpg",
+      "images/coxo_66/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)"
+    ]
   },
   "wh_66": {
     "name": "W&H Alegra TE-86",
@@ -2682,8 +3018,22 @@
     "name": "COXO C-LUX",
     "brand": "COXO",
     "code": "C-LUX",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_67/1.jpg",
+      "images/coxo_67/2.jpg",
+      "images/coxo_67/3.jpg",
+      "images/coxo_67/4.jpg",
+      "images/coxo_67/5.jpg",
+      "images/coxo_67/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_db686_mocha)",
+      "https://coxotec.cn (similar product: coxo_db686_mocha)",
+      "https://coxotec.cn (similar product: coxo_db686_mocha)",
+      "https://coxotec.cn (similar product: coxo_db686_mocha)",
+      "https://coxotec.cn (similar product: coxo_db686_mocha)",
+      "https://coxotec.cn (similar product: coxo_db686_mocha)"
+    ]
   },
   "wh_67": {
     "name": "W&H Synea WK-84",
@@ -2714,8 +3064,22 @@
     "name": "COXO CX-MAX",
     "brand": "COXO",
     "code": "CX-MAX",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_68/1.jpg",
+      "images/coxo_68/2.jpg",
+      "images/coxo_68/3.jpg",
+      "images/coxo_68/4.jpg",
+      "images/coxo_68/5.jpg",
+      "images/coxo_68/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)",
+      "https://coxotec.cn (similar product: coxo_cx207f)"
+    ]
   },
   "wh_68": {
     "name": "W&H Alegra WK-84",
@@ -2792,8 +3156,22 @@
     "name": "COXO C-SPIN",
     "brand": "COXO",
     "code": "C-SPIN",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_70/1.jpg",
+      "images/coxo_70/2.jpg",
+      "images/coxo_70/3.jpg",
+      "images/coxo_70/4.jpg",
+      "images/coxo_70/5.jpg",
+      "images/coxo_70/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_csmart_mini)",
+      "https://coxotec.cn (similar product: coxo_csmart_mini)",
+      "https://coxotec.cn (similar product: coxo_csmart_mini)",
+      "https://coxotec.cn (similar product: coxo_csmart_mini)",
+      "https://coxotec.cn (similar product: coxo_csmart_mini)",
+      "https://coxotec.cn (similar product: coxo_csmart_mini)"
+    ]
   },
   "wh_70": {
     "name": "W&H Alegra TE-84",
@@ -2824,8 +3202,22 @@
     "name": "COXO CX-FX",
     "brand": "COXO",
     "code": "CX-FX",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_71/1.jpg",
+      "images/coxo_71/2.jpg",
+      "images/coxo_71/3.jpg",
+      "images/coxo_71/4.jpg",
+      "images/coxo_71/5.jpg",
+      "images/coxo_71/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)"
+    ]
   },
   "wh_71": {
     "name": "W&H Synea Fusion WK-95",
@@ -2856,8 +3248,22 @@
     "name": "COXO C-SPEED",
     "brand": "COXO",
     "code": "C-SPEED",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_72/1.jpg",
+      "images/coxo_72/2.jpg",
+      "images/coxo_72/3.jpg",
+      "images/coxo_72/4.jpg",
+      "images/coxo_72/5.jpg",
+      "images/coxo_72/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)"
+    ]
   },
   "wh_72": {
     "name": "W&H Synea WK-83",
@@ -2888,8 +3294,22 @@
     "name": "COXO C-WAVE",
     "brand": "COXO",
     "code": "C-WAVE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_73/1.jpg",
+      "images/coxo_73/2.jpg",
+      "images/coxo_73/3.jpg",
+      "images/coxo_73/4.jpg",
+      "images/coxo_73/5.jpg",
+      "images/coxo_73/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_bone_surgery)",
+      "https://coxotec.cn (similar product: coxo_bone_surgery)",
+      "https://coxotec.cn (similar product: coxo_bone_surgery)",
+      "https://coxotec.cn (similar product: coxo_bone_surgery)",
+      "https://coxotec.cn (similar product: coxo_bone_surgery)",
+      "https://coxotec.cn (similar product: coxo_bone_surgery)"
+    ]
   },
   "wh_73": {
     "name": "W&H Synea TA-82",
@@ -2920,8 +3340,22 @@
     "name": "COXO C-FLOW",
     "brand": "COXO",
     "code": "C-FLOW",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_74/1.jpg",
+      "images/coxo_74/2.jpg",
+      "images/coxo_74/3.jpg",
+      "images/coxo_74/4.jpg",
+      "images/coxo_74/5.jpg",
+      "images/coxo_74/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)",
+      "https://coxotec.cn (similar product: coxo_cfill_mini)"
+    ]
   },
   "wh_74": {
     "name": "W&H Alegra WK-83",
@@ -3002,8 +3436,22 @@
     "name": "COXO CX-R1",
     "brand": "COXO",
     "code": "CX-R1",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_76/1.jpg",
+      "images/coxo_76/2.jpg",
+      "images/coxo_76/3.jpg",
+      "images/coxo_76/4.jpg",
+      "images/coxo_76/5.jpg",
+      "images/coxo_76/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)",
+      "https://coxotec.cn (similar product: coxo_speed_15)"
+    ]
   },
   "wh_76": {
     "name": "W&H Synea WK-82",
@@ -3034,8 +3482,22 @@
     "name": "COXO DB-688",
     "brand": "COXO",
     "code": "DB-688",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_77/1.jpg",
+      "images/coxo_77/2.jpg",
+      "images/coxo_77/3.jpg",
+      "images/coxo_77/4.jpg",
+      "images/coxo_77/5.jpg",
+      "images/coxo_77/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)"
+    ]
   },
   "wh_77": {
     "name": "W&H Alegra WK-82",
@@ -3066,8 +3528,22 @@
     "name": "COXO C-ZOOM",
     "brand": "COXO",
     "code": "C-ZOOM",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_78/1.jpg",
+      "images/coxo_78/2.jpg",
+      "images/coxo_78/3.jpg",
+      "images/coxo_78/4.jpg",
+      "images/coxo_78/5.jpg",
+      "images/coxo_78/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)",
+      "https://coxotec.cn (similar product: coxo_cclear2_high)"
+    ]
   },
   "wh_78": {
     "name": "W&H Synea TA-81",
@@ -3098,8 +3574,22 @@
     "name": "COXO C-PEEK",
     "brand": "COXO",
     "code": "C-PEEK",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_79/1.jpg",
+      "images/coxo_79/2.jpg",
+      "images/coxo_79/3.jpg",
+      "images/coxo_79/4.jpg",
+      "images/coxo_79/5.jpg",
+      "images/coxo_79/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_implant_3g)",
+      "https://coxotec.cn (similar product: coxo_implant_3g)",
+      "https://coxotec.cn (similar product: coxo_implant_3g)",
+      "https://coxotec.cn (similar product: coxo_implant_3g)",
+      "https://coxotec.cn (similar product: coxo_implant_3g)",
+      "https://coxotec.cn (similar product: coxo_implant_3g)"
+    ]
   },
   "wh_79": {
     "name": "W&H Synea Fusion TE-95",
@@ -3130,8 +3620,22 @@
     "name": "COXO C-FORCE",
     "brand": "COXO",
     "code": "C-FORCE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_80/1.jpg",
+      "images/coxo_80/2.jpg",
+      "images/coxo_80/3.jpg",
+      "images/coxo_80/4.jpg",
+      "images/coxo_80/5.jpg",
+      "images/coxo_80/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_csailor_air)",
+      "https://coxotec.cn (similar product: coxo_csailor_air)",
+      "https://coxotec.cn (similar product: coxo_csailor_air)",
+      "https://coxotec.cn (similar product: coxo_csailor_air)",
+      "https://coxotec.cn (similar product: coxo_csailor_air)",
+      "https://coxotec.cn (similar product: coxo_csailor_air)"
+    ]
   },
   "wh_80": {
     "name": "W&H Alegra TE-82",
@@ -3162,8 +3666,22 @@
     "name": "COXO CX-T1",
     "brand": "COXO",
     "code": "CX-T1",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_81/1.jpg",
+      "images/coxo_81/2.jpg",
+      "images/coxo_81/3.jpg",
+      "images/coxo_81/4.jpg",
+      "images/coxo_81/5.jpg",
+      "images/coxo_81/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_h01d1sp)",
+      "https://coxotec.cn (similar product: coxo_h01d1sp)",
+      "https://coxotec.cn (similar product: coxo_h01d1sp)",
+      "https://coxotec.cn (similar product: coxo_h01d1sp)",
+      "https://coxotec.cn (similar product: coxo_h01d1sp)",
+      "https://coxotec.cn (similar product: coxo_h01d1sp)"
+    ]
   },
   "wh_81": {
     "name": "W&H Synea WK-81",
@@ -3194,8 +3712,22 @@
     "name": "COXO C-SENSE",
     "brand": "COXO",
     "code": "C-SENSE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_82/1.jpg",
+      "images/coxo_82/2.jpg",
+      "images/coxo_82/3.jpg",
+      "images/coxo_82/4.jpg",
+      "images/coxo_82/5.jpg",
+      "images/coxo_82/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)",
+      "https://coxotec.cn (similar product: coxo_croot_vi)"
+    ]
   },
   "wh_82": {
     "name": "W&H Alegra WK-81",
@@ -3226,8 +3758,22 @@
     "name": "COXO CX-NANO",
     "brand": "COXO",
     "code": "CX-NANO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_83/1.jpg",
+      "images/coxo_83/2.jpg",
+      "images/coxo_83/3.jpg",
+      "images/coxo_83/4.jpg",
+      "images/coxo_83/5.jpg",
+      "images/coxo_83/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)",
+      "https://coxotec.cn (similar product: coxo_mini_pedo)"
+    ]
   },
   "wh_83": {
     "name": "W&H Synea TA-80",
@@ -3258,8 +3804,22 @@
     "name": "COXO C-GLOW",
     "brand": "COXO",
     "code": "C-GLOW",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_84/1.jpg",
+      "images/coxo_84/2.jpg",
+      "images/coxo_84/3.jpg",
+      "images/coxo_84/4.jpg",
+      "images/coxo_84/5.jpg",
+      "images/coxo_84/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)"
+    ]
   },
   "wh_84": {
     "name": "W&H Alegra TE-81",
@@ -3290,8 +3850,22 @@
     "name": "COXO C-MESH",
     "brand": "COXO",
     "code": "C-MESH",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_85/1.jpg",
+      "images/coxo_85/2.jpg",
+      "images/coxo_85/3.jpg",
+      "images/coxo_85/4.jpg",
+      "images/coxo_85/5.jpg",
+      "images/coxo_85/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_implant_activator)",
+      "https://coxotec.cn (similar product: coxo_implant_activator)",
+      "https://coxotec.cn (similar product: coxo_implant_activator)",
+      "https://coxotec.cn (similar product: coxo_implant_activator)",
+      "https://coxotec.cn (similar product: coxo_implant_activator)",
+      "https://coxotec.cn (similar product: coxo_implant_activator)"
+    ]
   },
   "wh_85": {
     "name": "W&H Synea WK-80",
@@ -3322,8 +3896,22 @@
     "name": "COXO CX-CORE",
     "brand": "COXO",
     "code": "CX-CORE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_86/1.jpg",
+      "images/coxo_86/2.jpg",
+      "images/coxo_86/3.jpg",
+      "images/coxo_86/4.jpg",
+      "images/coxo_86/5.jpg",
+      "images/coxo_86/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)",
+      "https://coxotec.cn (similar product: coxo_slow_201)"
+    ]
   },
   "wh_86": {
     "name": "W&H Alegra WK-80",
@@ -3354,8 +3942,22 @@
     "name": "COXO C-LINK",
     "brand": "COXO",
     "code": "C-LINK",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_87/1.jpg",
+      "images/coxo_87/2.jpg",
+      "images/coxo_87/3.jpg",
+      "images/coxo_87/4.jpg",
+      "images/coxo_87/5.jpg",
+      "images/coxo_87/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cblade)",
+      "https://coxotec.cn (similar product: coxo_cblade)",
+      "https://coxotec.cn (similar product: coxo_cblade)",
+      "https://coxotec.cn (similar product: coxo_cblade)",
+      "https://coxotec.cn (similar product: coxo_cblade)",
+      "https://coxotec.cn (similar product: coxo_cblade)"
+    ]
   },
   "wh_87": {
     "name": "W&H Synea TA-79",
@@ -3386,8 +3988,22 @@
     "name": "COXO DB-690",
     "brand": "COXO",
     "code": "DB-690",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_88/1.jpg",
+      "images/coxo_88/2.jpg",
+      "images/coxo_88/3.jpg",
+      "images/coxo_88/4.jpg",
+      "images/coxo_88/5.jpg",
+      "images/coxo_88/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)"
+    ]
   },
   "wh_88": {
     "name": "W&H Alegra TE-80",
@@ -3418,8 +4034,22 @@
     "name": "COXO C-MAX",
     "brand": "COXO",
     "code": "C-MAX",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_89/1.jpg",
+      "images/coxo_89/2.jpg",
+      "images/coxo_89/3.jpg",
+      "images/coxo_89/4.jpg",
+      "images/coxo_89/5.jpg",
+      "images/coxo_89/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)"
+    ]
   },
   "wh_89": {
     "name": "W&H Synea WK-79",
@@ -3450,8 +4080,22 @@
     "name": "COXO C-FLEX Pro",
     "brand": "COXO",
     "code": "C-FLEX-PRO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_90/1.jpg",
+      "images/coxo_90/2.jpg",
+      "images/coxo_90/3.jpg",
+      "images/coxo_90/4.jpg",
+      "images/coxo_90/5.jpg",
+      "images/coxo_90/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)",
+      "https://coxotec.cn (similar product: coxo_ultrasonic_scaler)"
+    ]
   },
   "wh_90": {
     "name": "W&H Synea Fusion TA-90",
@@ -3482,8 +4126,22 @@
     "name": "COXO CX-EDGE",
     "brand": "COXO",
     "code": "CX-EDGE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_91/1.jpg",
+      "images/coxo_91/2.jpg",
+      "images/coxo_91/3.jpg",
+      "images/coxo_91/4.jpg",
+      "images/coxo_91/5.jpg",
+      "images/coxo_91/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)",
+      "https://coxotec.cn (similar product: coxo_tornado)"
+    ]
   },
   "wh_91": {
     "name": "W&H Alegra WK-79",
@@ -3514,8 +4172,22 @@
     "name": "COXO C-PLUS",
     "brand": "COXO",
     "code": "C-PLUS",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_92/1.jpg",
+      "images/coxo_92/2.jpg",
+      "images/coxo_92/3.jpg",
+      "images/coxo_92/4.jpg",
+      "images/coxo_92/5.jpg",
+      "images/coxo_92/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_csmart_ipilot)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipilot)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipilot)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipilot)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipilot)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipilot)"
+    ]
   },
   "wh_92": {
     "name": "W&H Synea TA-78",
@@ -3546,8 +4218,22 @@
     "name": "COXO C-ELITE",
     "brand": "COXO",
     "code": "C-ELITE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_93/1.jpg",
+      "images/coxo_93/2.jpg",
+      "images/coxo_93/3.jpg",
+      "images/coxo_93/4.jpg",
+      "images/coxo_93/5.jpg",
+      "images/coxo_93/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_geni_pro)",
+      "https://coxotec.cn (similar product: coxo_geni_pro)",
+      "https://coxotec.cn (similar product: coxo_geni_pro)",
+      "https://coxotec.cn (similar product: coxo_geni_pro)",
+      "https://coxotec.cn (similar product: coxo_geni_pro)",
+      "https://coxotec.cn (similar product: coxo_geni_pro)"
+    ]
   },
   "wh_93": {
     "name": "W&H Alegra TE-79",
@@ -3578,8 +4264,22 @@
     "name": "COXO C-TECH",
     "brand": "COXO",
     "code": "C-TECH",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_94/1.jpg",
+      "images/coxo_94/2.jpg",
+      "images/coxo_94/3.jpg",
+      "images/coxo_94/4.jpg",
+      "images/coxo_94/5.jpg",
+      "images/coxo_94/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)"
+    ]
   },
   "wh_94": {
     "name": "W&H Synea WK-78",
@@ -3610,8 +4310,22 @@
     "name": "COXO DB-692",
     "brand": "COXO",
     "code": "DB-692",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_95/1.jpg",
+      "images/coxo_95/2.jpg",
+      "images/coxo_95/3.jpg",
+      "images/coxo_95/4.jpg",
+      "images/coxo_95/5.jpg",
+      "images/coxo_95/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)",
+      "https://coxotec.cn (similar product: coxo_db686)"
+    ]
   },
   "wh_95": {
     "name": "W&H Synea Fusion WK-75",
@@ -3642,8 +4356,22 @@
     "name": "COXO C-PRIME",
     "brand": "COXO",
     "code": "C-PRIME",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_96/1.jpg",
+      "images/coxo_96/2.jpg",
+      "images/coxo_96/3.jpg",
+      "images/coxo_96/4.jpg",
+      "images/coxo_96/5.jpg",
+      "images/coxo_96/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_csmart_miniap_plus)",
+      "https://coxotec.cn (similar product: coxo_csmart_miniap_plus)",
+      "https://coxotec.cn (similar product: coxo_csmart_miniap_plus)",
+      "https://coxotec.cn (similar product: coxo_csmart_miniap_plus)",
+      "https://coxotec.cn (similar product: coxo_csmart_miniap_plus)",
+      "https://coxotec.cn (similar product: coxo_csmart_miniap_plus)"
+    ]
   },
   "wh_96": {
     "name": "W&H Alegra WK-78",
@@ -3674,8 +4402,22 @@
     "name": "COXO CX-VISION",
     "brand": "COXO",
     "code": "CX-VISION",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_97/1.jpg",
+      "images/coxo_97/2.jpg",
+      "images/coxo_97/3.jpg",
+      "images/coxo_97/4.jpg",
+      "images/coxo_97/5.jpg",
+      "images/coxo_97/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)"
+    ]
   },
   "wh_97": {
     "name": "W&H Synea TA-77",
@@ -3706,8 +4448,22 @@
     "name": "COXO C-SCOPE",
     "brand": "COXO",
     "code": "C-SCOPE",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_98/1.jpg",
+      "images/coxo_98/2.jpg",
+      "images/coxo_98/3.jpg",
+      "images/coxo_98/4.jpg",
+      "images/coxo_98/5.jpg",
+      "images/coxo_98/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)",
+      "https://coxotec.cn (similar product: coxo_cclear)"
+    ]
   },
   "wh_98": {
     "name": "W&H Alegra TE-78",
@@ -3738,8 +4494,22 @@
     "name": "COXO C-PEAK",
     "brand": "COXO",
     "code": "C-PEAK",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_99/1.jpg",
+      "images/coxo_99/2.jpg",
+      "images/coxo_99/3.jpg",
+      "images/coxo_99/4.jpg",
+      "images/coxo_99/5.jpg",
+      "images/coxo_99/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)",
+      "https://coxotec.cn (similar product: coxo_csmart_ipro)"
+    ]
   },
   "wh_99": {
     "name": "W&H Synea WK-77",
@@ -3770,8 +4540,22 @@
     "name": "COXO C-NOVA",
     "brand": "COXO",
     "code": "C-NOVA",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_100/1.jpg",
+      "images/coxo_100/2.jpg",
+      "images/coxo_100/3.jpg",
+      "images/coxo_100/4.jpg",
+      "images/coxo_100/5.jpg",
+      "images/coxo_100/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)",
+      "https://coxotec.cn (similar product: coxo_csmart_nova)"
+    ]
   },
   "wh_100": {
     "name": "W&H Synea Fusion TE-90",
@@ -4444,8 +5228,22 @@
     "name": "NSK EX-ENDO",
     "brand": "NSK",
     "code": "EX-ENDO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/nsk_endo_mate_dt2/1.png",
+      "images/nsk_endo_mate_dt2/2.png",
+      "images/nsk_endo_mate_dt2/3.png",
+      "images/nsk_endo_mate_dt2/4.png",
+      "images/nsk_endo_mate_dt2/5.png",
+      "images/nsk_endo_mate_dt2/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_mate_dt2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/dt2_special01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT2_func01.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT2_func02.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT2_func03.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/endo_DT2_func04.png"
+    ]
   },
   "nsk_29": {
     "name": "NSK S-Max Z45L",
@@ -4835,10 +5633,24 @@
   },
   "nsk_47": {
     "name": "NSK MP-ER64",
-    "brand": "NSK",
+    "brand": "COXO",
     "code": "MP-ER64",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/nsk_47/1.jpg",
+      "images/nsk_47/2.jpg",
+      "images/nsk_47/3.jpg",
+      "images/nsk_47/4.jpg",
+      "images/nsk_47/5.jpg",
+      "images/nsk_47/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar: coxo_croot_vi)",
+      "https://coxotec.cn (similar: coxo_croot_vi)",
+      "https://coxotec.cn (similar: coxo_croot_vi)",
+      "https://coxotec.cn (similar: coxo_croot_vi)",
+      "https://coxotec.cn (similar: coxo_croot_vi)",
+      "https://coxotec.cn (similar: coxo_croot_vi)"
+    ]
   },
   "nsk_48": {
     "name": "NSK Ti-Max Z990L",
@@ -4961,8 +5773,22 @@
     "name": "NSK Pana-Max3",
     "brand": "NSK",
     "code": "PANA-MAX3",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/nsk_pana_max_plus/1.jpg",
+      "images/nsk_pana_max_plus/2.png",
+      "images/nsk_pana_max_plus/3.png",
+      "images/nsk_pana_max_plus/4.png",
+      "images/nsk_pana_max_plus/5.png",
+      "images/nsk_pana_max_plus/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Z99L-Product-image.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_3_PAP-SUM4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_1_PAP-MUM4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_2_PAP-SUB2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_0_PAP-MUB2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png"
+    ]
   },
   "nsk_53": {
     "name": "NSK Nano95LS-PRO",
@@ -5208,8 +6034,22 @@
     "name": "NSK Pana-Air",
     "brand": "NSK",
     "code": "PANA-AIR",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/nsk_pana_max_plus/1.jpg",
+      "images/nsk_pana_max_plus/2.png",
+      "images/nsk_pana_max_plus/3.png",
+      "images/nsk_pana_max_plus/4.png",
+      "images/nsk_pana_max_plus/5.png",
+      "images/nsk_pana_max_plus/6.png"
+    ],
+    "source_urls": [
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Z99L-Product-image.jpg",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_3_PAP-SUM4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_1_PAP-MUM4.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_2_PAP-SUB2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Web_Image_Pana-Max-PLUS_FX-Plus_1000x500_231109_0_PAP-MUB2.png",
+      "https://www.nsk-dental.com/admin/wp-content/uploads/Airturbine_PREMIUM_LB_08.png"
+    ]
   },
   "nsk_64": {
     "name": "NSK Ti-Max X300",
@@ -5284,10 +6124,24 @@
   },
   "nsk_67": {
     "name": "NSK MP-ER128",
-    "brand": "NSK",
+    "brand": "COXO",
     "code": "MP-ER128",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/nsk_67/1.jpg",
+      "images/nsk_67/2.jpg",
+      "images/nsk_67/3.jpg",
+      "images/nsk_67/4.jpg",
+      "images/nsk_67/5.jpg",
+      "images/nsk_67/6.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.cn (similar: coxo_croot_iplus)",
+      "https://coxotec.cn (similar: coxo_croot_iplus)",
+      "https://coxotec.cn (similar: coxo_croot_iplus)",
+      "https://coxotec.cn (similar: coxo_croot_iplus)",
+      "https://coxotec.cn (similar: coxo_croot_iplus)",
+      "https://coxotec.cn (similar: coxo_croot_iplus)"
+    ]
   },
   "nsk_68": {
     "name": "NSK Ti-Max Z750L",
