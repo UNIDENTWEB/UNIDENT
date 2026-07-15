@@ -98,8 +98,26 @@
     "name": "W&H Synea TA-98",
     "brand": "W&H",
     "code": "SYNEA-TA-98",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_3/1.png",
+      "images/wh_3/2.png",
+      "images/wh_3/3.png",
+      "images/wh_3/4.jpg",
+      "images/wh_3/5.jpg",
+      "images/wh_3/6.jpg",
+      "images/wh_3/7.jpg",
+      "images/wh_3/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_eb-75.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-97_image_001030_00_150dpi_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-56_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/e/we-66_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-75_l_g.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/h/a/handpiece_hg-43_a_image_001068_00_150dpi_1.png"
+    ]
   },
   "coxo_4": {
     "name": "COXO CX205-M",
@@ -127,8 +145,26 @@
     "name": "COXO C-sailor Pro",
     "brand": "COXO",
     "code": "C-SAILOR-PRO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_5/1.png",
+      "images/coxo_5/2.jpg",
+      "images/coxo_5/3.jpg",
+      "images/coxo_5/4.jpg",
+      "images/coxo_5/5.png",
+      "images/coxo_5/6.png",
+      "images/coxo_5/7.jpg",
+      "images/coxo_5/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/11/Implantation-Devices-COXO-Medical5.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/d5cd3cc0dd9e10137ef163-1024x545.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/d5cd3cc0dd9e10137ef163-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/cde5a3d4373f335301fa86-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/1be5af705e28d66e22fa9-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/c6e24145b508ad617d8749-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/C-SAILOR-PROwebsite_01-560x504.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/C-SAILOR-PROwebsite_02-768x691.jpg"
+    ]
   },
   "wh_5": {
     "name": "W&H Synea Fusion TK-94",
@@ -178,8 +214,26 @@
     "name": "W&H Synea TA-98 LED",
     "brand": "W&H",
     "code": "SYNEA-TA-98-LED",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_6/1.png",
+      "images/wh_6/2.png",
+      "images/wh_6/3.png",
+      "images/wh_6/4.png",
+      "images/wh_6/5.png",
+      "images/wh_6/6.png",
+      "images/wh_6/7.jpg",
+      "images/wh_6/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30048000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/g/wg-56_a.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_10207550.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-75_l_g.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-15_surgical_handpiece_straight_11_-_ref_30060000.png"
+    ]
   },
   "coxo_7": {
     "name": "COXO C-Smart I Pro",
@@ -225,29 +279,101 @@
     "name": "COXO PT Master",
     "brand": "COXO",
     "code": "PT-MASTER",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_8/1.png",
+      "images/coxo_8/2.png",
+      "images/coxo_8/3.png",
+      "images/coxo_8/4.jpg",
+      "images/coxo_8/5.jpg",
+      "images/coxo_8/6.jpg",
+      "images/coxo_8/7.jpg",
+      "images/coxo_8/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/02/1-1024x1024.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/1-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/2-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/f6cc78f42f53666ab9fa69.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/ee9cdccddba7d2d1fac049.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/ce2ec52c82165dbf585b5.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/891aa7670b22f6bf1f441.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/deba0a02318a58a63d0b96.jpg"
+    ]
   },
   "wh_8": {
     "name": "W&H Synea TA-90",
     "brand": "W&H",
     "code": "SYNEA-TA-90",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_8/1.png",
+      "images/wh_8/2.png",
+      "images/wh_8/3.png",
+      "images/wh_8/4.jpg",
+      "images/wh_8/5.png",
+      "images/wh_8/6.png",
+      "images/wh_8/7.jpg",
+      "images/wh_8/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_spray_head_90_for_proxeo_aura_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_spray_head_90_for_proxeo_aura_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_spray_head_perio_for_proxeo_aura_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/n/s/nsk_varios_prophy_powder_handpiece_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/1/3/13_1_.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_subgingival_perio_tips.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/n/s/nsk_varios_perio_powder_handpiece.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h.jpg"
+    ]
   },
   "coxo_9": {
     "name": "COXO GENI PRO",
     "brand": "COXO",
     "code": "GENI-PRO",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_9/1.png",
+      "images/coxo_9/2.png",
+      "images/coxo_9/3.png",
+      "images/coxo_9/4.png",
+      "images/coxo_9/5.png",
+      "images/coxo_9/6.png",
+      "images/coxo_9/7.png",
+      "images/coxo_9/8.png"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/02/2-3-1024x1024.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/2-3-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/3-4-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/6-2-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/5-3-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/4-4-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/1-4-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/8.png"
+    ]
   },
   "wh_9": {
     "name": "W&H Alegra TE-90",
     "brand": "W&H",
     "code": "ALEGRA-TE-90",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_9/1.png",
+      "images/wh_9/2.png",
+      "images/wh_9/3.jpg",
+      "images/wh_9/4.jpg",
+      "images/wh_9/5.png",
+      "images/wh_9/6.png",
+      "images/wh_9/7.png",
+      "images/wh_9/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30054000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30057000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_eb-75.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-15_surgical_handpiece_straight_11_-_ref_30060000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-93_lt_s.jpg"
+    ]
   },
   "coxo_10": {
     "name": "COXO CX207-B",
@@ -308,29 +434,101 @@
     "name": "W&H Synea TA-85",
     "brand": "W&H",
     "code": "SYNEA-TA-85",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_11/1.png",
+      "images/wh_11/2.png",
+      "images/wh_11/3.jpg",
+      "images/wh_11/4.jpg",
+      "images/wh_11/5.png",
+      "images/wh_11/6.png",
+      "images/wh_11/7.png",
+      "images/wh_11/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_dos_k_851_200-240v_50hz.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_dos_k_851_200-240v_50hz.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/f/i/filters_missing_image.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_em-12_l.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_b6_piezomed_bone_surgery_instrument.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_bulb_for_za-55l.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_klenzklean_detergent_5_litre_1_2.png"
+    ]
   },
   "coxo_12": {
     "name": "COXO C-CLEAR-2",
     "brand": "COXO",
     "code": "C-CLEAR-2",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_12/1.png",
+      "images/coxo_12/2.png",
+      "images/coxo_12/3.png",
+      "images/coxo_12/4.png",
+      "images/coxo_12/5.png",
+      "images/coxo_12/6.jpg",
+      "images/coxo_12/7.jpg",
+      "images/coxo_12/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/02/1-14-1024x1024.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/4-9-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/1-14-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/2-11-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/3-10-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/08375310211993975e1661.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/4599eb2df2a0959efc4623.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/5dbe6bafeff831c66fa194.jpg"
+    ]
   },
   "wh_12": {
     "name": "W&H Alegra TE-85",
     "brand": "W&H",
     "code": "ALEGRA-TE-85",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_12/1.png",
+      "images/wh_12/2.png",
+      "images/wh_12/3.jpg",
+      "images/wh_12/4.png",
+      "images/wh_12/5.jpg",
+      "images/wh_12/6.jpg",
+      "images/wh_12/7.png",
+      "images/wh_12/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-98_l_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92_lg.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/c/o/contra-angle_wg-56_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30118000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-56_l_g_2_.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png"
+    ]
   },
   "coxo_13": {
     "name": "COXO CP-1",
     "brand": "COXO",
     "code": "CP-1",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_13/1.png",
+      "images/coxo_13/2.png",
+      "images/coxo_13/3.png",
+      "images/coxo_13/4.png",
+      "images/coxo_13/5.jpg",
+      "images/coxo_13/6.jpg",
+      "images/coxo_13/7.jpg",
+      "images/coxo_13/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/02/CP-1-1024x1024.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/CP-1-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/cp-1.9-21-400x300.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/cp-1_s1.0-400x300.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/9e2c89b32e3db68fb68c50.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/68b987ec23f98843886a56.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/bce513d27f28195e914687.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/b7fa9e36fb10f94e955047.jpg"
+    ]
   },
   "wh_13": {
     "name": "W&H Synea WK-93",
@@ -376,8 +574,26 @@
     "name": "W&H Alegra WK-92",
     "brand": "W&H",
     "code": "ALEGRA-WK-92",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_14/1.png",
+      "images/wh_14/2.png",
+      "images/wh_14/3.png",
+      "images/wh_14/4.png",
+      "images/wh_14/5.jpg",
+      "images/wh_14/6.jpg",
+      "images/wh_14/7.png",
+      "images/wh_14/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_ws-92_l_contra-angle_handpiece.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_ws-92_l_contra-angle_handpiece.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_led_g_contra-angle_dental_handpiece_-_ref_10255600_v1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-91_12.7_surgical_contra-angle_with_45_head.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-97_l_2.jpg"
+    ]
   },
   "coxo_15": {
     "name": "COXO C-SMART MINI AP",
@@ -408,8 +624,26 @@
     "name": "W&H Synea Fusion TA-91",
     "brand": "W&H",
     "code": "SYNEA-FUSION-TA-91",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_15/1.jpg",
+      "images/wh_15/2.jpg",
+      "images/wh_15/3.png",
+      "images/wh_15/4.jpg",
+      "images/wh_15/5.jpg",
+      "images/wh_15/6.png",
+      "images/wh_15/7.png",
+      "images/wh_15/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/c/o/contra-angle_wg-66_a.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/c/o/contra-angle_wg-66_a.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-67_a.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-97_l_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/s/z/sz-75_zygoma_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-15_surgical_handpiece_straight_11_-_ref_30060000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rk-97_l_primea_advanced_air_handpiece.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_led_g_contra-angle_dental_handpiece_-_ref_10255600_v1.png"
+    ]
   },
   "coxo_16": {
     "name": "COXO C-File Mini",
@@ -422,8 +656,26 @@
     "name": "W&H Alegra TE-99",
     "brand": "W&H",
     "code": "ALEGRA-TE-99",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_16/1.png",
+      "images/wh_16/2.png",
+      "images/wh_16/3.png",
+      "images/wh_16/4.png",
+      "images/wh_16/5.jpg",
+      "images/wh_16/6.png",
+      "images/wh_16/7.jpg",
+      "images/wh_16/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92_lg.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-56_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png"
+    ]
   },
   "coxo_17": {
     "name": "COXO C-File Re",
@@ -436,22 +688,75 @@
     "name": "W&H Synea TA-97",
     "brand": "W&H",
     "code": "SYNEA-TA-97",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_17/1.png",
+      "images/wh_17/2.png",
+      "images/wh_17/3.png",
+      "images/wh_17/4.jpg",
+      "images/wh_17/5.jpg",
+      "images/wh_17/6.jpg",
+      "images/wh_17/7.jpg",
+      "images/wh_17/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-56_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/c/o/contra-angle_wg-66_a.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30054000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30418000.jpg"
+    ]
   },
   "coxo_18": {
     "name": "COXO C-FR2",
     "brand": "COXO",
     "code": "C-FR2",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_18/1.png",
+      "images/coxo_18/2.png",
+      "images/coxo_18/3.png",
+      "images/coxo_18/4.png",
+      "images/coxo_18/5.png",
+      "images/coxo_18/6.jpg",
+      "images/coxo_18/7.jpg",
+      "images/coxo_18/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/02/6d340c343b781cb7567d53.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/6d340c343b781cb7567d53-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/65c94db50b0abdbee7f89-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/505aaa1d04ee292b04b851-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/fa6a333e152b7826967853-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/bf07a1e66c1e48f4e27a56.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/bc03f5856853a64e686878.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/43b606faea8338e5306791.jpg"
+    ]
   },
   "wh_18": {
     "name": "W&H Synea WK-97",
     "brand": "W&H",
     "code": "SYNEA-WK-97",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_18/1.png",
+      "images/wh_18/3.png",
+      "images/wh_18/4.jpg",
+      "images/wh_18/5.png",
+      "images/wh_18/6.jpg",
+      "images/wh_18/7.png",
+      "images/wh_18/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-9.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-56_11_surgical_contra-angle_handpiece.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rg-97_l_primea_advanced_air_turbine.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-93_lt_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30068000_te-97_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/g/wg-900_lt_1.png"
+    ]
   },
   "coxo_19": {
     "name": "COXO C-BLADE",
@@ -478,15 +783,51 @@
     "name": "W&H Alegra WK-95",
     "brand": "W&H",
     "code": "ALEGRA-WK-95",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_19/1.png",
+      "images/wh_19/2.png",
+      "images/wh_19/3.jpg",
+      "images/wh_19/4.png",
+      "images/wh_19/5.png",
+      "images/wh_19/6.png",
+      "images/wh_19/7.png",
+      "images/wh_19/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-97_image_001030_00_150dpi_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-15_surgical_handpiece_straight_11_-_ref_30060000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92_lg.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/h/a/handpiece_hg-43_a_image_001068_00_150dpi_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-99_lt.jpg"
+    ]
   },
   "coxo_20": {
     "name": "COXO C3-11KIT",
     "brand": "COXO",
     "code": "C3-11KIT",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_20/1.jpg",
+      "images/coxo_20/2.jpg",
+      "images/coxo_20/3.jpg",
+      "images/coxo_20/4.jpg",
+      "images/coxo_20/5.jpg",
+      "images/coxo_20/6.jpg",
+      "images/coxo_20/7.jpg",
+      "images/coxo_20/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/02/9f9d36327d96efaefe0910.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/97.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/97-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/98-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/99-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/100-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/101-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/02/102-280x280.jpg"
+    ]
   },
   "wh_20": {
     "name": "W&H Synea Fusion WK-90",
@@ -517,15 +858,51 @@
     "name": "COXO C-PUMA PRO3",
     "brand": "COXO",
     "code": "C-PUMA-PRO3",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_21/1.jpg",
+      "images/coxo_21/2.jpg",
+      "images/coxo_21/3.jpg",
+      "images/coxo_21/4.jpg",
+      "images/coxo_21/5.jpg",
+      "images/coxo_21/6.png",
+      "images/coxo_21/7.jpg",
+      "images/coxo_21/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2026/03/C-PUMA-PRO3_Main-photo-1024x707.webp",
+      "https://coxotec.com/wp-content/uploads/2026/03/C-PUMA-PRO3_Main-photo-400x300.webp",
+      "https://coxotec.com/wp-content/uploads/2026/03/C-PUMA-PRO3-Water-box-water-supply-400x300.webp",
+      "https://coxotec.com/wp-content/uploads/2026/03/C-PUMA-PRO3-Water-bottle-water-supply-400x300.webp",
+      "https://coxotec.com/wp-content/uploads/2026/03/C-PUMA-PRO3-Directory-scaled.webp",
+      "https://coxotec.com/wp-content/uploads/2025/05/e58a5421b57696ddd92d18-scaled.png",
+      "https://coxotec.com/wp-content/uploads/2026/03/C-PUMA-PRO3_Main-photo-scaled.webp",
+      "https://coxotec.com/wp-content/uploads/2026/03/C-PUMA-PRO3-Water-bottle-water-supply.webp"
+    ]
   },
   "wh_21": {
     "name": "W&H Synea TA-99 LED",
     "brand": "W&H",
     "code": "SYNEA-TA-99-LED",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_21/1.jpg",
+      "images/wh_21/2.jpg",
+      "images/wh_21/3.png",
+      "images/wh_21/4.jpg",
+      "images/wh_21/5.jpg",
+      "images/wh_21/6.png",
+      "images/wh_21/7.jpg",
+      "images/wh_21/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/e/we-99_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/e/we-99_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-10.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/s/z/sz-75_zygoma_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-99.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_led_g_contra-angle_dental_handpiece_-_ref_10255600_v1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-99_lt.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30074000_te-95_bc_1.png"
+    ]
   },
   "coxo_22": {
     "name": "COXO C-PUMA INT X",
@@ -584,8 +961,26 @@
     "name": "W&H Synea TA-96",
     "brand": "W&H",
     "code": "SYNEA-TA-96",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_23/1.png",
+      "images/wh_23/2.png",
+      "images/wh_23/3.png",
+      "images/wh_23/4.jpg",
+      "images/wh_23/5.png",
+      "images/wh_23/6.png",
+      "images/wh_23/7.png",
+      "images/wh_23/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_d1296_p.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/d/e/devemed_d1296_p.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/e/devemed_gentle_extract_extraction_forceps_35n_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/5/d500-1_d650-1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/e/devemed_extract_400_extracting_forceps_73_-_ref_400-73_h.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/e/devemed_kids-extract_extracting_forceps_37_incisors_and_cuspids.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/e/devemed_american-extract_extracting_forceps_90.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/e/devemed_extract_400_extracting_forceps_22_-_ref_400-22_d.png"
+    ]
   },
   "coxo_24": {
     "name": "COXO DB686 HALO",
@@ -612,8 +1007,26 @@
     "name": "W&H Alegra WK-98",
     "brand": "W&H",
     "code": "ALEGRA-WK-98",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_24/1.png",
+      "images/wh_24/2.png",
+      "images/wh_24/3.png",
+      "images/wh_24/4.png",
+      "images/wh_24/5.jpg",
+      "images/wh_24/6.png",
+      "images/wh_24/7.png",
+      "images/wh_24/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rg-97_l_primea_advanced_air_turbine.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/e/we-66_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rk-97_l_primea_advanced_air_handpiece.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-67_a.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png"
+    ]
   },
   "coxo_25": {
     "name": "COXO DB686 LATTE",
@@ -657,15 +1070,51 @@
     "name": "COXO C-BRIGHT",
     "brand": "COXO",
     "code": "C-BRIGHT",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_26/1.png",
+      "images/coxo_26/2.png",
+      "images/coxo_26/3.jpg",
+      "images/coxo_26/4.jpg",
+      "images/coxo_26/5.jpg",
+      "images/coxo_26/6.jpg",
+      "images/coxo_26/7.jpg",
+      "images/coxo_26/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/02/C-BRIGHT-1024x1024.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/C-BRIGHT-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/C-BRIGHT-400x300.webp",
+      "https://coxotec.com/wp-content/uploads/2025/02/C-Bright-1b-400x300.webp",
+      "https://coxotec.com/wp-content/uploads/2025/02/C-Bright-Operation-400x300.webp",
+      "https://coxotec.com/wp-content/uploads/2025/02/C-Bright-album-768x969.webp",
+      "https://coxotec.com/wp-content/uploads/2025/02/C-BRIGHT-Whitening-Effect-768x1152.webp",
+      "https://coxotec.com/wp-content/uploads/2025/02/Professional-Dental-Whitening-Kit-1024x804.webp"
+    ]
   },
   "wh_26": {
     "name": "W&H Synea TA-94",
     "brand": "W&H",
     "code": "SYNEA-TA-94",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_26/1.jpg",
+      "images/wh_26/2.jpg",
+      "images/wh_26/3.jpg",
+      "images/wh_26/4.png",
+      "images/wh_26/5.png",
+      "images/wh_26/6.png",
+      "images/wh_26/7.png",
+      "images/wh_26/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-56_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-56_l_g_2_.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-15_surgical_handpiece_straight_11_-_ref_30060000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-12.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rg-97_l_primea_advanced_air_turbine.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/e/we-99_led_g_1.jpg"
+    ]
   },
   "coxo_27": {
     "name": "COXO DL-300P",
@@ -690,8 +1139,26 @@
     "name": "W&H Alegra TE-96",
     "brand": "W&H",
     "code": "ALEGRA-TE-96",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_27/1.png",
+      "images/wh_27/2.png",
+      "images/wh_27/3.png",
+      "images/wh_27/4.jpg",
+      "images/wh_27/5.png",
+      "images/wh_27/6.jpg",
+      "images/wh_27/7.png",
+      "images/wh_27/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-67_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30118000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30056000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-56_lt_s.jpg"
+    ]
   },
   "coxo_28": {
     "name": "COXO C-ROOT V",
@@ -716,8 +1183,26 @@
     "name": "W&H Synea WK-95",
     "brand": "W&H",
     "code": "SYNEA-WK-95",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_28/1.jpg",
+      "images/wh_28/2.jpg",
+      "images/wh_28/3.png",
+      "images/wh_28/4.png",
+      "images/wh_28/5.jpg",
+      "images/wh_28/6.png",
+      "images/wh_28/7.jpg",
+      "images/wh_28/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-9.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/e/we-66_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rg-97_l_primea_advanced_air_turbine.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-75_l_g.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_alegra_11_contra-angle_dental_handpiece_-_ref_30116000.png"
+    ]
   },
   "coxo_29": {
     "name": "COXO C-ROOT VI",
@@ -742,8 +1227,26 @@
     "name": "W&H Alegra WK-96",
     "brand": "W&H",
     "code": "ALEGRA-WK-96",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_29/1.png",
+      "images/wh_29/2.png",
+      "images/wh_29/3.jpg",
+      "images/wh_29/4.png",
+      "images/wh_29/5.jpg",
+      "images/wh_29/6.png",
+      "images/wh_29/7.jpg",
+      "images/wh_29/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/d/e/devemed_d1296_p.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/d/e/devemed_d1296_p.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/_/d/_d500-51_a_d650-51_a.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/e/devemed_1101_p_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/e/devemed_american-extract_forceps_88_r_upper_right_molars.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/e/devemed_1300-36m_fbc.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/1/d1302-51es_f.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/d/6/d600-150_as.png"
+    ]
   },
   "coxo_30": {
     "name": "COXO C-SMART NOVA X",
@@ -774,36 +1277,126 @@
     "name": "W&H Synea TA-93",
     "brand": "W&H",
     "code": "SYNEA-TA-93",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_30/1.jpg",
+      "images/wh_30/2.jpg",
+      "images/wh_30/3.png",
+      "images/wh_30/4.jpg",
+      "images/wh_30/5.jpg",
+      "images/wh_30/6.jpg",
+      "images/wh_30/7.png",
+      "images/wh_30/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_wk-93_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_wk-93_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_led_g_contra-angle_dental_handpiece_-_ref_10255600_v1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rq-53_roto_quick_coupling_with_generator.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-97_l_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/s/z/sz-75_zygoma_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-97_image_001030_00_150dpi_2.jpg"
+    ]
   },
   "coxo_31": {
     "name": "COXO C-TW1",
     "brand": "COXO",
     "code": "C-TW1",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_31/1.jpg",
+      "images/coxo_31/2.jpg",
+      "images/coxo_31/3.jpg",
+      "images/coxo_31/4.jpg",
+      "images/coxo_31/5.jpg",
+      "images/coxo_31/6.jpg",
+      "images/coxo_31/7.jpg",
+      "images/coxo_31/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/07/CTW1product01.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/CTW1product01-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/CTW1product02-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/CTW1product03-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/912498cfeb36e39d664869.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/19df24f1da21f7e1416e92.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/917cb4c8e3928ff84a8e33.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/28c7aaf996fde3fe8d5284.jpg"
+    ]
   },
   "wh_31": {
     "name": "W&H Alegra TE-94",
     "brand": "W&H",
     "code": "ALEGRA-TE-94",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_31/1.png",
+      "images/wh_31/2.png",
+      "images/wh_31/3.jpg",
+      "images/wh_31/4.jpg",
+      "images/wh_31/5.png",
+      "images/wh_31/6.jpg",
+      "images/wh_31/7.jpg",
+      "images/wh_31/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-98_l_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30057000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30048000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rq-53_roto_quick_coupling_with_generator.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-93_lt_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png"
+    ]
   },
   "coxo_32": {
     "name": "COXO C-TW2",
     "brand": "COXO",
     "code": "C-TW2",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_32/1.jpg",
+      "images/coxo_32/2.jpg",
+      "images/coxo_32/3.jpg",
+      "images/coxo_32/4.jpg",
+      "images/coxo_32/5.jpg",
+      "images/coxo_32/6.jpg",
+      "images/coxo_32/7.jpg",
+      "images/coxo_32/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/07/a3ce5df5febfe4f4e5d840.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/a3ce5df5febfe4f4e5d840-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/C-TW201-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/C-TW202-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/C-TW203-280x280.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/58087b70d90948d7b36371.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/accc06456c398e27d66c63.jpg",
+      "https://coxotec.com/wp-content/uploads/2025/07/6a03f5ef76e7f65212ac60.jpg"
+    ]
   },
   "wh_32": {
     "name": "W&H Synea WK-92",
     "brand": "W&H",
     "code": "SYNEA-WK-92",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_32/1.jpg",
+      "images/wh_32/2.jpg",
+      "images/wh_32/3.jpg",
+      "images/wh_32/4.png",
+      "images/wh_32/5.png",
+      "images/wh_32/6.png",
+      "images/wh_32/7.png",
+      "images/wh_32/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30057000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-67_a.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30068000_te-97_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/h/a/handpiece_hg-43_a_image_001068_00_150dpi_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/g/wg-900_lt_1.png"
+    ]
   },
   "coxo_33": {
     "name": "COXO C-SK1",
@@ -816,8 +1409,26 @@
     "name": "W&H Alegra WK-94",
     "brand": "W&H",
     "code": "ALEGRA-WK-94",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_33/1.jpg",
+      "images/wh_33/2.jpg",
+      "images/wh_33/3.png",
+      "images/wh_33/4.png",
+      "images/wh_33/5.png",
+      "images/wh_33/6.png",
+      "images/wh_33/7.png",
+      "images/wh_33/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-97_lm_synea_vision_dental_turbine_handpiece_-_ref_30018000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/g/wg-900_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30048000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-10.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92_lg.png"
+    ]
   },
   "coxo_34": {
     "name": "COXO C-SK2",
@@ -830,8 +1441,26 @@
     "name": "W&H Synea Fusion TA-98",
     "brand": "W&H",
     "code": "SYNEA-FUSION-TA-98",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_34/1.jpg",
+      "images/wh_34/2.jpg",
+      "images/wh_34/3.png",
+      "images/wh_34/4.png",
+      "images/wh_34/5.png",
+      "images/wh_34/6.png",
+      "images/wh_34/7.png",
+      "images/wh_34/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/t/u/turbine_tg-98_l_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/t/u/turbine_tg-98_l_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_led_g_contra-angle_dental_handpiece_-_ref_10255600_v1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/g/wg-900_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92_lg.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_10207550.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92.png"
+    ]
   },
   "coxo_35": {
     "name": "COXO C-ROOT V",
@@ -856,8 +1485,26 @@
     "name": "W&H Alegra TE-93",
     "brand": "W&H",
     "code": "ALEGRA-TE-93",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_35/1.png",
+      "images/wh_35/2.png",
+      "images/wh_35/3.png",
+      "images/wh_35/4.png",
+      "images/wh_35/5.png",
+      "images/wh_35/6.png",
+      "images/wh_35/7.png",
+      "images/wh_35/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-67_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_led_g_contra-angle_dental_handpiece_-_ref_10255600_v1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-100_lm_dental_turbine_handpiece_-_ref_30022000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-9.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-93_lt_s.jpg"
+    ]
   },
   "coxo_36": {
     "name": "COXO CX-207",
@@ -882,22 +1529,76 @@
     "name": "W&H Synea TA-92",
     "brand": "W&H",
     "code": "SYNEA-TA-92",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_36/1.png",
+      "images/wh_36/2.png",
+      "images/wh_36/3.png",
+      "images/wh_36/4.jpg",
+      "images/wh_36/5.png",
+      "images/wh_36/6.png",
+      "images/wh_36/7.png",
+      "images/wh_36/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_ws-92_l_contra-angle_handpiece.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_ws-92_l_contra-angle_handpiece.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-56_11_surgical_contra-angle_handpiece.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-67_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92_lg.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_he-43_alegra_straight_dental_handpiece_-_ref_30119000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_hk-43_lt_synea_vision_straight_dental_handpiece_-_ref_30028000.png"
+    ]
   },
   "coxo_37": {
     "name": "COXO C-Sailor",
     "brand": "COXO",
     "code": "C-SAILOR",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_37/1.png",
+      "images/coxo_37/2.png",
+      "images/coxo_37/3.png",
+      "images/coxo_37/4.png",
+      "images/coxo_37/5.png",
+      "images/coxo_37/6.png",
+      "images/coxo_37/7.png",
+      "images/coxo_37/8.jpg"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2025/11/Implantation-Devices-COXO-Medical5.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/31f6f81ad64a00092d171-1024x720.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/31f6f81ad64a00092d171-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/38d1d24b06951aa56b4193-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/b7718a1b4421fd560fb822-scaled-e1748585575306-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/97208f3be89ee078f26410-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/32634942f11f841cb09574-280x280.png",
+      "https://coxotec.com/wp-content/uploads/2025/02/f98ed0fe2a2317cda54f56-480x600.webp"
+    ]
   },
   "wh_37": {
     "name": "W&H Synea WK-91",
     "brand": "W&H",
     "code": "SYNEA-WK-91",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_37/1.jpg",
+      "images/wh_37/2.jpg",
+      "images/wh_37/3.png",
+      "images/wh_37/4.png",
+      "images/wh_37/5.png",
+      "images/wh_37/6.jpg",
+      "images/wh_37/7.png",
+      "images/wh_37/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30071000_te-98_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92_l_contra-angle_handpiece.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-91_12.7_surgical_contra-angle_with_45_head.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30068000_te-97_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-56_l_g_2_.png"
+    ]
   },
   "coxo_38": {
     "name": "COXO C-Flex",
@@ -910,8 +1611,26 @@
     "name": "W&H Alegra TE-92",
     "brand": "W&H",
     "code": "ALEGRA-TE-92",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_38/1.png",
+      "images/wh_38/2.png",
+      "images/wh_38/3.png",
+      "images/wh_38/4.png",
+      "images/wh_38/5.jpg",
+      "images/wh_38/6.png",
+      "images/wh_38/7.png",
+      "images/wh_38/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30067000_te-98_lq_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rg-97_l_primea_advanced_air_turbine.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30068000_te-97_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/g/wg-900_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-99_lt.jpg"
+    ]
   },
   "coxo_39": {
     "name": "COXO DB-686X",
@@ -938,22 +1657,68 @@
     "name": "W&H Synea WK-98 LED",
     "brand": "W&H",
     "code": "SYNEA-WK-98-LED",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_39/1.png",
+      "images/wh_39/2.png",
+      "images/wh_39/3.png",
+      "images/wh_39/4.png",
+      "images/wh_39/5.png",
+      "images/wh_39/6.jpg",
+      "images/wh_39/7.png",
+      "images/wh_39/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_tk-98_lm_dental_turbine_handpiece_-_ref_30020000_1_1_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-86_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-56_l_g_2_.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-56_lt_s.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-67_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-92_lg.png"
+    ]
   },
   "coxo_40": {
     "name": "COXO C-PUMA Mini",
     "brand": "COXO",
     "code": "C-PUMA-MINI",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/coxo_40/1.jpg",
+      "images/coxo_40/2.jpg",
+      "images/coxo_40/3.jpg",
+      "images/coxo_40/4.png"
+    ],
+    "source_urls": [
+      "https://coxotec.com/wp-content/uploads/2026/03/YSDENT-Collection-1.webp",
+      "https://coxotec.com/wp-content/uploads/2026/03/C-PUMA-MINI-Main-Image-1024x675.webp",
+      "https://coxotec.com/wp-content/uploads/2026/03/C-PUMA-MINI-Catalogue-Image-scaled.webp",
+      "https://coxotec.com/wp-content/uploads/2025/05/e58a5421b57696ddd92d18-scaled.png"
+    ]
   },
   "wh_40": {
     "name": "W&H Alegra WK-97",
     "brand": "W&H",
     "code": "ALEGRA-WK-97",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_40/1.png",
+      "images/wh_40/2.png",
+      "images/wh_40/3.png",
+      "images/wh_40/4.jpg",
+      "images/wh_40/5.png",
+      "images/wh_40/6.png",
+      "images/wh_40/7.png",
+      "images/wh_40/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/w/_/w_h_te-97_lq_led_dental_turbine_handpiece_-_ref_30066000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-10.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-75.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_eb-75.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_rq-54_roto_quick_coupling.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-66_lt.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_s-9.png"
+    ]
   },
   "coxo_41": {
     "name": "COXO C-SMART ENDO",
@@ -984,8 +1749,26 @@
     "name": "W&H Synea TA-91",
     "brand": "W&H",
     "code": "SYNEA-TA-91",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_41/1.png",
+      "images/wh_41/2.png",
+      "images/wh_41/3.jpg",
+      "images/wh_41/4.png",
+      "images/wh_41/5.jpg",
+      "images/wh_41/6.jpg",
+      "images/wh_41/7.png",
+      "images/wh_41/8.jpg"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30048000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30048000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_tk-94_lm_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-56_l_g_2_.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/t/u/turbine_tg-97_l_2.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wk-93_lt_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_we-56_alegra_11_contra-angle_dental_handpiece_-_ref_30116000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_wg-99.jpg"
+    ]
   },
   "coxo_42": {
     "name": "COXO C-Root ZX",
@@ -1010,8 +1793,26 @@
     "name": "W&H Alegra TE-91",
     "brand": "W&H",
     "code": "ALEGRA-TE-91",
-    "images": [],
-    "source_urls": []
+    "images": [
+      "images/wh_42/1.png",
+      "images/wh_42/2.png",
+      "images/wh_42/3.png",
+      "images/wh_42/4.jpg",
+      "images/wh_42/5.png",
+      "images/wh_42/6.png",
+      "images/wh_42/7.jpg",
+      "images/wh_42/8.png"
+    ],
+    "source_urls": [
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/cea00a24d4179ca267c83d3552f0a358/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/a7a6ae71dcce89f9bbe783a6b44f6c60/3/0/30074000_te-95_bc_1.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_ws-56_l_g_2_.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/e/we-66_led_g_1.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_hk-43_lt_synea_vision_straight_dental_handpiece_-_ref_30028000.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_eb-75.png",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/w/_/w_h_30418000.jpg",
+      "https://www.swallowdental.co.uk/media/catalog/product/cache/05abdc47fc27369af5f4d573c9f347e4/3/0/30048000.png"
+    ]
   },
   "coxo_43": {
     "name": "COXO DB-686 PRO",
