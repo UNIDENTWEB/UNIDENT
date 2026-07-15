@@ -1,8 +1,8 @@
 {
   "shop_name": "UNIDENT",
-  "address": "Tehran",
-  "phone": "021-12345678",
-  "email": "info@unident.ir",
+  "address": "",
+  "phone": "",
+  "email": "",
   "tax_rate": "9",
   "shipping_cost": "50000",
   "free_shipping_threshold": "5000000"
