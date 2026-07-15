@@ -2912,6 +2912,116 @@
 
     <script>
         // ============================================================
+        //  CLOUD SYNC — GitHub as cloud storage
+        // ============================================================
+        const CLOUD_GITHUB_RAW = 'https://raw.githubusercontent.com/UNIDENTWEB/UNIDENT/main/data';
+        const CLOUD_SYNC_ENABLED = true;
+        let _cloudSyncQueue = {};
+        let _cloudSyncTimer = null;
+
+        const _LS_TO_CLOUD = {
+            'unident_products_final_v12': 'products',
+            'unident_reviews': 'reviews',
+            'unident_orders': 'orders',
+            'unident_users': 'users',
+            'unident_coupons': 'coupons',
+            'unident_warranty_requests': 'warranties',
+            'unident_inquiries': 'inquiries',
+            'unident_surveys': 'surveys',
+            'newsletter_subs': 'subscribers',
+            'unident_customers': 'customers',
+            'shop_settings': 'settings',
+        };
+
+        async function _cloudSend(dataType, data) {
+            try {
+                const response = await fetch('/api/sync', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type: dataType, data: data }),
+                });
+                const result = await response.json();
+                if (result.status === 'ok') {
+                    console.log('[CLOUD] Synced:', dataType);
+                } else {
+                    console.warn('[CLOUD] Sync error for', dataType, ':', result.error);
+                }
+            } catch (e) {
+                console.warn('[CLOUD] Sync failed for', dataType, ':', e.message);
+            }
+        }
+
+        function _scheduleCloudSync() {
+            if (_cloudSyncTimer) clearTimeout(_cloudSyncTimer);
+            _cloudSyncTimer = setTimeout(async () => {
+                const queue = _cloudSyncQueue;
+                _cloudSyncQueue = {};
+                for (const [dataType, value] of Object.entries(queue)) {
+                    let data;
+                    try { data = JSON.parse(value); } catch (e) { data = value; }
+                    await _cloudSend(dataType, data);
+                }
+            }, 500);
+        }
+
+        // Monkey-patch localStorage.setItem to auto-sync to cloud
+        (function () {
+            const _origSetItem = localStorage.setItem.bind(localStorage);
+            localStorage.setItem = function (key, value) {
+                _origSetItem(key, value);
+                if (!CLOUD_SYNC_ENABLED) return;
+                const dataType = _LS_TO_CLOUD[key];
+                if (dataType) {
+                    _cloudSyncQueue[dataType] = value;
+                    _scheduleCloudSync();
+                }
+            };
+        })();
+
+        // Cloud load — fetch from GitHub if localStorage is empty
+        async function cloudLoadIfEmpty(key, fallbackDefault) {
+            const existing = localStorage.getItem(key);
+            if (existing && existing !== '[]' && existing !== '{}') {
+                try { return JSON.parse(existing); } catch (e) { return existing; }
+            }
+            const dataType = _LS_TO_CLOUD[key];
+            if (!dataType || !CLOUD_SYNC_ENABLED) return fallbackDefault;
+            try {
+                const resp = await fetch(CLOUD_GITHUB_RAW + '/' + dataType + '.json');
+                if (resp.ok) {
+                    const data = await resp.json();
+                    localStorage.setItem(key, JSON.stringify(data));
+                    console.log('[CLOUD] Loaded from GitHub:', dataType);
+                    return data;
+                }
+            } catch (e) {
+                console.warn('[CLOUD] Load failed for', dataType, ':', e.message);
+            }
+            return fallbackDefault;
+        }
+
+        // Background sync — pull updates from GitHub every 60s
+        async function _backgroundCloudPull() {
+            for (const [lsKey, dataType] of Object.entries(_LS_TO_CLOUD)) {
+                try {
+                    const resp = await fetch(CLOUD_GITHUB_RAW + '/' + dataType + '.json');
+                    if (!resp.ok) continue;
+                    const cloudData = await resp.json();
+                    const cloudStr = JSON.stringify(cloudData);
+                    const localStr = localStorage.getItem(lsKey);
+                    if (cloudStr !== localStr && cloudData && (Array.isArray(cloudData) ? cloudData.length > 0 : Object.keys(cloudData).length > 0)) {
+                        localStorage.setItem(lsKey, cloudStr);
+                        console.log('[CLOUD] Pulled update:', dataType);
+                    }
+                } catch (e) { /* silent */ }
+            }
+        }
+
+        if (CLOUD_SYNC_ENABLED) {
+            setInterval(_backgroundCloudPull, 60000);
+        }
+
+        // ============================================================
         //  دریافت نرخ تتر از نوبیتکس (USDT/IRT)
         // ============================================================
         let usdtRate = 0;
@@ -3219,6 +3329,69 @@
             productsData = generateProducts();
             localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
         }
+
+        // Cloud load: pull products from GitHub if local is empty/generated
+        (async function () {
+            const localProd = localStorage.getItem('unident_products_final_v12');
+            if (!localProd || localProd === '[]') {
+                try {
+                    const resp = await fetch(CLOUD_GITHUB_RAW + '/products.json');
+                    if (resp.ok) {
+                        const cloudProds = await resp.json();
+                        if (cloudProds && cloudProds.length > 0) {
+                            productsData = cloudProds;
+                            productsData.forEach(p => {
+                                if (p.profitPercent === undefined) p.profitPercent = 200;
+                                if (p.isOriginal === undefined) p.isOriginal = true;
+                                if (!p.images) p.images = [p.image];
+                                while (p.images.length < 3) {
+                                    const seed = `${p.brand}_${p.name.replace(/\s/g, '_')}_${p.images.length}`;
+                                    p.images.push(`https://picsum.photos/seed/${seed}/400/400`);
+                                }
+                                p.image = p.images[0];
+                            });
+                            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+                            applyFilters();
+                            console.log('[CLOUD] Loaded products from GitHub:', cloudProds.length);
+                        }
+                    }
+                } catch (e) { console.warn('[CLOUD] Products load failed:', e.message); }
+            }
+
+            // Cloud load other data types
+            for (const [lsKey, dataType] of Object.entries(_LS_TO_CLOUD)) {
+                if (dataType === 'products') continue;
+                const local = localStorage.getItem(lsKey);
+                if (local && local !== '[]') continue;
+                try {
+                    const resp = await fetch(CLOUD_GITHUB_RAW + '/' + dataType + '.json');
+                    if (resp.ok) {
+                        const cloudData = await resp.json();
+                        if (cloudData && (Array.isArray(cloudData) ? cloudData.length > 0 : Object.keys(cloudData).length > 0)) {
+                            localStorage.setItem(lsKey, JSON.stringify(cloudData));
+                            // Update in-memory state
+                            if (dataType === 'reviews') reviews = cloudData;
+                            else if (dataType === 'orders') orders = cloudData;
+                            else if (dataType === 'users') users = cloudData;
+                            else if (dataType === 'coupons') couponCodes = cloudData;
+                            else if (dataType === 'warranties') warrantyRequests = cloudData;
+                            else if (dataType === 'inquiries') inquiries = cloudData;
+                            else if (dataType === 'surveys') surveyResults = cloudData;
+                            else if (dataType === 'subscribers') newsletterSubs = cloudData;
+                            // customers is loaded from localStorage on-demand, no global variable
+                            else if (dataType === 'settings') {
+                                const s = cloudData;
+                                if (s.tax_rate) localStorage.setItem('tax_rate', s.tax_rate);
+                                if (s.shipping_cost) localStorage.setItem('shipping_cost', s.shipping_cost);
+                                if (s.free_shipping_threshold) localStorage.setItem('free_shipping_threshold', s.free_shipping_threshold);
+                                if (s.shop_name) localStorage.setItem('shop_settings', JSON.stringify({name: s.shop_name, address: s.address||'', phone: s.phone||'', email: s.email||''}));
+                            }
+                            console.log('[CLOUD] Loaded from GitHub:', dataType);
+                        }
+                    }
+                } catch (e) { /* silent */ }
+            }
+        })();
 
         let cart = JSON.parse(localStorage.getItem('unident_cart')) || [];
         let orders = JSON.parse(localStorage.getItem('unident_orders')) || [];
