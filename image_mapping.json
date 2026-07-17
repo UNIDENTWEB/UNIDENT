@@ -1,6 +1,5 @@
 {
   "coxo_us": {
-    "pid": "coxo_us",
     "code": "CP-2",
     "name": "COXO Ultrasonic Scaler CP-2",
     "brand": "COXO",
@@ -26,7 +25,6 @@
     ]
   },
   "coxo_ia": {
-    "pid": "coxo_ia",
     "code": "C-ACTIVATOR",
     "name": "COXO Implant Activator C-ACTIVATOR",
     "brand": "COXO",
@@ -49,7 +47,6 @@
     ]
   },
   "coxo_bs": {
-    "pid": "coxo_bs",
     "code": "C-SURGE",
     "name": "COXO Ultrasonic Bone Surgery C-SURGE",
     "brand": "COXO",
@@ -75,7 +72,6 @@
     ]
   },
   "coxo_im2": {
-    "pid": "coxo_im2",
     "code": "C-SAILOR-II",
     "name": "COXO 2nd Gen Implant Motor C-SAILOR-II",
     "brand": "COXO",
@@ -101,7 +97,6 @@
     ]
   },
   "coxo_sb": {
-    "pid": "coxo_sb",
     "code": "C-BLASTER",
     "name": "COXO External Sandblaster C-BLASTER",
     "brand": "COXO",
@@ -125,7 +120,6 @@
     ]
   },
   "coxo_csm": {
-    "pid": "coxo_csm",
     "code": "C-SMART-MINI",
     "name": "COXO C-SMART Mini Endo Motor",
     "brand": "COXO",
@@ -157,7 +151,6 @@
     ]
   },
   "coxo_csi": {
-    "pid": "coxo_csi",
     "code": "C-SMART-I-PILOT",
     "name": "COXO C-SMART i Pilot Endo Motor",
     "brand": "COXO",
@@ -189,7 +182,6 @@
     ]
   },
   "coxo_csp": {
-    "pid": "coxo_csp",
     "code": "C-SMART-I-PRO",
     "name": "COXO C-SMART-I PRO Endo Motor",
     "brand": "COXO",
@@ -221,7 +213,6 @@
     ]
   },
   "coxo_d85": {
-    "pid": "coxo_d85",
     "code": "DB-685",
     "name": "COXO DB-685 Penguin Curing Light",
     "brand": "COXO",
@@ -253,7 +244,6 @@
     ]
   },
   "coxo_d86": {
-    "pid": "coxo_d86",
     "code": "DB-686-LATTRE",
     "name": "COXO DB-686 Lattre Curing Light",
     "brand": "COXO",
@@ -285,7 +275,6 @@
     ]
   },
   "coxo_d8s": {
-    "pid": "coxo_d8s",
     "code": "DB-686-SWIFT",
     "name": "COXO DB-686 Swift Curing Light",
     "brand": "COXO",
@@ -317,7 +306,6 @@
     ]
   },
   "coxo_d8h": {
-    "pid": "coxo_d8h",
     "code": "DB-686-HONOR",
     "name": "COXO DB-686 Honor Curing Light",
     "brand": "COXO",
@@ -349,7 +337,6 @@
     ]
   },
   "coxo_d8m": {
-    "pid": "coxo_d8m",
     "code": "DB-686-MOCHA",
     "name": "COXO DB-686 Mocha LED Curing Light",
     "brand": "COXO",
@@ -381,7 +368,6 @@
     ]
   },
   "coxo_15": {
-    "pid": "coxo_15",
     "code": "CX235-1-5",
     "name": "COXO CX235 1:5 Speed Handpiece",
     "brand": "COXO",
@@ -420,7 +406,6 @@
     ]
   },
   "coxo_h01": {
-    "pid": "coxo_h01",
     "code": "H01-D1SP",
     "name": "COXO H01-D1SP 45° High Speed Turbine",
     "brand": "COXO",
@@ -446,7 +431,6 @@
     ]
   },
   "coxo_c73": {
-    "pid": "coxo_c73",
     "code": "C7-3S1",
     "name": "COXO C7-3S1 45° Extraction Handpiece",
     "brand": "COXO",
@@ -472,7 +456,6 @@
     ]
   },
   "coxo_cxf": {
-    "pid": "coxo_cxf",
     "code": "CX207-F",
     "name": "COXO CX207-F Caries Removal Handpiece",
     "brand": "COXO",
@@ -503,7 +486,6 @@
     ]
   },
   "coxo_led": {
-    "pid": "coxo_led",
     "code": "CX-LED",
     "name": "COXO LED Wind-Electric Handpiece",
     "brand": "COXO",
@@ -529,7 +511,6 @@
     ]
   },
   "coxo_mp": {
-    "pid": "coxo_mp",
     "code": "MINI-PEDO",
     "name": "COXO MINI Pediatric Handpiece",
     "brand": "COXO",
@@ -552,7 +533,6 @@
     ]
   },
   "coxo_tor": {
-    "pid": "coxo_tor",
     "code": "CX-TORNADO",
     "name": "COXO Tornado Single-Spray Handpiece",
     "brand": "COXO",
@@ -578,7 +558,6 @@
     ]
   },
   "coxo_cma": {
-    "pid": "coxo_cma",
     "code": "C-SMART-MINI-AP",
     "name": "COXO C-SMART MINI AP Endo Motor",
     "brand": "COXO",
@@ -611,7 +590,6 @@
     ]
   },
   "coxo_crv": {
-    "pid": "coxo_crv",
     "code": "C-ROOT-VI",
     "name": "COXO C-ROOT I(VI) Apex Locator",
     "brand": "COXO",
@@ -639,7 +617,6 @@
     ]
   },
   "coxo_csn": {
-    "pid": "coxo_csn",
     "code": "C-SMART-NOVA",
     "name": "COXO C-SMART NOVA Endo Motor",
     "brand": "COXO",
@@ -671,7 +648,6 @@
     ]
   },
   "coxo_cri": {
-    "pid": "coxo_cri",
     "code": "C-ROOT-I-PLUS",
     "name": "COXO C-ROOT I+ Apex Locator",
     "brand": "COXO",
@@ -700,7 +676,6 @@
     ]
   },
   "coxo_cfm": {
-    "pid": "coxo_cfm",
     "code": "C-FILL-MINI",
     "name": "COXO C-FILL Mini Obturation System",
     "brand": "COXO",
@@ -719,7 +694,9 @@
       "images/coxo_cfm/coxotec_6.jpg",
       "images/coxo_cfm/coxotec_7.jpg"
     ],
-    "source_urls": [],
+    "source_urls": [
+      "https://coxotec.cn/home/details/2036"
+    ],
     "coxotec_images": [
       "images/coxo_cfm/coxo_1.jpg",
       "images/coxo_cfm/coxo_2.jpg",
@@ -732,7 +709,6 @@
     "coxotec_url": "https://coxotec.cn/home/details/2036"
   },
   "coxo_cfx": {
-    "pid": "coxo_cfx",
     "code": "C-FILL-X",
     "name": "COXO C-FILL X Obturation System",
     "brand": "COXO",
@@ -745,7 +721,9 @@
       "images/coxo_cfx/coxo_6.jpg",
       "images/coxo_cfx/coxo_7.jpg"
     ],
-    "source_urls": [],
+    "source_urls": [
+      "https://coxotec.cn/home/details/2038"
+    ],
     "coxotec_images": [
       "images/coxo_cfx/coxo_1.jpg",
       "images/coxo_cfx/coxo_2.jpg",
@@ -758,7 +736,6 @@
     "coxotec_url": "https://coxotec.cn/home/details/2038"
   },
   "coxo_cbl": {
-    "pid": "coxo_cbl",
     "code": "C-BLADE",
     "name": "COXO C-BLADE Gutta-Percha Cutter",
     "brand": "COXO",
@@ -781,7 +758,6 @@
     ]
   },
   "coxo_ccl": {
-    "pid": "coxo_ccl",
     "code": "C-CLEAR",
     "name": "COXO C-CLEAR Dental Microscope",
     "brand": "COXO",
@@ -795,10 +771,11 @@
       "images/coxo_ccl/coxo_7.jpg",
       "images/coxo_ccl/coxo_8.jpg"
     ],
-    "source_urls": []
+    "source_urls": [
+      "https://coxotec.cn/home/details/2042"
+    ]
   },
   "coxo_cc2": {
-    "pid": "coxo_cc2",
     "code": "C-CLEAR-2",
     "name": "COXO C-CLEAR2 Premium Dental Microscope",
     "brand": "COXO",
@@ -812,10 +789,11 @@
       "images/coxo_cc2/coxo_7.jpg",
       "images/coxo_cc2/coxo_8.jpg"
     ],
-    "source_urls": []
+    "source_urls": [
+      "https://coxotec.cn/home/details/2042"
+    ]
   },
   "coxo_ccd": {
-    "pid": "coxo_ccd",
     "code": "C-CLEAR-2-DLX",
     "name": "COXO C-CLEAR2 Deluxe Dental Microscope",
     "brand": "COXO",
@@ -829,10 +807,11 @@
       "images/coxo_ccd/coxo_7.jpg",
       "images/coxo_ccd/coxo_8.jpg"
     ],
-    "source_urls": []
+    "source_urls": [
+      "https://coxotec.cn/home/details/2042"
+    ]
   },
   "coxo_im3": {
-    "pid": "coxo_im3",
     "code": "C-SAILOR-III",
     "name": "COXO 3rd Gen Implant Motor C-SAILOR-III",
     "brand": "COXO",
@@ -858,7 +837,6 @@
     ]
   },
   "coxo_sch": {
-    "pid": "coxo_sch",
     "code": "SC-CH",
     "name": "COXO SC-CH Pediatric NiTi Files",
     "brand": "COXO",
@@ -882,7 +860,6 @@
     ]
   },
   "coxo_sp8": {
-    "pid": "coxo_sp8",
     "code": "SC-PRO-2018",
     "name": "COXO SC-PRO 2018 NiTi File System",
     "brand": "COXO",
@@ -907,7 +884,6 @@
     ]
   },
   "coxo_spr": {
-    "pid": "coxo_spr",
     "code": "SC-PRO",
     "name": "COXO SC-PRO NiTi Files",
     "brand": "COXO",
@@ -932,7 +908,6 @@
     ]
   },
   "coxo_cf1": {
-    "pid": "coxo_cf1",
     "code": "C-FR1",
     "name": "COXO C-FR1 Broken File Remover",
     "brand": "COXO",
@@ -940,7 +915,6 @@
     "source_urls": []
   },
   "coxo_bfr": {
-    "pid": "coxo_bfr",
     "code": "C-FR2",
     "name": "COXO C-FR2 Broken File Remover Kit",
     "brand": "COXO",
@@ -948,7 +922,6 @@
     "source_urls": []
   },
   "coxo_csa": {
-    "pid": "coxo_csa",
     "code": "C-SAILOR-AIR",
     "name": "COXO C-SAILOR AIR Implant Motor",
     "brand": "COXO",
@@ -991,7 +964,6 @@
     "coxotec_url": "https://coxotec.cn/home/details/3002"
   },
   "coxo_csp2": {
-    "pid": "coxo_csp2",
     "code": "C-SAILOR-PRO",
     "name": "COXO C-SAILOR PRO+ Implant Motor",
     "brand": "COXO",
@@ -1036,7 +1008,6 @@
     "coxotec_url": "https://coxotec.cn/home/details/3003"
   },
   "coxo_100": {
-    "pid": "coxo_100",
     "code": "CX100",
     "name": "COXO CX100 Dental Chair",
     "brand": "COXO",
@@ -1079,7 +1050,6 @@
     "coxotec_url": "https://coxotec.cn/home/details/3005"
   },
   "coxo_gen": {
-    "pid": "coxo_gen",
     "code": "GENI-PRO",
     "name": "COXO GENI PRO Anesthesia Device",
     "brand": "COXO",
@@ -1105,7 +1075,6 @@
     ]
   },
   "coxo_200": {
-    "pid": "coxo_200",
     "code": "CX200",
     "name": "COXO CX200 Dental Chair",
     "brand": "COXO",
@@ -1136,7 +1105,6 @@
     ]
   },
   "coxo_cma2": {
-    "pid": "coxo_cma2",
     "code": "C-SMART-MINI-AP+",
     "name": "COXO C-SMART MINI AP+ Endo Motor",
     "brand": "COXO",
@@ -1162,7 +1130,6 @@
     ]
   },
   "coxo_cpm": {
-    "pid": "coxo_cpm",
     "code": "C-PUMA-MASTER",
     "name": "COXO C-PUMA MASTER Electric Motor",
     "brand": "COXO",
@@ -1278,7 +1245,7 @@
     ]
   },
   "coxo_11": {
-    "name": "Sold out",
+    "name": "COXO DB686 Halo Dental LED Curing Light with Caries Detector 3000mW/cm²",
     "brand": "COXO",
     "code": "DB686",
     "images": [
@@ -1320,7 +1287,9 @@
       "images/coxo_12/coxo_7.jpg",
       "images/coxo_12/coxo_8.jpg"
     ],
-    "source_urls": []
+    "source_urls": [
+      "https://coxotec.cn/home/details/2043"
+    ]
   },
   "coxo_13": {
     "name": "COXO CP-1",
@@ -1497,7 +1466,9 @@
       "images/coxo_26/coxo_7.jpg",
       "images/coxo_26/coxo_8.jpg"
     ],
-    "source_urls": []
+    "source_urls": [
+      "https://coxotec.cn/home/details/2017"
+    ]
   },
   "coxo_27": {
     "name": "COXO DL300P Dental Intraoral Scanner",

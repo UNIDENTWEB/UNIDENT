@@ -10,7 +10,8 @@
     "basePrice": 328.26,
     "priceRial": 213369000,
     "stock": 10,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "coxo_bfr",
@@ -23,7 +24,8 @@
     "basePrice": 775.74,
     "priceRial": 504231000,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لوازم ریشه"
   },
   {
     "id": "coxo_cbl",
@@ -36,7 +38,8 @@
     "basePrice": 604.38,
     "priceRial": 392847000,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال"
   },
   {
     "id": "coxo_51",
@@ -49,7 +52,8 @@
     "basePrice": 641.77,
     "priceRial": 417150500,
     "stock": 10,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال"
   },
   {
     "id": "coxo_26",
@@ -62,7 +66,8 @@
     "basePrice": 107.25,
     "priceRial": 69712500,
     "stock": 23,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_ccl",
@@ -75,7 +80,8 @@
     "basePrice": 450.44,
     "priceRial": 292786000,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "میکروسکوپ"
   },
   {
     "id": "coxo_12",
@@ -88,7 +94,8 @@
     "basePrice": 238.24,
     "priceRial": 154856000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "میکروسکوپ"
   },
   {
     "id": "coxo_ccd",
@@ -101,7 +108,8 @@
     "basePrice": 218.16,
     "priceRial": 141804000,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "میکروسکوپ"
   },
   {
     "id": "coxo_cc2",
@@ -114,7 +122,8 @@
     "basePrice": 273.12,
     "priceRial": 177528000,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "میکروسکوپ"
   },
   {
     "id": "coxo_cfm",
@@ -127,7 +136,8 @@
     "basePrice": 271.62,
     "priceRial": 176553000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال"
   },
   {
     "id": "coxo_cfx",
@@ -140,7 +150,8 @@
     "basePrice": 874.46,
     "priceRial": 568399000,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال"
   },
   {
     "id": "coxo_cf1",
@@ -153,7 +164,8 @@
     "basePrice": 765.34,
     "priceRial": 497471000,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لوازم ریشه"
   },
   {
     "id": "coxo_60",
@@ -166,7 +178,8 @@
     "basePrice": 1283.54,
     "priceRial": 834301000,
     "stock": 10,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "موتور الکتریکی"
   },
   {
     "id": "coxo_cpm",
@@ -179,7 +192,8 @@
     "basePrice": 704.16,
     "priceRial": 457704000,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "موتور الکتریکی"
   },
   {
     "id": "coxo_40",
@@ -192,7 +206,8 @@
     "basePrice": 679.72,
     "priceRial": 441818000,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "موتور الکتریکی"
   },
   {
     "id": "coxo_21",
@@ -205,7 +220,8 @@
     "basePrice": 883.84,
     "priceRial": 574496000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "موتور الکتریکی"
   },
   {
     "id": "coxo_crv",
@@ -218,7 +234,8 @@
     "basePrice": 776.52,
     "priceRial": 504738000,
     "stock": 21,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "اندازه‌گیری کانال"
   },
   {
     "id": "coxo_cri",
@@ -231,7 +248,8 @@
     "basePrice": 841.26,
     "priceRial": 546819000,
     "stock": 10,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "اندازه‌گیری کانال"
   },
   {
     "id": "coxo_28",
@@ -244,7 +262,8 @@
     "basePrice": 662.32,
     "priceRial": 430508000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "اندازه‌گیری کانال"
   },
   {
     "id": "coxo_58",
@@ -257,7 +276,8 @@
     "basePrice": 338.01,
     "priceRial": 219706500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "اندازه‌گیری کانال"
   },
   {
     "id": "coxo_6",
@@ -270,7 +290,8 @@
     "basePrice": 217.58,
     "priceRial": 141427000,
     "stock": 15,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_42",
@@ -283,7 +304,8 @@
     "basePrice": 641.77,
     "priceRial": 417150500,
     "stock": 10,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "اندازه‌گیری کانال"
   },
   {
     "id": "coxo_csa",
@@ -296,7 +318,8 @@
     "basePrice": 1340.13,
     "priceRial": 871084500,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "موتور ایمپلنت"
   },
   {
     "id": "coxo_csp2",
@@ -309,7 +332,8 @@
     "basePrice": 1600.08,
     "priceRial": 1040052000,
     "stock": 15,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "موتور ایمپلنت"
   },
   {
     "id": "coxo_41",
@@ -322,7 +346,8 @@
     "basePrice": 543.74,
     "priceRial": 353431000,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_cma",
@@ -335,7 +360,8 @@
     "basePrice": 604.38,
     "priceRial": 392847000,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_cma2",
@@ -348,7 +374,8 @@
     "basePrice": 896.88,
     "priceRial": 582972000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_csm",
@@ -361,7 +388,8 @@
     "basePrice": 600.72,
     "priceRial": 390468000,
     "stock": 20,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_csn",
@@ -374,7 +402,8 @@
     "basePrice": 296.77,
     "priceRial": 192900500,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_30",
@@ -387,7 +416,8 @@
     "basePrice": 441.92,
     "priceRial": 287248000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_csi",
@@ -400,7 +430,8 @@
     "basePrice": 374.37,
     "priceRial": 243340500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_14",
@@ -413,7 +444,8 @@
     "basePrice": 543.74,
     "priceRial": 353431000,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_56",
@@ -426,7 +458,8 @@
     "basePrice": 585.43,
     "priceRial": 380529499,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_75",
@@ -439,7 +472,8 @@
     "basePrice": 539.92,
     "priceRial": 350948000,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_csp",
@@ -452,7 +486,8 @@
     "basePrice": 595.5,
     "priceRial": 387075000,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "coxo_37",
@@ -465,7 +500,8 @@
     "basePrice": 1854.87,
     "priceRial": 1205665500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "ایمپلنت و جراحی"
   },
   {
     "id": "coxo_31",
@@ -478,7 +514,8 @@
     "basePrice": 979.62,
     "priceRial": 636753000,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "ایمپلنت و جراحی"
   },
   {
     "id": "coxo_32",
@@ -491,7 +528,8 @@
     "basePrice": 1533.01,
     "priceRial": 996456500,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "ایمپلنت و جراحی"
   },
   {
     "id": "coxo_20",
@@ -504,7 +542,8 @@
     "basePrice": 162.15,
     "priceRial": 105397500,
     "stock": 15,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "coxo_c73",
@@ -517,7 +556,8 @@
     "basePrice": 1019.6,
     "priceRial": 662740000,
     "stock": 23,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس جراحی"
   },
   {
     "id": "coxo_13",
@@ -530,7 +570,8 @@
     "basePrice": 179.92,
     "priceRial": 116947999,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "جرم‌گیر"
   },
   {
     "id": "coxo_36",
@@ -543,7 +584,8 @@
     "basePrice": 183.21,
     "priceRial": 119086500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "coxo_50",
@@ -556,7 +598,8 @@
     "basePrice": 212.59,
     "priceRial": 138183500,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "coxo_100",
@@ -569,7 +612,8 @@
     "basePrice": 2327.6,
     "priceRial": 1512940000,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "یونیت"
   },
   {
     "id": "coxo_200",
@@ -582,7 +626,8 @@
     "basePrice": 2557.89,
     "priceRial": 1662628500,
     "stock": 8,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "یونیت"
   },
   {
     "id": "coxo_10",
@@ -595,7 +640,8 @@
     "basePrice": 92.01,
     "priceRial": 59806500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "coxo_cxf",
@@ -608,7 +654,8 @@
     "basePrice": 340.15,
     "priceRial": 221097500,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "coxo_1",
@@ -621,7 +668,8 @@
     "basePrice": 96.85,
     "priceRial": 62952500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "coxo_d85",
@@ -634,7 +682,8 @@
     "basePrice": 188.23,
     "priceRial": 122349500,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_69",
@@ -647,7 +696,8 @@
     "basePrice": 461.94,
     "priceRial": 300261000,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_d8h",
@@ -660,7 +710,8 @@
     "basePrice": 324.46,
     "priceRial": 210899000,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_d86",
@@ -673,7 +724,8 @@
     "basePrice": 269.52,
     "priceRial": 175188000,
     "stock": 8,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_54",
@@ -686,7 +738,8 @@
     "basePrice": 252.9,
     "priceRial": 164385000,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_d8m",
@@ -699,7 +752,8 @@
     "basePrice": 142.05,
     "priceRial": 92332500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_61",
@@ -712,7 +766,8 @@
     "basePrice": 383.17,
     "priceRial": 249060500,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_43",
@@ -725,7 +780,8 @@
     "basePrice": 383.17,
     "priceRial": 249060500,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_d8s",
@@ -738,7 +794,8 @@
     "basePrice": 247.02,
     "priceRial": 160563000,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_39",
@@ -751,7 +808,8 @@
     "basePrice": 294.24,
     "priceRial": 191256000,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_11",
@@ -764,7 +822,8 @@
     "basePrice": 151.09,
     "priceRial": 98208500,
     "stock": 15,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_24",
@@ -777,7 +836,8 @@
     "basePrice": 352.44,
     "priceRial": 229086000,
     "stock": 10,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_25",
@@ -790,7 +850,8 @@
     "basePrice": 383.17,
     "priceRial": 249060500,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_23",
@@ -803,7 +864,8 @@
     "basePrice": 296.42,
     "priceRial": 192673000,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لایت کیور"
   },
   {
     "id": "coxo_27",
@@ -816,7 +878,8 @@
     "basePrice": 252.9,
     "priceRial": 164385000,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "اسکنر داخل دهانی"
   },
   {
     "id": "coxo_sb",
@@ -829,7 +892,8 @@
     "basePrice": 404.17,
     "priceRial": 262710500,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "سندبلاست"
   },
   {
     "id": "coxo_gen",
@@ -842,7 +906,8 @@
     "basePrice": 429.0,
     "priceRial": 278850000,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "بی‌حسی"
   },
   {
     "id": "coxo_h01",
@@ -855,7 +920,8 @@
     "basePrice": 80.75,
     "priceRial": 52487500,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "coxo_ia",
@@ -868,7 +934,8 @@
     "basePrice": 2219.03,
     "priceRial": 1442369500,
     "stock": 21,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "لوازم ایمپلنت"
   },
   {
     "id": "coxo_im2",
@@ -881,7 +948,8 @@
     "basePrice": 1875.59,
     "priceRial": 1219133500,
     "stock": 24,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "موتور ایمپلنت"
   },
   {
     "id": "coxo_im3",
@@ -894,7 +962,8 @@
     "basePrice": 799.76,
     "priceRial": 519844000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "موتور ایمپلنت"
   },
   {
     "id": "coxo_led",
@@ -907,7 +976,8 @@
     "basePrice": 95.13,
     "priceRial": 61834500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "coxo_mp",
@@ -920,7 +990,8 @@
     "basePrice": 187.02,
     "priceRial": 121563000,
     "stock": 20,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "coxo_8",
@@ -933,7 +1004,8 @@
     "basePrice": 250.84,
     "priceRial": 163046000,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال"
   },
   {
     "id": "coxo_sch",
@@ -946,7 +1018,8 @@
     "basePrice": 841.26,
     "priceRial": 546819000,
     "stock": 10,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "فایل ریشه"
   },
   {
     "id": "coxo_sp8",
@@ -959,7 +1032,8 @@
     "basePrice": 454.72,
     "priceRial": 295568000,
     "stock": 21,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "فایل ریشه"
   },
   {
     "id": "coxo_spr",
@@ -972,7 +1046,8 @@
     "basePrice": 354.78,
     "priceRial": 230606999,
     "stock": 25,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "فایل ریشه"
   },
   {
     "id": "coxo_tor",
@@ -985,7 +1060,8 @@
     "basePrice": 139.7,
     "priceRial": 90805000,
     "stock": 25,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "coxo_bs",
@@ -998,7 +1074,8 @@
     "basePrice": 2044.82,
     "priceRial": 1329133000,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "جراحی استخوان"
   },
   {
     "id": "coxo_us",
@@ -1011,7 +1088,8 @@
     "basePrice": 134.99,
     "priceRial": 87743500,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "جرم‌گیر"
   },
   {
     "id": "nsk_44",
@@ -1024,7 +1102,8 @@
     "basePrice": 323.57,
     "priceRial": 210320500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "nsk_72",
@@ -1037,7 +1116,8 @@
     "basePrice": 136.61,
     "priceRial": 88796500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "nsk_45",
@@ -1050,7 +1130,8 @@
     "basePrice": 136.61,
     "priceRial": 88796500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "nsk_28",
@@ -1063,7 +1144,8 @@
     "basePrice": 464.32,
     "priceRial": 301808000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_46",
@@ -1076,7 +1158,8 @@
     "basePrice": 464.32,
     "priceRial": 301808000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_66",
@@ -1089,7 +1172,8 @@
     "basePrice": 298.54,
     "priceRial": 194051000,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_16",
@@ -1102,7 +1186,8 @@
     "basePrice": 815.09,
     "priceRial": 529808500,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_25",
@@ -1115,7 +1200,8 @@
     "basePrice": 815.09,
     "priceRial": 529808500,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_73",
@@ -1128,7 +1214,8 @@
     "basePrice": 464.32,
     "priceRial": 301808000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_59",
@@ -1141,7 +1228,8 @@
     "basePrice": 708.75,
     "priceRial": 460687500,
     "stock": 20,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_13",
@@ -1154,7 +1242,8 @@
     "basePrice": 343.97,
     "priceRial": 223580500,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_14",
@@ -1167,7 +1256,8 @@
     "basePrice": 378.49,
     "priceRial": 246018500,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_60",
@@ -1180,7 +1270,8 @@
     "basePrice": 334.54,
     "priceRial": 217451000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_71",
@@ -1193,7 +1284,8 @@
     "basePrice": 417.7,
     "priceRial": 271505000,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_24",
@@ -1206,7 +1298,8 @@
     "basePrice": 334.54,
     "priceRial": 217451000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_23",
@@ -1219,7 +1312,8 @@
     "basePrice": 378.49,
     "priceRial": 246018500,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_50",
@@ -1232,7 +1326,8 @@
     "basePrice": 378.49,
     "priceRial": 246018500,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_77",
@@ -1245,7 +1340,8 @@
     "basePrice": 359.84,
     "priceRial": 233895999,
     "stock": 20,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_42",
@@ -1258,7 +1354,8 @@
     "basePrice": 334.54,
     "priceRial": 217451000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_11",
@@ -1271,7 +1368,8 @@
     "basePrice": 392.82,
     "priceRial": 255333000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_43",
@@ -1284,7 +1382,8 @@
     "basePrice": 409.97,
     "priceRial": 266480500,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین"
   },
   {
     "id": "nsk_12",
@@ -1297,7 +1396,8 @@
     "basePrice": 349.52,
     "priceRial": 227188000,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_69",
@@ -1310,7 +1410,8 @@
     "basePrice": 153.12,
     "priceRial": 99528000,
     "stock": 25,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_53",
@@ -1323,7 +1424,8 @@
     "basePrice": 323.57,
     "priceRial": 210320500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_21",
@@ -1336,7 +1438,8 @@
     "basePrice": 349.52,
     "priceRial": 227188000,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_52",
@@ -1349,7 +1452,8 @@
     "basePrice": 317.25,
     "priceRial": 206212500,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_63",
@@ -1362,7 +1466,8 @@
     "basePrice": 136.61,
     "priceRial": 88796500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_6",
@@ -1375,7 +1480,8 @@
     "basePrice": 263.06,
     "priceRial": 170989000,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_79",
@@ -1388,7 +1494,8 @@
     "basePrice": 2093.14,
     "priceRial": 1360541000,
     "stock": 24,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "نگهداری"
   },
   {
     "id": "nsk_62",
@@ -1401,7 +1508,8 @@
     "basePrice": 417.7,
     "priceRial": 271505000,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_20",
@@ -1414,7 +1522,8 @@
     "basePrice": 392.82,
     "priceRial": 255333000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_3",
@@ -1427,7 +1536,8 @@
     "basePrice": 438.17,
     "priceRial": 284810500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_51",
@@ -1440,7 +1550,8 @@
     "basePrice": 334.54,
     "priceRial": 217451000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_78",
@@ -1453,7 +1564,8 @@
     "basePrice": 209.37,
     "priceRial": 136090500,
     "stock": 25,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_29",
@@ -1466,7 +1578,8 @@
     "basePrice": 259.36,
     "priceRial": 168584000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_4",
@@ -1479,7 +1592,8 @@
     "basePrice": 422.77,
     "priceRial": 274800500,
     "stock": 15,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_15",
@@ -1492,7 +1606,8 @@
     "basePrice": 1835.22,
     "priceRial": 1192893000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "جراحی"
   },
   {
     "id": "nsk_65",
@@ -1505,7 +1620,8 @@
     "basePrice": 1402.37,
     "priceRial": 911540499,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "جراحی"
   },
   {
     "id": "nsk_27",
@@ -1518,7 +1634,8 @@
     "basePrice": 346.78,
     "priceRial": 225406999,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_58",
@@ -1531,7 +1648,8 @@
     "basePrice": 365.44,
     "priceRial": 237536000,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_76",
@@ -1544,7 +1662,8 @@
     "basePrice": 365.44,
     "priceRial": 237536000,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_64",
@@ -1557,7 +1676,8 @@
     "basePrice": 244.61,
     "priceRial": 158996500,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_5",
@@ -1570,7 +1690,8 @@
     "basePrice": 249.64,
     "priceRial": 162266000,
     "stock": 21,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_49",
@@ -1583,7 +1704,8 @@
     "basePrice": 365.44,
     "priceRial": 237536000,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_22",
@@ -1596,7 +1718,8 @@
     "basePrice": 442.64,
     "priceRial": 287716000,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_8",
@@ -1609,7 +1732,8 @@
     "basePrice": 294.8,
     "priceRial": 191620000,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_61",
@@ -1622,7 +1746,8 @@
     "basePrice": 409.97,
     "priceRial": 266480500,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_68",
@@ -1635,7 +1760,8 @@
     "basePrice": 359.84,
     "priceRial": 233895999,
     "stock": 20,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_2",
@@ -1648,7 +1774,8 @@
     "basePrice": 323.5,
     "priceRial": 210275000,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_1",
@@ -1661,7 +1788,8 @@
     "basePrice": 284.33,
     "priceRial": 184814500,
     "stock": 23,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_7",
@@ -1674,7 +1802,8 @@
     "basePrice": 291.96,
     "priceRial": 189774000,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_48",
@@ -1687,7 +1816,8 @@
     "basePrice": 166.45,
     "priceRial": 108192500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_17",
@@ -1700,7 +1830,8 @@
     "basePrice": 460.85,
     "priceRial": 299552500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "جرم‌گیر"
   },
   {
     "id": "nsk_54",
@@ -1713,7 +1844,8 @@
     "basePrice": 183.87,
     "priceRial": 119515500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "جرم‌گیر"
   },
   {
     "id": "nsk_70",
@@ -1726,7 +1858,8 @@
     "basePrice": 815.09,
     "priceRial": 529808500,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_40",
@@ -1739,7 +1872,8 @@
     "basePrice": 343.97,
     "priceRial": 223580500,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_75",
@@ -1752,7 +1886,8 @@
     "basePrice": 118.01,
     "priceRial": 76706500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_10",
@@ -1765,7 +1900,8 @@
     "basePrice": 140.83,
     "priceRial": 91539500,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_41",
@@ -1778,7 +1914,8 @@
     "basePrice": 291.49,
     "priceRial": 189468500,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_39",
@@ -1791,7 +1928,8 @@
     "basePrice": 118.01,
     "priceRial": 76706500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_57",
@@ -1804,7 +1942,8 @@
     "basePrice": 118.01,
     "priceRial": 76706500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_38",
@@ -1817,7 +1956,8 @@
     "basePrice": 194.02,
     "priceRial": 126113000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "nsk_33",
@@ -1830,7 +1970,8 @@
     "basePrice": 334.54,
     "priceRial": 217451000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_36",
@@ -1843,7 +1984,8 @@
     "basePrice": 189.19,
     "priceRial": 122973500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_32",
@@ -1856,7 +1998,8 @@
     "basePrice": 378.49,
     "priceRial": 246018500,
     "stock": 17,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_74",
@@ -1869,7 +2012,8 @@
     "basePrice": 259.36,
     "priceRial": 168584000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_34",
@@ -1882,7 +2026,8 @@
     "basePrice": 409.97,
     "priceRial": 266480500,
     "stock": 19,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_19",
@@ -1895,7 +2040,8 @@
     "basePrice": 244.61,
     "priceRial": 158996500,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_37",
@@ -1908,7 +2054,8 @@
     "basePrice": 244.61,
     "priceRial": 158996500,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_56",
@@ -1921,7 +2068,8 @@
     "basePrice": 259.36,
     "priceRial": 168584000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_35",
@@ -1934,7 +2082,8 @@
     "basePrice": 417.7,
     "priceRial": 271505000,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_31",
@@ -1947,7 +2096,8 @@
     "basePrice": 442.64,
     "priceRial": 287716000,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_30",
@@ -1960,7 +2110,8 @@
     "basePrice": 449.41,
     "priceRial": 292116500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_18",
@@ -1973,7 +2124,8 @@
     "basePrice": 189.19,
     "priceRial": 122973500,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_55",
@@ -1986,7 +2138,8 @@
     "basePrice": 244.61,
     "priceRial": 158996500,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده"
   },
   {
     "id": "nsk_26",
@@ -1999,7 +2152,8 @@
     "basePrice": 831.48,
     "priceRial": 540462000,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "درمان ریشه"
   },
   {
     "id": "nsk_9",
@@ -2012,7 +2166,8 @@
     "basePrice": 234.41,
     "priceRial": 152366500,
     "stock": 24,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_22",
@@ -2025,7 +2180,8 @@
     "basePrice": 167.1,
     "priceRial": 108615000,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_98",
@@ -2038,7 +2194,8 @@
     "basePrice": 341.27,
     "priceRial": 221825500,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_93",
@@ -2051,7 +2208,8 @@
     "basePrice": 124.1,
     "priceRial": 80665000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_88",
@@ -2064,7 +2222,8 @@
     "basePrice": 153.43,
     "priceRial": 99729500,
     "stock": 15,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_84",
@@ -2077,7 +2236,8 @@
     "basePrice": 124.1,
     "priceRial": 80665000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_80",
@@ -2090,7 +2250,8 @@
     "basePrice": 184.21,
     "priceRial": 119736500,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_75",
@@ -2103,7 +2264,8 @@
     "basePrice": 124.1,
     "priceRial": 80665000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_70",
@@ -2116,7 +2278,8 @@
     "basePrice": 256.7,
     "priceRial": 166855000,
     "stock": 8,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_12",
@@ -2129,7 +2292,8 @@
     "basePrice": 331.38,
     "priceRial": 215397000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_66",
@@ -2142,7 +2306,8 @@
     "basePrice": 124.1,
     "priceRial": 80665000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_61",
@@ -2155,7 +2320,8 @@
     "basePrice": 256.7,
     "priceRial": 166855000,
     "stock": 8,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_53",
@@ -2168,7 +2334,8 @@
     "basePrice": 184.21,
     "priceRial": 119736500,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_49",
@@ -2181,7 +2348,8 @@
     "basePrice": 124.19,
     "priceRial": 80723500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_9",
@@ -2194,7 +2362,8 @@
     "basePrice": 143.1,
     "priceRial": 93015000,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_42",
@@ -2207,7 +2376,8 @@
     "basePrice": 87.11,
     "priceRial": 56621500,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_38",
@@ -2220,7 +2390,8 @@
     "basePrice": 193.13,
     "priceRial": 125534500,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_35",
@@ -2233,7 +2404,8 @@
     "basePrice": 184.21,
     "priceRial": 119736500,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_31",
@@ -2246,7 +2418,8 @@
     "basePrice": 167.1,
     "priceRial": 108615000,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_2",
@@ -2259,7 +2432,8 @@
     "basePrice": 316.79,
     "priceRial": 205913500,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_27",
@@ -2272,7 +2446,8 @@
     "basePrice": 167.21,
     "priceRial": 108686500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_4",
@@ -2285,7 +2460,8 @@
     "basePrice": 113.55,
     "priceRial": 73807500,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_7",
@@ -2298,7 +2474,8 @@
     "basePrice": 89.19,
     "priceRial": 57973500,
     "stock": 15,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_16",
@@ -2311,7 +2488,8 @@
     "basePrice": 256.7,
     "priceRial": 166855000,
     "stock": 8,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_96",
@@ -2324,7 +2502,8 @@
     "basePrice": 240.52,
     "priceRial": 156338000,
     "stock": 25,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_91",
@@ -2337,7 +2516,8 @@
     "basePrice": 231.63,
     "priceRial": 150559500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_86",
@@ -2350,7 +2530,8 @@
     "basePrice": 148.82,
     "priceRial": 96733000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_82",
@@ -2363,7 +2544,8 @@
     "basePrice": 231.63,
     "priceRial": 150559500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_77",
@@ -2376,7 +2558,8 @@
     "basePrice": 148.82,
     "priceRial": 96733000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_74",
@@ -2389,7 +2572,8 @@
     "basePrice": 193.13,
     "priceRial": 125534500,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_68",
@@ -2402,7 +2586,8 @@
     "basePrice": 148.82,
     "priceRial": 96733000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_64",
@@ -2415,7 +2600,8 @@
     "basePrice": 231.63,
     "priceRial": 150559500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_59",
@@ -2428,7 +2614,8 @@
     "basePrice": 148.82,
     "priceRial": 96733000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_55",
@@ -2441,7 +2628,8 @@
     "basePrice": 231.63,
     "priceRial": 150559500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_51",
@@ -2454,7 +2642,8 @@
     "basePrice": 87.11,
     "priceRial": 56621500,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_14",
@@ -2467,7 +2656,8 @@
     "basePrice": 248.56,
     "priceRial": 161564000,
     "stock": 24,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_44",
@@ -2480,7 +2670,8 @@
     "basePrice": 184.21,
     "priceRial": 119736500,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_33",
@@ -2493,7 +2684,8 @@
     "basePrice": 87.11,
     "priceRial": 56621500,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_19",
@@ -2506,7 +2698,8 @@
     "basePrice": 231.63,
     "priceRial": 150559500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_29",
@@ -2519,7 +2712,8 @@
     "basePrice": 193.13,
     "priceRial": 125534500,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_40",
@@ -2532,7 +2726,8 @@
     "basePrice": 167.1,
     "priceRial": 108615000,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_24",
@@ -2545,7 +2740,8 @@
     "basePrice": 87.11,
     "priceRial": 56621500,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_46",
@@ -2558,7 +2754,8 @@
     "basePrice": 231.63,
     "priceRial": 150559500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_90",
@@ -2571,7 +2768,8 @@
     "basePrice": 167.21,
     "priceRial": 108686500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_15",
@@ -2584,7 +2782,8 @@
     "basePrice": 87.11,
     "priceRial": 56621500,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_34",
@@ -2597,7 +2796,8 @@
     "basePrice": 256.7,
     "priceRial": 166855000,
     "stock": 8,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_47",
@@ -2610,7 +2810,8 @@
     "basePrice": 193.13,
     "priceRial": 125534500,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_100",
@@ -2623,7 +2824,8 @@
     "basePrice": 135.05,
     "priceRial": 87782500,
     "stock": 21,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_79",
@@ -2636,7 +2838,8 @@
     "basePrice": 153.43,
     "priceRial": 99729500,
     "stock": 15,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_56",
@@ -2649,7 +2852,8 @@
     "basePrice": 193.13,
     "priceRial": 125534500,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_5",
@@ -2662,7 +2866,8 @@
     "basePrice": 163.89,
     "priceRial": 106528499,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_95",
@@ -2675,7 +2880,8 @@
     "basePrice": 148.82,
     "priceRial": 96733000,
     "stock": 6,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_63",
@@ -2688,7 +2894,8 @@
     "basePrice": 167.21,
     "priceRial": 108686500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_20",
@@ -2701,7 +2908,8 @@
     "basePrice": 148.47,
     "priceRial": 96505500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_71",
@@ -2714,7 +2922,8 @@
     "basePrice": 184.21,
     "priceRial": 119736500,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس الکتریکی"
   },
   {
     "id": "wh_97",
@@ -2727,7 +2936,8 @@
     "basePrice": 153.43,
     "priceRial": 99729500,
     "stock": 15,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_92",
@@ -2740,7 +2950,8 @@
     "basePrice": 193.13,
     "priceRial": 125534500,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_87",
@@ -2753,7 +2964,8 @@
     "basePrice": 240.52,
     "priceRial": 156338000,
     "stock": 25,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_83",
@@ -2766,7 +2978,8 @@
     "basePrice": 193.13,
     "priceRial": 125534500,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_78",
@@ -2779,7 +2992,8 @@
     "basePrice": 240.52,
     "priceRial": 156338000,
     "stock": 25,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_73",
@@ -2792,7 +3006,8 @@
     "basePrice": 231.63,
     "priceRial": 150559500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_69",
@@ -2805,7 +3020,8 @@
     "basePrice": 240.52,
     "priceRial": 156338000,
     "stock": 25,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_65",
@@ -2818,7 +3034,8 @@
     "basePrice": 193.13,
     "priceRial": 125534500,
     "stock": 22,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_11",
@@ -2831,7 +3048,8 @@
     "basePrice": 148.47,
     "priceRial": 96505500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_60",
@@ -2844,7 +3062,8 @@
     "basePrice": 87.11,
     "priceRial": 56621500,
     "stock": 5,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_57",
@@ -2857,7 +3076,8 @@
     "basePrice": 124.1,
     "priceRial": 80665000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_52",
@@ -2870,7 +3090,8 @@
     "basePrice": 256.7,
     "priceRial": 166855000,
     "stock": 8,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_48",
@@ -2883,7 +3104,8 @@
     "basePrice": 124.1,
     "priceRial": 80665000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_8",
@@ -2896,7 +3118,8 @@
     "basePrice": 169.54,
     "priceRial": 110201000,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_41",
@@ -2909,7 +3132,8 @@
     "basePrice": 248.56,
     "priceRial": 161564000,
     "stock": 24,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_36",
@@ -2922,7 +3146,8 @@
     "basePrice": 167.21,
     "priceRial": 108686500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_30",
@@ -2935,7 +3160,8 @@
     "basePrice": 331.38,
     "priceRial": 215397000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_26",
@@ -2948,7 +3174,8 @@
     "basePrice": 184.21,
     "priceRial": 119736500,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_45",
@@ -2961,7 +3188,8 @@
     "basePrice": 167.21,
     "priceRial": 108686500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_23",
@@ -2974,7 +3202,8 @@
     "basePrice": 248.56,
     "priceRial": 161564000,
     "stock": 24,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_17",
@@ -2987,7 +3216,8 @@
     "basePrice": 184.21,
     "priceRial": 119736500,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_3",
@@ -3000,7 +3230,8 @@
     "basePrice": 287.91,
     "priceRial": 187141500,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_6",
@@ -3013,7 +3244,8 @@
     "basePrice": 111.65,
     "priceRial": 72572500,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_21",
@@ -3026,7 +3258,8 @@
     "basePrice": 331.38,
     "priceRial": 215397000,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_1",
@@ -3039,7 +3272,8 @@
     "basePrice": 89.32,
     "priceRial": 58057999,
     "stock": 13,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_10",
@@ -3052,7 +3286,8 @@
     "basePrice": 289.31,
     "priceRial": 188051500,
     "stock": 10,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_99",
@@ -3065,7 +3300,8 @@
     "basePrice": 237.53,
     "priceRial": 154394500,
     "stock": 11,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_94",
@@ -3078,7 +3314,8 @@
     "basePrice": 124.19,
     "priceRial": 80723500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_89",
@@ -3091,7 +3328,8 @@
     "basePrice": 341.27,
     "priceRial": 221825500,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_85",
@@ -3104,7 +3342,8 @@
     "basePrice": 124.19,
     "priceRial": 80723500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_81",
@@ -3117,7 +3356,8 @@
     "basePrice": 167.21,
     "priceRial": 108686500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_76",
@@ -3130,7 +3370,8 @@
     "basePrice": 124.19,
     "priceRial": 80723500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_72",
@@ -3143,7 +3384,8 @@
     "basePrice": 167.21,
     "priceRial": 108686500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_67",
@@ -3156,7 +3398,8 @@
     "basePrice": 124.19,
     "priceRial": 80723500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_62",
@@ -3169,7 +3412,8 @@
     "basePrice": 184.21,
     "priceRial": 119736500,
     "stock": 7,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_58",
@@ -3182,7 +3426,8 @@
     "basePrice": 124.19,
     "priceRial": 80723500,
     "stock": 18,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_54",
@@ -3195,7 +3440,8 @@
     "basePrice": 167.21,
     "priceRial": 108686500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_50",
@@ -3208,7 +3454,8 @@
     "basePrice": 248.56,
     "priceRial": 161564000,
     "stock": 24,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_43",
@@ -3221,7 +3468,8 @@
     "basePrice": 256.7,
     "priceRial": 166855000,
     "stock": 8,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_37",
@@ -3234,7 +3482,8 @@
     "basePrice": 231.63,
     "priceRial": 150559500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_32",
@@ -3247,7 +3496,8 @@
     "basePrice": 248.56,
     "priceRial": 161564000,
     "stock": 24,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_13",
@@ -3260,7 +3510,8 @@
     "basePrice": 167.1,
     "priceRial": 108615000,
     "stock": 16,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_28",
@@ -3273,7 +3524,8 @@
     "basePrice": 231.63,
     "priceRial": 150559500,
     "stock": 12,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_18",
@@ -3286,7 +3538,8 @@
     "basePrice": 167.21,
     "priceRial": 108686500,
     "stock": 14,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_39",
@@ -3299,7 +3552,8 @@
     "basePrice": 124.1,
     "priceRial": 80665000,
     "stock": 9,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   },
   {
     "id": "wh_25",
@@ -3312,6 +3566,7 @@
     "basePrice": 256.7,
     "priceRial": 166855000,
     "stock": 8,
-    "isOriginal": true
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا"
   }
 ]
