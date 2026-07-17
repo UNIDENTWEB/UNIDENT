@@ -3,16 +3,7 @@
     "code": "CP-2",
     "name": "COXO Ultrasonic Scaler CP-2",
     "brand": "COXO",
-    "images": [
-      "images/coxo_us/coxo_1.jpg",
-      "images/coxo_us/coxo_2.jpg",
-      "images/coxo_us/coxo_3.jpg",
-      "images/coxo_us/coxo_4.jpg",
-      "images/coxo_us/coxo_5.jpg",
-      "images/coxo_us/coxo_6.jpg",
-      "images/coxo_us/coxo_7.jpg",
-      "images/coxo_us/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -50,16 +41,7 @@
     "code": "C-SURGE",
     "name": "COXO Ultrasonic Bone Surgery C-SURGE",
     "brand": "COXO",
-    "images": [
-      "images/coxo_bs/coxo_1.jpg",
-      "images/coxo_bs/coxo_2.jpg",
-      "images/coxo_bs/coxo_3.jpg",
-      "images/coxo_bs/coxo_4.jpg",
-      "images/coxo_bs/coxo_5.jpg",
-      "images/coxo_bs/coxo_6.jpg",
-      "images/coxo_bs/coxo_7.jpg",
-      "images/coxo_bs/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -75,16 +57,7 @@
     "code": "C-SAILOR-II",
     "name": "COXO 2nd Gen Implant Motor C-SAILOR-II",
     "brand": "COXO",
-    "images": [
-      "images/coxo_im2/coxo_1.jpg",
-      "images/coxo_im2/coxo_2.jpg",
-      "images/coxo_im2/coxo_3.jpg",
-      "images/coxo_im2/coxo_4.jpg",
-      "images/coxo_im2/coxo_5.jpg",
-      "images/coxo_im2/coxo_6.jpg",
-      "images/coxo_im2/coxo_7.jpg",
-      "images/coxo_im2/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -409,16 +382,7 @@
     "code": "H01-D1SP",
     "name": "COXO H01-D1SP 45° High Speed Turbine",
     "brand": "COXO",
-    "images": [
-      "images/coxo_h01/coxo_1.jpg",
-      "images/coxo_h01/coxo_2.jpg",
-      "images/coxo_h01/coxo_3.jpg",
-      "images/coxo_h01/coxo_4.jpg",
-      "images/coxo_h01/coxo_5.jpg",
-      "images/coxo_h01/coxo_6.jpg",
-      "images/coxo_h01/coxo_7.jpg",
-      "images/coxo_h01/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -434,16 +398,7 @@
     "code": "C7-3S1",
     "name": "COXO C7-3S1 45° Extraction Handpiece",
     "brand": "COXO",
-    "images": [
-      "images/coxo_c73/coxotec_1.jpg",
-      "images/coxo_c73/coxotec_2.jpg",
-      "images/coxo_c73/coxotec_3.jpg",
-      "images/coxo_c73/coxotec_4.jpg",
-      "images/coxo_c73/coxotec_5.jpg",
-      "images/coxo_c73/coxotec_6.jpg",
-      "images/coxo_c73/coxotec_7.jpg",
-      "images/coxo_c73/coxotec_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -489,16 +444,7 @@
     "code": "CX-LED",
     "name": "COXO LED Wind-Electric Handpiece",
     "brand": "COXO",
-    "images": [
-      "images/coxo_led/coxo_1.jpg",
-      "images/coxo_led/coxo_2.jpg",
-      "images/coxo_led/coxo_3.jpg",
-      "images/coxo_led/coxo_4.jpg",
-      "images/coxo_led/coxo_5.jpg",
-      "images/coxo_led/coxo_6.jpg",
-      "images/coxo_led/coxo_7.jpg",
-      "images/coxo_led/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -536,16 +482,7 @@
     "code": "CX-TORNADO",
     "name": "COXO Tornado Single-Spray Handpiece",
     "brand": "COXO",
-    "images": [
-      "images/coxo_tor/coxo_1.jpg",
-      "images/coxo_tor/coxo_2.jpg",
-      "images/coxo_tor/coxo_3.jpg",
-      "images/coxo_tor/coxo_4.jpg",
-      "images/coxo_tor/coxo_5.jpg",
-      "images/coxo_tor/coxo_6.jpg",
-      "images/coxo_tor/coxo_7.jpg",
-      "images/coxo_tor/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -680,22 +617,10 @@
     "name": "COXO C-FILL Mini Obturation System",
     "brand": "COXO",
     "images": [
-      "images/coxo_cfm/coxo_1.jpg",
-      "images/coxo_cfm/coxo_2.jpg",
-      "images/coxo_cfm/coxo_3.jpg",
-      "images/coxo_cfm/coxo_4.jpg",
-      "images/coxo_cfm/coxo_5.jpg",
-      "images/coxo_cfm/coxo_6.jpg",
-      "images/coxo_cfm/coxo_7.jpg",
-      "images/coxo_cfm/coxotec_2.jpg",
-      "images/coxo_cfm/coxotec_3.jpg",
-      "images/coxo_cfm/coxotec_4.jpg",
-      "images/coxo_cfm/coxotec_5.jpg",
-      "images/coxo_cfm/coxotec_6.jpg",
-      "images/coxo_cfm/coxotec_7.jpg"
+      "images/coxo_cfm/1.jpg"
     ],
     "source_urls": [
-      "https://coxotec.cn/home/details/2036"
+      "https://cdn.shopify.com/s/files/1/0250/2852/6157/files/3_07497329-1dbe-4ed2-8a50-13a426af27a9.jpg?v=1769561073"
     ],
     "coxotec_images": [
       "images/coxo_cfm/coxo_1.jpg",
@@ -712,15 +637,7 @@
     "code": "C-FILL-X",
     "name": "COXO C-FILL X Obturation System",
     "brand": "COXO",
-    "images": [
-      "images/coxo_cfx/coxo_1.jpg",
-      "images/coxo_cfx/coxo_2.jpg",
-      "images/coxo_cfx/coxo_3.jpg",
-      "images/coxo_cfx/coxo_4.jpg",
-      "images/coxo_cfx/coxo_5.jpg",
-      "images/coxo_cfx/coxo_6.jpg",
-      "images/coxo_cfx/coxo_7.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn/home/details/2038"
     ],
@@ -761,16 +678,7 @@
     "code": "C-CLEAR",
     "name": "COXO C-CLEAR Dental Microscope",
     "brand": "COXO",
-    "images": [
-      "images/coxo_ccl/coxo_1.jpg",
-      "images/coxo_ccl/coxo_2.jpg",
-      "images/coxo_ccl/coxo_3.jpg",
-      "images/coxo_ccl/coxo_4.jpg",
-      "images/coxo_ccl/coxo_5.jpg",
-      "images/coxo_ccl/coxo_6.jpg",
-      "images/coxo_ccl/coxo_7.jpg",
-      "images/coxo_ccl/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn/home/details/2042"
     ]
@@ -779,16 +687,7 @@
     "code": "C-CLEAR-2",
     "name": "COXO C-CLEAR2 Premium Dental Microscope",
     "brand": "COXO",
-    "images": [
-      "images/coxo_cc2/coxo_1.jpg",
-      "images/coxo_cc2/coxo_2.jpg",
-      "images/coxo_cc2/coxo_3.jpg",
-      "images/coxo_cc2/coxo_4.jpg",
-      "images/coxo_cc2/coxo_5.jpg",
-      "images/coxo_cc2/coxo_6.jpg",
-      "images/coxo_cc2/coxo_7.jpg",
-      "images/coxo_cc2/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn/home/details/2042"
     ]
@@ -797,16 +696,7 @@
     "code": "C-CLEAR-2-DLX",
     "name": "COXO C-CLEAR2 Deluxe Dental Microscope",
     "brand": "COXO",
-    "images": [
-      "images/coxo_ccd/coxo_1.jpg",
-      "images/coxo_ccd/coxo_2.jpg",
-      "images/coxo_ccd/coxo_3.jpg",
-      "images/coxo_ccd/coxo_4.jpg",
-      "images/coxo_ccd/coxo_5.jpg",
-      "images/coxo_ccd/coxo_6.jpg",
-      "images/coxo_ccd/coxo_7.jpg",
-      "images/coxo_ccd/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn/home/details/2042"
     ]
@@ -815,16 +705,7 @@
     "code": "C-SAILOR-III",
     "name": "COXO 3rd Gen Implant Motor C-SAILOR-III",
     "brand": "COXO",
-    "images": [
-      "images/coxo_im3/coxo_1.jpg",
-      "images/coxo_im3/coxo_2.jpg",
-      "images/coxo_im3/coxo_3.jpg",
-      "images/coxo_im3/coxo_4.jpg",
-      "images/coxo_im3/coxo_5.jpg",
-      "images/coxo_im3/coxo_6.jpg",
-      "images/coxo_im3/coxo_7.jpg",
-      "images/coxo_im3/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -840,15 +721,7 @@
     "code": "SC-CH",
     "name": "COXO SC-CH Pediatric NiTi Files",
     "brand": "COXO",
-    "images": [
-      "images/coxo_sch/coxo_1.jpg",
-      "images/coxo_sch/coxo_2.jpg",
-      "images/coxo_sch/coxo_3.jpg",
-      "images/coxo_sch/coxo_4.jpg",
-      "images/coxo_sch/coxo_5.jpg",
-      "images/coxo_sch/coxo_6.jpg",
-      "images/coxo_sch/coxo_7.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -863,16 +736,7 @@
     "code": "SC-PRO-2018",
     "name": "COXO SC-PRO 2018 NiTi File System",
     "brand": "COXO",
-    "images": [
-      "images/coxo_sp8/coxo_1.jpg",
-      "images/coxo_sp8/coxo_2.jpg",
-      "images/coxo_sp8/coxo_3.jpg",
-      "images/coxo_sp8/coxo_4.jpg",
-      "images/coxo_sp8/coxo_5.jpg",
-      "images/coxo_sp8/coxo_6.jpg",
-      "images/coxo_sp8/coxo_7.jpg",
-      "images/coxo_sp8/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -887,16 +751,7 @@
     "code": "SC-PRO",
     "name": "COXO SC-PRO NiTi Files",
     "brand": "COXO",
-    "images": [
-      "images/coxo_spr/coxo_1.jpg",
-      "images/coxo_spr/coxo_2.jpg",
-      "images/coxo_spr/coxo_3.jpg",
-      "images/coxo_spr/coxo_4.jpg",
-      "images/coxo_spr/coxo_5.jpg",
-      "images/coxo_spr/coxo_6.jpg",
-      "images/coxo_spr/coxo_7.jpg",
-      "images/coxo_spr/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -925,22 +780,7 @@
     "code": "C-SAILOR-AIR",
     "name": "COXO C-SAILOR AIR Implant Motor",
     "brand": "COXO",
-    "images": [
-      "images/coxo_csa/coxo_1.jpg",
-      "images/coxo_csa/coxo_2.jpg",
-      "images/coxo_csa/coxo_3.jpg",
-      "images/coxo_csa/coxo_4.jpg",
-      "images/coxo_csa/coxo_5.jpg",
-      "images/coxo_csa/coxo_6.jpg",
-      "images/coxo_csa/coxo_7.jpg",
-      "images/coxo_csa/coxo_8.jpg",
-      "images/coxo_csa/coxotec_1.jpg",
-      "images/coxo_csa/coxotec_2.jpg",
-      "images/coxo_csa/coxotec_3.jpg",
-      "images/coxo_csa/coxotec_4.jpg",
-      "images/coxo_csa/coxotec_5.jpg",
-      "images/coxo_csa/coxotec_6.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -967,24 +807,7 @@
     "code": "C-SAILOR-PRO",
     "name": "COXO C-SAILOR PRO+ Implant Motor",
     "brand": "COXO",
-    "images": [
-      "images/coxo_csp2/coxo_1.jpg",
-      "images/coxo_csp2/coxo_2.jpg",
-      "images/coxo_csp2/coxo_3.jpg",
-      "images/coxo_csp2/coxo_4.jpg",
-      "images/coxo_csp2/coxo_5.jpg",
-      "images/coxo_csp2/coxo_6.jpg",
-      "images/coxo_csp2/coxo_7.jpg",
-      "images/coxo_csp2/coxo_8.jpg",
-      "images/coxo_csp2/coxotec_1.jpg",
-      "images/coxo_csp2/coxotec_2.jpg",
-      "images/coxo_csp2/coxotec_3.jpg",
-      "images/coxo_csp2/coxotec_4.jpg",
-      "images/coxo_csp2/coxotec_5.jpg",
-      "images/coxo_csp2/coxotec_6.jpg",
-      "images/coxo_csp2/coxotec_7.jpg",
-      "images/coxo_csp2/coxotec_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -1011,24 +834,7 @@
     "code": "CX100",
     "name": "COXO CX100 Dental Chair",
     "brand": "COXO",
-    "images": [
-      "images/coxo_100/coxo_1.jpg",
-      "images/coxo_100/coxo_2.jpg",
-      "images/coxo_100/coxo_3.jpg",
-      "images/coxo_100/coxo_4.jpg",
-      "images/coxo_100/coxo_5.jpg",
-      "images/coxo_100/coxo_6.jpg",
-      "images/coxo_100/coxo_7.jpg",
-      "images/coxo_100/coxo_8.jpg",
-      "images/coxo_100/coxotec_1.jpg",
-      "images/coxo_100/coxotec_2.jpg",
-      "images/coxo_100/coxotec_3.jpg",
-      "images/coxo_100/coxotec_4.jpg",
-      "images/coxo_100/coxotec_5.jpg",
-      "images/coxo_100/coxotec_6.jpg",
-      "images/coxo_100/coxotec_7.jpg",
-      "images/coxo_100/coxotec_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -1053,16 +859,7 @@
     "code": "GENI-PRO",
     "name": "COXO GENI PRO Anesthesia Device",
     "brand": "COXO",
-    "images": [
-      "images/coxo_gen/coxo_1.jpg",
-      "images/coxo_gen/coxo_2.jpg",
-      "images/coxo_gen/coxo_3.jpg",
-      "images/coxo_gen/coxo_4.jpg",
-      "images/coxo_gen/coxo_5.jpg",
-      "images/coxo_gen/coxo_6.jpg",
-      "images/coxo_gen/coxo_7.jpg",
-      "images/coxo_gen/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn",
       "https://coxotec.cn",
@@ -1277,16 +1074,7 @@
     "name": "COXO C-CLEAR-2",
     "brand": "COXO",
     "code": "C-CLEAR-2",
-    "images": [
-      "images/coxo_12/coxo_1.jpg",
-      "images/coxo_12/coxo_2.jpg",
-      "images/coxo_12/coxo_3.jpg",
-      "images/coxo_12/coxo_4.jpg",
-      "images/coxo_12/coxo_5.jpg",
-      "images/coxo_12/coxo_6.jpg",
-      "images/coxo_12/coxo_7.jpg",
-      "images/coxo_12/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn/home/details/2043"
     ]
@@ -1295,16 +1083,7 @@
     "name": "COXO CP-1",
     "brand": "COXO",
     "code": "CP-1",
-    "images": [
-      "images/coxo_13/coxo_1.jpg",
-      "images/coxo_13/coxo_2.jpg",
-      "images/coxo_13/coxo_3.jpg",
-      "images/coxo_13/coxo_4.jpg",
-      "images/coxo_13/coxo_5.jpg",
-      "images/coxo_13/coxo_6.jpg",
-      "images/coxo_13/coxo_7.jpg",
-      "images/coxo_13/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.com/wp-content/uploads/2025/02/CP-1-1024x1024.png",
       "https://coxotec.com/wp-content/uploads/2025/02/CP-1-280x280.png",
@@ -1456,16 +1235,7 @@
     "name": "COXO C-BRIGHT",
     "brand": "COXO",
     "code": "C-BRIGHT",
-    "images": [
-      "images/coxo_26/coxo_1.jpg",
-      "images/coxo_26/coxo_2.jpg",
-      "images/coxo_26/coxo_3.jpg",
-      "images/coxo_26/coxo_4.jpg",
-      "images/coxo_26/coxo_5.jpg",
-      "images/coxo_26/coxo_6.jpg",
-      "images/coxo_26/coxo_7.jpg",
-      "images/coxo_26/coxo_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.cn/home/details/2017"
     ]
@@ -1610,24 +1380,7 @@
     "name": "COXO C-Sailor",
     "brand": "COXO",
     "code": "C-SAILOR",
-    "images": [
-      "images/coxo_37/coxo_1.jpg",
-      "images/coxo_37/coxo_2.jpg",
-      "images/coxo_37/coxo_3.jpg",
-      "images/coxo_37/coxo_4.jpg",
-      "images/coxo_37/coxo_5.jpg",
-      "images/coxo_37/coxo_6.jpg",
-      "images/coxo_37/coxo_7.jpg",
-      "images/coxo_37/coxo_8.jpg",
-      "images/coxo_37/coxotec_1.jpg",
-      "images/coxo_37/coxotec_2.jpg",
-      "images/coxo_37/coxotec_3.jpg",
-      "images/coxo_37/coxotec_4.jpg",
-      "images/coxo_37/coxotec_5.jpg",
-      "images/coxo_37/coxotec_6.jpg",
-      "images/coxo_37/coxotec_7.jpg",
-      "images/coxo_37/coxotec_8.jpg"
-    ],
+    "images": [],
     "source_urls": [
       "https://coxotec.com/wp-content/uploads/2025/11/Implantation-Devices-COXO-Medical5.png",
       "https://coxotec.com/wp-content/uploads/2025/02/31f6f81ad64a00092d171-1024x720.png",
