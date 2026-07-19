@@ -58,6 +58,10 @@
       {
         "key": "نوع",
         "value": "دستی / چرخشی"
+      },
+      {
+        "key": "استفاده",
+        "value": "یکبار مصرف / اتوکلاو شونده"
       }
     ]
   },
@@ -124,7 +128,7 @@
     "name": "COXO C-BRIGHT",
     "brand": "COXO",
     "code": "C-BRIGHT",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 0,
     "type": "光固化机",
     "basePrice": 107.25,
@@ -157,7 +161,7 @@
     "name": "COXO C-CLEAR Dental Microscope",
     "brand": "COXO",
     "code": "C-CLEAR",
-    "category": "ارتودنسی",
+    "category": "میکروسکوپ",
     "images": 8,
     "type": "显微镜",
     "basePrice": 450.44,
@@ -165,7 +169,7 @@
     "stock": 17,
     "isOriginal": true,
     "type_fa": "میکروسکوپ",
-    "description": "میکروسکوپ دندانپزشکی",
+    "description": "میکروسکوپ دندانپزشکی COXO C-CLEAR با طراحی پایه و اپتیک پیشرفته برای تشخیص و درمان دقیق",
     "specs": [
       {
         "key": "بزرگنمایی",
@@ -190,7 +194,7 @@
     "name": "COXO C-CLEAR-2",
     "brand": "COXO",
     "code": "C-CLEAR-2",
-    "category": "ارتودنسی",
+    "category": "میکروسکوپ",
     "images": 8,
     "type": "显微镜",
     "basePrice": 238.24,
@@ -198,7 +202,7 @@
     "stock": 18,
     "isOriginal": true,
     "type_fa": "میکروسکوپ",
-    "description": "میکروسکوپ دندانپزشکی",
+    "description": "میکروسکوپ دندانپزشکی COXO C-CLEAR-2 با سیستم اپتیک آپوکروماتیک، بزرگنمایی 2.5x-25x و نور LED",
     "specs": [
       {
         "key": "بزرگنمایی",
@@ -223,7 +227,7 @@
     "name": "COXO C-CLEAR2 Deluxe Dental Microscope",
     "brand": "COXO",
     "code": "C-CLEAR-2-DLX",
-    "category": "ارتودنسی",
+    "category": "میکروسکوپ",
     "images": 8,
     "type": "显微镜",
     "basePrice": 218.16,
@@ -231,7 +235,7 @@
     "stock": 19,
     "isOriginal": true,
     "type_fa": "میکروسکوپ",
-    "description": "میکروسکوپ دندانپزشکی",
+    "description": "میکروسکوپ دندانپزشکی COXO C-CLEAR2 Deluxe با امکانات کامل، نور LED و پایه چند مفصلی",
     "specs": [
       {
         "key": "بزرگنمایی",
@@ -256,7 +260,7 @@
     "name": "COXO C-CLEAR2 Premium Dental Microscope",
     "brand": "COXO",
     "code": "C-CLEAR-2",
-    "category": "ارتودنسی",
+    "category": "میکروسکوپ",
     "images": 8,
     "type": "显微镜",
     "basePrice": 273.12,
@@ -264,7 +268,7 @@
     "stock": 7,
     "isOriginal": true,
     "type_fa": "میکروسکوپ",
-    "description": "میکروسکوپ دندانپزشکی",
+    "description": "میکروسکوپ دندانپزشکی COXO C-CLEAR2 Premium با بزرگنمایی بالا و اپتیک آپوکروماتیک",
     "specs": [
       {
         "key": "بزرگنمایی",
@@ -364,6 +368,10 @@
       {
         "key": "نوع",
         "value": "دستی / چرخشی"
+      },
+      {
+        "key": "استفاده",
+        "value": "یکبار مصرف / اتوکلاو شونده"
       }
     ]
   },
@@ -1251,15 +1259,32 @@
     "stock": 23,
     "isOriginal": true,
     "type_fa": "هندپیس جراحی",
-    "description": "محصول دندانپزشکی COXO",
-    "specs": []
+    "description": "هندپیس جراحی COXO C7-3S1 با زاویه 45 درجه، سرعت 40,000-200,000 RPM، مناسب جراحی ایمپلنت",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "40,000-200,000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "سیستم خنک‌کننده",
+        "value": "اسپری خارجی"
+      },
+      {
+        "key": "نوع فرز",
+        "value": "FG جراحی"
+      }
+    ]
   },
   {
     "id": "coxo_13",
     "name": "COXO CP-1",
     "brand": "COXO",
     "code": "CP-1",
-    "category": "ارتودنسی",
+    "category": "جرم‌گیر",
     "images": 0,
     "type": "洁牙机",
     "basePrice": 179.92,
@@ -1267,7 +1292,7 @@
     "stock": 13,
     "isOriginal": true,
     "type_fa": "جرم‌گیر",
-    "description": "دستگاه جرم‌گیری اولتراسونیک دندانپزشکی",
+    "description": "دستگاه جرم‌گیری اولتراسونیک COXO CP-1 با فرکانس 25-32 kHz، سیستم خنک‌کننده آب خودکار",
     "specs": [
       {
         "key": "فرکانس",
@@ -1370,32 +1395,66 @@
     "name": "COXO CX100 Dental Chair",
     "brand": "COXO",
     "code": "CX100",
-    "category": "ست هندپیس",
+    "category": "یونیت",
     "images": 8,
     "type": "牙椅",
     "basePrice": 2327.6,
     "priceRial": 1512940000,
     "stock": 11,
     "isOriginal": true,
-    "type_fa": "یونیت",
-    "description": "محصول دندانپزشکی COXO",
-    "specs": []
+    "type_fa": "یونیت دندانپزشکی",
+    "description": "یونیت دندانپزشکی COXO CX100 با 4-6 خروجی هندپیس، موتور براشلس، صندلی برقی با حافظه و پدال چندکاره",
+    "specs": [
+      {
+        "key": "تعداد خروجی هندپیس",
+        "value": "4-6 عدد"
+      },
+      {
+        "key": "موتور الکتریکی",
+        "value": "براشلس"
+      },
+      {
+        "key": "کنترل پذیری",
+        "value": "پدال چندکاره"
+      },
+      {
+        "key": "صندلی",
+        "value": "برقی با قابلیت تنظیم حافظه"
+      }
+    ]
   },
   {
     "id": "coxo_200",
     "name": "COXO CX200 Dental Chair",
     "brand": "COXO",
     "code": "CX200",
-    "category": "ست هندپیس",
+    "category": "یونیت",
     "images": 5,
     "type": "牙椅",
     "basePrice": 2557.89,
     "priceRial": 1662628500,
     "stock": 8,
     "isOriginal": true,
-    "type_fa": "یونیت",
-    "description": "محصول دندانپزشکی COXO",
-    "specs": []
+    "type_fa": "یونیت دندانپزشکی",
+    "description": "یونیت دندانپزشکی COXO CX200 پیشرفته با طراحی ارگونومیک، مانیتور لمسی، موتور براشلس و نور LED",
+    "specs": [
+      {
+        "key": "تعداد خروجی هندپیس",
+        "value": "4-6 عدد"
+      },
+      {
+        "key": "موتور الکتریکی",
+        "value": "براشلس"
+      },
+      {
+        "key": "کنترل پذیری",
+        "value": "پدال چندکاره"
+      },
+      {
+        "key": "صندلی",
+        "value": "برقی با قابلیت تنظیم حافظه"
+      }
+    ]
   },
   {
     "id": "coxo_10",
@@ -1525,7 +1584,7 @@
     "name": "COXO DB-685 Penguin Curing Light",
     "brand": "COXO",
     "code": "DB-685",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 188.23,
@@ -1558,7 +1617,7 @@
     "name": "COXO DB-686 AIR",
     "brand": "COXO",
     "code": "DB-686-AIR",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 461.94,
@@ -1591,7 +1650,7 @@
     "name": "COXO DB-686 Honor Curing Light",
     "brand": "COXO",
     "code": "DB-686-HONOR",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 324.46,
@@ -1624,7 +1683,7 @@
     "name": "COXO DB-686 Lattre Curing Light",
     "brand": "COXO",
     "code": "DB-686-LATTRE",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 269.52,
@@ -1657,7 +1716,7 @@
     "name": "COXO DB-686 Lite",
     "brand": "COXO",
     "code": "DB-686-LITE",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 252.9,
@@ -1690,7 +1749,7 @@
     "name": "COXO DB-686 Mocha LED Curing Light",
     "brand": "COXO",
     "code": "DB-686-MOCHA",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 142.05,
@@ -1723,7 +1782,7 @@
     "name": "COXO DB-686 NK",
     "brand": "COXO",
     "code": "DB-686-NK",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 383.17,
@@ -1756,7 +1815,7 @@
     "name": "COXO DB-686 PRO",
     "brand": "COXO",
     "code": "DB-686-PRO",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 383.17,
@@ -1789,7 +1848,7 @@
     "name": "COXO DB-686 Swift Curing Light",
     "brand": "COXO",
     "code": "DB-686-SWIFT",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 247.02,
@@ -1822,7 +1881,7 @@
     "name": "COXO DB-686X",
     "brand": "COXO",
     "code": "DB-686X",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 294.24,
@@ -1855,7 +1914,7 @@
     "name": "COXO DB686 Halo Dental LED Curing Light with Caries Detector 3000mW/cm²",
     "brand": "COXO",
     "code": "DB686",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 151.09,
@@ -1888,7 +1947,7 @@
     "name": "COXO DB686 HALO",
     "brand": "COXO",
     "code": "DB686-HALO",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 352.44,
@@ -1921,7 +1980,7 @@
     "name": "COXO DB686 LATTE",
     "brand": "COXO",
     "code": "DB686-LATTE",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 383.17,
@@ -1954,7 +2013,7 @@
     "name": "COXO DB686 Q1",
     "brand": "COXO",
     "code": "DB686-Q1",
-    "category": "ارتودنسی",
+    "category": "لایت کیور",
     "images": 6,
     "type": "光固化机",
     "basePrice": 296.42,
@@ -1987,7 +2046,7 @@
     "name": "COXO DL300P Dental Intraoral Scanner",
     "brand": "COXO",
     "code": "DL-300P",
-    "category": "ارتودنسی",
+    "category": "اسکنر",
     "images": 5,
     "type": "口内扫描仪",
     "basePrice": 252.9,
@@ -1995,15 +2054,32 @@
     "stock": 12,
     "isOriginal": true,
     "type_fa": "اسکنر داخل دهانی",
-    "description": "محصول دندانپزشکی COXO",
-    "specs": []
+    "description": "اسکنر داخل دهانی COXO DL300P با دقت بالا، سرعت 15-20 فریم در ثانیه و طراحی ارگونومیک برای اسکن سه‌بعدی دندان",
+    "specs": [
+      {
+        "key": "سرعت اسکن",
+        "value": "15-20 fps"
+      },
+      {
+        "key": "دقت",
+        "value": "10-15 میکرون"
+      },
+      {
+        "key": "وزن",
+        "value": "180-240 گرم"
+      },
+      {
+        "key": "نرم‌افزار",
+        "value": "CAD/CAM سازگار"
+      }
+    ]
   },
   {
     "id": "coxo_sb",
     "name": "COXO External Sandblaster C-BLASTER",
     "brand": "COXO",
     "code": "C-BLASTER",
-    "category": "ارتودنسی",
+    "category": "سندبلاست",
     "images": 6,
     "type": "喷砂设备",
     "basePrice": 404.17,
@@ -2011,24 +2087,58 @@
     "stock": 5,
     "isOriginal": true,
     "type_fa": "سندبلاست",
-    "description": "محصول دندانپزشکی COXO",
-    "specs": []
+    "description": "سندبلاست خارج دهانی COXO C-BLASTER با فشار کاری 2-8 bar و مخزن 25-50 گرمی برای تمیزکاری سطوح",
+    "specs": [
+      {
+        "key": "فشار کاری",
+        "value": "2-8 bar"
+      },
+      {
+        "key": "ظرفیت مخزن",
+        "value": "25-50 گرم"
+      },
+      {
+        "key": "نازل",
+        "value": "0.4-0.8 mm"
+      },
+      {
+        "key": "نوع هندپیس",
+        "value": "قلمی ارگونومیک"
+      }
+    ]
   },
   {
     "id": "coxo_gen",
     "name": "COXO GENI PRO Anesthesia Device",
     "brand": "COXO",
     "code": "GENI-PRO",
-    "category": "ارتودنسی",
+    "category": "بی‌حسی",
     "images": 8,
     "type": "麻醉设备",
     "basePrice": 429.0,
     "priceRial": 278850000,
     "stock": 11,
     "isOriginal": true,
-    "type_fa": "بی‌حسی",
-    "description": "محصول دندانپزشکی COXO",
-    "specs": []
+    "type_fa": "دستگاه بی‌حسی",
+    "description": "دستگاه بی‌حسی COXO GENI PRO با نرخ تزریق قابل تنظیم 0.05-5 ml/min، صفحه نمایش لمسی رنگی و تکنولوژی پیشرفته",
+    "specs": [
+      {
+        "key": "نرخ تزریق",
+        "value": "قابل تنظیم 0.05-5 ml/min"
+      },
+      {
+        "key": "نوع سرسوزن",
+        "value": "یکبار مصرف استاندارد"
+      },
+      {
+        "key": "گشتاور تزریق",
+        "value": "350-450 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      }
+    ]
   },
   {
     "id": "coxo_h01",
@@ -2083,9 +2193,26 @@
     "priceRial": 1442369500,
     "stock": 21,
     "isOriginal": true,
-    "type_fa": "لوازم ایمپلنت",
-    "description": "محصول دندانپزشکی COXO",
-    "specs": []
+    "type_fa": "فعال‌ساز ایمپلنت",
+    "description": "فعال‌ساز ایمپلنت COXO C-ACTIVATOR با فرکانس 40-60 Hz و باتری لیتیومی قابل شارژ",
+    "specs": [
+      {
+        "key": "فرکانس فعال‌سازی",
+        "value": "40-60 Hz"
+      },
+      {
+        "key": "ولتاژ",
+        "value": "1.5-3.0V"
+      },
+      {
+        "key": "زمان فعال‌سازی",
+        "value": "20-30 ثانیه"
+      },
+      {
+        "key": "نوع باتری",
+        "value": "قابل شارژ لیتیومی"
+      }
+    ]
   },
   {
     "id": "coxo_im2",
@@ -2413,15 +2540,32 @@
     "stock": 5,
     "isOriginal": true,
     "type_fa": "جراحی استخوان",
-    "description": "محصول دندانپزشکی COXO",
-    "specs": []
+    "description": "جراحی استخوان اولتراسونیک COXO C-SURGE با فرکانس 25-35 kHz، توان 3-90W و پمپ آب استریل داخلی",
+    "specs": [
+      {
+        "key": "فرکانس",
+        "value": "25-35 kHz"
+      },
+      {
+        "key": "توان خروجی",
+        "value": "3-90W"
+      },
+      {
+        "key": "حالت‌های جراحی",
+        "value": "برش استخوان / سینوس لیفت / آپیکو"
+      },
+      {
+        "key": "خنک‌کننده",
+        "value": "آب استریل با پمپ داخلی"
+      }
+    ]
   },
   {
     "id": "coxo_us",
     "name": "COXO Ultrasonic Scaler CP-2",
     "brand": "COXO",
     "code": "CP-2",
-    "category": "ارتودنسی",
+    "category": "جرم‌گیر",
     "images": 8,
     "type": "洁牙机",
     "basePrice": 134.99,
@@ -2429,7 +2573,7 @@
     "stock": 17,
     "isOriginal": true,
     "type_fa": "جرم‌گیر",
-    "description": "دستگاه جرم‌گیری اولتراسونیک دندانپزشکی",
+    "description": "دستگاه جرم‌گیری اولتراسونیک COXO CP-2 با حالت‌های جرم‌گیری، پریودنتال و درمان ریشه",
     "specs": [
       {
         "key": "فرکانس",
@@ -3490,16 +3634,33 @@
     "name": "NSK Pana-Spray",
     "brand": "NSK",
     "code": "PANA-SPRAY",
-    "category": "ست هندپیس",
+    "category": "تجهیزات",
     "images": 8,
     "type": "卫生维护",
     "basePrice": 2093.14,
     "priceRial": 1360541000,
     "stock": 24,
     "isOriginal": true,
-    "type_fa": "نگهداری",
-    "description": "محصول دندانپزشکی NSK",
-    "specs": []
+    "type_fa": "روانکار و تمیزکننده",
+    "description": "دستگاه روانکار و تمیزکننده NSK Pana-Spray با فشار 2-4 bar مخصوص هندپیس‌های دندانپزشکی",
+    "specs": [
+      {
+        "key": "فشار کاری",
+        "value": "2-4 bar"
+      },
+      {
+        "key": "نوع روغن",
+        "value": "مخصوص هندپیس"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "روغن‌کاری / تمیزکاری"
+      },
+      {
+        "key": "وزن",
+        "value": "3-5 kg"
+      }
+    ]
   },
   {
     "id": "nsk_62",
@@ -3800,9 +3961,26 @@
     "priceRial": 1192893000,
     "stock": 6,
     "isOriginal": true,
-    "type_fa": "جراحی",
-    "description": "محصول دندانپزشکی NSK",
-    "specs": []
+    "type_fa": "موتور جراحی",
+    "description": "موتور جراحی NSK Surgic AP با سرعت 40,000 RPM، گشتاور 50-80 N.cm و 8-20 برنامه حافظه",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "40,000 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "50-80 N.cm"
+      },
+      {
+        "key": "محدوده گشتاور",
+        "value": "5-80 N.cm"
+      },
+      {
+        "key": "برنامه‌های حافظه",
+        "value": "8-20 برنامه"
+      }
+    ]
   },
   {
     "id": "nsk_65",
@@ -3816,9 +3994,26 @@
     "priceRial": 911540499,
     "stock": 9,
     "isOriginal": true,
-    "type_fa": "جراحی",
-    "description": "محصول دندانپزشکی NSK",
-    "specs": []
+    "type_fa": "موتور جراحی",
+    "description": "موتور جراحی NSK Surgic Pro پیشرفته با گشتاور بالا، صفحه نمایش لمسی و برنامه‌های قابل تنظیم",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "40,000 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "50-80 N.cm"
+      },
+      {
+        "key": "محدوده گشتاور",
+        "value": "5-80 N.cm"
+      },
+      {
+        "key": "برنامه‌های حافظه",
+        "value": "8-20 برنامه"
+      }
+    ]
   },
   {
     "id": "nsk_27",
@@ -4391,7 +4586,7 @@
     "name": "NSK Varios 370",
     "brand": "NSK",
     "code": "VARIOS-370",
-    "category": "ارتودنسی",
+    "category": "جرم‌گیر",
     "images": 8,
     "type": "洁牙机",
     "basePrice": 460.85,
@@ -4420,7 +4615,7 @@
     "name": "NSK Varios 570",
     "brand": "NSK",
     "code": "VARIOS-570",
-    "category": "ارتودنسی",
+    "category": "جرم‌گیر",
     "images": 8,
     "type": "洁牙机",
     "basePrice": 183.87,

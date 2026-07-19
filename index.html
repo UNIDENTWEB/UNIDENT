@@ -711,6 +711,40 @@
             }
         }
         /* ===== HERO ===== */
+        .hero-slider {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .hero-slider .slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transform: scale(1);
+            filter: brightness(0.5) contrast(1.3) saturate(0.8);
+            transition: opacity 1.8s cubic-bezier(0.4, 0, 0.2, 1), transform 120s cubic-bezier(0.25, 0, 0.1, 1);
+        }
+        .hero-slider .slide.active {
+            opacity: 1;
+            transform: scale(1.08);
+        }
+        .hero-slider .slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to left, var(--bg-primary) 30%, transparent 60%);
+        }
+        .hero-slider::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: radial-gradient(ellipse at center, transparent 40%, var(--bg-primary) 90%);
+        }
         .hero {
             min-height: 100vh;
             display: flex;
@@ -718,8 +752,9 @@
             padding: 100px 0 60px;
             position: relative;
             z-index: 1;
-            background: linear-gradient(110deg, var(--bg-primary) 0%, var(--bg-primary) 45%, var(--bg-primary) 100%), url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1900&q=80') center/cover no-repeat;
+            background: var(--bg-primary);
             border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
         }
         .hero .container {
             display: grid;
@@ -2299,11 +2334,96 @@
             background: var(--bg-hover);
         }
         @media (max-width: 480px) {
-            .admin-toggle-btn {
-                padding: 4px 10px;
-                font-size: 0.65rem;
-                min-height: 30px;
+            .cookie-consent {
+                padding: 10px 14px;
+                font-size: 0.8rem;
+                flex-direction: column;
+                text-align: center;
             }
+            .cookie-consent .btn-sm {
+                padding: 6px 16px;
+                font-size: 0.75rem;
+                min-height: 32px;
+            }
+            .modal-content {
+                padding: 20px 14px;
+                border-radius: 16px;
+                max-width: 100%;
+                width: calc(100% - 16px);
+            }
+            .modal-content h3 {
+                font-size: 1.1rem;
+            }
+            .close-modal {
+                top: 8px;
+                right: 10px;
+                font-size: 1.3rem;
+                min-width: 40px;
+                min-height: 40px;
+            }
+            .features-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 10px;
+            }
+            .feature-card {
+                padding: 16px 12px;
+            }
+            .feature-card .icon {
+                font-size: 1.5rem;
+            }
+            .feature-card h4 {
+                font-size: 0.8rem;
+            }
+            .feature-card p {
+                font-size: 0.65rem;
+            }
+            .trust-badges {
+                gap: 8px;
+            }
+            .trust-item {
+                padding: 4px 8px;
+                font-size: 0.65rem;
+                min-height: 28px;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .hero-slider .slide.active {
+                opacity: 1;
+            }
+            .hero-slider .slide::after {
+                background: linear-gradient(to top, var(--bg-primary) 40%, transparent 85%);
+            }
+            .hero-slider::after {
+                background: radial-gradient(ellipse at center, transparent 20%, var(--bg-primary) 85%);
+            }
+            .contact-social-links a {
+                padding: 8px 12px;
+                font-size: 0.75rem;
+                min-height: 40px;
+                min-width: 40px;
+            }
+            .social-proof {
+                gap: 8px;
+                font-size: 0.7rem;
+            }
+            .social-proof span {
+                padding: 2px 6px;
+            }
+            .marquee-track {
+                gap: 24px;
+            }
+            .marquee-track .brand {
+                font-size: 0.8rem;
+            }
+            .shipping-info {
+                font-size: 0.75rem;
+                padding: 6px 10px;
+            }
+            .section {
+                padding: 30px 0;
+            }
+        }
             .cookie-consent {
                 padding: 10px 14px;
                 font-size: 0.8rem;
@@ -2348,6 +2468,10 @@
             .admin-table th,
             .admin-table td {
                 padding: 4px 3px;
+            }
+            .admin-content-scroll {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
         }
         /* ===== CHART CONTAINER ===== */
@@ -2599,6 +2723,7 @@
     </div>
 
     <section class="hero" id="home">
+        <div class="hero-slider" id="heroSlider"></div>
         <div class="container">
             <div class="hero-content animate-fade-up">
                 <div class="hero-badge"><span class="dot"></span> پیشرو در متریال دندانپزشکی</div>
@@ -2633,7 +2758,7 @@
                 <h2 class="section-title" style="margin-bottom:0;">🔍 تمام محصولات</h2>
                 <div class="filters">
                     <select id="filterBrand"><option value="">همه برندها</option><option value="NSK">NSK</option><option value="COXO">COXO</option><option value="W&H">W&H</option></select>
-                    <select id="filterCategory"><option value="">همه دسته‌ها</option><option value="ایمپلنت">ایمپلنت</option><option value="توربین">توربین</option><option value="آنگل">آنگل</option><option value="ایرموتور">ایرموتور</option><option value="ست هندپیس">ست هندپیس</option><option value="اندو">اندو</option><option value="ارتودنسی">ارتودنسی</option></select>
+                    <select id="filterCategory"><option value="">همه دسته‌ها</option><option value="توربین">توربین</option><option value="آنگل">آنگل</option><option value="اندو">اندو</option><option value="لایت کیور">لایت کیور</option><option value="ایمپلنت">ایمپلنت</option><option value="میکروسکوپ">میکروسکوپ</option><option value="ایرموتور">ایرموتور</option><option value="جرم‌گیر">جرم‌گیر</option><option value="یونیت">یونیت</option><option value="اسکنر">اسکنر</option><option value="سندبلاست">سندبلاست</option><option value="بی‌حسی">بی‌حسی</option><option value="تجهیزات">تجهیزات</option></select>
                     <select id="filterSort"><option value="name">مرتب‌سازی: نام</option><option value="price">قیمت</option><option value="stock">موجودی</option><option value="popular">پرفروش‌ترین</option></select>
                     <div class="price-slider-wrap">
                         <span style="font-size:0.75rem;color:var(--text-muted);">قیمت:</span>
@@ -3031,11 +3156,16 @@
                 const response = await fetch('https://api.nobitex.ir/v2/orderbook/USDTIRT');
                 if (!response.ok) throw new Error('Network error');
                 const data = await response.json();
-                const rate = parseFloat(data.last) || 0;
-                if (rate > 0) {
-                    usdtRate = rate;
-                    localStorage.setItem('usdt_rate', String(rate));
-                    console.log(`✅ نرخ تتر به‌روز شد: ${rate} ریال`);
+                const newRate = parseFloat(data.last) || 0;
+                if (newRate > 0 && newRate !== usdtRate) {
+                    usdtRate = newRate;
+                    localStorage.setItem('usdt_rate', String(newRate));
+                    updateAllPricesRial();
+                    applyFilters();
+                    console.log(`✅ نرخ تتر به‌روز شد: ${newRate} ریال - قیمت‌ها بروزرسانی شدند`);
+                } else if (newRate > 0) {
+                    usdtRate = newRate;
+                    localStorage.setItem('usdt_rate', String(newRate));
                 }
             } catch (error) {
                 console.warn('⚠️ خطا در دریافت نرخ تتر:', error);
@@ -3043,8 +3173,22 @@
                 if (cached) usdtRate = parseFloat(cached);
             }
         }
+
+        function updateAllPricesRial() {
+            if (!usdtRate || usdtRate <= 0) return;
+            for (const p of productsData) {
+                const priceUSD = p.priceUSD || 0;
+                const profit = p.profitPercent !== undefined ? p.profitPercent : 200;
+                p.priceRial = Math.round(priceUSD * (1 + profit / 100) * usdtRate);
+            }
+            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+        }
+
         fetchUsdtRate();
-        setInterval(fetchUsdtRate, 300000);
+        // Load cached rate immediately for initial display
+        const cachedRate = localStorage.getItem('usdt_rate');
+        if (cachedRate) usdtRate = parseFloat(cachedRate);
+        setInterval(fetchUsdtRate, 3600000);
 
         // ============================================================
         //  دریافت تصویر از سایت‌های مختلف بر اساس برند
@@ -3208,7 +3352,7 @@
         // ============================================================
         function generateProducts() {
             const brands = ['NSK', 'COXO', 'W&H'];
-            const categories = ['ایمپلنت', 'توربین', 'آنگل', 'ایرموتور', 'ست هندپیس', 'اندو', 'ارتودنسی'];
+            const categories = ['توربین', 'آنگل', 'اندو', 'لایت کیور', 'ایمپلنت', 'میکروسکوپ', 'ایرموتور', 'جرم‌گیر', 'یونیت', 'اسکنر', 'سندبلاست', 'بی‌حسی', 'تجهیزات'];
             const nskModels = [
                 'Ti-Max Z900L', 'Ti-Max Z800L', 'S-Max M600L', 'S-Max pico', 'Ti-Max X450L',
                 'Pana-Max2', 'Ti-Max Z95L', 'Ti-Max Z45L', 'nano95LS', 'X25L',
@@ -5442,8 +5586,8 @@
                         </div>
                     </div>
                     <div class="form-group" style="margin-top:20px;border-top:1px solid var(--border-color);padding-top:20px;">
-                        <label class="field-label">📤 آپلود خودکار تصاویر به GitHub</label>
-                        <p style="color:var(--text-muted);font-size:0.8rem;margin-bottom:8px;">با استفاده از ربات اسکرپری که در اختیار دارید، تصاویر محصولات به‌طور خودکار از منابع معتبر دریافت و در مخزن GitHub ذخیره می‌شوند. پس از اجرای ربات، فایل <code>image_mapping.json</code> تولید شده و تصاویر در سایت بارگذاری می‌شوند.</p>
+                        <label class="field-label">📤 مدیریت تصاویر محصولات</label>
+                        <p style="color:var(--text-muted);font-size:0.8rem;margin-bottom:8px;">تصاویر محصولات از سرور محلی بارگیری می‌شوند. فایل <code>image_mapping.json</code> نگاشت تصاویر را مشخص می‌کند.</p>
                         <div style="background:var(--bg-secondary);border-radius:12px;padding:16px;border:1px solid var(--border-color);">
                             <p style="color:var(--text-secondary);font-size:0.85rem;"><i class="fas fa-info-circle"></i> برای فعال‌سازی، فایل‌های ربات (scraper_bot.py و ...) را در سرور خود اجرا کنید. پس از اجرا، تصاویر به‌روز می‌شوند.</p>
                             <button class="btn btn-white btn-sm" onclick="window.triggerImageScraper()" style="margin-top:8px;"><i class="fas fa-play"></i> اجرای دستی اسکرپ (شبیه‌سازی)</button>
@@ -5991,6 +6135,49 @@
         }
 
         // ============================================================
+        //  HERO SLIDER — تصاویر مینیمال با افکت وو موشن هر ۲ دقیقه
+        // ============================================================
+        const _HERO_IMAGES = [
+            'images/coxo_gen/8.jpg',
+            'images/coxo_gen/1.jpg',
+            'images/coxo_gen/4.jpg',
+            'images/coxo_gen/6.jpg',
+            'images/coxo_gen/2.jpg',
+            'images/coxo_gen/5.jpg',
+            'images/wh_12/2.png',
+            'images/coxo_ccd/3.jpg',
+        ];
+        let _sliderIndex = 0;
+
+        (function initHeroSlider() {
+            const slider = document.getElementById('heroSlider');
+            if (!slider || !_HERO_IMAGES.length) return;
+
+            for (const src of _HERO_IMAGES) {
+                const div = document.createElement('div');
+                div.className = 'slide';
+                div.style.backgroundImage = `url('${src}')`;
+                slider.appendChild(div);
+            }
+            slider.firstElementChild.classList.add('active');
+
+            setInterval(() => {
+                const allSlides = slider.querySelectorAll('.slide');
+                if (!allSlides.length) return;
+                const prev = allSlides[_sliderIndex];
+                _sliderIndex = (_sliderIndex + 1) % allSlides.length;
+                const next = allSlides[_sliderIndex];
+                prev.classList.remove('active');
+                prev.style.transform = 'scale(1)';
+                next.classList.add('active');
+                next.style.transform = 'scale(1)';
+                requestAnimationFrame(() => {
+                    next.style.transform = 'scale(1.08)';
+                });
+            }, 120000);
+        })();
+
+        // ============================================================
         //  INIT
         // ============================================================
         const hasCoxo = productsData.some(p => p.brand === 'COXO');
@@ -6010,65 +6197,45 @@
             }, 2000);
         }
 
-        renderReviews();
-        renderStats();
-        updateCartUI();
-        updateWishlistUI();
-        applyFilters();
-
-        if (currentUser) {
-            document.getElementById('loginBtn').innerHTML =
-                `<i class="fas fa-user"></i> <span class="label">${escapeHtml(currentUser.name)}</span>`;
-        }
-
-        console.log('🦷 UNIDENT — ' + productsData.length + ' محصول');
-        console.log('🔑 پنل ادمین با رمز 1212');
-        console.log('✅ قیمت‌ها پس از به‌روزرسانی به‌صورت خودکار از حالت استعلام خارج می‌شوند.');
-        console.log('✅ امکان تغییر حالت استعلام به‌صورت تکی و جمعی در بخش محصولات اضافه شد.');
-        console.log('✅ تصاویر با استفاده از سرویس picsum تولید می‌شوند و در صورت خطا، جایگزین نمایش داده می‌شود.');
-        console.log('✅ تصاویر برند COXO از coxotec.com، NSK از fordent.ru، W&H از swallowdental.co.uk دریافت می‌شوند.');
-
-        // ============================================================
-        //  بارگیری خودکار تصاویر از گیت‌هاب
-        // ============================================================
-        async function loadImagesFromGitHub() {
+        // Load image mapping BEFORE rendering products
+        (async function() {
             try {
-                const url = 'https://raw.githubusercontent.com/UNIDENTWEB/UNIDENT/main/image_mapping.json';
-                const response = await fetch(url);
-                if (!response.ok) {
-                    console.warn('⚠️ فایل image_mapping.json در گیت‌هاب یافت نشد (404)');
-                    return false;
-                }
-                const data = await response.json();
-                let updated = 0;
-                for (const [id, info] of Object.entries(data)) {
-                    const product = productsData.find(p => p.id === id);
-                    if (product && info.images && info.images.length > 0) {
-                        product.images = info.images;
-                        product.image = info.images[0];
-                        updated++;
+                const resp = await fetch('/image_mapping.json');
+                if (resp.ok) {
+                    const data = await resp.json();
+                    let updated = 0;
+                    for (const [id, info] of Object.entries(data)) {
+                        const product = productsData.find(p => p.id === id);
+                        if (product && info.images && info.images.length > 0) {
+                            product.images = info.images;
+                            product.image = info.images[0];
+                            updated++;
+                        }
+                    }
+                    if (updated > 0) {
+                        localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+                        console.log(`✅ ${updated} محصول با تصاویر واقعی بارگذاری شدند`);
                     }
                 }
-                if (updated > 0) {
-                    localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
-                    applyFilters();
-                    showToast(`✅ ${updated} محصول از گیت‌هاب به‌روز شد`);
-                } else {
-                    console.log('ℹ️ هیچ محصول جدیدی برای به‌روزرسانی یافت نشد.');
-                }
-                return true;
-            } catch (error) {
-                console.warn('⚠️ بارگیری از گیت‌هاب ناموفق:', error.message);
-                return false;
+            } catch(e) {
+                console.warn('⚠️ بارگیری تصاویر:', e.message);
             }
-        }
 
-        // اجرای بارگیری خودکار ۳ ثانیه بعد از بارگذاری صفحه
-        setTimeout(() => {
-            loadImagesFromGitHub().catch(err => {
-                console.warn('خطا در بارگیری خودکار تصاویر:', err);
-            });
-        }, 3000);
+            renderReviews();
+            renderStats();
+            updateCartUI();
+            updateWishlistUI();
+            applyFilters();
+
+            if (currentUser) {
+                document.getElementById('loginBtn').innerHTML =
+                    `<i class="fas fa-user"></i> <span class="label">${escapeHtml(currentUser.name)}</span>`;
+            }
+
+            console.log('🦷 UNIDENT — ' + productsData.length + ' محصول');
+            console.log('🔑 پنل ادمین با رمز 1212');
+        })();
+
     </script>
 </body>
 </html>
