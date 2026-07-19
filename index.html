@@ -3348,97 +3348,6 @@
         }
 
         // ============================================================
-        //  GENERATE PRODUCTS (300 products) با قیمت دلار و حداقل ۳ تصویر
-        // ============================================================
-        function generateProducts() {
-            const brands = ['NSK', 'COXO', 'W&H'];
-            const categories = ['توربین', 'آنگل', 'اندو', 'لایت کیور', 'ایمپلنت', 'میکروسکوپ', 'ایرموتور', 'جرم‌گیر', 'یونیت', 'اسکنر', 'سندبلاست', 'بی‌حسی', 'تجهیزات'];
-            const nskModels = [
-                'Ti-Max Z900L', 'Ti-Max Z800L', 'S-Max M600L', 'S-Max pico', 'Ti-Max X450L',
-                'Pana-Max2', 'Ti-Max Z95L', 'Ti-Max Z45L', 'nano95LS', 'X25L',
-                'FX25m', 'NAC-EC', 'FPB-EC', 'FX-205M', 'Surgic AP',
-                'Endo Mate DT', 'Varios 370', 'Z95L', 'Z25L', 'S-Max M500L',
-                'Pana-Max PLUS', 'Ti-Max X95L', 'FX-65m', 'FX-57m', 'Endo Mate TC2',
-                'iPexil', 'Ti-ENDO', 'EX-ENDO', 'S-Max Z45L', 'Z85L',
-                'Z84L', 'Z15L', 'Z10L', 'Z24L', 'Z25L',
-                'Z65L', 'Z12L', 'Z35L', 'X95EX', 'X65L',
-                'X12L', 'X35L', 'FX25m', 'FX15m', 'FX65m',
-                'FX75m', 'AR-EC', 'AR-ECM', 'EX-6B', 'MP-ER64'
-            ];
-            const coxoModels = [
-                'CX207-W', 'CX207-F', 'C6-23', 'CX205-M', 'C-sailor Pro',
-                'C-Root I', 'C-Smart I Pro', 'PT Master', 'GENI PRO', 'CX207-B',
-                'DB686', 'C-CLEAR-2', 'CP-1', 'C-SMART-1 PRO', 'C-SMART MINI AP',
-                'C-File Mini', 'C-File Re', 'C-FR2', 'C-BLADE', 'C3-11KIT',
-                'C-PUMA PRO3', 'C-PUMA INT X', 'DB686 Q1', 'DB686 HALO', 'DB686 LATTE',
-                'C-BRIGHT', 'DL-300P', 'C-ROOT V', 'C-ROOT VI', 'C-SMART NOVA X',
-                'C-TW1', 'C-TW2', 'C-SK1', 'C-SK2', 'C-ROOT V'
-            ];
-            const whModels = ['WH-SET', 'WH-TURBINE', 'WH-ANGLE', 'WH-MOTOR'];
-            const allModels = [...nskModels, ...coxoModels, ...whModels];
-            const products = [];
-
-            for (let i = 0; i < 300; i++) {
-                const brand = brands[i % brands.length];
-                const cat = categories[i % categories.length];
-                const modelIdx = i % allModels.length;
-                const model = allModels[modelIdx] || ('MODEL-' + (i + 1));
-                const isOriginal = brand === 'COXO';
-                const priceUSD = Math.floor(Math.random() * 990 + 10);
-                const stock = Math.floor(Math.random() * 25) + 0;
-                const tag = (i % 5 === 0) ? ['اورجینال', 'تخفیف', 'جدید', 'پرطرفدار', 'پرفروش', 'اقتصادی', 'لوکس'][i % 7] : null;
-
-                // تصاویر با seed ثابت و معتبر
-                const seed = `${brand}_${model.replace(/\s/g, '_')}_${i}`;
-                const images = [
-                    `https://picsum.photos/seed/${seed}_1/400/400`,
-                    `https://picsum.photos/seed/${seed}_2/400/400`,
-                    `https://picsum.photos/seed/${seed}_3/400/400`
-                ];
-
-                const inquiryEnabled = i % 5 === 0;
-                const description =
-                    `✅ **محصول:** ${brand} ${model}\n✅ **کاربرد:** مناسب برای ${cat === 'ایمپلنت' ? 'کاشت ایمپلنت' : cat === 'توربین' ? 'تراش و برش' : cat === 'آنگل' ? 'دسترسی به نقاط سخت' : cat === 'ایرموتور' ? 'کار با سرعت بالا' : cat === 'ست هندپیس' ? 'مجموعه کامل ابزار' : cat === 'اندو' ? 'درمان ریشه' : 'ارتودنسی و اصلاح دندان'}\n✅ **ویژگی‌ها:** طراحی ارگونومیک، کیفیت ساخت بالا، گارانتی معتبر\n✅ **محصول شامل:** ${brand} ${model} + کابل اتصال (در صورت نیاز) + گارانتی ۱ ساله + دفترچه راهنما\n✅ **نوع:** ${isOriginal ? 'اورجینال' : 'غیر اورجینال'}\n✅ **گارانتی:** ${isOriginal ? 'گارانتی ۲ ساله شرکت سازنده' : 'گارانتی ۱ ساله فروشگاه'}\n✅ **کشور سازنده:** ${brand === 'COXO' ? 'چین' : brand === 'NSK' ? 'ژاپن' : 'آلمان'}`;
-
-                products.push({
-                    id: (brand === 'NSK' ? 'nsk_' : brand === 'COXO' ? 'coxo_' : 'wh_') + (i + 1),
-                    name: `${brand} ${model}`,
-                    brand: brand,
-                    category: cat,
-                    code: model.replace(/\s/g, '') + (i % 100 + 10),
-                    'اصالت': isOriginal ? 'اورجینال' : 'غیر اورجینال',
-                    'سیستم LED': i % 2 === 0 ? 'دارد' : 'ندارد',
-                    'سیستم آبرسانی': ['تک', 'Quattro', 'سه جت', '۳ کاناله', 'خارجی', 'داخلی'][i % 6],
-                    'حداکثر سرعت': `${300 + (i % 200)},۰۰۰~${400 + (i % 150)},۰۰۰`,
-                    'توان': `${15 + (i % 20)} وات`,
-                    'نوع بلبرینگ': ['سرامیکی', 'بلبرینگ', 'استیل ضد زنگ', 'سرامیکی کپسولی'][i % 4],
-                    'نوع فرزگیر': ['پوش باتن', 'ناخنکی', 'فشاری'][i % 3],
-                    'نسبت انتقال': (i % 4 === 0) ? '۱:۱' : (i % 4 === 1) ? '۱:۵' : (i % 4 === 2) ? '۲۰:۱' : '۴:۱',
-                    'گشتاور': (i % 3 === 0) ? '۵۵ نیوتون' : (i % 3 === 1) ? '۸۰ نیوتون' : '۵ نیوتون',
-                    'فشار هوا': (i % 2 === 0) ? '۰.۲۵ مگاپاسکال' : '۰.۲۸ مگاپاسکال',
-                    'جنس بدنه': (i % 3 === 0) ? 'آلیاژ آلومینیوم' : (i % 3 === 1) ? 'استیل ضد زنگ' : 'تیتانیوم',
-                    'استاندارد': 'FDA آمریکا، CE اروپا، ISO',
-                    'کشور تولید کننده': brand === 'COXO' ? 'چین' : brand === 'NSK' ? 'ژاپن' : 'آلمان',
-                    'گارانتی': isOriginal ? '۲ ساله' : '۱ ساله',
-                    guarantee: true,
-                    image: images[0],
-                    images: images,
-                    tag: tag,
-                    priceUSD: priceUSD,
-                    profitPercent: 200,
-                    stock: stock,
-                    isOriginal: isOriginal,
-                    inquiryEnabled: inquiryEnabled,
-                    showPrice: true,
-                    description: description,
-                    soldCount: Math.floor(Math.random() * 50),
-                    viewCount: Math.floor(Math.random() * 200)
-                });
-            }
-            return products;
-        }
-
-        // ============================================================
         //  STATE
         // ============================================================
         let productsData = [];
@@ -3453,25 +3362,15 @@
                     if (p.showPrice === undefined) p.showPrice = true;
                     if (p.viewCount === undefined) p.viewCount = 0;
                     if (p.soldCount === undefined) p.soldCount = 0;
-                    if (!p.images) p.images = [p.image];
-                    while (p.images.length < 3) {
-                        const seed = `${p.brand}_${p.name.replace(/\s/g, '_')}_${p.images.length}`;
-                        p.images.push(`https://picsum.photos/seed/${seed}/400/400`);
-                    }
-                    p.image = p.images[0];
                     if (p.basePrice !== undefined && p.priceUSD === undefined) {
                         p.priceUSD = Math.round(p.basePrice / 50000);
                         delete p.basePrice;
                     }
-                    if (p.priceUSD === undefined) p.priceUSD = Math.floor(Math.random() * 990 + 10);
                 });
             } catch (e) {
-                productsData = generateProducts();
-                localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
+                productsData = [];
+                localStorage.removeItem('unident_products_final_v12');
             }
-        } else {
-            productsData = generateProducts();
-            localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
         }
 
         // Cloud load: pull products from GitHub if local is empty/generated
@@ -3487,12 +3386,6 @@
                             productsData.forEach(p => {
                                 if (p.profitPercent === undefined) p.profitPercent = 200;
                                 if (p.isOriginal === undefined) p.isOriginal = true;
-                                if (!p.images) p.images = [p.image];
-                                while (p.images.length < 3) {
-                                    const seed = `${p.brand}_${p.name.replace(/\s/g, '_')}_${p.images.length}`;
-                                    p.images.push(`https://picsum.photos/seed/${seed}/400/400`);
-                                }
-                                p.image = p.images[0];
                             });
                             localStorage.setItem('unident_products_final_v12', JSON.stringify(productsData));
                             applyFilters();
