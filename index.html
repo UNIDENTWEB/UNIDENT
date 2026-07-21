@@ -802,7 +802,7 @@ ul{list-style:none}
 </div>
 <script>
 'use strict';
-const API_BASE = window.location.origin;
+const API_BASE = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
 let products = [], imageMapping = {}, settings = {};
 let cart = JSON.parse(localStorage.getItem('cart') || '[]');
 let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
