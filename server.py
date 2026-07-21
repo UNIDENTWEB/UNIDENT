@@ -8,6 +8,8 @@ import base64
 import urllib.request
 import urllib.error
 import sys
+import time
+from datetime import datetime
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_REPO = "UNIDENTWEB/UNIDENT"
@@ -20,12 +22,52 @@ DATA_TYPES = [
     "settings", "customers",
 ]
 
+START_TIME = time.time()
+
+_rate_limits = {}
+RATE_LIMIT_MAX = 30
+RATE_LIMIT_WINDOW = 60
+
+
+def is_rate_limited(ip):
+    now = time.time()
+    if ip not in _rate_limits:
+        _rate_limits[ip] = []
+    timestamps = _rate_limits[ip]
+    timestamps = [t for t in timestamps if now - t < RATE_LIMIT_WINDOW]
+    _rate_limits[ip] = timestamps
+    if len(timestamps) >= RATE_LIMIT_MAX:
+        return True
+    timestamps.append(now)
+    return False
+
 
 class CloudHandler(http.server.SimpleHTTPRequestHandler):
     def log_message(self, fmt, *args):
-        pass
+        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{ts}] {self.client_address[0]} - {fmt % args}")
+        sys.stdout.flush()
+
+    def send_cors_headers(self):
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With")
+        self.send_header("Access-Control-Max-Age", "86400")
+
+    def check_rate_limit(self):
+        ip = self.client_address[0]
+        if is_rate_limited(ip):
+            self.send_response(429)
+            self.send_cors_headers()
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"error": "Too many requests", "retry_after": 60}).encode())
+            return True
+        return False
 
     def do_POST(self):
+        if self.check_rate_limit():
+            return
         if self.path == "/api/sync":
             self.handle_sync_single()
         elif self.path == "/api/sync-batch":
@@ -34,13 +76,16 @@ class CloudHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(404)
 
     def do_GET(self):
-        if self.path.startswith("/api/status"):
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.end_headers()
-            self.wfile.write(
-                json.dumps({"status": "ok", "version": "1.0.0"}).encode()
-            )
+        if self.check_rate_limit():
+            return
+        if self.path == "/api/health":
+            self.handle_health()
+        elif self.path == "/api/products":
+            self.handle_products()
+        elif self.path == "/api/stats":
+            self.handle_stats()
+        elif self.path == "/api/status":
+            self.send_json({"status": "ok", "version": "1.0.0"})
         elif self.path.startswith("/api/data/"):
             data_type = self.path.split("/api/data/", 1)[1].replace(".json", "")
             if data_type in DATA_TYPES:
@@ -49,6 +94,54 @@ class CloudHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_error(404)
         else:
             super().do_GET()
+
+    def handle_health(self):
+        uptime = int(time.time() - START_TIME)
+        products_count = self._count_products()
+        self.send_json({"status": "healthy", "uptime": uptime, "products": products_count})
+
+    def handle_products(self):
+        try:
+            products_path = os.path.join(DATA_DIR, "products.json")
+            if not os.path.exists(products_path):
+                self.send_json({"error": "products.json not found"}, 404)
+                return
+            with open(products_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            self.send_json(data)
+        except Exception as e:
+            self.send_json({"error": str(e)}, 500)
+
+    def handle_stats(self):
+        products_count = self._count_products()
+        orders_count = self._count_json("orders.json")
+        reviews_count = self._count_json("reviews.json")
+        self.send_json({
+            "total_products": products_count,
+            "total_orders": orders_count,
+            "total_reviews": reviews_count,
+        })
+
+    def _count_products(self):
+        try:
+            products_path = os.path.join(DATA_DIR, "products.json")
+            if os.path.exists(products_path):
+                with open(products_path, "r", encoding="utf-8") as f:
+                    return len(json.load(f))
+        except Exception:
+            pass
+        return 0
+
+    def _count_json(self, filename):
+        try:
+            fpath = os.path.join(DATA_DIR, filename)
+            if os.path.exists(fpath):
+                with open(fpath, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    return len(data) if isinstance(data, list) else 0
+        except Exception:
+            pass
+        return 0
 
     def handle_sync_single(self):
         try:
@@ -101,7 +194,7 @@ class CloudHandler(http.server.SimpleHTTPRequestHandler):
                 data = resp.read()
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json")
-                self.send_header("Access-Control-Allow-Origin", "*")
+                self.send_cors_headers()
                 self.end_headers()
                 self.wfile.write(data)
         except urllib.error.HTTPError as e:
@@ -169,17 +262,13 @@ class CloudHandler(http.server.SimpleHTTPRequestHandler):
     def send_json(self, data, status=200):
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
-        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_cors_headers()
         self.end_headers()
         self.wfile.write(json.dumps(data, ensure_ascii=False).encode())
 
     def do_OPTIONS(self):
         self.send_response(200)
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header(
-            "Access-Control-Allow-Headers", "Content-Type, Authorization"
-        )
+        self.send_cors_headers()
         self.end_headers()
 
 
