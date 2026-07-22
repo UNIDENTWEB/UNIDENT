@@ -101,24 +101,35 @@ ul{list-style:none}
 .hero-slide.active{opacity:1}
 .hero-slide::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.75))}
 [data-theme="light"] .hero-slide::after{background:linear-gradient(to bottom,rgba(0,0,0,0.05),rgba(0,0,0,0.25))}
-.hero-grid-pattern{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:60px 60px;animation:heroGridMove 30s linear infinite}
-@keyframes heroGridMove{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
-[data-theme="light"] .hero-float svg circle,[data-theme="light"] .hero-float svg rect,[data-theme="light"] .hero-float svg path,[data-theme="light"] .hero-float svg ellipse,[data-theme="light"] .hero-float svg line{stroke:rgba(255,255,255,0.15);fill:rgba(255,255,255,0.08)}
 .hero-particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 .glow-orb{position:absolute;border-radius:50%;filter:blur(100px);z-index:0;animation:float 8s ease-in-out infinite}
 .glow-orb-1{top:10%;left:20%;width:300px;height:300px;background:var(--accent-glow)}
 .glow-orb-2{bottom:20%;right:10%;width:250px;height:250px;background:rgba(0,168,255,0.15);animation-delay:3s}
 .glow-orb-3{top:40%;left:60%;width:200px;height:200px;background:rgba(255,107,53,0.1);animation-delay:6s}
-.hero-float-elements{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none}
-.hero-float{position:absolute;animation:heroFloat 20s ease-in-out infinite}
-.hero-float-1{top:8%;right:12%;width:90px;animation-delay:0s}
-.hero-float-2{top:55%;right:3%;width:110px;animation-delay:5s}
-.hero-float-3{top:20%;left:8%;width:100px;animation-delay:10s}
-.hero-float-4{top:65%;left:18%;width:80px;animation-delay:15s}
-.hero-float-5{top:35%;right:25%;width:70px;animation-delay:3s}
-.hero-float-6{bottom:15%;left:35%;width:85px;animation-delay:12s}
-.hero-float svg{width:100%;height:100%;filter:drop-shadow(0 0 10px rgba(255,255,255,0.08))}
-@keyframes heroFloat{0%,100%{transform:translateY(0) rotate(0deg)}25%{transform:translateY(-25px) rotate(5deg)}50%{transform:translateY(-10px) rotate(0deg)}75%{transform:translateY(-35px) rotate(-5deg)}}
+.hero-clinic-scene{position:absolute;top:0;left:0;width:55%;height:100%;z-index:1;pointer-events:none;opacity:0.85}
+.hero-clinic-scene svg{width:100%;height:100%}
+.clinic-chair{animation:chairBreathe 4s ease-in-out infinite}
+@keyframes chairBreathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.beam-pulse{animation:beamGlow 3s ease-in-out infinite;transform-origin:300px 85px}
+@keyframes beamGlow{0%,100%{opacity:0.5}50%{opacity:1}}
+.beam-ellipse{animation:beamSpread 3s ease-in-out infinite;transform-origin:300px 240px}
+@keyframes beamSpread{0%,100%{opacity:0.4;transform:scaleX(0.9)}50%{opacity:0.8;transform:scaleX(1.1)}}
+.blink-dot{animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:0.3}50%{opacity:1}}
+.screen-data{animation:screenFlicker 2.5s ease-in-out infinite}
+@keyframes screenFlicker{0%,100%{opacity:0.7}50%{opacity:1}}
+.screen-line{animation:screenLine 2s ease-in-out infinite}
+@keyframes screenLine{0%,100%{opacity:1}50%{opacity:0.4}}
+.sparkle{animation:sparkleFloat 3s ease-in-out infinite}
+.sparkle-1{animation-delay:0s}.sparkle-2{animation-delay:0.6s}.sparkle-3{animation-delay:1.2s}
+.sparkle-4{animation-delay:1.8s}.sparkle-5{animation-delay:2.4s}.sparkle-6{animation-delay:0.3s}
+@keyframes sparkleFloat{0%,100%{opacity:0.2;transform:translateY(0) scale(1)}50%{opacity:0.8;transform:translateY(-8px) scale(1.5)}}
+.tool-1{animation:toolShift 5s ease-in-out infinite}
+.tool-2{animation:toolShift 5s ease-in-out infinite;animation-delay:1s}
+.tool-3{animation:toolShift 5s ease-in-out infinite;animation-delay:2s}
+.tool-4{animation:toolShift 5s ease-in-out infinite;animation-delay:3s}
+.tool-5{animation:toolShift 5s ease-in-out infinite;animation-delay:4s}
+@keyframes toolShift{0%,100%{opacity:0.6}50%{opacity:1}}
 .hero-content{position:relative;z-index:2;max-width:700px}
 .hero-content h1{font-size:3.5rem;font-weight:900;line-height:1.2;margin-bottom:20px}
 .hero-content p{font-size:1.15rem;color:var(--text2);margin-bottom:32px;line-height:1.8}
@@ -413,12 +424,7 @@ ul{list-style:none}
     .marquee-track{animation-duration:20s}
     .reviews-grid{grid-template-columns:1fr}
     .faq-grid{grid-template-columns:1fr}
-    .hero-float-1{width:60px;top:10%;right:8%}
-    .hero-float-2{width:60px;top:50%;right:2%}
-    .hero-float-3{width:60px;top:25%;left:5%}
-    .hero-float-4{width:50px;top:60%;left:10%}
-    .hero-float-5{display:none}
-    .hero-float-6{display:none}
+    .hero-clinic-scene{width:100%;opacity:0.55;top:5%}
 }
 @media(max-width:480px){
     .container{padding:0 12px}
@@ -448,8 +454,7 @@ ul{list-style:none}
     .footer{padding:24px 0 16px}
     .admin-stats{grid-template-columns:repeat(2,1fr)}
     .modal{padding:16px;margin:0 8px}
-    .hero-float-2{display:none}
-    .hero-float-4{display:none}
+    .hero-clinic-scene{opacity:0.35}
 }
 /* file inputs */
 .file-input-wrap{position:relative;padding:20px;border:2px dashed var(--glass-border);border-radius:var(--radius);text-align:center;cursor:pointer;transition:var(--transition)}
@@ -534,62 +539,77 @@ ul{list-style:none}
     <div class="hero-slide" id="heroSlide4"></div>
   </div>
   <canvas class="hero-particles" id="particlesCanvas"></canvas>
-  <div class="hero-float-elements">
-    <div class="hero-float hero-float-1">
-      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="40" r="38" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
-        <path d="M25 35h30v4H25zm0 8h20v4H25zm25-18c-4 0-7 3-7 7v2h14v-2c0-4-3-7-7-7z" fill="rgba(255,255,255,0.1)"/>
-        <circle cx="30" cy="55" r="4" fill="rgba(255,255,255,0.1)"/>
-        <circle cx="50" cy="55" r="4" fill="rgba(255,255,255,0.1)"/>
-        <path d="M60 30l8-8M68 22v8h-8" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </div>
-    <div class="hero-float hero-float-2">
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="20" width="80" height="60" rx="4" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
-        <rect x="20" y="30" width="25" height="15" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="55" y="30" width="25" height="15" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="20" y="52" width="15" height="15" rx="2" fill="rgba(255,255,255,0.07)"/>
-        <rect x="42" y="52" width="15" height="15" rx="2" fill="rgba(255,255,255,0.07)"/>
-        <rect x="64" y="52" width="15" height="15" rx="2" fill="rgba(255,255,255,0.07)"/>
-      </svg>
-    </div>
-    <div class="hero-float hero-float-3">
-      <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="45" cy="40" rx="30" ry="20" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
-        <path d="M25 50l-10 15M65 50l10 15" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="45" cy="40" r="8" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
-        <path d="M37 38l4-4 4 4" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </div>
-    <div class="hero-float hero-float-4">
-      <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="35" cy="35" r="32" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-dasharray="6 3"/>
-        <circle cx="35" cy="35" r="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
-        <circle cx="35" cy="35" r="5" fill="rgba(255,255,255,0.12)"/>
-        <line x1="35" y1="3" x2="35" y2="15" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
-        <line x1="35" y1="55" x2="35" y2="67" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
-        <line x1="3" y1="35" x2="15" y2="35" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
-        <line x1="55" y1="35" x2="67" y2="35" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
-      </svg>
-    </div>
-    <div class="hero-float hero-float-5">
-      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 40h50M40 15v50M20 25l40 30M60 25L20 55" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-dasharray="4 2"/>
-        <circle cx="40" cy="40" r="25" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-        <rect x="32" y="32" width="16" height="16" rx="3" fill="rgba(255,255,255,0.06)"/>
-      </svg>
-    </div>
-    <div class="hero-float hero-float-6">
-      <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 70V30c0-8 6-15 15-15h20c9 0 15 7 15 15v40" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-linecap="round"/>
-        <path d="M25 50h40M25 60h40" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
-        <circle cx="35" cy="75" r="5" fill="rgba(255,255,255,0.06)"/>
-        <circle cx="55" cy="75" r="5" fill="rgba(255,255,255,0.06)"/>
-        <path d="M45 30v15" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-linecap="round"/>
-        <circle cx="45" cy="27" r="3" fill="rgba(255,255,255,0.1)"/>
-      </svg>
-    </div>
+  <div class="hero-clinic-scene">
+    <svg viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <linearGradient id="lightBeam" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" style="stop-color:rgba(255,255,255,0.18)"/>
+          <stop offset="100%" style="stop-color:rgba(255,255,255,0)"/>
+        </linearGradient>
+        <linearGradient id="screenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:rgba(0,168,255,0.15)"/>
+          <stop offset="100%" style="stop-color:rgba(0,168,255,0.03)"/>
+        </linearGradient>
+      </defs>
+      <!-- Overhead Dental Light -->
+      <g class="clinic-light">
+        <path d="M260 30 L220 80 L380 80 L340 30" stroke="rgba(255,255,255,0.15)" stroke-width="2" fill="none"/>
+        <ellipse cx="300" cy="85" rx="80" ry="20" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <ellipse cx="300" cy="85" rx="50" ry="12" fill="rgba(255,255,255,0.05)"/>
+        <!-- Light Beam -->
+        <path d="M270 95 L220 250 L380 250 L330 95" fill="url(#lightBeam)" class="beam-pulse"/>
+        <ellipse cx="300" cy="240" rx="90" ry="15" fill="rgba(255,255,255,0.06)" class="beam-ellipse"/>
+      </g>
+      <!-- Dental Chair -->
+      <g class="clinic-chair">
+        <path d="M200 460 L210 380 Q215 350 250 340 L350 340 Q385 350 390 380 L400 460" stroke="rgba(255,255,255,0.12)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M230 350 Q235 300 260 280 L340 280 Q365 300 370 350" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M240 330 Q245 310 260 300 L340 300 Q355 310 360 330" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <rect x="235" y="455" width="130" height="10" rx="5" fill="rgba(255,255,255,0.06)"/>
+        <circle cx="300" cy="130" r="3" fill="rgba(255,255,255,0.1)" class="blink-dot"/>
+      </g>
+      <!-- Monitor / Screen -->
+      <g class="clinic-monitor">
+        <rect x="420" y="200" width="100" height="70" rx="6" fill="rgba(0,168,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+        <rect x="428" y="208" width="84" height="54" rx="3" fill="url(#screenGlow)" class="screen-data"/>
+        <line x1="435" y1="225" x2="495" y2="225" stroke="rgba(255,255,255,0.08)" stroke-width="1" class="screen-line"/>
+        <line x1="435" y1="235" x2="490" y2="235" stroke="rgba(255,255,255,0.06)" stroke-width="1" class="screen-line"/>
+        <line x1="435" y1="245" x2="480" y2="245" stroke="rgba(255,255,255,0.04)" stroke-width="1" class="screen-line"/>
+        <rect x="455" y="270" width="30" height="12" rx="2" fill="rgba(255,255,255,0.06)"/>
+        <line x1="470" y1="282" x2="470" y2="340" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+        <rect x="458" y="340" width="24" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+      </g>
+      <!-- Instrument Tray -->
+      <g class="clinic-tray">
+        <rect x="100" y="260" width="120" height="8" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <line x1="105" y1="290" x2="105" y2="360" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+        <rect x="120" y="340" width="80" height="6" rx="3" fill="rgba(255,255,255,0.05)"/>
+        <!-- Tools on tray -->
+        <rect x="110" y="253" width="4" height="14" rx="2" fill="rgba(255,255,255,0.08)" class="tool-1"/>
+        <rect x="125" y="250" width="3" height="17" rx="1.5" fill="rgba(255,255,255,0.07)" class="tool-2"/>
+        <rect x="140" y="255" width="5" height="12" rx="2" fill="rgba(255,255,255,0.08)" class="tool-3"/>
+        <circle cx="160" cy="256" r="4" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5" class="tool-4"/>
+        <rect x="175" y="253" width="3" height="14" rx="1.5" fill="rgba(255,255,255,0.06)" class="tool-5"/>
+      </g>
+      <!-- Equipment Cabinet -->
+      <g class="clinic-cabinet">
+        <rect x="75" y="390" width="170" height="100" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <line x1="75" y1="430" x2="245" y2="430" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <rect x="85" y="400" width="40" height="22" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="135" y="400" width="40" height="22" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="185" y="400" width="40" height="22" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="85" y="440" width="40" height="22" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="135" y="440" width="40" height="22" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="185" y="440" width="40" height="22" rx="3" fill="rgba(255,255,255,0.03)"/>
+      </g>
+      <!-- Floating Sparkles around the scene -->
+      <circle cx="120" cy="180" r="2" fill="rgba(255,255,255,0.15)" class="sparkle sparkle-1"/>
+      <circle cx="450" cy="150" r="1.5" fill="rgba(255,255,255,0.12)" class="sparkle sparkle-2"/>
+      <circle cx="380" cy="110" r="2.5" fill="rgba(255,255,255,0.1)" class="sparkle sparkle-3"/>
+      <circle cx="180" cy="310" r="1.5" fill="rgba(255,255,255,0.12)" class="sparkle sparkle-4"/>
+      <circle cx="420" cy="380" r="2" fill="rgba(255,255,255,0.1)" class="sparkle sparkle-5"/>
+      <circle cx="350" cy="170" r="1" fill="rgba(255,255,255,0.15)" class="sparkle sparkle-6"/>
+    </svg>
   </div>
   <div class="container hero-content">
     <div class="hero-badge fade-up visible">
