@@ -115,6 +115,8 @@ ul{list-style:none}
 .hero-float-2{top:55%;right:3%;width:110px;animation-delay:5s}
 .hero-float-3{top:20%;left:8%;width:100px;animation-delay:10s}
 .hero-float-4{top:65%;left:18%;width:80px;animation-delay:15s}
+.hero-float-5{top:35%;right:25%;width:70px;animation-delay:3s}
+.hero-float-6{bottom:15%;left:35%;width:85px;animation-delay:12s}
 .hero-float svg{width:100%;height:100%;filter:drop-shadow(0 0 10px rgba(255,255,255,0.08))}
 @keyframes heroFloat{0%,100%{transform:translateY(0) rotate(0deg)}25%{transform:translateY(-25px) rotate(5deg)}50%{transform:translateY(-10px) rotate(0deg)}75%{transform:translateY(-35px) rotate(-5deg)}}
 .hero-content{position:relative;z-index:2;max-width:700px}
@@ -369,36 +371,85 @@ ul{list-style:none}
     .header-inner{gap:8px}.logo-text{display:none}.header-search{display:none}
     .order-btn span{display:none}.order-btn{width:40px;height:40px;border-radius:50%;justify-content:center;padding:0}
     .mobile-toggle{display:flex}
-    .hero-content h1{font-size:2.2rem}
-    .hero-stats{gap:20px}
-    .hero-stat .num{font-size:1.4rem}
+    .hero{min-height:85vh;padding-top:60px}
+    .hero-content h1{font-size:1.8rem;margin-bottom:12px}
+    .hero-content p{font-size:0.85rem;margin-bottom:20px;line-height:1.6}
+    .hero-stats{gap:16px;margin-top:24px}
+    .hero-stat .num{font-size:1.2rem}
+    .hero-stat .label{font-size:0.7rem}
     .hero-cta{flex-direction:column}
-    .section{padding:50px 0}
-    .section-title{font-size:1.5rem}
-    .flash-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
-    .products-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
-    .best-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+    .hero-cta .btn{padding:10px 20px;font-size:0.85rem}
+    .hero-badge{padding:6px 14px;font-size:0.75rem;margin-bottom:16px}
+    .section{padding:36px 0}
+    .section-title{font-size:1.3rem;margin-bottom:24px}
+    .flash-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+    .products-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+    .best-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+    .category-grid{grid-template-columns:repeat(3,1fr);gap:10px}
+    .category-card{padding:14px 8px}
+    .category-card i{font-size:1.5rem;margin-bottom:8px}
+    .category-card .name{font-size:0.75rem}
+    .category-card .count{font-size:0.65rem}
+    .product-card-image{height:160px}
+    .product-card-body{padding:10px 12px}
+    .product-card-body .brand{font-size:0.65rem}
+    .product-card-body .name{font-size:0.75rem}
+    .product-card-body .code{font-size:0.65rem}
+    .product-card-body .price{font-size:0.85rem}
+    .product-card-actions{padding:8px 12px}
+    .product-card-actions .add-cart-btn{font-size:0.75rem;padding:8px 12px}
+    .product-card-actions .wishlist-btn{width:32px;height:32px;font-size:0.85rem}
     .footer-grid{grid-template-columns:1fr 1fr}
+    .footer{padding:30px 0 20px}
+    .footer-grid{gap:20px}
     .newsletter-form{flex-direction:column}
-    .filters{flex-direction:column;align-items:stretch}
+    .filters{flex-direction:column;align-items:stretch;gap:10px}
     .filter-chips{white-space:nowrap}
     .admin-panel{flex-direction:column}
     .admin-sidebar{width:100%;max-height:50px;overflow:hidden;transition:max-height 0.3s}
     .admin-sidebar.expanded{max-height:100vh}
     .cart-item{flex-wrap:wrap}
-    .compare-bar{flex-direction:column}
+    .compare-bar{flex-direction:column;padding:8px 12px}
+    .marquee-track{animation-duration:20s}
+    .reviews-grid{grid-template-columns:1fr}
+    .faq-grid{grid-template-columns:1fr}
+    .hero-float-1{width:60px;top:10%;right:8%}
+    .hero-float-2{width:60px;top:50%;right:2%}
+    .hero-float-3{width:60px;top:25%;left:5%}
+    .hero-float-4{width:50px;top:60%;left:10%}
+    .hero-float-5{display:none}
+    .hero-float-6{display:none}
 }
 @media(max-width:480px){
     .container{padding:0 12px}
-    .hero-content h1{font-size:1.7rem}
+    .hero{min-height:75vh;padding-top:56px}
+    .hero-content h1{font-size:1.4rem;margin-bottom:8px}
+    .hero-content p{font-size:0.78rem;margin-bottom:16px}
+    .hero-stats{gap:12px;margin-top:18px}
+    .hero-stat .num{font-size:1.1rem}
+    .hero-stat .label{font-size:0.65rem}
+    .hero-badge{padding:4px 10px;font-size:0.7rem}
+    .hero-cta .btn{padding:8px 16px;font-size:0.78rem}
+    .section{padding:28px 0}
+    .section-title{font-size:1.1rem;margin-bottom:18px}
     .products-grid{grid-template-columns:1fr}
     .best-grid{grid-template-columns:1fr}
     .flash-grid{grid-template-columns:1fr}
+    .category-grid{grid-template-columns:repeat(3,1fr);gap:6px}
+    .category-card{padding:10px 4px}
+    .category-card i{font-size:1.3rem;margin-bottom:6px}
+    .category-card .name{font-size:0.7rem}
+    .category-card .count{font-size:0.6rem}
+    .product-card-image{height:180px}
+    .product-card-body{padding:8px 10px}
+    .product-card-actions{padding:6px 10px}
     .reviews-grid{grid-template-columns:1fr}
-    .category-grid{grid-template-columns:repeat(3,1fr)}
     .footer-grid{grid-template-columns:1fr}
+    .footer{padding:24px 0 16px}
     .admin-stats{grid-template-columns:repeat(2,1fr)}
-    .modal{padding:20px;margin:0 8px}
+    .modal{padding:16px;margin:0 8px}
+    .hero-float-2{display:none}
+    .hero-float-4{display:none}
 }
 /* file inputs */
 .file-input-wrap{position:relative;padding:20px;border:2px dashed var(--glass-border);border-radius:var(--radius);text-align:center;cursor:pointer;transition:var(--transition)}
@@ -520,6 +571,23 @@ ul{list-style:none}
         <line x1="35" y1="55" x2="35" y2="67" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
         <line x1="3" y1="35" x2="15" y2="35" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
         <line x1="55" y1="35" x2="67" y2="35" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="hero-float hero-float-5">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 40h50M40 15v50M20 25l40 30M60 25L20 55" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <circle cx="40" cy="40" r="25" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        <rect x="32" y="32" width="16" height="16" rx="3" fill="rgba(255,255,255,0.06)"/>
+      </svg>
+    </div>
+    <div class="hero-float hero-float-6">
+      <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 70V30c0-8 6-15 15-15h20c9 0 15 7 15 15v40" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-linecap="round"/>
+        <path d="M25 50h40M25 60h40" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+        <circle cx="35" cy="75" r="5" fill="rgba(255,255,255,0.06)"/>
+        <circle cx="55" cy="75" r="5" fill="rgba(255,255,255,0.06)"/>
+        <path d="M45 30v15" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="45" cy="27" r="3" fill="rgba(255,255,255,0.1)"/>
       </svg>
     </div>
   </div>
@@ -999,25 +1067,48 @@ function initParticles() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   var particles = [];
-  for (var i = 0; i < 50; i++) {
+  for (var i = 0; i < 80; i++) {
     particles.push({
       x: Math.random() * canvas.width, y: Math.random() * canvas.height,
-      r: Math.random() * 2 + 0.5,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-      opacity: Math.random() * 0.4 + 0.15
+      r: Math.random() * 2.5 + 0.8,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      opacity: Math.random() * 0.6 + 0.25,
+      pulse: Math.random() * Math.PI * 2
     });
   }
+  var lines = [];
+  for (var j = 0; j < 25; j++) {
+    var a = particles[Math.floor(Math.random() * particles.length)];
+    var b = particles[Math.floor(Math.random() * particles.length)];
+    if (a !== b) lines.push({ a: a, b: b, opacity: Math.random() * 0.08 + 0.02 });
+  }
+  var time = 0;
   function draw() {
-    if (document.documentElement.getAttribute('data-theme') !== 'dark') {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      return;
-    }
+    time += 0.01;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    lines.forEach(function(l) {
+      var dx = l.a.x - l.b.x, dy = l.a.y - l.b.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 200) {
+        ctx.beginPath();
+        ctx.moveTo(l.a.x, l.a.y);
+        ctx.lineTo(l.b.x, l.b.y);
+        ctx.strokeStyle = 'rgba(255,255,255,' + (l.opacity * (1 - dist / 200)) + ')';
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      }
+    });
     particles.forEach(function(p) {
+      p.pulse += 0.02;
+      var glow = 1 + Math.sin(p.pulse) * 0.3;
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(255,255,255,' + p.opacity + ')';
+      ctx.arc(p.x, p.y, p.r * glow, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,' + (p.opacity * glow) + ')';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r * glow * 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,' + (p.opacity * 0.1) + ')';
       ctx.fill();
       p.x += p.vx; p.y += p.vy;
       if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
@@ -1303,7 +1394,7 @@ function updateCompareUI() {
 
 function toggleCompare(id, checked) {
   if (checked) {
-    if (compare.length >= 4) { toast('حداکثر ۴ محصول قابل مقایسه است', 'error'); return false; }
+    if (compare.length >= 4) { toast('حداکثر ۴ محصول قابل مقایسه است', 'error'); renderProducts(); return; }
     if (compare.indexOf(id) === -1) compare.push(id);
   } else {
     compare = compare.filter(function(c) { return c !== id; });
