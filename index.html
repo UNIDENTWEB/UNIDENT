@@ -16,7 +16,7 @@
 :root{--bg:#000;--bg2:#0a0a0a;--bg3:#111;--bg4:#1a1a1a;--text:#fff;--text2:#aaa;--text3:#666;--accent:#ffffff;--accent2:#e0e0e0;--accent3:#cccccc;--accent-glow:rgba(255,255,255,0.15);--green:#00e676;--red:#ff4757;--orange:#ff6b35;--yellow:#ffc107;--blue:#00a8ff;--glass:rgba(10,10,10,0.85);--glass-hover:rgba(20,20,20,0.9);--glass-border:rgba(255,255,255,0.08);--card-bg:rgba(17,17,17,0.9);--card-hover:rgba(25,25,25,0.95);--shadow:0 4px 30px rgba(0,0,0,0.5);--shadow-lg:0 10px 60px rgba(0,0,0,0.6);--radius:12px;--radius-sm:8px;--radius-lg:20px;--radius-xl:28px;--transition:0.3s cubic-bezier(0.4,0,0.2,1);--font:'Vazirmatn',sans-serif;--max-w:1280px;--header-h:72px;--z-header:1000;--z-modal:2000;--z-toast:3000;--z-admin:4000}
 [data-theme="light"]{--bg:#f5f5f7;--bg2:#eee;--bg3:#ddd;--bg4:#ccc;--text:#111;--text2:#555;--text3:#999;--glass:rgba(255,255,255,0.85);--glass-hover:rgba(255,255,255,0.95);--glass-border:rgba(0,0,0,0.1);--card-bg:rgba(255,255,255,0.9);--card-hover:rgba(255,255,255,1);--shadow:0 4px 30px rgba(0,0,0,0.1);--shadow-lg:0 10px 60px rgba(0,0,0,0.15)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
+html{scroll-behavior:smooth;font-size:16px;scroll-padding-top:calc(var(--header-h) + 8px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;min-height:100vh;position:relative}
 a{color:inherit;text-decoration:none}
 button{cursor:pointer;border:none;outline:none;font-family:inherit}
@@ -88,11 +88,14 @@ ul{list-style:none}
 .order-btn:hover{transform:translateY(-2px)}
 .order-btn i{font-size:1.1rem}
 .mobile-toggle{display:none;width:40px;height:40px;border-radius:50%;background:var(--bg2);border:1px solid var(--glass-border);color:var(--text);font-size:1.2rem;align-items:center;justify-content:center}
-.mobile-menu{position:fixed;top:var(--header-h);left:0;right:0;bottom:0;background:var(--bg);z-index:999;padding:20px;display:none;flex-direction:column;gap:16px;overflow-y:auto}
+.mobile-menu{position:fixed;top:var(--header-h);left:0;right:0;bottom:0;background:var(--bg);z-index:999;padding:20px;display:none;flex-direction:column;gap:12px;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .mobile-menu.active{display:flex}
 .mobile-menu .header-search{max-width:100%}
-.mobile-menu a{display:flex;align-items:center;gap:10px;padding:14px 16px;border-radius:var(--radius);background:var(--bg2);font-weight:500;transition:var(--transition)}
-.mobile-menu a:hover{background:var(--accent);color:#000}
+.mm-link{display:flex;align-items:center;gap:10px;padding:14px 16px;border-radius:var(--radius);background:var(--bg2);font-weight:500;transition:var(--transition);color:var(--text);text-align:right;font-size:0.92rem;width:100%}
+.mobile-menu a.mm-link{background:var(--bg2)}
+.mm-link:hover,.mobile-menu a.mm-link:hover{background:var(--accent);color:#000}
+.mm-divider{height:1px;background:var(--glass-border);margin:2px 0}
+.mm-count{margin-left:auto;min-width:22px;height:22px;border-radius:11px;background:var(--accent);color:#000;font-size:0.68rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;padding:0 6px}
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:var(--header-h)}
 .hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
 .hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;background:linear-gradient(135deg,#060d1a 0%,#0b1a3b 50%,#0a1628 100%)}
@@ -175,8 +178,6 @@ ul{list-style:none}
 .flash-card .old-price{font-size:0.85rem;color:var(--text3);text-decoration:line-through}
 .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
 .filters{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px;align-items:center}
-.filter-chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;flex:1;min-width:200px}
-.filter-chips::-webkit-scrollbar{height:3px}
 .filter-chip{padding:8px 18px;border-radius:100px;background:var(--bg2);border:1px solid var(--glass-border);font-size:0.8rem;white-space:nowrap;transition:var(--transition);cursor:pointer;color:var(--text2)}
 .filter-chip:hover{background:var(--bg3)}
 .filter-chip.active{background:var(--accent);color:#000;border-color:var(--accent)}
@@ -218,7 +219,17 @@ ul{list-style:none}
 .compare-check{display:flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--text3);padding:4px 0;cursor:pointer}
 .compare-check input{accent-color:var(--accent)}
 .best-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.reviews-grid{position:relative}
+.reviews-carousel{overflow:hidden;position:relative}
+.reviews-track{display:flex;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1)}
+.reviews-page{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;flex:0 0 100%;min-width:100%;box-sizing:border-box}
+.reviews-arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:var(--card-bg);border:1px solid var(--glass-border);color:var(--text);font-size:0.9rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition);z-index:3}
+.reviews-arrow:hover{background:var(--accent);color:#000;border-color:var(--accent)}
+.reviews-arrow.prev{right:6px}
+.reviews-arrow.next{left:6px}
+.reviews-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.reviews-dot{width:10px;height:10px;border-radius:50%;background:var(--bg4);border:1px solid var(--glass-border);cursor:pointer;transition:var(--transition);padding:0}
+.reviews-dot.active{background:var(--accent);border-color:var(--accent);transform:scale(1.25)}
 .review-card{background:var(--card-bg);border:1px solid var(--glass-border);border-radius:var(--radius);padding:24px;transition:var(--transition)}
 .review-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .review-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
@@ -383,13 +394,15 @@ ul{list-style:none}
 /* responsive */
 @media(max-width:1024px){.header-search{max-width:200px}.header-actions{gap:2px}.order-btn{font-size:0.75rem;padding:6px 14px}}
 @media(max-width:768px){
+    html{font-size:14px}
     .header-inner{gap:4px}.logo-text{display:none}.header-search{display:none}
     .logo-icon{width:34px;height:34px;font-size:1rem}
     .order-btn span{display:none}.order-btn{width:36px;height:36px;border-radius:50%;justify-content:center;padding:0}
     .header-btn{width:36px;height:36px;font-size:0.9rem}
 /* file inputs */
     .mobile-toggle{display:flex;width:36px;height:36px}
-    .hero{min-height:70vh;padding-top:56px}
+    .hero{min-height:calc(100svh - var(--header-h));padding-top:56px}
+    .scroll-indicator{display:none}
     .hero-content h1{font-size:1.5rem;margin-bottom:10px}
     .hero-content p{font-size:0.8rem;margin-bottom:16px;line-height:1.6}
     .hero-stats{gap:12px;margin-top:20px}
@@ -410,6 +423,18 @@ ul{list-style:none}
     .category-card .name{font-size:0.72rem}
     .category-card .count{font-size:0.62rem}
     .product-card-image{height:140px}
+    .product-card-actions .add-cart-btn{flex:1;min-height:36px}
+    .compare-check{display:none}
+    .modal{max-height:88vh}
+    .detail-gallery img{height:260px}
+    .gallery-thumbs{scrollbar-width:none}
+    .gallery-thumbs::-webkit-scrollbar{display:none}
+    .admin-sidebar-header{cursor:pointer;user-select:none}
+    .admin-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .footer{text-align:center}
+    .social-links{justify-content:center}
+    .footer-grid .trust-badges{justify-content:center}
+    .footer .logo{justify-content:center}
     .product-card-body{padding:8px 10px}
     .product-card-body .brand{font-size:0.6rem}
     .product-card-body .name{font-size:0.72rem}
@@ -423,21 +448,23 @@ ul{list-style:none}
     .footer{padding:28px 0 18px}
     .footer-grid{gap:16px}
     .newsletter-form{flex-direction:column}
-    .filters{flex-direction:column;align-items:stretch;gap:10px}
-    .filter-chips{white-space:nowrap}
+    .filters{flex-direction:row;flex-wrap:wrap;align-items:stretch;gap:8px}
+    .filter-select-wrap{flex:1 1 calc(50% - 4px);min-width:0}
+    .filter-price-inputs{flex:0 0 100%;justify-content:flex-start;flex-wrap:nowrap}
     .admin-panel{flex-direction:column}
     .admin-sidebar{width:100%;max-height:50px;overflow:hidden;transition:max-height 0.3s}
     .admin-sidebar.expanded{max-height:100vh}
     .cart-item{flex-wrap:wrap}
     .compare-bar{flex-direction:column;padding:6px 10px}
     .marquee-track{animation-duration:20s}
-    .reviews-grid{grid-template-columns:1fr}
+    .reviews-page{grid-template-columns:1fr}
     .faq-grid{grid-template-columns:1fr}
     .container{padding:0 14px}
 }
 @media(max-width:480px){
+    html{font-size:13px}
     .container{padding:0 10px}
-    .hero{min-height:65vh;padding-top:50px}
+    .hero{min-height:calc(100svh - var(--header-h));padding-top:50px}
     .hero-content h1{font-size:1.3rem;margin-bottom:8px}
     .hero-content p{font-size:0.75rem;margin-bottom:14px}
     .hero-stats{gap:10px;margin-top:16px}
@@ -458,11 +485,13 @@ ul{list-style:none}
     .product-card-image{height:160px}
     .product-card-body{padding:8px}
     .product-card-actions{padding:6px 8px}
-    .reviews-grid{grid-template-columns:1fr}
+    .detail-gallery img{height:240px}
+    .reviews-page{grid-template-columns:1fr}
+    .reviews-arrow{width:34px;height:34px;font-size:0.8rem}
     .footer-grid{grid-template-columns:1fr}
     .footer{padding:22px 0 14px}
     .admin-stats{grid-template-columns:repeat(2,1fr)}
-    .modal{padding:14px;margin:0 6px;width:calc(100% - 12px);max-width:100%}
+    .modal{padding:14px;margin:0 6px;width:calc(100% - 12px);max-width:100%;border-radius:16px}
 }
 #adminBtn{display:none}
 .file-input-wrap{position:relative;padding:20px;border:2px dashed var(--glass-border);border-radius:var(--radius);text-align:center;cursor:pointer;transition:var(--transition)}
@@ -530,12 +559,16 @@ ul{list-style:none}
     <i class="fa-solid fa-magnifying-glass"></i>
     <div class="search-dropdown" id="mobileSearchDropdown"></div>
   </div>
-  <a href="#hero"><i class="fa-solid fa-house"></i> صفحه اصلی</a>
-  <a href="#categories"><i class="fa-solid fa-layer-group"></i> دسته‌بندی محصولات</a>
-  <a href="#products"><i class="fa-solid fa-box"></i> همه محصولات</a>
-  <a href="#products"><i class="fa-solid fa-box"></i> محصولات</a>
-  <a href="#reviews"><i class="fa-solid fa-star"></i> نظرات مشتریان</a>
-  <a href="#faq"><i class="fa-solid fa-circle-question"></i> سوالات متداول</a>
+  <a class="mm-link" href="#hero"><i class="fa-solid fa-house"></i> صفحه اصلی</a>
+  <a class="mm-link" href="#categories"><i class="fa-solid fa-layer-group"></i> دسته‌بندی محصولات</a>
+  <a class="mm-link" href="#products"><i class="fa-solid fa-box"></i> همه محصولات</a>
+  <a class="mm-link" href="#reviews"><i class="fa-solid fa-star"></i> نظرات مشتریان</a>
+  <a class="mm-link" href="#faq"><i class="fa-solid fa-circle-question"></i> سوالات متداول</a>
+  <div class="mm-divider"></div>
+  <a class="mm-link" href="javascript:void(0)" onclick="openModal('cartModal');document.getElementById('mobileMenu').classList.remove('active')"><i class="fa-solid fa-cart-shopping"></i> سبد خرید <span class="mm-count" id="mmCartCount">0</span></a>
+  <a class="mm-link" href="javascript:void(0)" onclick="openMobileWishlist()"><i class="fa-solid fa-heart"></i> علاقه‌مندی‌ها <span class="mm-count" id="mmWishCount">0</span></a>
+  <a class="mm-link" href="javascript:void(0)" onclick="openModal('loginModal');document.getElementById('mobileMenu').classList.remove('active')"><i class="fa-solid fa-user"></i> ورود / ثبت نام</a>
+  <a class="mm-link" href="javascript:void(0)" onclick="openModal('surveyModal');document.getElementById('mobileMenu').classList.remove('active')"><i class="fa-solid fa-poll"></i> نظرسنجی</a>
 </div>
 
 <section class="hero" id="hero">
@@ -661,7 +694,10 @@ ul{list-style:none}
     <h2 class="section-title fade-up"><span class="gradient-text">همه</span> محصولات</h2>
     <p class="section-subtitle fade-up">نمایش <span id="productTotalCount">0</span> محصول</p>
     <div class="filters fade-up">
-      <div class="filter-chips" id="filterChips"></div>
+      <div class="filter-select-wrap filter-cat-wrap">
+        <i class="fa-solid fa-chevron-down"></i>
+        <select class="filter-select" id="filterCategory"><option value="all">همه دسته‌بندی‌ها</option></select>
+      </div>
       <div class="filter-select-wrap">
         <i class="fa-solid fa-chevron-down"></i>
         <select class="filter-select" id="filterBrand"><option value="all">همه برندها</option></select>
@@ -1023,7 +1059,7 @@ function initAfterLoad() {
   initCategories();
   initFilters();
   renderProducts();
-  renderReviews();
+  buildReviewSlider();
   renderFAQ();
   initScrollObserver();
   updateCartUI();
@@ -1158,10 +1194,8 @@ function initCategories() {
     div.innerHTML = '<i class="fa-solid ' + icon + '"></i><div class="name">' + cat + '</div><div class="count">' + cats[cat].toLocaleString('fa-IR') + ' محصول</div>';
     div.onclick = function() {
       currentCategory = cat;
-      var chips = document.querySelectorAll('.filter-chip');
-      chips.forEach(function(c) { c.classList.remove('active'); });
-      var chip = document.querySelector('.filter-chip[data-cat="' + cat.replace(/"/g, '&quot;') + '"]');
-      if (chip) chip.classList.add('active');
+      var catSelect = document.getElementById('filterCategory');
+      if (catSelect) catSelect.value = cat;
       currentPage = 1;
       renderProducts();
       document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
@@ -1174,11 +1208,10 @@ function initCategories() {
 function initFilters() {
   var catsMap = {};
   products.forEach(function(p) { if (p.category) catsMap[p.category] = true; });
-  var cats = Object.keys(catsMap);
-  var chips = document.getElementById('filterChips');
-  chips.innerHTML = '<span class="filter-chip active" data-cat="all" onclick="filterByCategory(\'all\')">همه</span>';
+  var cats = Object.keys(catsMap).sort();
+  var catSelect = document.getElementById('filterCategory');
   cats.forEach(function(cat) {
-    chips.innerHTML += '<span class="filter-chip" data-cat="' + cat.replace(/"/g, '&quot;') + '" onclick="filterByCategory(\'' + cat.replace(/'/g, "\\'") + '\')">' + cat + '</span>';
+    catSelect.innerHTML += '<option value="' + cat.replace(/"/g, '&quot;') + '">' + cat + '</option>';
   });
 
   var brandsMap = {};
@@ -1189,7 +1222,7 @@ function initFilters() {
     brandSelect.innerHTML += '<option value="' + b.replace(/"/g, '&quot;') + '">' + b + '</option>';
   });
 
-  ['filterBrand', 'filterOrigin', 'filterStock', 'filterSort'].forEach(function(id) {
+  ['filterCategory', 'filterBrand', 'filterOrigin', 'filterStock', 'filterSort'].forEach(function(id) {
     document.getElementById(id).addEventListener('change', function() { currentPage = 1; renderProducts(); });
   });
   document.getElementById('filterPriceMin').addEventListener('input', debounce(function() { currentPage = 1; renderProducts(); }, 500));
@@ -1198,10 +1231,8 @@ function initFilters() {
 
 function filterByCategory(cat) {
   currentCategory = cat;
-  var chips = document.querySelectorAll('.filter-chip');
-  chips.forEach(function(c) { c.classList.remove('active'); });
-  var chip = document.querySelector('.filter-chip[data-cat="' + cat.replace(/"/g, '&quot;') + '"]');
-  if (chip) chip.classList.add('active');
+  var catSelect = document.getElementById('filterCategory');
+  if (catSelect) catSelect.value = cat;
   currentPage = 1;
   renderProducts();
 }
@@ -1321,20 +1352,94 @@ function goToPage(page) {
   }, 100);
 }
 
-function renderReviews() {
+var reviewSlider = { page: 0, pages: 0, timer: null, perView: 3 };
+
+function reviewCardHTML(r) {
+  var stars = '';
+  for (var i = 0; i < (r.rating || 5); i++) stars += '<i class="fa-solid fa-star"></i>';
+  return '<div class="review-card"><div class="review-header"><div class="review-avatar">' + (r.avatar || (r.name || 'ن').charAt(0)) + '</div><div><div class="review-name">' + (r.name || 'ناشناس') + '</div><div class="review-stars">' + stars + '</div></div></div><div class="review-text">' + r.text + '</div></div>';
+}
+
+function reviewSliderPerView() {
+  return window.innerWidth <= 768 ? 1 : 3;
+}
+
+function buildReviewSlider() {
   var sampleReviews = [
     { name: 'دکتر محمد رضایی', rating: 5, text: 'کیفیت محصولات بی‌نظیره. هندپیس‌های COXO واقعا عالی کار می‌کنن و قیمت‌شون نسبت به بازار خیلی مناسب‌تره.', avatar: 'م' },
     { name: 'دکتر سارا احمدی', rating: 5, text: 'پشتیبانی و خدمات پس از فروش عالی. سفارش من خیلی سریع رسید و بسته‌بندی حرفه‌ای بود.', avatar: 'س' },
     { name: 'دکتر علی کریمی', rating: 4, text: 'محصولات تنوع خوبی دارن. چند تا توربین NSK سفارش دادم، همشون سالم و با گارانتی رسیدن.', avatar: 'ع' },
-    { name: 'دکتر مریم حسینی', rating: 5, text: 'بهترین فروشگاه تجهیزات دندانپزشکی. قیمت‌ها رقابتی، کیفیت بالا و ارسال سریع. عالیه.', avatar: 'م' }
+    { name: 'دکتر مریم حسینی', rating: 5, text: 'بهترین فروشگاه تجهیزات دندانپزشکی. قیمت‌ها رقابتی، کیفیت بالا و ارسال سریع. عالیه.', avatar: 'م' },
+    { name: 'دکتر رضا قاسمی', rating: 5, text: 'میکروسکوپ اندودانتیک COXO رو تهیه کردم، کیفیت تصویر فوق‌العاده‌ست و پشتیبانی نصب هم داشتیم.', avatar: 'ر' },
+    { name: 'دکتر نازنین موسوی', rating: 4, text: 'فایل‌های روتاری NSK خیلی تمیز و دقیق کار می‌کنن. نسبت به نمونه‌های مشابه در بازار قیمت مناسبی داره.', avatar: 'ن' },
+    { name: 'دکتر حسین نادری', rating: 5, text: 'نظم در ارسال و بسته‌بندی استاندارد. تجربه خرید اینترنتی از این مجموعه واقعا رضایت‌بخش بود.', avatar: 'ح' },
+    { name: 'دکتر فاطمه کاظمی', rating: 5, text: 'تنوع تجهیزات عالیه؛ هر چیزی از هندپیس تا کمپرسور لازم داشتم یکجا پیدا کردم. پیشنهاد می‌کنم.', avatar: 'ف' },
+    { name: 'دکتر امیر تهرانی', rating: 4, text: 'گارانتی معتبر و پاسخگویی سریع به سوالات فنی. قطعا برای تجهیزات بعدی دوباره سفارش می‌دم.', avatar: 'ا' }
   ];
-  var all = reviews.length > 0 ? reviews.slice(0, 4) : sampleReviews;
+  var all = reviews.length > 0 ? reviews.slice(0, 9) : sampleReviews;
+  var perView = reviewSliderPerView();
+  var pages = Math.ceil(all.length / perView);
   var grid = document.getElementById('reviewsGrid');
-  grid.innerHTML = all.map(function(r) {
-    var stars = '';
-    for (var i = 0; i < (r.rating || 5); i++) stars += '<i class="fa-solid fa-star"></i>';
-    return '<div class="review-card fade-up"><div class="review-header"><div class="review-avatar">' + (r.avatar || r.name.charAt(0)) + '</div><div><div class="review-name">' + (r.name || 'ناشناس') + '</div><div class="review-stars">' + stars + '</div></div></div><div class="review-text">' + r.text + '</div></div>';
-  }).join('');
+  grid.innerHTML = '<div class="reviews-carousel" id="reviewsCarousel">' +
+    '<button class="reviews-arrow prev" onclick="reviewSliderMove(-1)"><i class="fa-solid fa-chevron-right"></i></button>' +
+    '<button class="reviews-arrow next" onclick="reviewSliderMove(1)"><i class="fa-solid fa-chevron-left"></i></button>' +
+    '<div class="reviews-track" id="reviewsTrack"></div>' +
+    '</div>' +
+    '<div class="reviews-dots" id="reviewsDots"></div>';
+  var track = document.getElementById('reviewsTrack');
+  track.innerHTML = '';
+  for (var p = 0; p < pages; p++) {
+    var pageDiv = document.createElement('div');
+    pageDiv.className = 'reviews-page';
+    pageDiv.innerHTML = all.slice(p * perView, p * perView + perView).map(reviewCardHTML).join('');
+    track.appendChild(pageDiv);
+  }
+  var dots = document.getElementById('reviewsDots');
+  dots.innerHTML = '';
+  for (var d = 0; d < pages; d++) {
+    var dot = document.createElement('button');
+    dot.className = 'reviews-dot' + (d === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'صفحه ' + (d + 1));
+    dot.onclick = (function(i) { return function() { reviewSliderGoTo(i); }; })(d);
+    dots.appendChild(dot);
+  }
+  reviewSlider.pages = pages;
+  reviewSlider.perView = perView;
+  reviewSliderGoTo(0);
+  reviewSliderStart();
+  var carousel = document.getElementById('reviewsCarousel');
+  carousel.onmouseenter = function() { reviewSliderStop(); };
+  carousel.onmouseleave = function() { reviewSliderStart(); };
+}
+
+function reviewSliderGoTo(i) {
+  if (reviewSlider.pages === 0) return;
+  reviewSlider.page = (i + reviewSlider.pages) % reviewSlider.pages;
+  var track = document.getElementById('reviewsTrack');
+  if (track) track.style.transform = 'translateX(' + (reviewSlider.page * 100) + '%)';
+  var dots = document.querySelectorAll('#reviewsDots .reviews-dot');
+  for (var d = 0; d < dots.length; d++) {
+    dots[d].classList.toggle('active', d === reviewSlider.page);
+  }
+}
+
+function reviewSliderMove(step) {
+  reviewSliderGoTo(reviewSlider.page + step);
+  reviewSliderRestart();
+}
+
+function reviewSliderStart() {
+  reviewSliderStop();
+  reviewSlider.timer = setInterval(function() { reviewSliderGoTo(reviewSlider.page + 1); }, 5000);
+}
+
+function reviewSliderStop() {
+  if (reviewSlider.timer) { clearInterval(reviewSlider.timer); reviewSlider.timer = null; }
+}
+
+function reviewSliderRestart() {
+  reviewSliderStop();
+  reviewSliderStart();
 }
 
 function renderFAQ() {
@@ -1509,10 +1614,14 @@ function toggleWishlist(id) {
 
 function updateCartUI() {
   document.getElementById('cartCount').textContent = cart.reduce(function(s, c) { return s + c.qty; }, 0);
+  var mm = document.getElementById('mmCartCount');
+  if (mm) mm.textContent = cart.reduce(function(s, c) { return s + c.qty; }, 0);
 }
 
 function updateWishlistUI() {
   document.getElementById('wishlistCount').textContent = wishlist.length;
+  var mm = document.getElementById('mmWishCount');
+  if (mm) mm.textContent = wishlist.length;
 }
 
 function renderCart() {
@@ -1618,9 +1727,9 @@ function openProductDetail(id) {
   html += '<div style="font-size:1.3rem;font-weight:800;color:var(--accent);margin-bottom:16px">قیمت: استعلام</div>';
   html += '<div style="color:var(--text2);font-size:0.9rem;line-height:1.8;margin-bottom:16px">' + (p.description || '') + '</div>';
   if (p.specs && p.specs.length) {
-    html += '<table class="admin-table" style="width:100%;margin-bottom:16px">';
+    html += '<div class="admin-table-wrap" style="width:100%;margin-bottom:16px;overflow-x:auto"><table class="admin-table" style="width:100%">';
     p.specs.forEach(function(s) { html += '<tr><td style="font-weight:600">' + s.key + '</td><td>' + s.value + '</td></tr>'; });
-    html += '</table>';
+    html += '</table></div>';
   }
   html += '<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-primary" onclick="addToCart(\'' + p.id + '\')"><i class="fa-solid fa-cart-plus"></i> افزودن به سبد خرید</button>';
   html += '<button class="btn btn-outline" onclick="toggleWishlist(\'' + p.id + '\')"><i class="fa-' + (wishlist.indexOf(p.id) >= 0 ? 'solid' : 'regular') + ' fa-heart"></i> علاقه‌مندی</button>';
@@ -1699,7 +1808,7 @@ function submitReview() {
   if (!n || !t) { toast('نام و متن نظر الزامی است', 'error'); return; }
   reviews.unshift({ name: n, rating: r, text: t, avatar: n.charAt(0) });
   saveReviews();
-  renderReviews();
+  buildReviewSlider();
   toast('نظر شما ثبت شد');
   closeModal('reviewModal');
 }
@@ -2229,7 +2338,7 @@ function restoreBackup(input) {
       if (backup.settings) { settings = backup.settings; localStorage.setItem('settings', JSON.stringify(settings)); }
       toast('داده‌ها با موفقیت بازیابی شدند');
       renderProducts();
-      renderReviews();
+      buildReviewSlider();
       initCategories();
       renderAdminDashboard();
     } catch(err) { toast('خطا در بازیابی فایل', 'error'); }
@@ -2324,9 +2433,7 @@ document.getElementById('wishlistBtn').addEventListener('click', function() {
   var wProducts = wishlist.map(function(id) { return products.find(function(p) { return p.id === id; }); }).filter(Boolean);
   if (wProducts.length === 0) { toast('علاقه‌مندی‌ها خالی است', 'error'); return; }
   currentCategory = 'all';
-  document.querySelectorAll('.filter-chip').forEach(function(c) { c.classList.remove('active'); });
-  var chipAll = document.querySelector('.filter-chip[data-cat="all"]');
-  if (chipAll) chipAll.classList.add('active');
+  document.getElementById('filterCategory').value = 'all';
   document.getElementById('filterBrand').value = 'all';
   document.getElementById('filterOrigin').value = 'all';
   document.getElementById('filterStock').value = 'all';
@@ -2348,6 +2455,43 @@ document.getElementById('adminBtn').addEventListener('click', function() {
 
 document.getElementById('mobileToggle').addEventListener('click', function() {
   document.getElementById('mobileMenu').classList.toggle('active');
+});
+
+document.querySelectorAll('.mobile-menu .mm-link[href^="#"]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('mobileMenu').classList.remove('active');
+  });
+});
+
+function openMobileWishlist() {
+  document.getElementById('mobileMenu').classList.remove('active');
+  var wProducts = wishlist.map(function(id) { return products.find(function(p) { return p.id === id; }); }).filter(Boolean);
+  if (wProducts.length === 0) { toast('علاقه‌مندی‌ها خالی است', 'error'); return; }
+  currentCategory = 'all';
+  document.getElementById('filterCategory').value = 'all';
+  document.getElementById('filterBrand').value = 'all';
+  document.getElementById('filterOrigin').value = 'all';
+  document.getElementById('filterStock').value = 'all';
+  document.getElementById('filterPriceMin').value = '';
+  document.getElementById('filterPriceMax').value = '';
+  document.getElementById('filterSort').value = 'default';
+  var tempProducts = products;
+  products = wProducts;
+  currentPage = 1;
+  renderProducts();
+  products = tempProducts;
+  setTimeout(function() { document.getElementById('products').scrollIntoView({ behavior: 'smooth' }); }, 100);
+}
+
+document.getElementById('adminSidebar').addEventListener('click', function(e) {
+  if (window.innerWidth <= 768 && e.target.closest('.admin-sidebar-header')) {
+    this.classList.toggle('expanded');
+  }
+});
+document.getElementById('adminSidebar').addEventListener('scroll', function() {
+  if (window.innerWidth <= 768 && this.classList.contains('expanded')) {
+    setTimeout(function() { document.getElementById('adminSidebar').classList.remove('expanded'); }, 1800);
+  }
 });
 
 document.getElementById('mobileSearchInput').addEventListener('input', debounce(function() {
@@ -2388,4 +2532,10 @@ document.addEventListener('click', function(e) {
 });
 
 document.addEventListener('DOMContentLoaded', loadData);
+
+window.addEventListener('resize', debounce(function() {
+  if (reviewSlider.perView !== reviewSliderPerView()) {
+    buildReviewSlider();
+  }
+}, 250));
 </script>
