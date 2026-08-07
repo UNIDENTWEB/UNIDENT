@@ -154,7 +154,14 @@ ul{list-style:none}
 .marquee-track{display:flex;gap:60px;animation:marquee 20s linear infinite;width:max-content}
 .marquee-item{font-size:1.4rem;font-weight:700;color:var(--text3);white-space:nowrap;transition:var(--transition)}
 .marquee-item:hover{color:var(--accent)}
-.category-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.category-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;position:relative}
+.cat-grid-wrap{position:relative}
+.cat-grid-wrap.collapsed .category-grid{max-height:190px;overflow:hidden}
+.cat-grid-wrap.collapsed::after{content:'';position:absolute;left:0;right:0;bottom:0;height:80px;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg));pointer-events:none}
+.cat-toggle{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:10px 24px;border-radius:100px;background:var(--glass);border:1px solid var(--glass-border);color:var(--text);font-size:0.85rem;cursor:pointer;transition:var(--transition)}
+.cat-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.cat-toggle i{transition:transform 0.3s ease}
+.cat-grid-wrap.expanded .cat-toggle i{transform:rotate(180deg)}
 .category-card{padding:24px 16px;background:var(--card-bg);border:1px solid var(--glass-border);border-radius:var(--radius);text-align:center;cursor:pointer;transition:var(--transition);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .category-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 8px 40px var(--accent-glow)}
 .category-card i{font-size:2rem;color:var(--accent);margin-bottom:12px;display:block;text-shadow:0 0 20px var(--accent-glow),0 0 40px var(--accent-glow)}
@@ -685,7 +692,10 @@ ul{list-style:none}
   <div class="container">
     <h2 class="section-title fade-up">دسته‌بندی <span class="gradient-text">محصولات</span></h2>
     <p class="section-subtitle fade-up">محصولات ما را بر اساس دسته‌بندی‌های تخصصی دندانپزشکی مرور کنید</p>
-    <div class="category-grid" id="categoryGrid"></div>
+    <div class="cat-grid-wrap collapsed" id="catGridWrap">
+      <div class="category-grid" id="categoryGrid"></div>
+      <button class="cat-toggle" id="catToggle"><i class="fa-solid fa-chevron-down"></i> <span id="catToggleText">نمایش همه دسته‌بندی‌ها</span></button>
+    </div>
   </div>
 </section>
 
@@ -1202,6 +1212,18 @@ function initCategories() {
     };
     grid.appendChild(div);
   });
+  var wrap = document.getElementById('catGridWrap');
+  var toggle = document.getElementById('catToggle');
+  if (Object.keys(cats).length <= 6) {
+    if (wrap) wrap.classList.remove('collapsed');
+    if (toggle) toggle.style.display = 'none';
+  } else if (toggle) {
+    toggle.onclick = function() {
+      var isExpanded = wrap.classList.toggle('expanded');
+      wrap.classList.toggle('collapsed', !isExpanded);
+      document.getElementById('catToggleText').textContent = isExpanded ? 'بستن دسته‌بندی‌ها' : 'نمایش همه دسته‌بندی‌ها';
+    };
+  }
 }
 
 
