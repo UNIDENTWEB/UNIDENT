@@ -1269,7 +1269,12 @@ function initFilters() {
     brandSelect.innerHTML += '<option value="' + b.replace(/"/g, '&quot;') + '">' + b + '</option>';
   });
 
-  ['filterCategory', 'filterBrand', 'filterOrigin', 'filterStock', 'filterSort'].forEach(function(id) {
+  document.getElementById('filterCategory').addEventListener('change', function() {
+    currentCategory = this.value || 'all';
+    currentPage = 1;
+    renderProducts();
+  });
+  ['filterBrand', 'filterOrigin', 'filterStock', 'filterSort'].forEach(function(id) {
     document.getElementById(id).addEventListener('change', function() { currentPage = 1; renderProducts(); });
   });
   document.getElementById('filterPriceMin').addEventListener('input', debounce(function() { currentPage = 1; renderProducts(); }, 500));
