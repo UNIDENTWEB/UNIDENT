@@ -38,6 +38,7 @@ Entries discovered by the Agent during task execution should follow this format:
 - Instructions:
   - GitHub remote of this repo has moved; canonical URL is `https://github.com/UNIDENTWEB/UNIDENT.git` (origin previously pointed at the old `unidentweb/UNIDENT` path, which redirects on push)
   - The configured credential helper (`/app/agent/bin/agent git-credential-helper`) returns HTTP 500 and cannot be used for `git push`; pushing requires embedding an access token in the URL (`https://x-access-token:<TOKEN>@github.com/UNIDENTWEB/UNIDENT.git main`). The token value is obtained at runtime and must NOT be committed to the repo (GitHub push protection blocks it)
+  - GitHub push protection blocks any commit containing the literal token; if a commit was rejected, amend it to remove the secret before pushing. A fresh amended commit is allowed even if it is the second push of the same logical change
 
 [Project Knowledge Summary]
 - Date: 2026-08-10
