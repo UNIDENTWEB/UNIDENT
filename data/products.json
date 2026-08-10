@@ -452,59 +452,6 @@
     ]
   },
   {
-    "id": "coxo_cc2",
-    "name": "COXO C-CLEAR2 Premium Dental Microscope",
-    "brand": "COXO",
-    "code": "C-CLEAR-2",
-    "category": "میکروسکوپ",
-    "images": 8,
-    "type": "میکروسکوپ",
-    "basePrice": 273.12,
-    "priceRial": 177528000,
-    "stock": 7,
-    "isOriginal": true,
-    "type_fa": "میکروسکوپ",
-    "description": "میکروسکوپ دندانپزشکی COXO C-CLEAR2 Premium با بزرگنمایی بالا و اپتیک آپوکروماتیک",
-    "specs": [
-      {
-        "key": "بزرگنمایی",
-        "value": "۳.۴x - ۲۳.۲x"
-      },
-      {
-        "key": "نوع لنز",
-        "value": "اپوکروماتیک"
-      },
-      {
-        "key": "منبع نور",
-        "value": "LED"
-      },
-      {
-        "key": "فوکوس",
-        "value": "موتوردار"
-      },
-      {
-        "key": "زاویه دید",
-        "value": "۴۵/۹۰ درجه"
-      },
-      {
-        "key": "فاصله کاری",
-        "value": "۲۰۰ - ۳۵۰ mm"
-      },
-      {
-        "key": "گارانتی",
-        "value": "۳۶ ماه"
-      },
-      {
-        "key": "ساخت",
-        "value": "چین - COXO (YUSENDEN)"
-      },
-      {
-        "key": "استاندارد",
-        "value": "CE / ISO ۱۳۴۸۵"
-      }
-    ]
-  },
-  {
     "id": "coxo_cfm",
     "name": "COXO C-FILL Mini Obturation System",
     "brand": "COXO",
@@ -1483,7 +1430,7 @@
   },
   {
     "id": "coxo_cma2",
-    "name": "COXO C-SMART MINI AP Endo Motor",
+    "name": "COXO C-SMART MINI AP+ Endo Motor",
     "brand": "COXO",
     "code": "C-SMART-MINI-AP+",
     "category": "اندو",
@@ -1832,7 +1779,7 @@
     "images": 8,
     "type": null,
     "basePrice": 585.43,
-    "priceRial": 380529499,
+    "priceRial": 380529500,
     "stock": 14,
     "isOriginal": true,
     "type_fa": "درمان ریشه",
@@ -2280,7 +2227,7 @@
     "images": 0,
     "type": "جرم گیر",
     "basePrice": 179.92,
-    "priceRial": 116947999,
+    "priceRial": 116948000,
     "stock": 13,
     "isOriginal": true,
     "type_fa": "جرم گیر",
@@ -4374,7 +4321,7 @@
     "images": 8,
     "type": null,
     "basePrice": 354.78,
-    "priceRial": 230606999,
+    "priceRial": 230607000,
     "stock": 25,
     "isOriginal": true,
     "type_fa": "فایل ریشه",
@@ -5735,7 +5682,7 @@
     "images": 8,
     "type": "هندپیس سرعت پایین",
     "basePrice": 359.84,
-    "priceRial": 233895999,
+    "priceRial": 233896000,
     "stock": 20,
     "isOriginal": true,
     "type_fa": "هندپیس سرعت پایین",
@@ -6240,87 +6187,6 @@
     "basePrice": 349.52,
     "priceRial": 227188000,
     "stock": 16,
-    "isOriginal": true,
-    "type_fa": "هندپیس سرعت بالا",
-    "description": "هندپیس توربین دندانپزشکی با سرعت بالا",
-    "specs": [
-      {
-        "key": "جنس بدنه",
-        "value": "استیل ضد زنگ"
-      },
-      {
-        "key": "استریلیزاسیون",
-        "value": "اتوکلاو ۱۳۵ درجه"
-      },
-      {
-        "key": "نوع بلبرینگ",
-        "value": "سرامیکی"
-      },
-      {
-        "key": "نویز",
-        "value": "< ۶۸ dB"
-      },
-      {
-        "key": "فشار هوا",
-        "value": "۰.۲۲ - ۰.۲۸ MPa"
-      },
-      {
-        "key": "حداکثر سرعت",
-        "value": "350 000-400 000 RPM"
-      },
-      {
-        "key": "نوع اتصال",
-        "value": "کوپلینگ استاندارد"
-      },
-      {
-        "key": "سیستم اسپری",
-        "value": "چهار کاناله / دو کاناله"
-      },
-      {
-        "key": "نوع فرز",
-        "value": "FG (Friction Grip)"
-      },
-      {
-        "key": "فایبر اپتیک",
-        "value": "دارد / ندارد"
-      },
-      {
-        "key": "سایز هد",
-        "value": "استاندارد / مینی"
-      },
-      {
-        "key": "قدرت",
-        "value": "۲۰ وات"
-      },
-      {
-        "key": "نوع چاک",
-        "value": "دکمه‌ای (Push Button)"
-      },
-      {
-        "key": "گارانتی",
-        "value": "۱۸ ماه"
-      },
-      {
-        "key": "ساخت",
-        "value": "ژاپن - Nakanishi"
-      },
-      {
-        "key": "استاندارد",
-        "value": "CE / ISO ۹۱۶۸ / FDA"
-      }
-    ]
-  },
-  {
-    "id": "nsk_52",
-    "name": "NSK Pana-Max PLUS",
-    "brand": "NSK",
-    "code": "PANA-MAX-PLUS",
-    "category": "توربین",
-    "images": 7,
-    "type": "هندپیس سرعت بالا",
-    "basePrice": 317.25,
-    "priceRial": 206212500,
-    "stock": 19,
     "isOriginal": true,
     "type_fa": "هندپیس سرعت بالا",
     "description": "هندپیس توربین دندانپزشکی با سرعت بالا",
@@ -7107,7 +6973,7 @@
     "images": 8,
     "type": null,
     "basePrice": 1402.37,
-    "priceRial": 911540499,
+    "priceRial": 911540500,
     "stock": 9,
     "isOriginal": true,
     "type_fa": "موتور جراحی",
@@ -7160,7 +7026,7 @@
     "images": 6,
     "type": null,
     "basePrice": 346.78,
-    "priceRial": 225406999,
+    "priceRial": 225407000,
     "stock": 16,
     "isOriginal": true,
     "type_fa": "درمان ریشه",
@@ -7737,7 +7603,7 @@
     "images": 8,
     "type": "هندپیس",
     "basePrice": 359.84,
-    "priceRial": 233895999,
+    "priceRial": 233896000,
     "stock": 20,
     "isOriginal": true,
     "type_fa": "هندپیس خمیده",
@@ -13752,7 +13618,7 @@
     "images": 8,
     "type": "هندپیس",
     "basePrice": 163.89,
-    "priceRial": 106528499,
+    "priceRial": 106528500,
     "stock": 7,
     "isOriginal": true,
     "type_fa": "هندپیس الکتریکی",
@@ -16101,7 +15967,7 @@
     "images": 8,
     "type": "هندپیس سرعت بالا",
     "basePrice": 89.32,
-    "priceRial": 58057999,
+    "priceRial": 58058000,
     "stock": 13,
     "isOriginal": true,
     "type_fa": "هندپیس سرعت بالا",
@@ -17871,6 +17737,5649 @@
       {
         "key": "استاندارد",
         "value": "CE / ISO ۱۳۴۸۵ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "wp_1",
+    "name": "Woodpecker O-Star Pro Curing Light",
+    "brand": "Woodpecker",
+    "code": "O-StarPro",
+    "category": "لایت کیور",
+    "images": 2,
+    "type": "لایت کیور",
+    "basePrice": 525.0,
+    "priceRial": 341250000,
+    "stock": 19,
+    "isOriginal": true,
+    "type_fa": "لایت کیور",
+    "description": "دستگاه کیورینگ لایت بی‌سیم دندانپزشکی",
+    "specs": [
+      {
+        "key": "شدت نور",
+        "value": "1000-3000 mW/cm²"
+      },
+      {
+        "key": "طول موج",
+        "value": "380-520 nm"
+      },
+      {
+        "key": "منبع تغذیه",
+        "value": "باتری لیتیومی"
+      },
+      {
+        "key": "نوع شارژ",
+        "value": "بی‌سیم"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "Normal / High / Pulse"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485 / FDA"
+      }
+    ]
+  },
+  {
+    "id": "wp_2",
+    "name": "Woodpecker UDS-E LED Ultrasonic Piezo Scaler",
+    "brand": "Woodpecker",
+    "code": "UDS-E LED",
+    "category": "جرم گیر",
+    "images": 1,
+    "type": "جرم گیر",
+    "basePrice": 395.0,
+    "priceRial": 256750000,
+    "stock": 3,
+    "isOriginal": true,
+    "type_fa": "جرم گیر",
+    "description": "جرم‌گیر اولتراسونیک پیزوالکتریک",
+    "specs": [
+      {
+        "key": "فرکانس",
+        "value": "25-32 KHz"
+      },
+      {
+        "key": "قدرت",
+        "value": "قابل تنظیم"
+      },
+      {
+        "key": "سیستم خنک‌کننده",
+        "value": "اسپری آب"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "G / P / Perio / Endo"
+      },
+      {
+        "key": "منبع نور",
+        "value": "LED"
+      },
+      {
+        "key": "ولتاژ ورودی",
+        "value": "AC 100-240V"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_3",
+    "name": "Woodpecker 1:3 Surgical 45 LED",
+    "brand": "Woodpecker",
+    "code": "WJ-SG45CL",
+    "category": "آنگل",
+    "images": 1,
+    "type": "هندپیس جراحی",
+    "basePrice": 599.0,
+    "priceRial": 389350000,
+    "stock": 13,
+    "isOriginal": true,
+    "type_fa": "هندپیس جراحی",
+    "description": "هندپیس خمیده جراحی ۱:۳ با لایت",
+    "specs": [
+      {
+        "key": "نسبت تبدیل",
+        "value": "1:5 / 1:1 / 1:4.2"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ / تیتانیوم"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_4",
+    "name": "Woodpecker LED-H High Power Curing Light",
+    "brand": "Woodpecker",
+    "code": "LED-H",
+    "category": "لایت کیور",
+    "images": 2,
+    "type": "لایت کیور",
+    "basePrice": 130.0,
+    "priceRial": 84500000,
+    "stock": 24,
+    "isOriginal": true,
+    "type_fa": "لایت کیور",
+    "description": "دستگاه کیورینگ لایت بی‌سیم دندانپزشکی",
+    "specs": [
+      {
+        "key": "شدت نور",
+        "value": "1000-3000 mW/cm²"
+      },
+      {
+        "key": "طول موج",
+        "value": "380-520 nm"
+      },
+      {
+        "key": "منبع تغذیه",
+        "value": "باتری لیتیومی"
+      },
+      {
+        "key": "نوع شارژ",
+        "value": "بی‌سیم"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "Normal / High / Pulse"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485 / FDA"
+      }
+    ]
+  },
+  {
+    "id": "wp_5",
+    "name": "Woodpecker Prophy Mini",
+    "brand": "Woodpecker",
+    "code": "Prophy-Mini",
+    "category": "آنگل",
+    "images": 3,
+    "type": "هندپیس پروفی",
+    "basePrice": 399.0,
+    "priceRial": 259350000,
+    "stock": 8,
+    "isOriginal": true,
+    "type_fa": "هندپیس پروفی",
+    "description": "هندپیس پروفی بی‌سیم",
+    "specs": [
+      {
+        "key": "نسبت تبدیل",
+        "value": "1:5 / 1:1 / 1:4.2"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ / تیتانیوم"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_6",
+    "name": "Woodpecker MT3 Electric Motor System with 1:5 Angle",
+    "brand": "Woodpecker",
+    "code": "MT3",
+    "category": "ایرموتور",
+    "images": 11,
+    "type": "موتور الکتریکی",
+    "basePrice": 1450.0,
+    "priceRial": 942500000,
+    "stock": 19,
+    "isOriginal": true,
+    "type_fa": "موتور الکتریکی",
+    "description": "موتور الکتریکی دندانپزشکی همراه آنگل ۱:۵",
+    "specs": [
+      {
+        "key": "نوع موتور",
+        "value": "براش‌لس (Brushless)"
+      },
+      {
+        "key": "حداکثر سرعت",
+        "value": "40 000 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "5 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "لمسی"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "wp_7",
+    "name": "Woodpecker Woodpex V Apex Locator",
+    "brand": "Woodpecker",
+    "code": "Woodpex V",
+    "category": "اندو",
+    "images": 1,
+    "type": "اندازه گیری کانال",
+    "basePrice": 250.0,
+    "priceRial": 162500000,
+    "stock": 9,
+    "isOriginal": true,
+    "type_fa": "اندازه گیری کانال",
+    "description": "دستگاه تعیین طول کانال ریشه",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "200 - 1200 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "0.4 - 5.0 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "6:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_8",
+    "name": "Woodpecker Endo Free Cordless Brushless Endo Motor",
+    "brand": "Woodpecker",
+    "code": "EndoFree",
+    "category": "اندو",
+    "images": 1,
+    "type": "درمان ریشه",
+    "basePrice": 399.0,
+    "priceRial": 259350000,
+    "stock": 21,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو بی‌سیم براش‌لس",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "200 - 1200 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "0.4 - 5.0 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "6:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_9",
+    "name": "Woodpecker Implanter Plus Motor with 20:1 Optic Angle",
+    "brand": "Woodpecker",
+    "code": "ImplanterPlus",
+    "category": "ایرموتور",
+    "images": 4,
+    "type": "موتور ایمپلنت",
+    "basePrice": 2250.0,
+    "priceRial": 1462500000,
+    "stock": 4,
+    "isOriginal": true,
+    "type_fa": "موتور ایمپلنت",
+    "description": "موتور ایمپلنت با آنگل ۲۰:۱",
+    "specs": [
+      {
+        "key": "نوع موتور",
+        "value": "براش‌لس (Brushless)"
+      },
+      {
+        "key": "حداکثر سرعت",
+        "value": "40 000 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "5 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "لمسی"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "wp_10",
+    "name": "Woodpecker M2 Electric Motor System",
+    "brand": "Woodpecker",
+    "code": "M2",
+    "category": "ایرموتور",
+    "images": 8,
+    "type": "موتور الکتریکی",
+    "basePrice": 849.0,
+    "priceRial": 551850000,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "موتور الکتریکی",
+    "description": "موتور الکتریکی دندانپزشکی",
+    "specs": [
+      {
+        "key": "نوع موتور",
+        "value": "براش‌لس (Brushless)"
+      },
+      {
+        "key": "حداکثر سرعت",
+        "value": "40 000 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "5 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "لمسی"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "wp_11",
+    "name": "Woodpecker ES5 Surgical Motor with 1:5 and 1:3 Angle",
+    "brand": "Woodpecker",
+    "code": "ES5",
+    "category": "ایرموتور",
+    "images": 12,
+    "type": "موتور جراحی",
+    "basePrice": 1899.0,
+    "priceRial": 1234350000,
+    "stock": 15,
+    "isOriginal": true,
+    "type_fa": "موتور جراحی",
+    "description": "موتور جراحی دندانپزشکی",
+    "specs": [
+      {
+        "key": "نوع موتور",
+        "value": "براش‌لس (Brushless)"
+      },
+      {
+        "key": "حداکثر سرعت",
+        "value": "40 000 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "5 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "لمسی"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "wp_12",
+    "name": "Woodpecker 1:4.2 Surgical 45 LED",
+    "brand": "Woodpecker",
+    "code": "WJ-45L",
+    "category": "آنگل",
+    "images": 1,
+    "type": "هندپیس جراحی",
+    "basePrice": 599.0,
+    "priceRial": 389350000,
+    "stock": 4,
+    "isOriginal": true,
+    "type_fa": "هندپیس جراحی",
+    "description": "هندپیس خمیده جراحی ۱:۴.۲",
+    "specs": [
+      {
+        "key": "نسبت تبدیل",
+        "value": "1:5 / 1:1 / 1:4.2"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ / تیتانیوم"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_13",
+    "name": "Woodpecker 1:1 Electric Angle",
+    "brand": "Woodpecker",
+    "code": "WJ-11L",
+    "category": "آنگل",
+    "images": 1,
+    "type": "هندپیس خمیده",
+    "basePrice": 499.0,
+    "priceRial": 324350000,
+    "stock": 22,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس خمیده برقی ۱:۱",
+    "specs": [
+      {
+        "key": "نسبت تبدیل",
+        "value": "1:5 / 1:1 / 1:4.2"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ / تیتانیوم"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_14",
+    "name": "Woodpecker AP-A Dental Air Polisher",
+    "brand": "Woodpecker",
+    "code": "AP-A",
+    "category": "سندبلاست",
+    "images": 4,
+    "type": "سندبلاست",
+    "basePrice": 1849.0,
+    "priceRial": 1201850000,
+    "stock": 18,
+    "isOriginal": true,
+    "type_fa": "سندبلاست",
+    "description": "دستگاه سندبلاست و ایرپولیش دندانپزشکی",
+    "specs": [
+      {
+        "key": "سیستم",
+        "value": "ایرپولیش و جرم‌گیری"
+      },
+      {
+        "key": "حالت‌ها",
+        "value": "سوپرا و ساب‌جینجیوال"
+      },
+      {
+        "key": "مخزن پودر",
+        "value": "قیفی شکل"
+      },
+      {
+        "key": "ولتاژ ورودی",
+        "value": "AC 100-240V"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_15",
+    "name": "Woodpecker Ai-Pex Apex Locator w/ Pulp Tester",
+    "brand": "Woodpecker",
+    "code": "Ai-Pex",
+    "category": "اندو",
+    "images": 4,
+    "type": "اندازه گیری کانال",
+    "basePrice": 399.0,
+    "priceRial": 259350000,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "اندازه گیری کانال",
+    "description": "دستگاه تعیین طول کانال ریشه",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "200 - 1200 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "0.4 - 5.0 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "6:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_16",
+    "name": "Woodpecker U600 Piezo Scaler (EMS-Type)",
+    "brand": "Woodpecker",
+    "code": "U600",
+    "category": "جرم گیر",
+    "images": 2,
+    "type": "جرم گیر",
+    "basePrice": 539.0,
+    "priceRial": 350350000,
+    "stock": 18,
+    "isOriginal": true,
+    "type_fa": "جرم گیر",
+    "description": "جرم‌گیر پیزوالکتریک LED",
+    "specs": [
+      {
+        "key": "فرکانس",
+        "value": "25-32 KHz"
+      },
+      {
+        "key": "قدرت",
+        "value": "قابل تنظیم"
+      },
+      {
+        "key": "سیستم خنک‌کننده",
+        "value": "اسپری آب"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "G / P / Perio / Endo"
+      },
+      {
+        "key": "منبع نور",
+        "value": "LED"
+      },
+      {
+        "key": "ولتاژ ورودی",
+        "value": "AC 100-240V"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_17",
+    "name": "Woodpecker Intraoral Sensor Size 1.5",
+    "brand": "Woodpecker",
+    "code": "H1.5",
+    "category": "تجهیزات",
+    "images": 8,
+    "type": "سنسور داخل دهانی",
+    "basePrice": 1600.0,
+    "priceRial": 1040000000,
+    "stock": 3,
+    "isOriginal": true,
+    "type_fa": "سنسور داخل دهانی",
+    "description": "سنسور رادیوگرافی داخل دهانی",
+    "specs": [
+      {
+        "key": "تکنولوژی",
+        "value": "پیشرفته دیجیتال"
+      },
+      {
+        "key": "رزولوشن",
+        "value": "HD"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "wp_18",
+    "name": "Woodpecker Size 2 Sensor with Imaging Software",
+    "brand": "Woodpecker",
+    "code": "H2",
+    "category": "تجهیزات",
+    "images": 9,
+    "type": "سنسور داخل دهانی",
+    "basePrice": 1600.0,
+    "priceRial": 1040000000,
+    "stock": 23,
+    "isOriginal": true,
+    "type_fa": "سنسور داخل دهانی",
+    "description": "سنسور رادیوگرافی داخل دهانی",
+    "specs": [
+      {
+        "key": "تکنولوژی",
+        "value": "پیشرفته دیجیتال"
+      },
+      {
+        "key": "رزولوشن",
+        "value": "HD"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "wp_19",
+    "name": "Woodpecker Size 1 Sensor with Imaging Software",
+    "brand": "Woodpecker",
+    "code": "H1",
+    "category": "تجهیزات",
+    "images": 9,
+    "type": "سنسور داخل دهانی",
+    "basePrice": 1600.0,
+    "priceRial": 1040000000,
+    "stock": 11,
+    "isOriginal": true,
+    "type_fa": "سنسور داخل دهانی",
+    "description": "سنسور رادیوگرافی داخل دهانی",
+    "specs": [
+      {
+        "key": "تکنولوژی",
+        "value": "پیشرفته دیجیتال"
+      },
+      {
+        "key": "رزولوشن",
+        "value": "HD"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "wp_20",
+    "name": "Woodpecker IntraOral Scanner Smile 2",
+    "brand": "Woodpecker",
+    "code": "SmileScan2",
+    "category": "اسکنر",
+    "images": 2,
+    "type": "اسکنر داخل دهانی",
+    "basePrice": 4999.0,
+    "priceRial": 3249350000,
+    "stock": 13,
+    "isOriginal": true,
+    "type_fa": "اسکنر داخل دهانی",
+    "description": "اسکنر داخل دهانی",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "اسکنر داخل دهانی"
+      },
+      {
+        "key": "دقت",
+        "value": "بالا"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_21",
+    "name": "Woodpecker Endo Radar Pro Endo Motor with Apex Locator",
+    "brand": "Woodpecker",
+    "code": "AI Pex",
+    "category": "اندو",
+    "images": 9,
+    "type": "درمان ریشه",
+    "basePrice": 799.0,
+    "priceRial": 519350000,
+    "stock": 21,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو با دستگاه تعیین طول کانال",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "200 - 1200 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "0.4 - 5.0 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "6:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_22",
+    "name": "Woodpecker M2 Pro Built-In Electric Motor System + Free Transformer",
+    "brand": "Woodpecker",
+    "code": "M2-Pro",
+    "category": "ایرموتور",
+    "images": 3,
+    "type": "موتور الکتریکی",
+    "basePrice": 650.0,
+    "priceRial": 422500000,
+    "stock": 15,
+    "isOriginal": true,
+    "type_fa": "موتور الکتریکی",
+    "description": "موتور الکتریکی توکار",
+    "specs": [
+      {
+        "key": "نوع موتور",
+        "value": "براش‌لس (Brushless)"
+      },
+      {
+        "key": "حداکثر سرعت",
+        "value": "40 000 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "5 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "لمسی"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "wp_23",
+    "name": "Woodpecker 1:5 Fiber Optic Contra-Angle Mini Head WJ-45TL",
+    "brand": "Woodpecker",
+    "code": "WJ-45TL",
+    "category": "آنگل",
+    "images": 3,
+    "type": "هندپیس خمیده",
+    "basePrice": 599.0,
+    "priceRial": 389350000,
+    "stock": 5,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس خمیده ۱:۵ فایبراپتیک",
+    "specs": [
+      {
+        "key": "نسبت تبدیل",
+        "value": "1:5 / 1:1 / 1:4.2"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ / تیتانیوم"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_24",
+    "name": "Woodpecker FI-P Cordless Gutta-Percha Obturation System",
+    "brand": "Woodpecker",
+    "code": "FI-P",
+    "category": "اندو",
+    "images": 1,
+    "type": "پرکردن کانال",
+    "basePrice": 375.0,
+    "priceRial": 243750000,
+    "stock": 12,
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال",
+    "description": "دستگاه پرکردن کانال گوتاپرکا بی‌سیم",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "200 - 1200 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "0.4 - 5.0 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "6:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_25",
+    "name": "Woodpecker AI Ray Lite",
+    "brand": "Woodpecker",
+    "code": "WOODPECKERAIRAYLITE",
+    "category": "تجهیزات",
+    "images": 34,
+    "type": "رادیوگرافی",
+    "basePrice": 3199.0,
+    "priceRial": 2079350000,
+    "stock": 11,
+    "isOriginal": true,
+    "type_fa": "رادیوگرافی",
+    "description": "دستگاه رادیوگرافی پرتابل",
+    "specs": [
+      {
+        "key": "تکنولوژی",
+        "value": "پیشرفته دیجیتال"
+      },
+      {
+        "key": "رزولوشن",
+        "value": "HD"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "wp_26",
+    "name": "Woodpecker Endo Smart+ Motor",
+    "brand": "Woodpecker",
+    "code": "Endo Smart+",
+    "category": "اندو",
+    "images": 3,
+    "type": "درمان ریشه",
+    "basePrice": 549.0,
+    "priceRial": 356850000,
+    "stock": 17,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو با تعیین طول کانال",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "200 - 1200 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "0.4 - 5.0 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "6:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_27",
+    "name": "Woodpecker Endo 3 Activator",
+    "brand": "Woodpecker",
+    "code": "Endo 3",
+    "category": "اندو",
+    "images": 1,
+    "type": "درمان ریشه",
+    "basePrice": 220.0,
+    "priceRial": 143000000,
+    "stock": 9,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "دستگاه فعال‌ساز محلول شستشوی کانال",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "200 - 1200 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "0.4 - 5.0 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "6:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_28",
+    "name": "Woodpecker FI-G Obturation System",
+    "brand": "Woodpecker",
+    "code": "FI-G",
+    "category": "اندو",
+    "images": 2,
+    "type": "پرکردن کانال",
+    "basePrice": 499.0,
+    "priceRial": 324350000,
+    "stock": 12,
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال",
+    "description": "دستگاه پرکردن کانال گوتاپرکا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "200 - 1200 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "0.4 - 5.0 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "6:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_29",
+    "name": "Woodpecker Yoshi Ai Endo Motor",
+    "brand": "Woodpecker",
+    "code": "Yoshi Ai Motor",
+    "category": "اندو",
+    "images": 1,
+    "type": "درمان ریشه",
+    "basePrice": 1195.0,
+    "priceRial": 776750000,
+    "stock": 9,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو هوشمند",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "200 - 1200 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "0.4 - 5.0 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "6:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_30",
+    "name": "Woodpecker D7 DTE LED Scaler",
+    "brand": "Woodpecker",
+    "code": "D7 LED",
+    "category": "جرم گیر",
+    "images": 2,
+    "type": "جرم گیر",
+    "basePrice": 395.0,
+    "priceRial": 256750000,
+    "stock": 9,
+    "isOriginal": true,
+    "type_fa": "جرم گیر",
+    "description": "جرم‌گیر اولتراسونیک LED",
+    "specs": [
+      {
+        "key": "فرکانس",
+        "value": "25-32 KHz"
+      },
+      {
+        "key": "قدرت",
+        "value": "قابل تنظیم"
+      },
+      {
+        "key": "سیستم خنک‌کننده",
+        "value": "اسپری آب"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "G / P / Perio / Endo"
+      },
+      {
+        "key": "منبع نور",
+        "value": "LED"
+      },
+      {
+        "key": "ولتاژ ورودی",
+        "value": "AC 100-240V"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "wp_31",
+    "name": "Woodpecker O-Light II Curing Light",
+    "brand": "Woodpecker",
+    "code": "O-Light II",
+    "category": "لایت کیور",
+    "images": 3,
+    "type": "لایت کیور",
+    "basePrice": 199.5,
+    "priceRial": 129675000,
+    "stock": 24,
+    "isOriginal": true,
+    "type_fa": "لایت کیور",
+    "description": "دستگاه کیورینگ لایت بی‌سیم",
+    "specs": [
+      {
+        "key": "شدت نور",
+        "value": "1000-3000 mW/cm²"
+      },
+      {
+        "key": "طول موج",
+        "value": "380-520 nm"
+      },
+      {
+        "key": "منبع تغذیه",
+        "value": "باتری لیتیومی"
+      },
+      {
+        "key": "نوع شارژ",
+        "value": "بی‌سیم"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "Normal / High / Pulse"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485 / FDA"
+      }
+    ]
+  },
+  {
+    "id": "wp_32",
+    "name": "Woodpecker DTE D600 LED Scaler",
+    "brand": "Woodpecker",
+    "code": "DTED600",
+    "category": "جرم گیر",
+    "images": 4,
+    "type": "جرم گیر",
+    "basePrice": 599.0,
+    "priceRial": 389350000,
+    "stock": 19,
+    "isOriginal": true,
+    "type_fa": "جرم گیر",
+    "description": "جرم‌گیر اولتراسونیک LED",
+    "specs": [
+      {
+        "key": "فرکانس",
+        "value": "25-32 KHz"
+      },
+      {
+        "key": "قدرت",
+        "value": "قابل تنظیم"
+      },
+      {
+        "key": "سیستم خنک‌کننده",
+        "value": "اسپری آب"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "G / P / Perio / Endo"
+      },
+      {
+        "key": "منبع نور",
+        "value": "LED"
+      },
+      {
+        "key": "ولتاژ ورودی",
+        "value": "AC 100-240V"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Woodpecker"
+      }
+    ]
+  },
+  {
+    "id": "nsk_47",
+    "name": "NSK MP-ER64",
+    "brand": "NSK",
+    "code": "MP-ER64",
+    "category": "ست هندپیس",
+    "images": 6,
+    "type": "هندپیس خمیده",
+    "basePrice": 1467.75,
+    "priceRial": 954037500,
+    "stock": 12,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل اندو با کاهش ۶۴:۱",
+    "specs": [
+      {
+        "key": "نسبت تبدیل",
+        "value": "مطابق مدل (۶۴:۱ / ۱۲۸:۱ / ۲۵۶:۱)"
+      },
+      {
+        "key": "کاربرد",
+        "value": "اندو / ایمپلنت"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_67",
+    "name": "NSK MP-ER128",
+    "brand": "NSK",
+    "code": "MP-ER128",
+    "category": "ایرموتور",
+    "images": 6,
+    "type": "هندپیس خمیده",
+    "basePrice": 1004.05,
+    "priceRial": 652632500,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل اندو با کاهش ۱۲۸:۱",
+    "specs": [
+      {
+        "key": "نسبت تبدیل",
+        "value": "مطابق مدل (۶۴:۱ / ۱۲۸:۱ / ۲۵۶:۱)"
+      },
+      {
+        "key": "کاربرد",
+        "value": "اندو / ایمپلنت"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_80",
+    "name": "NSK Varios 970",
+    "brand": "NSK",
+    "code": "VARIOS-970",
+    "category": "آنگل",
+    "images": 5,
+    "type": "هندپیس",
+    "basePrice": 117.99,
+    "priceRial": 76693500,
+    "stock": 5,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل پولیش و جرم‌گیری",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "2 000 - 10 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type / ISO"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پولیش و جرم‌گیری"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_81",
+    "name": "NSK Z330L",
+    "brand": "NSK",
+    "code": "Z330L",
+    "category": "ایرموتور",
+    "images": 6,
+    "type": "هندپیس سرعت بالا",
+    "basePrice": 688.42,
+    "priceRial": 447473000,
+    "stock": 3,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا",
+    "description": "توربین دندانپزشکی سرعت بالا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_82",
+    "name": "NSK X50X",
+    "brand": "NSK",
+    "code": "X50X",
+    "category": "ست هندپیس",
+    "images": 6,
+    "type": "هندپیس سرعت بالا",
+    "basePrice": 2066.28,
+    "priceRial": 1343082000,
+    "stock": 2,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا",
+    "description": "توربین دندانپزشکی سرعت بالا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_83",
+    "name": "NSK Ti-ENDO Pro",
+    "brand": "NSK",
+    "code": "TI-ENDO-PRO",
+    "category": "اندو",
+    "images": 6,
+    "type": "موتور اندو",
+    "basePrice": 143.14,
+    "priceRial": 93041000,
+    "stock": 14,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو با دستگاه اندازه‌گیری کانال",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "۲۰۰ - ۱۲۰۰ RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "۰.۴ - ۵.۰ N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی"
+      },
+      {
+        "key": "حافظه فایل",
+        "value": "دارد"
+      },
+      {
+        "key": "دستگاه اندازه‌گیری طول کانال",
+        "value": "توکار"
+      },
+      {
+        "key": "بازگشت خودکار",
+        "value": "دارد"
+      },
+      {
+        "key": "فایل‌های سازگار",
+        "value": "ProTaper / WaveOne / Reciproc"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_84",
+    "name": "NSK EX-10B",
+    "brand": "NSK",
+    "code": "EX-10B",
+    "category": "ارتودنسی",
+    "images": 6,
+    "type": "هندپیس خمیده",
+    "basePrice": 1664.48,
+    "priceRial": 1081912000,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل دندانپزشکی",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "20 000 - 40 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی / خارجی"
+      },
+      {
+        "key": "نسبت تبدیل",
+        "value": "۱:۱ / ۱:۵ / ۱۶:۱"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد / ندارد"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "نوع چاک",
+        "value": "دکمه‌ای (Push Button)"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_85",
+    "name": "NSK MP-ER256",
+    "brand": "NSK",
+    "code": "MP-ER256",
+    "category": "ایمپلنت",
+    "images": 6,
+    "type": "هندپیس خمیده",
+    "basePrice": 116.91,
+    "priceRial": 75991500,
+    "stock": 24,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل اندو با کاهش ۲۵۶:۱",
+    "specs": [
+      {
+        "key": "نسبت تبدیل",
+        "value": "مطابق مدل (۶۴:۱ / ۱۲۸:۱ / ۲۵۶:۱)"
+      },
+      {
+        "key": "کاربرد",
+        "value": "اندو / ایمپلنت"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_86",
+    "name": "NSK Nano65",
+    "brand": "NSK",
+    "code": "NANO65",
+    "category": "توربین",
+    "images": 5,
+    "type": "هندپیس خمیده",
+    "basePrice": 2408.61,
+    "priceRial": 1565596500,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل نانو",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_87",
+    "name": "NSK Ti-Max Z350L",
+    "brand": "NSK",
+    "code": "TI-MAX-Z350L",
+    "category": "آنگل",
+    "images": 6,
+    "type": "هندپیس سرعت بالا",
+    "basePrice": 671.16,
+    "priceRial": 436254000,
+    "stock": 21,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا",
+    "description": "توربین دندانپزشکی سرعت بالا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_88",
+    "name": "NSK FX-50m",
+    "brand": "NSK",
+    "code": "FX-50M",
+    "category": "ایرموتور",
+    "images": 6,
+    "type": "هندپیس سرعت پایین",
+    "basePrice": 521.87,
+    "priceRial": 339215500,
+    "stock": 22,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین",
+    "description": "هندپیس دندانپزشکی با سرعت پایین",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "20 000 - 40 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری خارجی"
+      },
+      {
+        "key": "نسبت تبدیل",
+        "value": "زاویه دار / مستقیم"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد / ندارد"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "نوع چاک",
+        "value": "دکمه‌ای (Push Button)"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_89",
+    "name": "NSK S-Max M200L",
+    "brand": "NSK",
+    "code": "S-MAX-M200L",
+    "category": "ست هندپیس",
+    "images": 5,
+    "type": "هندپیس سرعت بالا",
+    "basePrice": 934.19,
+    "priceRial": 607223500,
+    "stock": 25,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا",
+    "description": "توربین دندانپزشکی سرعت بالا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_90",
+    "name": "NSK Pana-Flow",
+    "brand": "NSK",
+    "code": "PANA-FLOW",
+    "category": "اندو",
+    "images": 5,
+    "type": "هندپیس پروفی",
+    "basePrice": 1986.12,
+    "priceRial": 1290978000,
+    "stock": 5,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل پروفی و پولیش",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "2 000 - 10 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type / ISO"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پولیش و جرم‌گیری"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_91",
+    "name": "NSK Ti-Max X150",
+    "brand": "NSK",
+    "code": "TI-MAX-X150",
+    "category": "ارتودنسی",
+    "images": 6,
+    "type": "هندپیس سرعت بالا",
+    "basePrice": 159.58,
+    "priceRial": 103727000,
+    "stock": 7,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا",
+    "description": "توربین دندانپزشکی سرعت بالا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_92",
+    "name": "NSK Z400L",
+    "brand": "NSK",
+    "code": "Z400L",
+    "category": "ایمپلنت",
+    "images": 6,
+    "type": "هندپیس سرعت بالا",
+    "basePrice": 1973.69,
+    "priceRial": 1282898500,
+    "stock": 21,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا",
+    "description": "توربین دندانپزشکی سرعت بالا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_93",
+    "name": "NSK X250L",
+    "brand": "NSK",
+    "code": "X250L",
+    "category": "توربین",
+    "images": 6,
+    "type": "هندپیس سرعت بالا",
+    "basePrice": 844.24,
+    "priceRial": 548756000,
+    "stock": 1,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا",
+    "description": "توربین دندانپزشکی سرعت بالا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_94",
+    "name": "NSK AR-EC-X",
+    "brand": "NSK",
+    "code": "AR-EC-X",
+    "category": "آنگل",
+    "images": 6,
+    "type": "هندپیس خمیده",
+    "basePrice": 1056.88,
+    "priceRial": 686972000,
+    "stock": 15,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل دندانپزشکی",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "20 000 - 40 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی / خارجی"
+      },
+      {
+        "key": "نسبت تبدیل",
+        "value": "۱:۱ / ۱:۵ / ۱۶:۱"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد / ندارد"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "نوع چاک",
+        "value": "دکمه‌ای (Push Button)"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_95",
+    "name": "NSK EX-5B",
+    "brand": "NSK",
+    "code": "EX-5B",
+    "category": "ایرموتور",
+    "images": 6,
+    "type": "هندپیس خمیده",
+    "basePrice": 1009.22,
+    "priceRial": 655993000,
+    "stock": 7,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل دندانپزشکی",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "20 000 - 40 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی / خارجی"
+      },
+      {
+        "key": "نسبت تبدیل",
+        "value": "۱:۱ / ۱:۵ / ۱۶:۱"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد / ندارد"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "نوع چاک",
+        "value": "دکمه‌ای (Push Button)"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_96",
+    "name": "NSK Varios 770",
+    "brand": "NSK",
+    "code": "VARIOS-770",
+    "category": "ست هندپیس",
+    "images": 5,
+    "type": "هندپیس",
+    "basePrice": 1392.98,
+    "priceRial": 905437000,
+    "stock": 0,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل پولیش و جرم‌گیری",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "2 000 - 10 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type / ISO"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پولیش و جرم‌گیری"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_97",
+    "name": "NSK Nano45",
+    "brand": "NSK",
+    "code": "NANO45",
+    "category": "اندو",
+    "images": 6,
+    "type": "هندپیس خمیده",
+    "basePrice": 2307.22,
+    "priceRial": 1499693000,
+    "stock": 11,
+    "isOriginal": true,
+    "type_fa": "هندپیس خمیده",
+    "description": "هندپیس آنگل نانو",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "20 000 - 40 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی / خارجی"
+      },
+      {
+        "key": "نسبت تبدیل",
+        "value": "۱:۱ / ۱:۵ / ۱۶:۱"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد / ندارد"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "نوع چاک",
+        "value": "دکمه‌ای (Push Button)"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_98",
+    "name": "NSK Ti-Max Z150L",
+    "brand": "NSK",
+    "code": "TI-MAX-Z150L",
+    "category": "ارتودنسی",
+    "images": 6,
+    "type": "هندپیس سرعت بالا",
+    "basePrice": 1087.71,
+    "priceRial": 707011500,
+    "stock": 7,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا",
+    "description": "توربین دندانپزشکی سرعت بالا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_99",
+    "name": "NSK FX-95m",
+    "brand": "NSK",
+    "code": "FX-95M",
+    "category": "ایمپلنت",
+    "images": 6,
+    "type": "هندپیس سرعت پایین",
+    "basePrice": 2067.23,
+    "priceRial": 1343699500,
+    "stock": 3,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت پایین",
+    "description": "هندپیس دندانپزشکی با سرعت پایین",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "20 000 - 40 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری خارجی"
+      },
+      {
+        "key": "نسبت تبدیل",
+        "value": "زاویه دار / مستقیم"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد / ندارد"
+      },
+      {
+        "key": "جنس بدنه",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "نوع چاک",
+        "value": "دکمه‌ای (Push Button)"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "nsk_100",
+    "name": "NSK S-Max M900L",
+    "brand": "NSK",
+    "code": "S-MAX-M900L",
+    "category": "توربین",
+    "images": 6,
+    "type": "هندپیس سرعت بالا",
+    "basePrice": 1092.51,
+    "priceRial": 710131500,
+    "stock": 24,
+    "isOriginal": true,
+    "type_fa": "هندپیس سرعت بالا",
+    "description": "توربین دندانپزشکی سرعت بالا",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "300 000 - 400 000 RPM"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "4 هول / ISO"
+      },
+      {
+        "key": "سیستم اسپری",
+        "value": "اسپری داخلی"
+      },
+      {
+        "key": "فایبر اپتیک",
+        "value": "دارد"
+      },
+      {
+        "key": "نوع هد",
+        "value": "کوچک (Mini Head)"
+      },
+      {
+        "key": "نوع بلبرینگ",
+        "value": "سرامیکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۵ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "ژاپن - Nakanishi"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO ۹۱۶۸ / FDA"
+      }
+    ]
+  },
+  {
+    "id": "et_Endo-Motor_334",
+    "name": "Eighteeth NanoMotor",
+    "brand": "Eighteeth",
+    "code": "NANOMOTOR",
+    "category": "اندو",
+    "images": 4,
+    "type": "موتور اندو",
+    "basePrice": 580,
+    "priceRial": 377000000,
+    "stock": 23,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو بی‌سیم با دستگاه تعیین طول کانال",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_Endo-Motor_163",
+    "name": "Eighteeth E-value E",
+    "brand": "Eighteeth",
+    "code": "E-VALUE-E",
+    "category": "اندو",
+    "images": 4,
+    "type": "موتور اندو",
+    "basePrice": 550,
+    "priceRial": 357500000,
+    "stock": 6,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو با دستگاه تعیین طول کانال",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_Endo-Motor_10",
+    "name": "Eighteeth E-xtreme",
+    "brand": "Eighteeth",
+    "code": "E-XTREME",
+    "category": "اندو",
+    "images": 5,
+    "type": "موتور اندو",
+    "basePrice": 680,
+    "priceRial": 442000000,
+    "stock": 3,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو پیشرفته با صفحه نمایش رنگی",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_Endo-Motor_34",
+    "name": "Eighteeth E-CONNECT",
+    "brand": "Eighteeth",
+    "code": "E-CONNECT",
+    "category": "اندو",
+    "images": 5,
+    "type": "موتور اندو",
+    "basePrice": 720,
+    "priceRial": 468000000,
+    "stock": 11,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو با دستگاه تعیین طول کانال",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_Endo-Motor_11",
+    "name": "Eighteeth E-connect S",
+    "brand": "Eighteeth",
+    "code": "E-CONNECT-S",
+    "category": "اندو",
+    "images": 5,
+    "type": "موتور اندو",
+    "basePrice": 520,
+    "priceRial": 338000000,
+    "stock": 10,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو با دستگاه تعیین طول کانال",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_Endo-Motor_118",
+    "name": "Eighteeth E-connect S+",
+    "brand": "Eighteeth",
+    "code": "E-CONNECT-S+",
+    "category": "اندو",
+    "images": 4,
+    "type": "موتور اندو",
+    "basePrice": 620,
+    "priceRial": 403000000,
+    "stock": 10,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو با دستگاه تعیین طول کانال",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_Endo-Motor_24",
+    "name": "Eighteeth E-value",
+    "brand": "Eighteeth",
+    "code": "E-VALUE",
+    "category": "اندو",
+    "images": 4,
+    "type": "موتور اندو",
+    "basePrice": 480,
+    "priceRial": 312000000,
+    "stock": 7,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "موتور اندو با دستگاه تعیین طول کانال",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_apex-locator_140",
+    "name": "Eighteeth FindPex",
+    "brand": "Eighteeth",
+    "code": "FINDPEX",
+    "category": "اندو",
+    "images": 4,
+    "type": "دستگاه اندازه‌گیری کانال",
+    "basePrice": 140,
+    "priceRial": 91000000,
+    "stock": 6,
+    "isOriginal": true,
+    "type_fa": "اندازه گیری کانال",
+    "description": "دستگاه تعیین طول کانال ریشه",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_apex-locator_4",
+    "name": "Eighteeth E-PEX",
+    "brand": "Eighteeth",
+    "code": "E-PEX",
+    "category": "اندو",
+    "images": 3,
+    "type": "دستگاه اندازه‌گیری کانال",
+    "basePrice": 120,
+    "priceRial": 78000000,
+    "stock": 24,
+    "isOriginal": true,
+    "type_fa": "اندازه گیری کانال",
+    "description": "دستگاه تعیین طول کانال ریشه",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_apex-locator_3",
+    "name": "Eighteeth AirPex",
+    "brand": "Eighteeth",
+    "code": "AIRPEX",
+    "category": "اندو",
+    "images": 5,
+    "type": "دستگاه اندازه‌گیری کانال",
+    "basePrice": 160,
+    "priceRial": 104000000,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "اندازه گیری کانال",
+    "description": "دستگاه تعیین طول کانال ریشه",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_E-FLEX-Series_32",
+    "name": "Eighteeth E-FLEX GOLD",
+    "brand": "Eighteeth",
+    "code": "E-FLEX-GOLD",
+    "category": "اندو",
+    "images": 2,
+    "type": "فایل روتاری اندو",
+    "basePrice": 38,
+    "priceRial": 24700000,
+    "stock": 5,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو نیکل تیتانیوم",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_E-FLEX-Series_31",
+    "name": "Eighteeth E-FLEX BLUE",
+    "brand": "Eighteeth",
+    "code": "E-FLEX-BLUE",
+    "category": "اندو",
+    "images": 2,
+    "type": "فایل روتاری اندو",
+    "basePrice": 38,
+    "priceRial": 24700000,
+    "stock": 21,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو نیکل تیتانیوم",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_E-FLEX-Series_29",
+    "name": "Eighteeth E-FLEX S",
+    "brand": "Eighteeth",
+    "code": "E-FLEX-S",
+    "category": "اندو",
+    "images": 2,
+    "type": "فایل روتاری اندو",
+    "basePrice": 38,
+    "priceRial": 24700000,
+    "stock": 16,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو نیکل تیتانیوم",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_E-FLEX-Series_28",
+    "name": "Eighteeth E-FLEX REC",
+    "brand": "Eighteeth",
+    "code": "E-FLEX-REC",
+    "category": "اندو",
+    "images": 2,
+    "type": "فایل روتاری اندو",
+    "basePrice": 38,
+    "priceRial": 24700000,
+    "stock": 4,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو رسیپروکال",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_E-FLEX-Series_27",
+    "name": "Eighteeth E-FLEX ONE",
+    "brand": "Eighteeth",
+    "code": "E-FLEX-ONE",
+    "category": "اندو",
+    "images": 2,
+    "type": "فایل روتاری اندو",
+    "basePrice": 38,
+    "priceRial": 24700000,
+    "stock": 3,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو نیکل تیتانیوم",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_E-FLEX-Series_26",
+    "name": "Eighteeth E-FLEX MINI",
+    "brand": "Eighteeth",
+    "code": "E-FLEX-MINI",
+    "category": "اندو",
+    "images": 2,
+    "type": "فایل روتاری اندو",
+    "basePrice": 38,
+    "priceRial": 24700000,
+    "stock": 5,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو مینی",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_E-FLEX-Series_25",
+    "name": "Eighteeth E-FLEX RT",
+    "brand": "Eighteeth",
+    "code": "E-FLEX-RT",
+    "category": "اندو",
+    "images": 2,
+    "type": "فایل روتاری اندو",
+    "basePrice": 38,
+    "priceRial": 24700000,
+    "stock": 9,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو نیکل تیتانیوم",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_E-FLEX-Series_72",
+    "name": "Eighteeth E-FLEX PATH",
+    "brand": "Eighteeth",
+    "code": "E-FLEX-PATH",
+    "category": "اندو",
+    "images": 2,
+    "type": "فایل روتاری اندو",
+    "basePrice": 38,
+    "priceRial": 24700000,
+    "stock": 10,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو جهت دهی مسیر",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_E-STYLE-Series_144",
+    "name": "Eighteeth E-STYLE GOLD & BLUE",
+    "brand": "Eighteeth",
+    "code": "E-STYLE-GOLD-BLUE",
+    "category": "اندو",
+    "images": 7,
+    "type": "فایل دستی اندو",
+    "basePrice": 30,
+    "priceRial": 19500000,
+    "stock": 19,
+    "isOriginal": true,
+    "type_fa": "فایل دستی اندو",
+    "description": "فایل دستی اندو",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "سایزها",
+        "value": "دستگاه کانال استاندارد"
+      },
+      {
+        "key": "پکیج",
+        "value": "آسست کامل"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Hand-Files_332",
+    "name": "Eighteeth Hand Files",
+    "brand": "Eighteeth",
+    "code": "HAND-FILES",
+    "category": "اندو",
+    "images": 3,
+    "type": "فایل دستی اندو",
+    "basePrice": 15,
+    "priceRial": 9750000,
+    "stock": 22,
+    "isOriginal": true,
+    "type_fa": "فایل دستی اندو",
+    "description": "فایل دستی اندو",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "سایزها",
+        "value": "دستگاه کانال استاندارد"
+      },
+      {
+        "key": "پکیج",
+        "value": "آسست کامل"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_AURORA_342",
+    "name": "Eighteeth AURORA",
+    "brand": "Eighteeth",
+    "code": "AURORA",
+    "category": "اندو",
+    "images": 4,
+    "type": "فایل روتاری اندو",
+    "basePrice": 40,
+    "priceRial": 26000000,
+    "stock": 3,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو نیکل تیتانیوم",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Reciprocating-Files_352",
+    "name": "Eighteeth OneFlow Gold",
+    "brand": "Eighteeth",
+    "code": "ONEFLOW-GOLD",
+    "category": "اندو",
+    "images": 4,
+    "type": "فایل روتاری اندو",
+    "basePrice": 35,
+    "priceRial": 22750000,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "فایل روتاری اندو",
+    "description": "فایل روتاری اندو رسیپروکال",
+    "specs": [
+      {
+        "key": "جنس",
+        "value": "نیکل تیتانیوم (NiTi)"
+      },
+      {
+        "key": "سیستم",
+        "value": "چرخشی / رسیپروکال"
+      },
+      {
+        "key": "طول",
+        "value": "۲۱ / ۲۵ میلی‌متر"
+      },
+      {
+        "key": "پکیج",
+        "value": "۶ عددی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_ultrasonic-device_8",
+    "name": "Eighteeth UltraMint / UltraMint Pro",
+    "brand": "Eighteeth",
+    "code": "ULTRAMINT-ULTRAMINT-PRO",
+    "category": "جرم گیر",
+    "images": 5,
+    "type": "جرم گیر",
+    "basePrice": 380,
+    "priceRial": 247000000,
+    "stock": 9,
+    "isOriginal": true,
+    "type_fa": "جرم گیر",
+    "description": "جرم گیر اولتراسونیک پیزوالکتریک",
+    "specs": [
+      {
+        "key": "فرکانس",
+        "value": "25-32 KHz"
+      },
+      {
+        "key": "قدرت",
+        "value": "قابل تنظیم"
+      },
+      {
+        "key": "سیستم خنک‌کننده",
+        "value": "اسپری آب"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "G / P / Perio / Endo"
+      },
+      {
+        "key": "منبع نور",
+        "value": "LED"
+      },
+      {
+        "key": "ولتاژ ورودی",
+        "value": "AC 100-240V"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_ultrasonic-device_9",
+    "name": "Eighteeth Ultra X",
+    "brand": "Eighteeth",
+    "code": "ULTRA-X",
+    "category": "جرم گیر",
+    "images": 5,
+    "type": "جرم گیر",
+    "basePrice": 320,
+    "priceRial": 208000000,
+    "stock": 25,
+    "isOriginal": true,
+    "type_fa": "جرم گیر",
+    "description": "جرم گیر اولتراسونیک پیزوالکتریک",
+    "specs": [
+      {
+        "key": "فرکانس",
+        "value": "25-32 KHz"
+      },
+      {
+        "key": "قدرت",
+        "value": "قابل تنظیم"
+      },
+      {
+        "key": "سیستم خنک‌کننده",
+        "value": "اسپری آب"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "G / P / Perio / Endo"
+      },
+      {
+        "key": "منبع نور",
+        "value": "LED"
+      },
+      {
+        "key": "ولتاژ ورودی",
+        "value": "AC 100-240V"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Sonic-Activator_295",
+    "name": "Eighteeth SurfyOne",
+    "brand": "Eighteeth",
+    "code": "SURFYONE",
+    "category": "اندو",
+    "images": 3,
+    "type": "دستگاه شستشوی کانال",
+    "basePrice": 280,
+    "priceRial": 182000000,
+    "stock": 23,
+    "isOriginal": true,
+    "type_fa": "درمان ریشه",
+    "description": "دستگاه فعال‌ساز محلول شستشوی کانال",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_obturation-system_164",
+    "name": "Eighteeth Space-Pack & Space-Fill",
+    "brand": "Eighteeth",
+    "code": "SPACE-PACK-SPACE-FILL",
+    "category": "اندو",
+    "images": 7,
+    "type": "دستگاه پرکردن کانال",
+    "basePrice": 420,
+    "priceRial": 273000000,
+    "stock": 25,
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال",
+    "description": "دستگاه پرکردن کانال گوتاپرکا",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "لوازم مصرفی اندو"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پرکردن کانال ریشه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_obturation-system_6",
+    "name": "Eighteeth Fast-Pack pro",
+    "brand": "Eighteeth",
+    "code": "FAST-PACK-PRO",
+    "category": "اندو",
+    "images": 4,
+    "type": "دستگاه پرکردن کانال",
+    "basePrice": 380,
+    "priceRial": 247000000,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال",
+    "description": "دستگاه پرکردن کانال گوتاپرکا",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "لوازم مصرفی اندو"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پرکردن کانال ریشه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_obturation-system_5",
+    "name": "Eighteeth Fast-Fill",
+    "brand": "Eighteeth",
+    "code": "FAST-FILL",
+    "category": "اندو",
+    "images": 4,
+    "type": "دستگاه پرکردن کانال",
+    "basePrice": 340,
+    "priceRial": 221000000,
+    "stock": 16,
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال",
+    "description": "دستگاه پرکردن کانال گوتاپرکا",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "لوازم مصرفی اندو"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پرکردن کانال ریشه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_gutta-percha-points_142",
+    "name": "Eighteeth Gutta Percha Points",
+    "brand": "Eighteeth",
+    "code": "GUTTA-PERCHA-POINTS",
+    "category": "اندو",
+    "images": 4,
+    "type": "نقاط گوتاپرکا",
+    "basePrice": 22,
+    "priceRial": 14300000,
+    "stock": 10,
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال",
+    "description": "نقاط گوتاپرکا استاندارد",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "لوازم مصرفی اندو"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پرکردن کانال ریشه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_absorbent-paper-points_143",
+    "name": "Eighteeth Absorbent Paper Points",
+    "brand": "Eighteeth",
+    "code": "ABSORBENT-PAPER-POINTS",
+    "category": "اندو",
+    "images": 2,
+    "type": "نقاط کاغذی",
+    "basePrice": 18,
+    "priceRial": 11700000,
+    "stock": 17,
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال",
+    "description": "نقاط کاغذی جاذب کانال ریشه",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "لوازم مصرفی اندو"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پرکردن کانال ریشه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Root-Canal-Supplies_346",
+    "name": "Eighteeth E-Root SP",
+    "brand": "Eighteeth",
+    "code": "E-ROOT-SP",
+    "category": "اندو",
+    "images": 6,
+    "type": "سیمان اندو",
+    "basePrice": 60,
+    "priceRial": 39000000,
+    "stock": 21,
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال",
+    "description": "سیمان بیوسرامیک تزریقی کانال ریشه",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "لوازم مصرفی اندو"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پرکردن کانال ریشه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Root-Canal-Supplies_345",
+    "name": "Eighteeth E-Root BP",
+    "brand": "Eighteeth",
+    "code": "E-ROOT-BP",
+    "category": "اندو",
+    "images": 4,
+    "type": "سیمان اندو",
+    "basePrice": 55,
+    "priceRial": 35750000,
+    "stock": 11,
+    "isOriginal": true,
+    "type_fa": "پرکردن کانال",
+    "description": "سیمان بیوسرامیک کانال ریشه",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "لوازم مصرفی اندو"
+      },
+      {
+        "key": "کاربرد",
+        "value": "پرکردن کانال ریشه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "گارانتی کیفیت"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_led-curing-light_294",
+    "name": "Eighteeth CuringPen-X",
+    "brand": "Eighteeth",
+    "code": "CURINGPEN-X",
+    "category": "لایت کیور",
+    "images": 2,
+    "type": "لایت کیور",
+    "basePrice": 120,
+    "priceRial": 78000000,
+    "stock": 3,
+    "isOriginal": true,
+    "type_fa": "لایت کیور",
+    "description": "دستگاه کیورینگ لایت بی‌سیم",
+    "specs": [
+      {
+        "key": "شدت نور",
+        "value": "1200-2000 mW/cm²"
+      },
+      {
+        "key": "طول موج",
+        "value": "380-515 nm"
+      },
+      {
+        "key": "منبع تغذیه",
+        "value": "باتری لیتیومی"
+      },
+      {
+        "key": "نوع شارژ",
+        "value": "بی‌سیم"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "Normal / High / Pulse"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_led-curing-light_7",
+    "name": "Eighteeth CuringPen",
+    "brand": "Eighteeth",
+    "code": "CURINGPEN",
+    "category": "لایت کیور",
+    "images": 4,
+    "type": "لایت کیور",
+    "basePrice": 65,
+    "priceRial": 42250000,
+    "stock": 8,
+    "isOriginal": true,
+    "type_fa": "لایت کیور",
+    "description": "دستگاه کیورینگ لایت بی‌سیم",
+    "specs": [
+      {
+        "key": "شدت نور",
+        "value": "1200-2000 mW/cm²"
+      },
+      {
+        "key": "طول موج",
+        "value": "380-515 nm"
+      },
+      {
+        "key": "منبع تغذیه",
+        "value": "باتری لیتیومی"
+      },
+      {
+        "key": "نوع شارژ",
+        "value": "بی‌سیم"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "Normal / High / Pulse"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_led-curing-light_78",
+    "name": "Eighteeth CuringPen-E",
+    "brand": "Eighteeth",
+    "code": "CURINGPEN-E",
+    "category": "لایت کیور",
+    "images": 4,
+    "type": "لایت کیور",
+    "basePrice": 85,
+    "priceRial": 55250000,
+    "stock": 25,
+    "isOriginal": true,
+    "type_fa": "لایت کیور",
+    "description": "دستگاه کیورینگ لایت بی‌سیم",
+    "specs": [
+      {
+        "key": "شدت نور",
+        "value": "1200-2000 mW/cm²"
+      },
+      {
+        "key": "طول موج",
+        "value": "380-515 nm"
+      },
+      {
+        "key": "منبع تغذیه",
+        "value": "باتری لیتیومی"
+      },
+      {
+        "key": "نوع شارژ",
+        "value": "بی‌سیم"
+      },
+      {
+        "key": "حالت‌های عملکرد",
+        "value": "Normal / High / Pulse"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_X-Ray-Unit_35",
+    "name": "Eighteeth HyperLight",
+    "brand": "Eighteeth",
+    "code": "HYPERLIGHT",
+    "category": "تجهیزات",
+    "images": 6,
+    "type": "دستگاه رادیوگرافی",
+    "basePrice": 2400,
+    "priceRial": 1560000000,
+    "stock": 16,
+    "isOriginal": true,
+    "type_fa": "رادیوگرافی",
+    "description": "دستگاه رادیوگرافی داخل دهانی پرتابل",
+    "specs": [
+      {
+        "key": "تکنولوژی",
+        "value": "دیجیتال"
+      },
+      {
+        "key": "ولتاژ",
+        "value": "60-70 kV"
+      },
+      {
+        "key": "قابل حمل",
+        "value": "دارد"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_X-Ray-Unit_75",
+    "name": "Eighteeth HyperLight-G",
+    "brand": "Eighteeth",
+    "code": "HYPERLIGHT-G",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "دستگاه رادیوگرافی",
+    "basePrice": 2600,
+    "priceRial": 1690000000,
+    "stock": 13,
+    "isOriginal": true,
+    "type_fa": "رادیوگرافی",
+    "description": "دستگاه رادیوگرافی داخل دهانی پرتابل",
+    "specs": [
+      {
+        "key": "تکنولوژی",
+        "value": "دیجیتال"
+      },
+      {
+        "key": "ولتاژ",
+        "value": "60-70 kV"
+      },
+      {
+        "key": "قابل حمل",
+        "value": "دارد"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_X-Ray-Unit_162",
+    "name": "Eighteeth HyperLight-M",
+    "brand": "Eighteeth",
+    "code": "HYPERLIGHT-M",
+    "category": "تجهیزات",
+    "images": 6,
+    "type": "دستگاه رادیوگرافی",
+    "basePrice": 2800,
+    "priceRial": 1820000000,
+    "stock": 11,
+    "isOriginal": true,
+    "type_fa": "رادیوگرافی",
+    "description": "دستگاه رادیوگرافی داخل دهانی پرتابل",
+    "specs": [
+      {
+        "key": "تکنولوژی",
+        "value": "دیجیتال"
+      },
+      {
+        "key": "ولتاژ",
+        "value": "60-70 kV"
+      },
+      {
+        "key": "قابل حمل",
+        "value": "دارد"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_X-Ray-Unit_358",
+    "name": "Eighteeth HyperLight-A",
+    "brand": "Eighteeth",
+    "code": "HYPERLIGHT-A",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "دستگاه رادیوگرافی",
+    "basePrice": 2500,
+    "priceRial": 1625000000,
+    "stock": 7,
+    "isOriginal": true,
+    "type_fa": "رادیوگرافی",
+    "description": "دستگاه رادیوگرافی داخل دهانی پرتابل",
+    "specs": [
+      {
+        "key": "تکنولوژی",
+        "value": "دیجیتال"
+      },
+      {
+        "key": "ولتاژ",
+        "value": "60-70 kV"
+      },
+      {
+        "key": "قابل حمل",
+        "value": "دارد"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Digital-Sensor_1",
+    "name": "Eighteeth NanoPix",
+    "brand": "Eighteeth",
+    "code": "NANOPIX",
+    "category": "تجهیزات",
+    "images": 24,
+    "type": "سنسور داخل دهانی",
+    "basePrice": 2800,
+    "priceRial": 1820000000,
+    "stock": 9,
+    "isOriginal": true,
+    "type_fa": "سنسور تصویربرداری",
+    "description": "سنسور رادیوگرافی دیجیتال داخل دهانی",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "سنسور CMOS"
+      },
+      {
+        "key": "رزولوشن",
+        "value": "HD"
+      },
+      {
+        "key": "سایز",
+        "value": "سایز ۲"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Digital-Sensor_95",
+    "name": "Eighteeth NanoPix-E 1.3",
+    "brand": "Eighteeth",
+    "code": "NANOPIX-E-1.3",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "سنسور داخل دهانی",
+    "basePrice": 2600,
+    "priceRial": 1690000000,
+    "stock": 13,
+    "isOriginal": true,
+    "type_fa": "سنسور تصویربرداری",
+    "description": "سنسور رادیوگرافی دیجیتال داخل دهانی",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "سنسور CMOS"
+      },
+      {
+        "key": "رزولوشن",
+        "value": "HD"
+      },
+      {
+        "key": "سایز",
+        "value": "سایز ۲"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Digital-Sensor_298",
+    "name": "Eighteeth NanoPix-M",
+    "brand": "Eighteeth",
+    "code": "NANOPIX-M",
+    "category": "تجهیزات",
+    "images": 6,
+    "type": "سنسور داخل دهانی",
+    "basePrice": 3000,
+    "priceRial": 1950000000,
+    "stock": 6,
+    "isOriginal": true,
+    "type_fa": "سنسور تصویربرداری",
+    "description": "سنسور رادیوگرافی دیجیتال داخل دهانی",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "سنسور CMOS"
+      },
+      {
+        "key": "رزولوشن",
+        "value": "HD"
+      },
+      {
+        "key": "سایز",
+        "value": "سایز ۲"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_CBCT_155",
+    "name": "Eighteeth FinScan F350",
+    "brand": "Eighteeth",
+    "code": "FINSCAN-F350",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "سیستم CBCT",
+    "basePrice": 45000,
+    "priceRial": 29250000000,
+    "stock": 5,
+    "isOriginal": true,
+    "type_fa": "رادیوگرافی",
+    "description": "سیستم تصویربرداری سه‌بعدی CBCT",
+    "specs": [
+      {
+        "key": "تکنولوژی",
+        "value": "دیجیتال"
+      },
+      {
+        "key": "ولتاژ",
+        "value": "60-70 kV"
+      },
+      {
+        "key": "قابل حمل",
+        "value": "دارد"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Intraoral-Scanner_120",
+    "name": "Eighteeth Helios 500",
+    "brand": "Eighteeth",
+    "code": "HELIOS-500",
+    "category": "اسکنر",
+    "images": 7,
+    "type": "اسکنر داخل دهانی",
+    "basePrice": 6800,
+    "priceRial": 4420000000,
+    "stock": 15,
+    "isOriginal": true,
+    "type_fa": "اسکنر داخل دهانی",
+    "description": "اسکنر داخل دهانی",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "اسکنر داخل دهانی"
+      },
+      {
+        "key": "دقت",
+        "value": "بالا"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Intraoral-Scanner_71",
+    "name": "Eighteeth Helios 600",
+    "brand": "Eighteeth",
+    "code": "HELIOS-600",
+    "category": "اسکنر",
+    "images": 6,
+    "type": "اسکنر داخل دهانی",
+    "basePrice": 8900,
+    "priceRial": 5785000000,
+    "stock": 6,
+    "isOriginal": true,
+    "type_fa": "اسکنر داخل دهانی",
+    "description": "اسکنر داخل دهانی",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "اسکنر داخل دهانی"
+      },
+      {
+        "key": "دقت",
+        "value": "بالا"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Intraoral-Scanner_153",
+    "name": "Eighteeth Helios 680",
+    "brand": "Eighteeth",
+    "code": "HELIOS-680",
+    "category": "اسکنر",
+    "images": 6,
+    "type": "اسکنر داخل دهانی",
+    "basePrice": 10500,
+    "priceRial": 6825000000,
+    "stock": 14,
+    "isOriginal": true,
+    "type_fa": "اسکنر داخل دهانی",
+    "description": "اسکنر داخل دهانی",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "اسکنر داخل دهانی"
+      },
+      {
+        "key": "دقت",
+        "value": "بالا"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Intraoral-Scanner_303",
+    "name": "Eighteeth Helios 700",
+    "brand": "Eighteeth",
+    "code": "HELIOS-700",
+    "category": "اسکنر",
+    "images": 6,
+    "type": "اسکنر داخل دهانی",
+    "basePrice": 13500,
+    "priceRial": 8775000000,
+    "stock": 14,
+    "isOriginal": true,
+    "type_fa": "اسکنر داخل دهانی",
+    "description": "اسکنر داخل دهانی",
+    "specs": [
+      {
+        "key": "نوع",
+        "value": "اسکنر داخل دهانی"
+      },
+      {
+        "key": "دقت",
+        "value": "بالا"
+      },
+      {
+        "key": "نرم افزار",
+        "value": "همراه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Digital-Implant-Solution_344",
+    "name": "Eighteeth Orion Kit",
+    "brand": "Eighteeth",
+    "code": "ORION-KIT",
+    "category": "ایمپلنت",
+    "images": 19,
+    "type": "ست ایمپلنت دیجیتال",
+    "basePrice": 3500,
+    "priceRial": 2275000000,
+    "stock": 22,
+    "isOriginal": true,
+    "type_fa": "ایمپلنت",
+    "description": "ست جراحی ایمپلنت دیجیتال",
+    "specs": [
+      {
+        "key": "کاربرد",
+        "value": "جراحی ایمپلنت"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_Dental-Implant-Unit_125",
+    "name": "Eighteeth MotorSurg",
+    "brand": "Eighteeth",
+    "code": "MOTORSURG",
+    "category": "ایمپلنت",
+    "images": 8,
+    "type": "موتور ایمپلنت",
+    "basePrice": 1500,
+    "priceRial": 975000000,
+    "stock": 11,
+    "isOriginal": true,
+    "type_fa": "موتور ایمپلنت",
+    "description": "موتور ایمپلنت با آنگل جراحی",
+    "specs": [
+      {
+        "key": "حداکثر سرعت",
+        "value": "20 - 2000 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "5 - 70 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "رنگی لمسی"
+      },
+      {
+        "key": "نسبت آنگل",
+        "value": "20:1"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Dental-Microscopes_361",
+    "name": "Eighteeth Acuvision X1",
+    "brand": "Eighteeth",
+    "code": "ACUVISION-X1",
+    "category": "میکروسکوپ",
+    "images": 11,
+    "type": "میکروسکوپ دندانپزشکی",
+    "basePrice": 11000,
+    "priceRial": 7150000000,
+    "stock": 4,
+    "isOriginal": true,
+    "type_fa": "میکروسکوپ",
+    "description": "میکروسکوپ دندانپزشکی",
+    "specs": [
+      {
+        "key": "بزرگنمایی",
+        "value": "۳ - ۲۵ برابر"
+      },
+      {
+        "key": "سیستم نوری",
+        "value": "اپتیک با کیفیت بالا"
+      },
+      {
+        "key": "نورپردازی",
+        "value": "LED"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Dental-Microscopes_185",
+    "name": "Eighteeth Acuvision X",
+    "brand": "Eighteeth",
+    "code": "ACUVISION-X",
+    "category": "میکروسکوپ",
+    "images": 10,
+    "type": "میکروسکوپ دندانپزشکی",
+    "basePrice": 8800,
+    "priceRial": 5720000000,
+    "stock": 17,
+    "isOriginal": true,
+    "type_fa": "میکروسکوپ",
+    "description": "میکروسکوپ دندانپزشکی",
+    "specs": [
+      {
+        "key": "بزرگنمایی",
+        "value": "۳ - ۲۵ برابر"
+      },
+      {
+        "key": "سیستم نوری",
+        "value": "اپتیک با کیفیت بالا"
+      },
+      {
+        "key": "نورپردازی",
+        "value": "LED"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۲۴ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Dental-Loupes_36",
+    "name": "Eighteeth Brilliance",
+    "brand": "Eighteeth",
+    "code": "BRILLIANCE",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "لوپ دندانپزشکی",
+    "basePrice": 350,
+    "priceRial": 227500000,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "لوپ دندانپزشکی",
+    "description": "لوپ بزرگنمایی دندانپزشکی",
+    "specs": [
+      {
+        "key": "بزرگنمایی",
+        "value": "۲.۵ - ۶ برابر"
+      },
+      {
+        "key": "زاویه",
+        "value": "استاندارد / ۴۸ درجه"
+      },
+      {
+        "key": "فریم",
+        "value": "مطابق صورت"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Dental-Loupes_149",
+    "name": "Eighteeth Brilliance BP",
+    "brand": "Eighteeth",
+    "code": "BRILLIANCE-BP",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "لوپ دندانپزشکی",
+    "basePrice": 420,
+    "priceRial": 273000000,
+    "stock": 6,
+    "isOriginal": true,
+    "type_fa": "لوپ دندانپزشکی",
+    "description": "لوپ بزرگنمایی دندانپزشکی",
+    "specs": [
+      {
+        "key": "بزرگنمایی",
+        "value": "۲.۵ - ۶ برابر"
+      },
+      {
+        "key": "زاویه",
+        "value": "استاندارد / ۴۸ درجه"
+      },
+      {
+        "key": "فریم",
+        "value": "مطابق صورت"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Dental-Loupes_119",
+    "name": "Eighteeth Brilliance 48°",
+    "brand": "Eighteeth",
+    "code": "BRILLIANCE-48°",
+    "category": "تجهیزات",
+    "images": 6,
+    "type": "لوپ دندانپزشکی",
+    "basePrice": 460,
+    "priceRial": 299000000,
+    "stock": 15,
+    "isOriginal": true,
+    "type_fa": "لوپ دندانپزشکی",
+    "description": "لوپ بزرگنمایی ۴۸ درجه دندانپزشکی",
+    "specs": [
+      {
+        "key": "بزرگنمایی",
+        "value": "۲.۵ - ۶ برابر"
+      },
+      {
+        "key": "زاویه",
+        "value": "استاندارد / ۴۸ درجه"
+      },
+      {
+        "key": "فریم",
+        "value": "مطابق صورت"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Dental-Loupes_151",
+    "name": "Eighteeth Brilliance 48° Pro",
+    "brand": "Eighteeth",
+    "code": "BRILLIANCE-48°-PRO",
+    "category": "تجهیزات",
+    "images": 6,
+    "type": "لوپ دندانپزشکی",
+    "basePrice": 520,
+    "priceRial": 338000000,
+    "stock": 5,
+    "isOriginal": true,
+    "type_fa": "لوپ دندانپزشکی",
+    "description": "لوپ بزرگنمایی ۴۸ درجه دندانپزشکی",
+    "specs": [
+      {
+        "key": "بزرگنمایی",
+        "value": "۲.۵ - ۶ برابر"
+      },
+      {
+        "key": "زاویه",
+        "value": "استاندارد / ۴۸ درجه"
+      },
+      {
+        "key": "فریم",
+        "value": "مطابق صورت"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Headlight_79",
+    "name": "Eighteeth Softouch",
+    "brand": "Eighteeth",
+    "code": "SOFTOUCH",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "هدلایت",
+    "basePrice": 120,
+    "priceRial": 78000000,
+    "stock": 20,
+    "isOriginal": true,
+    "type_fa": "تجهیزات",
+    "description": "هدلایت دندانپزشکی",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_Headlight_300",
+    "name": "Eighteeth Wireless Z+",
+    "brand": "Eighteeth",
+    "code": "WIRELESS-Z+",
+    "category": "تجهیزات",
+    "images": 6,
+    "type": "هدلایت",
+    "basePrice": 180,
+    "priceRial": 117000000,
+    "stock": 12,
+    "isOriginal": true,
+    "type_fa": "تجهیزات",
+    "description": "هدلایت بی‌سیم دندانپزشکی",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "et_Dental-Anesthesia-Delivery-System_126",
+    "name": "Eighteeth E-FLOW",
+    "brand": "Eighteeth",
+    "code": "E-FLOW",
+    "category": "بی حسی",
+    "images": 6,
+    "type": "دستگاه بی حسی",
+    "basePrice": 450,
+    "priceRial": 292500000,
+    "stock": 23,
+    "isOriginal": true,
+    "type_fa": "بی حسی",
+    "description": "دستگاه تزریق بی‌حسی بدون سوزن",
+    "specs": [
+      {
+        "key": "کاربرد",
+        "value": "تزریق بی‌حسی بدون سوزن"
+      },
+      {
+        "key": "کنترل دوز",
+        "value": "الکترونیکی"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Electric-Motor-Electric-Handpie_76",
+    "name": "Eighteeth Motorturbo & E-asp1",
+    "brand": "Eighteeth",
+    "code": "MOTORTURBO-E-ASP1",
+    "category": "ایرموتور",
+    "images": 6,
+    "type": "موتور الکتریکی",
+    "basePrice": 700,
+    "priceRial": 455000000,
+    "stock": 22,
+    "isOriginal": true,
+    "type_fa": "موتور الکتریکی",
+    "description": "موتور الکتریکی همراه هندپیس",
+    "specs": [
+      {
+        "key": "نوع موتور",
+        "value": "براش‌لس (Brushless)"
+      },
+      {
+        "key": "حداکثر سرعت",
+        "value": "40 000 RPM"
+      },
+      {
+        "key": "حداکثر گشتاور",
+        "value": "5 N.cm"
+      },
+      {
+        "key": "صفحه نمایش",
+        "value": "لمسی"
+      },
+      {
+        "key": "نوع اتصال",
+        "value": "E-Type"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      }
+    ]
+  },
+  {
+    "id": "et_Autoclave_157",
+    "name": "Eighteeth E-Sanit",
+    "brand": "Eighteeth",
+    "code": "E-SANIT",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "اتوکلاو",
+    "basePrice": 1800,
+    "priceRial": 1170000000,
+    "stock": 14,
+    "isOriginal": true,
+    "type_fa": "تجهیزات",
+    "description": "اتوکلاو کلاس B",
+    "specs": [
+      {
+        "key": "گارانتی",
+        "value": "۱۸ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "چین - Eighteeth"
+      },
+      {
+        "key": "استاندارد",
+        "value": "CE / ISO 13485"
+      }
+    ]
+  },
+  {
+    "id": "tv_0_polish",
+    "name": "TOR-VM Clamp ۰ (پولیش استاندارد)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-0-POLISH",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 18,
+    "priceRial": 11700000,
+    "stock": 25,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای پره‌مولارهای فک بالا و پایین و انسیزورهای فک بالا. طراحی کوچک شاخک‌ها امکان استفاده در دیستوپی پره‌مولار و شلوغی قدامی را فراهم می‌کند. دارای بال‌های جانبی برجسته برای ثبات مارجین سوراخ ورقه لاتکس. کلاسپ به صورت پولیش استاندارد.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۳-۱۲-۱۱-۲۱-۲۲-۲۳-۳۳-۳۲-۳۱-۴۱-۴۲-۴۳"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_0_black",
+    "name": "TOR-VM Clamp ۰ (پوشش مشکی)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-0-BLACK",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 18,
+    "priceRial": 11700000,
+    "stock": 14,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای پره‌مولارهای فک بالا و پایین و انسیزورهای فک بالا. طراحی کوچک شاخک‌ها امکان استفاده در دیستوپی پره‌مولار و شلوغی قدامی را فراهم می‌کند. دارای بال‌های جانبی برجسته برای ثبات مارجین سوراخ ورقه لاتکس. کلاسپ به صورت با روکش مشکی.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۳-۱۲-۱۱-۲۱-۲۲-۲۳-۳۳-۳۲-۳۱-۴۱-۴۲-۴۳"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_138_polish",
+    "name": "TOR-VM Clamp ۱۳۸ (پولیش استاندارد)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-138-POLISH",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 20,
+    "priceRial": 13000000,
+    "stock": 30,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای مولار سوم سمت چپ. بدون بال، شاخک‌های نامتقارن در سطوح مختلف. ایده‌آل به عنوان کلاسپ لنگر در ایزولاسیون طولانی دندان با کمبود فضا در سمت وستیبولار. کلاسپ به صورت پولیش استاندارد.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۲۸-۳۸"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_138_black",
+    "name": "TOR-VM Clamp ۱۳۸ (پوشش مشکی)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-138-BLACK",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 20,
+    "priceRial": 13000000,
+    "stock": 8,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای مولار سوم سمت چپ. بدون بال، شاخک‌های نامتقارن در سطوح مختلف. ایده‌آل به عنوان کلاسپ لنگر در ایزولاسیون طولانی دندان با کمبود فضا در سمت وستیبولار. کلاسپ به صورت با روکش مشکی.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۲۸-۳۸"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_139_polish",
+    "name": "TOR-VM Clamp ۱۳۹ (پولیش استاندارد)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-139-POLISH",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 20,
+    "priceRial": 13000000,
+    "stock": 9,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای مولار سوم. بدون بال، شاخک‌های نامتقارن در سطوح مختلف. ایده‌آل به عنوان کلاسپ لنگر در ایزولاسیون طولانی دندان با کمبود فضا در سمت وستیبولار. کلاسپ به صورت پولیش استاندارد.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۸-۴۸"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_139_black",
+    "name": "TOR-VM Clamp ۱۳۹ (پوشش مشکی)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-139-BLACK",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 20,
+    "priceRial": 13000000,
+    "stock": 39,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای مولار سوم. بدون بال، شاخک‌های نامتقارن در سطوح مختلف. ایده‌آل به عنوان کلاسپ لنگر در ایزولاسیون طولانی دندان با کمبود فضا در سمت وستیبولار. کلاسپ به صورت با روکش مشکی.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۸-۴۸"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_14_polish",
+    "name": "TOR-VM Clamp ۱۴ (پولیش استاندارد)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-14-POLISH",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 22,
+    "priceRial": 14300000,
+    "stock": 11,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای مولارهای فک بالا و پایین با تخریب قابل توجه تاج یا تخریب کامل دیواره مزیال. شاخک‌های کوچک قیفی شکل مشابه کلاسپ ۳. مناسب برای کار منظم با ضایعات پوسیدگی در هر محل و تاج‌های بدون استوا. کلاسپ به صورت پولیش استاندارد.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۷-۱۶-۲۶-۲۷-۳۷-۳۶-۴۶-۴۷"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_14_black",
+    "name": "TOR-VM Clamp ۱۴ (پوشش مشکی)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-14-BLACK",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 22,
+    "priceRial": 14300000,
+    "stock": 28,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای مولارهای فک بالا و پایین با تخریب قابل توجه تاج یا تخریب کامل دیواره مزیال. شاخک‌های کوچک قیفی شکل مشابه کلاسپ ۳. مناسب برای کار منظم با ضایعات پوسیدگی در هر محل و تاج‌های بدون استوا. کلاسپ به صورت با روکش مشکی.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۷-۱۶-۲۶-۲۷-۳۷-۳۶-۴۶-۴۷"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_14a_polish",
+    "name": "TOR-VM Clamp ۱۴A (پولیش استاندارد)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-14A-POLISH",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 24,
+    "priceRial": 15600000,
+    "stock": 8,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای مولارهای فک بالا و پایین با تخریب قابل توجه تاج یا تخریب کامل دیواره مزیال. شاخک‌های بزرگ قیفی شکل مشابه کلاسپ ۷A. مناسب برای تاج‌های بزرگ. کلاسپ به صورت پولیش استاندارد.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۷-۱۶-۲۶-۲۷-۳۷-۳۶-۴۶-۴۷"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_14a_black",
+    "name": "TOR-VM Clamp ۱۴A (پوشش مشکی)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-14A-BLACK",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 24,
+    "priceRial": 15600000,
+    "stock": 37,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای مولارهای فک بالا و پایین با تخریب قابل توجه تاج یا تخریب کامل دیواره مزیال. شاخک‌های بزرگ قیفی شکل مشابه کلاسپ ۷A. مناسب برای تاج‌های بزرگ. کلاسپ به صورت با روکش مشکی.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۷-۱۶-۲۶-۲۷-۳۷-۳۶-۴۶-۴۷"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_b4_polish",
+    "name": "TOR-VM Clamp B4 (پولیش استاندارد)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-B4-POLISH",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 18,
+    "priceRial": 11700000,
+    "stock": 18,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای پره‌مولارهای فک بالا و پایین و انسیزورهای فک بالا. طراحی کوچک شاخک‌ها امکان استفاده در دیستوپی پره‌مولار و شلوغی قدامی را فراهم می‌کند. دارای بال‌های جانبی برجسته برای ثبات مارجین سوراخ ورقه لاتکس. کلاسپ به صورت پولیش استاندارد.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۳-۱۲-۱۱-۲۱-۲۲-۲۳-۳۳-۳۲-۳۱-۴۱-۴۲-۴۳"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
+      }
+    ]
+  },
+  {
+    "id": "tv_b4_black",
+    "name": "TOR-VM Clamp B4 (پوشش مشکی)",
+    "brand": "TOR-VM",
+    "code": "TORVM-CLAMP-B4-BLACK",
+    "category": "تجهیزات",
+    "images": 4,
+    "type": "کلاسپ رابردام",
+    "basePrice": 18,
+    "priceRial": 11700000,
+    "stock": 7,
+    "isOriginal": true,
+    "type_fa": "کلاسپ رابردام",
+    "description": "کلاسپ ایزولاسیون رابردام برای پره‌مولارهای فک بالا و پایین و انسیزورهای فک بالا. طراحی کوچک شاخک‌ها امکان استفاده در دیستوپی پره‌مولار و شلوغی قدامی را فراهم می‌کند. دارای بال‌های جانبی برجسته برای ثبات مارجین سوراخ ورقه لاتکس. کلاسپ به صورت با روکش مشکی.",
+    "specs": [
+      {
+        "key": "دندان‌های پیشنهادی",
+        "value": "۱۳-۱۲-۱۱-۲۱-۲۲-۲۳-۳۳-۳۲-۳۱-۴۱-۴۲-۴۳"
+      },
+      {
+        "key": "کاربرد",
+        "value": "ایزولاسیون رابردام"
+      },
+      {
+        "key": "جنس",
+        "value": "استیل ضد زنگ"
+      },
+      {
+        "key": "نوع روکش",
+        "value": "استاندارد پولیش / مشکی"
+      },
+      {
+        "key": "استریلیزاسیون",
+        "value": "اتوکلاو ۱۳۴ درجه"
+      },
+      {
+        "key": "گارانتی",
+        "value": "۱۲ ماه"
+      },
+      {
+        "key": "ساخت",
+        "value": "روسیه - TOR-VM"
       }
     ]
   }
