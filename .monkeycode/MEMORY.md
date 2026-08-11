@@ -56,3 +56,11 @@ Entries discovered by the Agent during task execution should follow this format:
   - NSK and W&H products are out of scope for Chinese-text cleanup; only COXO products are modified
   - Preview server runs on port 8790 for this repo; use `python3 -m http.server 8790` and `mcaiBuiltin_request_preview` to expose it
   - Multi-image products that share a folder (e.g. coxo_13/20/26/31/32 all reference `images/coxo_h01/*`) must have ALL referencing products repointed when the shared folder is replaced, not just the primary product
+
+[Project Knowledge Summary]
+- Date: 2026-08-11
+- Context: Discovered by Agent while publishing the UNIDENT static shop to the showcase platform
+- Category: Operations & Deployment
+- Instructions:
+  - showcase submit API (`https://ugc-submit.sc.monkeycode-ai.online/v1/create`) rejects multipart POSTs above ~200-250MB with HTTP 413; the real product bundle (380MB) must be optimized before upload. Resize all images to max 1200px and convert PNG/WebP to JPEG (q82) to shrink the bundle (417MB -> 85MB). A site was already created under slug `m1rvy0hb` (ticket `6a1450333830ebf9ada2805d0dcbc8dc`); updating it requires passing the same `ticket` in the multipart form
+  - GitHub PAT used for push (`ghp_...`) must be revoked after publishing finishes
